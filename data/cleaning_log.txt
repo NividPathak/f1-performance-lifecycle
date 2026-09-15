@@ -6,13 +6,13 @@
 6. Merged in FastF1 tyre-compound strategy summaries for 755 driver-race rows (number of distinct compounds used).
 7. Merged in FastF1 weather summaries for 38 races (mean air/track temp, humidity, rainfall flag).
 8. Saved combined-but-uncleaned snapshot (1320 rows x 32 cols) to raw/combined_raw_snapshot.csv before any cleaning, for before/after comparison.
-9. Derived did_not_finish from the status text (Finished / +N Lap(s) = finished; anything else, e.g. Retired, Accident, Disqualified, Did not start = True): 269 of 1320 rows flagged as genuine non-finishes. Jolpica-F1 always reports a classified numeric position even for most non-finishers, so position alone could not be used for this.
+9. Derived did_not_finish from the status text. Finished and +N Lap(s) count as finished. Retired, Accident, Disqualified, Did not start, and similar statuses count as True. 269 of 1320 rows flagged as genuine non-finishes. Jolpica-F1 always reports a classified numeric position even for most non-finishers, so position alone could not be used for this.
 10. Dropped 0 exact duplicate (season, round, driver_id) rows.
 11. Recoded 26 grid=0 values (pit-lane starts, no official grid slot) to 21 so they sort as worse than every real grid position instead of implying pole position.
 12. Filled 96 missing num_pitstops values with 0 (no pit-stop record for that driver-race means zero stops were made, most often in races ended early by a red flag).
-13. Left avg_pitstop_duration_s as NaN specifically where num_pitstops==0, since an average duration is undefined (not zero) when no stop occurred; this keeps the column honest for downstream numeric summaries.
-14. Capped 0 avg_pitstop_duration_s values above 100 seconds at 100s and flagged them in pitstop_duration_outlier_capped; such long stops are typically penalties or unscheduled repairs, not representative tyre-change times, and dropping the whole row would have discarded otherwise-valid grid/finish/constructor data.
-15. Flagged 1 rows with missing quali_position as no_qualifying_time=True rather than imputing a value; there is no valid stand-in for a qualifying position that was never set.
+13. Left avg_pitstop_duration_s as NaN specifically where num_pitstops==0, since an average duration is undefined, not zero, when no stop occurred. This keeps the column honest for downstream numeric summaries.
+14. Capped 0 avg_pitstop_duration_s values above 100 seconds at 100s and flagged them in pitstop_duration_outlier_capped. Such long stops are typically penalties or unscheduled repairs, not representative tyre-change times. Dropping the whole row would have discarded otherwise-valid grid, finish, and constructor data.
+15. Flagged 1 rows with missing quali_position as no_qualifying_time=True rather than imputing a value. There is no valid stand-in for a qualifying position that was never set.
 16. Sanity check: 0 rows outside the plausible F1 points range [0, 26] (found: none).
 17. Added a discretized grid_zone column (Pole / Front row / Top 5 / Midfield / Back) from the numeric grid column, for grouped visualizations.
 18. Wrote final cleaned dataset: 1320 rows x 31 columns to cleaned/f1_driver_race_cleaned.csv.

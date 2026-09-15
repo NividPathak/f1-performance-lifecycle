@@ -152,14 +152,14 @@ def main():
         log(f"Merged in FastF1 tyre-compound strategy summaries for {len(stints)} driver-race rows "
             f"(number of distinct compounds used).")
     else:
-        log("FastF1 tyre-compound data not yet available at merge time; num_compounds_used/"
-            "compounds_used left absent for this run.")
+        log("FastF1 tyre-compound data not yet available at merge time. "
+            "num_compounds_used and compounds_used left absent for this run.")
     if not weather.empty:
         df = df.merge(weather, on=["season", "round"], how="left")
         log(f"Merged in FastF1 weather summaries for {len(weather)} races "
             f"(mean air/track temp, humidity, rainfall flag).")
     else:
-        log("FastF1 weather data not yet available at merge time; weather columns left absent.")
+        log("FastF1 weather data not yet available at merge time. Weather columns left absent.")
 
     raw_snapshot = df.copy()
     raw_snapshot.to_csv("raw/combined_raw_snapshot.csv", index=False)
@@ -176,16 +176,17 @@ def main():
     #    "+1 Lap" for being lapped but still classified as a finisher). So a
     #    numeric position alone cannot distinguish a true non-finish from a
     #    normal finish. did_not_finish is instead derived from the `status`
-    #    text: "Finished" and the "+N Lap(s)" lapped-but-classified statuses
-    #    count as finishes; anything else (mechanical failure, accident,
+    #    text. "Finished" and the "+N Lap(s)" lapped-but-classified statuses
+    #    count as finishes. Anything else (mechanical failure, accident,
     #    disqualification, did-not-start, withdrew) counts as a genuine DNF.
     finished_pattern = r"^(Finished|\+\d+ Laps?)$"
     df["did_not_finish"] = ~df["status"].str.match(finished_pattern)
     n_dnf = df["did_not_finish"].sum()
-    log(f"Derived did_not_finish from the status text (Finished / +N Lap(s) = finished; anything "
-        f"else, e.g. Retired, Accident, Disqualified, Did not start = True): {n_dnf} of {len(df)} "
-        f"rows flagged as genuine non-finishes. Jolpica-F1 always reports a classified numeric "
-        f"position even for most non-finishers, so position alone could not be used for this.")
+    log(f"Derived did_not_finish from the status text. Finished and +N Lap(s) count as finished. "
+        f"Retired, Accident, Disqualified, Did not start, and similar statuses count as True. "
+        f"{n_dnf} of {len(df)} rows flagged as genuine non-finishes. Jolpica-F1 always reports a "
+        f"classified numeric position even for most non-finishers, so position alone could not be "
+        f"used for this.")
     df["final_position_num"] = pd.to_numeric(df["final_position"], errors="coerce")
 
     # 2. Duplicate rows
@@ -216,7 +217,7 @@ def main():
         df["num_pitstops"] == 0, np.nan, df["avg_pitstop_duration_s"]
     )
     log("Left avg_pitstop_duration_s as NaN specifically where num_pitstops==0, since an average "
-        "duration is undefined (not zero) when no stop occurred; this keeps the column honest for "
+        "duration is undefined, not zero, when no stop occurred. This keeps the column honest for "
         "downstream numeric summaries.")
 
     # 6. Outlier check on pit stop durations: extreme values (>100s) are
@@ -230,9 +231,9 @@ def main():
     df["pitstop_duration_outlier_capped"] = outlier_mask
     df.loc[outlier_mask, dur_col] = 100.0
     log(f"Capped {n_outliers} avg_pitstop_duration_s values above 100 seconds at 100s and flagged "
-        f"them in pitstop_duration_outlier_capped; such long stops are typically penalties or "
-        f"unscheduled repairs, not representative tyre-change times, and dropping the whole row "
-        f"would have discarded otherwise-valid grid/finish/constructor data.")
+        f"them in pitstop_duration_outlier_capped. Such long stops are typically penalties or "
+        f"unscheduled repairs, not representative tyre-change times. Dropping the whole row "
+        f"would have discarded otherwise-valid grid, finish, and constructor data.")
 
     # 7. quali_position missing (driver did not set a qualifying time, e.g.
     #    withdrew before qualifying, or a sprint-weekend edge case). Left as
@@ -241,14 +242,14 @@ def main():
     n_no_quali = df["quali_position"].isna().sum()
     df["no_qualifying_time"] = df["quali_position"].isna()
     log(f"Flagged {n_no_quali} rows with missing quali_position as no_qualifying_time=True rather "
-        f"than imputing a value; there is no valid stand-in for a qualifying position that was "
+        f"than imputing a value. There is no valid stand-in for a qualifying position that was "
         f"never set.")
 
     # 8. points / laps_completed / final_position_num sanity bounds.
     bad_points = df[(df["points"] < 0) | (df["points"] > 26)]
     log(f"Sanity check: {len(bad_points)} rows outside the plausible F1 points range [0, 26] "
         f"(found: none)." if bad_points.empty else
-        f"Sanity check found {len(bad_points)} rows with implausible points values; removed.")
+        f"Sanity check found {len(bad_points)} rows with implausible points values. Removed.")
     df = df[(df["points"] >= 0) & (df["points"] <= 26)]
 
     # 9. Discretize grid position into starting-zone buckets for the EDA
