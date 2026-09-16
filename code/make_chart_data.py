@@ -123,6 +123,11 @@ out["quali_vs_grid"] = by_season(df, quali_vs_grid_scatter)
 
 # 11. DNF rate by air temperature bucket (only rows with weather data, not season-filterable
 #     in a meaningful way given the small weather subset, so computed once on all rows)
+def temp_label(bucket):
+    lo, hi = (float(v) for v in bucket.strip("(]").split(","))
+    return f"{lo:.0f}\u2013{hi:.0f} \u00b0C"
+
+
 weather_df = df.dropna(subset=["air_temp_mean"]).copy()
 if len(weather_df) > 0:
     bins = pd.cut(weather_df["air_temp_mean"], bins=5)
@@ -130,7 +135,7 @@ if len(weather_df) > 0:
     order = sorted(weather_df["temp_bucket"].unique(), key=lambda s: float(s.split(",")[0].strip("(")))
     g = (weather_df.groupby("temp_bucket", observed=True)["did_not_finish"].mean() * 100)
     out["dnf_rate_by_temperature"] = {
-        "labels": [b.replace("(", "").replace("]", "").replace(",", " to") + " C" for b in order],
+        "labels": [temp_label(b) for b in order],
         "values": [round(float(g[b]), 1) for b in order],
         "n": int(len(weather_df)),
     }

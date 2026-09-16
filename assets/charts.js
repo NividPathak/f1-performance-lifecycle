@@ -1,14 +1,21 @@
-/* Renders the 12 EDA visualizations with Chart.js from precomputed
-   aggregates in data/chart_data.json. Flat colors only, no gradients. A
-   season filter re-renders the charts that have per-season data. */
+/* EDA charts, drawn with Chart.js from data/chart_data.json
+   (built by code/make_chart_data.py). The season dropdown redraws the
+   charts that have per-season numbers. */
 
 const F1_RED = "#e10600";
-const F1_BLACK = "#15151e";
-const F1_SILVER = "#949498";
+const TEXT = "#a7a7b0";
+const GRID = "rgba(255,255,255,0.07)";
+const F1_WHITE = "#e8e8ec";
+const F1_SILVER = "#8c8c96";
 const F1_GOLD = "#ffb800";
-const F1_TEAL = "#00a19c";
-const F1_NAVY = "#1b3358";
-const LINE_COLORS = [F1_RED, F1_BLACK, F1_SILVER, F1_GOLD, F1_TEAL, F1_NAVY];
+const F1_TEAL = "#00d2be";
+const F1_BLUE = "#3671c6";
+const LINE_COLORS = [F1_BLUE, "#6cd3bf", F1_RED, "#ff8700", "#ff87bc", "#358c75"]; // in top-six order: Red Bull, Mercedes, Ferrari, McLaren, Alpine, Aston Martin
+
+Chart.defaults.font.family = '"Titillium Web", "Helvetica Neue", Arial, sans-serif';
+Chart.defaults.font.size = 12;
+Chart.defaults.color = TEXT;
+Chart.defaults.borderColor = GRID;
 
 let CHART_DATA = null;
 const activeCharts = {};
@@ -19,15 +26,25 @@ function baseOptions(extra) {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { display: false, labels: { color: F1_BLACK } },
+        legend: { display: false },
       },
       scales: {
-        x: { ticks: { color: F1_BLACK }, grid: { color: "#e2e2e6" } },
-        y: { ticks: { color: F1_BLACK }, grid: { color: "#e2e2e6" } },
+        x: { grid: { color: GRID } },
+        y: { grid: { color: GRID } },
       },
     },
     extra || {}
   );
+}
+
+// Bars for "average finishing position": lower is better, so say so on the axis.
+function avgFinishOptions() {
+  return baseOptions({
+    scales: {
+      x: { grid: { color: GRID } },
+      y: { beginAtZero: true, title: { display: true, text: "Avg finishing position (lower is better)" }, grid: { color: GRID } },
+    },
+  });
 }
 
 function makeOrUpdate(id, config) {
@@ -55,15 +72,15 @@ function renderAll(season) {
         {
           label: "Driver result",
           data: d.grid_vs_final[k],
-          backgroundColor: "rgba(225,6,0,0.35)",
+          backgroundColor: "rgba(225,6,0,0.45)",
           pointRadius: 3,
         },
       ],
     },
     options: baseOptions({
       scales: {
-        x: { title: { display: true, text: "Starting grid position", color: F1_BLACK }, ticks: { color: F1_BLACK } },
-        y: { title: { display: true, text: "Final race position", color: F1_BLACK }, reverse: true, ticks: { color: F1_BLACK } },
+        x: { title: { display: true, text: "Starting grid position" }, grid: { color: GRID } },
+        y: { title: { display: true, text: "Final race position" }, reverse: true, grid: { color: GRID } },
       },
     }),
   });
@@ -72,8 +89,8 @@ function renderAll(season) {
   const z = d.avg_position_by_grid_zone[k];
   makeOrUpdate("chart-02", {
     type: "bar",
-    data: { labels: z.labels, datasets: [{ label: "Avg final position", data: z.values, backgroundColor: F1_BLACK }] },
-    options: baseOptions({ scales: { y: { reverse: true, ticks: { color: F1_BLACK } }, x: { ticks: { color: F1_BLACK } } } }),
+    data: { labels: z.labels, datasets: [{ label: "Avg final position", data: z.values, backgroundColor: F1_WHITE }] },
+    options: avgFinishOptions(),
   });
 
   // 3. avg points by constructor
@@ -88,8 +105,8 @@ function renderAll(season) {
   const c4 = d.avg_position_by_pitstops[k];
   makeOrUpdate("chart-04", {
     type: "bar",
-    data: { labels: c4.labels, datasets: [{ label: "Avg final position", data: c4.values, backgroundColor: F1_NAVY }] },
-    options: baseOptions({ scales: { y: { reverse: true, ticks: { color: F1_BLACK } }, x: { ticks: { color: F1_BLACK } } } }),
+    data: { labels: c4.labels, datasets: [{ label: "Avg final position", data: c4.values, backgroundColor: F1_BLUE }] },
+    options: avgFinishOptions(),
   });
 
   // 5. pit stop count distribution
@@ -114,15 +131,15 @@ function renderAll(season) {
     type: "scatter",
     data: {
       datasets: [
-        { label: "Scored points", data: c7.scored, backgroundColor: "rgba(0,161,156,0.55)", pointRadius: 3 },
-        { label: "No points", data: c7.not_scored, backgroundColor: "rgba(148,148,152,0.45)", pointRadius: 3 },
+        { label: "Scored points", data: c7.scored, backgroundColor: "rgba(0,210,190,0.6)", pointRadius: 3 },
+        { label: "No points", data: c7.not_scored, backgroundColor: "rgba(140,140,150,0.4)", pointRadius: 3 },
       ],
     },
     options: baseOptions({
-      plugins: { legend: { display: true, position: "top", labels: { color: F1_BLACK } } },
+      plugins: { legend: { display: true, position: "top", labels: {} } },
       scales: {
-        x: { title: { display: true, text: "Lap of first pit stop", color: F1_BLACK }, ticks: { color: F1_BLACK } },
-        y: { title: { display: true, text: "Final position", color: F1_BLACK }, reverse: true, ticks: { color: F1_BLACK } },
+        x: { title: { display: true, text: "Lap of first pit stop" }, grid: { color: GRID } },
+        y: { title: { display: true, text: "Final position" }, reverse: true, grid: { color: GRID } },
       },
     }),
   });
@@ -144,7 +161,7 @@ function renderAll(season) {
           pointRadius: 4,
         })),
       },
-      options: baseOptions({ plugins: { legend: { display: true, position: "bottom", labels: { color: F1_BLACK, boxWidth: 12 } } } }),
+      options: baseOptions({ plugins: { legend: { display: true, position: "bottom", labels: { boxWidth: 12 } } } }),
     });
   }
 
@@ -161,13 +178,13 @@ function renderAll(season) {
     type: "scatter",
     data: {
       datasets: [
-        { label: "Driver", data: d.quali_vs_grid[k], backgroundColor: "rgba(27,51,88,0.4)", pointRadius: 3 },
+        { label: "Driver", data: d.quali_vs_grid[k], backgroundColor: "rgba(54,113,198,0.55)", pointRadius: 3 },
       ],
     },
     options: baseOptions({
       scales: {
-        x: { title: { display: true, text: "Qualifying position", color: F1_BLACK }, ticks: { color: F1_BLACK } },
-        y: { title: { display: true, text: "Actual starting grid", color: F1_BLACK }, ticks: { color: F1_BLACK } },
+        x: { title: { display: true, text: "Qualifying position" }, grid: { color: GRID } },
+        y: { title: { display: true, text: "Actual starting grid" }, grid: { color: GRID } },
       },
     }),
   });
@@ -187,15 +204,16 @@ function renderAll(season) {
     const c12 = d.position_by_tyre_compounds;
     makeOrUpdate("chart-12", {
       type: "bar",
-      data: { labels: c12.labels, datasets: [{ label: "Avg final position", data: c12.values, backgroundColor: F1_BLACK }] },
-      options: baseOptions({ scales: { y: { reverse: true, ticks: { color: F1_BLACK } }, x: { ticks: { color: F1_BLACK } } } }),
+      data: { labels: c12.labels, datasets: [{ label: "Avg final position", data: c12.values, backgroundColor: F1_WHITE }] },
+      options: avgFinishOptions(),
     });
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("data/chart_data.json")
-    .then((r) => r.json())
+  // Wait for Titillium Web so the canvas text doesn't render in a fallback font.
+  Promise.all([fetch("data/chart_data.json").then((r) => r.json()), document.fonts.ready])
+    .then(([data]) => data)
     .then((data) => {
       CHART_DATA = data;
       renderAll("all");

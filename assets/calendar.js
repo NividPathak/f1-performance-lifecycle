@@ -1,8 +1,4 @@
-/* Real, confirmed 2026 Formula 1 season calendar, for reference context next
-   to the 2021-2023 historical dataset used in the analysis. Sources:
-   formula1.com/en/racing/2026 and the FIA 2026 calendar announcement
-   confirming Malaysia (Sepang International Circuit) as the 2026 host venue
-   for the Bahrain Grand Prix. */
+// 2026 calendar, from formula1.com/en/racing/2026. The Bahrain GP runs at Sepang this year.
 const CALENDAR_2026 = [
   { round: 1, gp: "Australian Grand Prix", circuit: "Albert Park Circuit, Melbourne", country: "Australia" },
   { round: 2, gp: "Chinese Grand Prix", circuit: "Shanghai International Circuit", country: "China" },

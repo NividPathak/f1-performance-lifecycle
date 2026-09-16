@@ -1,56 +1,57 @@
-# Formula 1 Race Performance and Strategy: Data Science Lifecycle Project
+# F1 Race Performance & Strategy
 
-A tab-based website built for an individual Data Science Lifecycle course project at CU Boulder. This is Module 1, Part 1. Only the Introduction and DataPrep_EDA tabs have content. The rest are placeholders for later modules.
+Course project for Data Science Lifecycle at CU Boulder. The question: how much do grid position, pit strategy, tyres, team, and weather each matter to where an F1 driver finishes?
 
-Topic: what factors, grid position, tyre strategy, pit stop timing, constructor, and weather, predict race outcomes and driver performance in Formula 1.
+Live site: https://nividpathak.github.io/f1-performance-lifecycle/
 
-## Data sources (real data only)
+Right now the Introduction and Data Prep & EDA tabs are done. The other tabs get filled in as the course goes on.
 
-- [Jolpica-F1 API](https://api.jolpi.ca/ergast/f1): official historical race results, qualifying, and pit stop records, 2021 to 2023 seasons (66 races).
-- [FastF1](https://docs.fastf1.dev/) Python library: official F1 timing data for tyre compound strategy and race weather, for 38 of the 66 races. The rest were not pulled due to the public timing API's hourly rate limit.
+## Data
 
-No simulated or synthetic data was used anywhere in this project. The 2026 season calendar shown on the Introduction tab is real, sourced from formula1.com and the FIA's 2026 calendar confirmation, and is included for context only. It is not part of the analyzed dataset.
+- [Jolpica-F1 API](https://github.com/jolpica/jolpica-f1): results, qualifying, and pit stops for every race from 2021 to 2023 (66 races).
+- [FastF1](https://docs.fastf1.dev/): tyre compounds and weather for 38 of those races (the public timing feed rate-limited me before I got the rest), plus the Bahrain track outline used on the Introduction tab.
 
-## Design notes
-
-The site uses a flat color theme (F1 red, black, white, silver) with no gradients, and all 12 EDA charts are rendered live in the browser with Chart.js from precomputed data, so they are interactive (hover for exact values) instead of static images. The header emblem is an original checkered-flag badge, not the official F1 logo, since that mark is trademarked.
-
-## Repository layout
+## Layout
 
 ```
-index.html                         the site (tab navigation, all content)
-assets/style.css                   styling
-assets/script.js                   tab-switching logic
-assets/charts.js                   renders the 12 interactive charts with Chart.js
-assets/calendar.js                 renders the 2026 season calendar table
-assets/img/                        raw and cleaned data preview images, intro illustration
-data/f1_driver_race_cleaned.csv    final cleaned dataset (1,320 rows, 31 columns)
-data/combined_raw_snapshot.csv     merged data before cleaning
-data/cleaning_log.txt              step-by-step cleaning log
-data/chart_data.json               precomputed aggregates that feed the charts
-data/raw_pulls/                    every raw API response, uncleaned
-code/                              every script used to fetch, clean, and prepare the data
-code/paths.py                      shared file locations used by all scripts
+index.html                  the site
+assets/style.css            styles
+assets/script.js            tab switching, cleaning log loader
+assets/motion.js            background speed lines + hero car (anime.js)
+assets/track.js             animated Bahrain track map (anime.js + SVG)
+assets/charts.js            the 12 EDA charts (Chart.js)
+assets/calendar.js          2026 calendar table
+assets/vendor_*.min.js      anime.js 3.2.2 and Chart.js, vendored
+assets/img/                 raw / cleaned data sample tables
+data/raw_pulls/             raw API responses
+data/combined_raw_snapshot.csv
+data/f1_driver_race_cleaned.csv
+data/cleaning_log.txt
+data/chart_data.json        aggregates behind the charts
+data/track_bahrain.json     track outline + corner numbers
+code/                       fetch, clean, and chart-prep scripts
 ```
 
 ## Rebuilding the data
 
-The scripts in `code/` resolve every file location through `code/paths.py`, so they can be run from anywhere. They need Python 3 with `pandas`, `numpy`, and `matplotlib` (plus `fastf1` for the FastF1 pull).
+Scripts find their files through `code/paths.py`, so run them from anywhere. You need Python 3 with `pandas`, `numpy`, and `matplotlib`, plus `fastf1` for the FastF1 scripts.
 
 ```bash
 python code/fetch_jolpica.py            # results + qualifying -> data/raw_pulls/
 python code/fetch_pitstops.py           # pit stops -> data/raw_pulls/ (needs schedule_*.json)
-python code/fetch_fastf1.py             # tyre + weather -> data/raw_pulls/fastf1/ (rate limited, resumable)
+python code/fetch_fastf1.py             # tyres + weather -> data/raw_pulls/fastf1/ (resumable)
 python code/build_dataset.py            # merge + clean -> data/*.csv, data/cleaning_log.txt
-python code/make_chart_data.py          # aggregates -> data/chart_data.json
-python code/make_data_preview_images.py # raw/cleaned sample tables -> assets/img/
-python code/make_intro_image.py         # intro illustration -> assets/img/
+python code/make_chart_data.py          # data/chart_data.json
+python code/make_data_preview_images.py # assets/img/ sample tables
+python code/make_track_data.py          # data/track_bahrain.json
 ```
 
-The raw API pulls are already committed, so only the last four steps are needed to regenerate the site's data.
+The raw pulls are already committed, so you only need the last four to regenerate what the site uses.
 
 ## Hosting
 
-The site is live on GitHub Pages at https://nividpathak.github.io/f1-performance-lifecycle/, served from the root of the `master` branch. Every push to `master` redeploys it automatically, usually within a minute or two.
+GitHub Pages serves the root of `master`. Pushing to `master` redeploys the site within a minute or two.
 
-Later modules are added by filling in the matching empty `<section>` in `index.html`, then committing and pushing.
+## Credits
+
+Font: Titillium Web (Google Fonts). Animation: [anime.js](https://animejs.com/) (MIT). Charts: [Chart.js](https://www.chartjs.org/) (MIT).
