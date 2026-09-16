@@ -6,6 +6,8 @@ import json
 import time
 import urllib.request
 
+from paths import RAW
+
 BASE = "https://api.jolpi.ca/ergast/f1"
 SEASONS = [2021, 2022, 2023]
 
@@ -31,7 +33,7 @@ def fetch_race_pitstops(season, rnd):
 
 def main():
     for season in SEASONS:
-        with open(f"raw/schedule_{season}.json") as f:
+        with open(RAW / f"schedule_{season}.json") as f:
             sched = json.load(f)
         rounds = [r["round"] for r in sched["MRData"]["RaceTable"]["Races"]]
         season_out = {}
@@ -39,7 +41,7 @@ def main():
             stops = fetch_race_pitstops(season, rnd)
             season_out[rnd] = stops
             print(f"{season} round {rnd}: {len(stops)} pit stops")
-        with open(f"raw/pitstops_{season}_full.json", "w") as f:
+        with open(RAW / f"pitstops_{season}_full.json", "w") as f:
             json.dump(season_out, f)
 
 

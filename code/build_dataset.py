@@ -5,9 +5,10 @@ list, which is written out alongside the cleaned CSV so the steps are
 traceable.
 """
 import json
-import os
 import numpy as np
 import pandas as pd
+
+from paths import CLEANED_CSV, CLEANING_LOG, COMBINED_RAW_CSV, DATA, FASTF1_RAW, RAW
 
 SEASONS = [2021, 2022, 2023]
 cleaning_log = []
@@ -21,7 +22,7 @@ def log(msg):
 def load_results():
     rows = []
     for season in SEASONS:
-        with open(f"raw/results_{season}_full.json") as f:
+        with open(RAW / f"results_{season}_full.json") as f:
             data = json.load(f)
         for race in data["races"]:
             for res in race.get("Results", []):
@@ -52,7 +53,7 @@ def load_results():
 def load_qualifying():
     rows = []
     for season in SEASONS:
-        with open(f"raw/qualifying_{season}_full.json") as f:
+        with open(RAW / f"qualifying_{season}_full.json") as f:
             data = json.load(f)
         for race in data["races"]:
             for res in race.get("QualifyingResults", []):
@@ -71,7 +72,7 @@ def load_qualifying():
 def load_pitstops():
     rows = []
     for season in SEASONS:
-        with open(f"raw/pitstops_{season}_full.json") as f:
+        with open(RAW / f"pitstops_{season}_full.json") as f:
             data = json.load(f)
         for rnd, stops in data.items():
             per_driver = {}
@@ -100,11 +101,11 @@ def load_fastf1():
     """Optional: merge tyre-stint and weather summaries if FastF1 fetch has
     produced files by the time this runs. Returns empty frames if not."""
     stint_rows, weather_rows = [], []
-    fdir = "raw/fastf1"
-    if not os.path.isdir(fdir):
+    fdir = FASTF1_RAW
+    if not fdir.is_dir():
         return pd.DataFrame(), pd.DataFrame()
-    for fname in os.listdir(fdir):
-        with open(os.path.join(fdir, fname)) as f:
+    for path in sorted(fdir.glob("*.json")):
+        with open(path) as f:
             d = json.load(f)
         season, rnd = d["season"], d["round"]
         weather_rows.append({
@@ -128,7 +129,7 @@ def load_fastf1():
 
 
 def main():
-    os.makedirs("cleaned", exist_ok=True)
+    DATA.mkdir(exist_ok=True)
 
     results = load_results()
     log(f"Loaded {len(results)} driver-race result rows from Jolpica-F1 (results endpoint), "
@@ -162,9 +163,9 @@ def main():
         log("FastF1 weather data not yet available at merge time. Weather columns left absent.")
 
     raw_snapshot = df.copy()
-    raw_snapshot.to_csv("raw/combined_raw_snapshot.csv", index=False)
+    raw_snapshot.to_csv(COMBINED_RAW_CSV, index=False)
     log(f"Saved combined-but-uncleaned snapshot ({raw_snapshot.shape[0]} rows x "
-        f"{raw_snapshot.shape[1]} cols) to raw/combined_raw_snapshot.csv before any cleaning, "
+        f"{raw_snapshot.shape[1]} cols) to data/combined_raw_snapshot.csv before any cleaning, "
         f"for before/after comparison.")
 
     # ---------------- CLEANING STEPS ----------------
@@ -278,13 +279,13 @@ def main():
             final_cols.append(c)
     df = df[final_cols]
 
-    df.to_csv("cleaned/f1_driver_race_cleaned.csv", index=False)
+    df.to_csv(CLEANED_CSV, index=False)
     log(f"Wrote final cleaned dataset: {df.shape[0]} rows x {df.shape[1]} columns to "
-        f"cleaned/f1_driver_race_cleaned.csv.")
+        f"data/f1_driver_race_cleaned.csv.")
 
-    with open("cleaned/cleaning_log.txt", "w") as f:
+    with open(CLEANING_LOG, "w") as f:
         f.write("\n".join(f"{i+1}. {m}" for i, m in enumerate(cleaning_log)))
-    log("Cleaning log written to cleaned/cleaning_log.txt")
+    print("Cleaning log written to data/cleaning_log.txt")
 
     print("\n--- Final null counts (should be zero except intentionally-preserved fields) ---")
     print(df.isna().sum())

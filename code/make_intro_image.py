@@ -8,6 +8,8 @@ import matplotlib.patches as mpatches
 from matplotlib.path import Path
 import numpy as np
 
+from paths import IMG
+
 fig, ax = plt.subplots(figsize=(9, 5.5))
 ax.set_facecolor("#f4f4f6")
 fig.patch.set_facecolor("#f4f4f6")
@@ -47,5 +49,5 @@ ax.set_title("A Formula 1 race weekend: starting grid, circuit, and strategy cal
               fontsize=12, color="#15151e", pad=14)
 
 fig.tight_layout()
-fig.savefig("figures/intro_illustration.png", dpi=170, bbox_inches="tight", facecolor=fig.get_facecolor())
-print("saved figures/intro_illustration.png")
+fig.savefig(IMG / "intro_illustration.png", dpi=170, bbox_inches="tight", facecolor=fig.get_facecolor())
+print("saved assets/img/intro_illustration.png")

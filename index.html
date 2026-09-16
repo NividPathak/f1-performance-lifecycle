@@ -97,7 +97,7 @@
       <p>All raw pulls and the fetch scripts that produced them are included in this repository.</p>
       <ul class="source-list">
         <li><a href="data/combined_raw_snapshot.csv">combined_raw_snapshot.csv</a>: the merged results, qualifying, pit stop, and tyre/weather data, exactly as pulled, before any cleaning (1,320 driver-race rows).</li>
-        <li><a href="data/raw_pulls/">data/raw_pulls/</a>: every individual raw JSON response pulled from the APIs (per-season results, qualifying, pit stops, and per-race FastF1 tyre/weather summaries) before any merging or cleaning.</li>
+        <li><a href="https://github.com/NividPathak/f1-performance-lifecycle/tree/master/data/raw_pulls" target="_blank" rel="noopener">data/raw_pulls/</a> (opens on GitHub): every individual raw JSON response pulled from the APIs (per-season results, qualifying, pit stops, and per-race FastF1 tyre/weather summaries) before any merging or cleaning.</li>
         <li><a href="code/fetch_jolpica.py">fetch_jolpica.py</a>, <a href="code/fetch_pitstops.py">fetch_pitstops.py</a>, <a href="code/fetch_fastf1.py">fetch_fastf1.py</a>: the data-pull scripts.</li>
         <li><a href="code/build_dataset.py">build_dataset.py</a>: the full cleaning and merge pipeline, with every step documented inline.</li>
         <li><a href="data/f1_driver_race_cleaned.csv">f1_driver_race_cleaned.csv</a>: the final cleaned dataset (1,320 rows by 31 columns).</li>
@@ -130,7 +130,7 @@
       <div class="fig-grid">
         <figure>
           <canvas id="chart-01"></canvas>
-          <figcaption>1. Starting grid position is strongly and roughly linearly related to final finishing position across all finishers in the dataset.</figcaption>
+          <figcaption>1. Starting grid position is strongly and roughly linearly related to final finishing position across all finishers in the dataset (correlation of about 0.73).</figcaption>
         </figure>
         <figure>
           <canvas id="chart-02"></canvas>
@@ -142,15 +142,15 @@
         </figure>
         <figure>
           <canvas id="chart-04"></canvas>
-          <figcaption>4. Drivers making one or two pit stops tend to finish higher on average than those needing three or more.</figcaption>
+          <figcaption>4. Among finishers, average finishing position is similar for one, two, and three pit stops (about P8.4 to P8.7). Drivers who made no stops or four stops finished further back on average, so stop count alone separates results only weakly.</figcaption>
         </figure>
         <figure>
           <canvas id="chart-05"></canvas>
-          <figcaption>5. Two pit stops is the most common strategy across the sample of races, consistent with a typical two-stop race.</figcaption>
+          <figcaption>5. Two pit stops is the most common count across all three seasons combined, with one stop a close second. In 2021, one-stop races were slightly more common than two-stop races.</figcaption>
         </figure>
         <figure>
           <canvas id="chart-06"></canvas>
-          <figcaption>6. Average pit stop durations cluster tightly around 24 to 25 seconds, the typical time for a modern F1 tyre change.</figcaption>
+          <figcaption>6. Average pit stop durations, measured as total time in the pit lane rather than time stationary, have a median of about 24 seconds, with most falling between 22 and 26 seconds and a long tail of slower stops.</figcaption>
         </figure>
         <figure>
           <canvas id="chart-07"></canvas>
@@ -170,11 +170,11 @@
         </figure>
         <figure>
           <canvas id="chart-11"></canvas>
-          <figcaption>11. Using the subset of races with weather data available, the rate of non-finishes varies across average air temperature ranges.</figcaption>
+          <figcaption>11. Using the 38 races with weather data available, the rate of non-finishes varies across average air temperature ranges, peaking in the 26 to 31 C band, with no steady trend from cooler to hotter races.</figcaption>
         </figure>
         <figure>
           <canvas id="chart-12"></canvas>
-          <figcaption>12. Using the subset of races with tyre compound data available, average final position is shown across drivers who used different numbers of distinct compounds.</figcaption>
+          <figcaption>12. Using the 38 races with tyre compound data available, finishers who used two distinct compounds had the best average position. Only 13 finishers used four or five compounds, all in races with rain, so those two bars rest on very few results.</figcaption>
         </figure>
       </div>
     </div>

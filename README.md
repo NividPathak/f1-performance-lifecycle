@@ -30,21 +30,27 @@ data/cleaning_log.txt              step-by-step cleaning log
 data/chart_data.json               precomputed aggregates that feed the charts
 data/raw_pulls/                    every raw API response, uncleaned
 code/                              every script used to fetch, clean, and prepare the data
+code/paths.py                      shared file locations used by all scripts
 ```
 
-## Publishing this to GitHub Pages
+## Rebuilding the data
 
-1. Create a new public GitHub repository (for example `f1-data-science-lifecycle`) on github.com. No need to add a README or gitignore there, since this folder already has one.
-2. From inside this folder, point it at your new repo and push.
+The scripts in `code/` resolve every file location through `code/paths.py`, so they can be run from anywhere. They need Python 3 with `pandas`, `numpy`, and `matplotlib` (plus `fastf1` for the FastF1 pull).
 
-   ```bash
-   git remote add origin https://github.com/<your-username>/<your-repo>.git
-   git branch -M main
-   git push -u origin main
-   ```
+```bash
+python code/fetch_jolpica.py            # results + qualifying -> data/raw_pulls/
+python code/fetch_pitstops.py           # pit stops -> data/raw_pulls/ (needs schedule_*.json)
+python code/fetch_fastf1.py             # tyre + weather -> data/raw_pulls/fastf1/ (rate limited, resumable)
+python code/build_dataset.py            # merge + clean -> data/*.csv, data/cleaning_log.txt
+python code/make_chart_data.py          # aggregates -> data/chart_data.json
+python code/make_data_preview_images.py # raw/cleaned sample tables -> assets/img/
+python code/make_intro_image.py         # intro illustration -> assets/img/
+```
 
-3. On GitHub, open the repo's Settings, then Pages.
-4. Under "Build and deployment", set Source to "Deploy from a branch", branch main, folder / (root), then click Save.
-5. GitHub will publish the site at `https://<your-username>.github.io/<your-repo>/` within a minute or two. Refresh the Pages settings page to get the link.
+The raw API pulls are already committed, so only the last four steps are needed to regenerate the site's data.
 
-Every later module can be added by editing the relevant empty `<section>` in `index.html` and running `git add . && git commit -m "..." && git push`. Pages redeploys automatically on every push to `main`.
+## Hosting
+
+The site is live on GitHub Pages at https://nividpathak.github.io/f1-performance-lifecycle/, served from the root of the `master` branch. Every push to `master` redeploys it automatically, usually within a minute or two.
+
+Later modules are added by filling in the matching empty `<section>` in `index.html`, then committing and pushing.

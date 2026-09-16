@@ -1,10 +1,12 @@
 """Fetch full-season race results and qualifying data from the Jolpica-F1 API,
 paginating past the API's 100-record-per-request cap. Saves one merged raw JSON
-per season per endpoint under raw/.
+per season per endpoint under data/raw_pulls/.
 """
 import json
 import time
 import urllib.request
+
+from paths import RAW
 
 BASE = "https://api.jolpi.ca/ergast/f1"
 SEASONS = [2021, 2022, 2023]
@@ -37,6 +39,7 @@ def fetch_paginated(url_template, season):
 
 
 def main():
+    RAW.mkdir(parents=True, exist_ok=True)
     for season in SEASONS:
         for name, path in [
             ("results", "/{season}/results.json?limit={limit}&offset={offset}"),
@@ -45,7 +48,7 @@ def main():
             url_template = BASE + path
             races, total = fetch_paginated(url_template, season)
             out = {"season": season, "endpoint": name, "total_records": total, "races": races}
-            with open(f"raw/{name}_{season}_full.json", "w") as f:
+            with open(RAW / f"{name}_{season}_full.json", "w") as f:
                 json.dump(out, f)
             print(f"{name} {season}: {len(races)} races, {total} total records")
 

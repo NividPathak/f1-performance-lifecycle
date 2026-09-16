@@ -1,5 +1,5 @@
 """Fetch per-race tyre-compound (stint) and weather summaries from FastF1's
-official timing data feed. Writes one JSON file per race under raw/fastf1/.
+official timing data feed. Writes one JSON file per race under data/raw_pulls/fastf1/.
 Only lap and weather data are loaded (no telemetry) to keep this reasonably
 fast across many races. Designed to be resumable: already-fetched races are
 skipped on re-run.
@@ -10,8 +10,11 @@ import time
 import fastf1
 import pandas as pd
 
-fastf1.Cache.enable_cache("fastf1_cache")
-os.makedirs("raw/fastf1", exist_ok=True)
+from paths import FASTF1_CACHE, FASTF1_RAW, RAW
+
+FASTF1_CACHE.mkdir(exist_ok=True)
+fastf1.Cache.enable_cache(str(FASTF1_CACHE))
+FASTF1_RAW.mkdir(parents=True, exist_ok=True)
 
 SEASONS = [2021, 2022, 2023]
 
@@ -57,11 +60,11 @@ def summarize_race(season, rnd):
 
 def main():
     for season in SEASONS:
-        with open(f"raw/schedule_{season}.json") as f:
+        with open(RAW / f"schedule_{season}.json") as f:
             sched = json.load(f)
         rounds = [int(r["round"]) for r in sched["MRData"]["RaceTable"]["Races"]]
         for rnd in rounds:
-            out_path = f"raw/fastf1/{season}_{rnd}.json"
+            out_path = FASTF1_RAW / f"{season}_{rnd}.json"
             if os.path.exists(out_path):
                 print(f"skip {season} round {rnd} (cached)")
                 continue

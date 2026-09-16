@@ -6,7 +6,9 @@ import json
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv("cleaned/f1_driver_race_cleaned.csv")
+from paths import CHART_DATA, CLEANED_CSV
+
+df = pd.read_csv(CLEANED_CSV)
 
 GRID_ZONES = ["Pole (P1)", "Front row (P2-P3)", "Top 5 (P4-P5)", "Midfield (P6-P10)", "Back (P11+)"]
 
@@ -41,7 +43,7 @@ out["avg_position_by_grid_zone"] = by_season(df, avg_by_grid_zone)
 
 # 3. avg points by constructor
 def avg_points_by_constructor(frame):
-    g = frame.groupby("constructor_name")["points"].mean().sort_values(ascending=False)
+    g = frame.groupby("constructor_name")["points"].mean().sort_values(ascending=False, kind="stable")
     return {"labels": list(g.index), "values": [round(float(v), 2) for v in g.values]}
 
 
@@ -104,7 +106,7 @@ out["season_points_top_constructors"] = {"labels": ["2021", "2022", "2023"], "da
 
 # 9. DNF rate by constructor
 def dnf_rate_by_constructor(frame):
-    g = (frame.groupby("constructor_name")["did_not_finish"].mean() * 100).sort_values(ascending=False)
+    g = (frame.groupby("constructor_name")["did_not_finish"].mean() * 100).sort_values(ascending=False, kind="stable")
     return {"labels": list(g.index), "values": [round(float(v), 1) for v in g.values]}
 
 
@@ -148,8 +150,8 @@ if len(tyre_df) > 0:
 else:
     out["position_by_tyre_compounds"] = {"labels": [], "values": [], "n": 0}
 
-with open("site/data/chart_data.json", "w") as f:
+with open(CHART_DATA, "w") as f:
     json.dump(out, f)
 
-print("wrote site/data/chart_data.json")
+print("wrote data/chart_data.json")
 print("size:", len(json.dumps(out)), "bytes")
