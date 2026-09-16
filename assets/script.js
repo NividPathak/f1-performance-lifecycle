@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const initial = window.location.hash.replace("#", "");
   activate(document.getElementById(initial) ? initial : "introduction");
-  // The hash matches a section id, so the browser would jump past the header on load.
+  // hash matches a section id, so undo the jump past the header
   window.addEventListener("load", () => window.scrollTo(0, 0));
 
   const log = document.getElementById("cleaning-log-content");

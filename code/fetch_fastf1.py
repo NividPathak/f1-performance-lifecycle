@@ -1,9 +1,4 @@
-"""Fetch per-race tyre-compound (stint) and weather summaries from FastF1's
-official timing data feed. Writes one JSON file per race under data/raw_pulls/fastf1/.
-Only lap and weather data are loaded (no telemetry) to keep this reasonably
-fast across many races. Designed to be resumable: already-fetched races are
-skipped on re-run.
-"""
+# Tyre stints and weather per race from FastF1. Skips races already saved.
 import json
 import os
 import time
@@ -24,7 +19,6 @@ def summarize_race(season, rnd):
     session.load(telemetry=False, weather=True, laps=True, messages=False)
     laps = session.laps
 
-    # tyre stints: driver -> list of {compound, stint, lap_count}
     stints = (
         laps.groupby(["Driver", "Stint", "Compound"])
         .agg(lap_count=("LapNumber", "count"))
@@ -32,7 +26,6 @@ def summarize_race(season, rnd):
     )
     stint_records = stints.to_dict(orient="records")
 
-    # pit-in laps per driver (from lap data, cross-checked against Jolpica pitstops)
     pit_laps = (
         laps[laps["PitInTime"].notna()][["Driver", "LapNumber"]]
         .rename(columns={"LapNumber": "pit_in_lap"})

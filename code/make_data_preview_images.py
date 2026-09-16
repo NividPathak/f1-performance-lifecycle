@@ -1,7 +1,4 @@
-"""Render small labeled table images of a RAW data sample and a CLEANED data
-sample (not screenshots — rendered directly from the dataframes with
-matplotlib's table feature) for the DataPrep_EDA tab.
-"""
+# Raw vs cleaned sample tables for the Data Prep tab.
 import pandas as pd
 import matplotlib.pyplot as plt
 

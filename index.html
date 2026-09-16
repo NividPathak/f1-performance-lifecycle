@@ -14,11 +14,17 @@
 <div class="speed-lines" aria-hidden="true"></div>
 
 <header class="site-header">
-  <a class="wordmark" href="#introduction">
-    <span class="wordmark-slash" aria-hidden="true"></span>
-    <span>F1 Race Performance <em>&amp;</em> Strategy</span>
-  </a>
-  <span class="byline">Nivid Pathak &middot; CU Boulder</span>
+  <h1>F1 Race Performance &amp; Strategy</h1>
+  <span class="byline">Nivid Pathak</span>
+  <svg class="header-car" viewBox="0 0 60 22" width="60" height="22" aria-hidden="true">
+    <rect x="2" y="2" width="5" height="18" rx="1" fill="#e10600"/>
+    <rect x="9" y="1" width="8" height="5" rx="2" fill="#222"/>
+    <rect x="9" y="16" width="8" height="5" rx="2" fill="#222"/>
+    <path d="M7 8 L20 7 L44 8.5 L52 10 L52 12 L44 13.5 L20 15 L7 14 Z" fill="#e10600"/>
+    <rect x="37" y="2" width="8" height="4.5" rx="1.5" fill="#222"/>
+    <rect x="37" y="15.5" width="8" height="4.5" rx="1.5" fill="#222"/>
+    <rect x="51" y="4" width="4" height="14" rx="1" fill="#eee"/>
+  </svg>
 </header>
 
 <nav class="tabs">
@@ -36,33 +42,10 @@
 
 <main>
 
-  <!-- INTRODUCTION -->
   <section id="introduction" class="tab-panel active">
 
-    <div class="hero">
-      <p class="kicker">2021&ndash;2023 &middot; 66 races &middot; 1,320 driver results</p>
-      <h1>What actually decides<br>an F1 race?</h1>
-      <p class="lede">I pulled three seasons of race data to find out how much grid position, pit strategy, tyres, team strength, and weather each matter to where a driver finishes.</p>
-      <div class="hero-road" aria-hidden="true">
-        <svg class="hero-car" viewBox="0 0 120 44" width="120" height="44">
-          <rect x="4" y="4" width="10" height="36" rx="2" fill="#e10600"/>
-          <rect x="18" y="2" width="16" height="10" rx="3" fill="#111"/>
-          <rect x="18" y="32" width="16" height="10" rx="3" fill="#111"/>
-          <path d="M14 17 L40 14 L88 17 L104 20 L104 24 L88 27 L40 30 L14 27 Z" fill="#e10600"/>
-          <rect x="52" y="17" width="16" height="10" rx="5" fill="#15151e"/>
-          <rect x="74" y="4" width="16" height="9" rx="3" fill="#111"/>
-          <rect x="74" y="31" width="16" height="9" rx="3" fill="#111"/>
-          <rect x="102" y="8" width="8" height="28" rx="2" fill="#f4f4f4"/>
-        </svg>
-      </div>
-    </div>
-
-    <div class="panel-card track-card">
-      <div class="section-head">
-        <span class="section-num">01</span>
-        <h2>How a race works, at Sakhir</h2>
-      </div>
-      <p class="muted">The layout below is the Bahrain International Circuit, which opened all three seasons in this dataset, traced from the car position data of the fastest lap in the 2023 race.</p>
+    <div class="block track-block">
+      <h2>Introduction</h2>
 
       <div class="track-layout">
         <div class="track-stage">
@@ -73,47 +56,25 @@
           <button class="replay" type="button" id="track-replay">Replay</button>
         </div>
 
-        <ol class="race-steps" id="race-steps">
-          <li data-step="0">
-            <strong>Qualifying sets the grid</strong>
-            <span>Saturday's one-lap shootout decides the starting order. The fastest driver starts on pole, closest to Turn 1.</span>
-          </li>
-          <li data-step="1">
-            <strong>Lights out</strong>
-            <span>Five red lights come on one at a time, then all go out together. That's the start.</span>
-          </li>
-          <li data-step="2">
-            <strong>57 laps of 5.4 km</strong>
-            <span>Bahrain's rough surface wears tyres out quickly, so how drivers manage them over a stint matters a lot here.</span>
-          </li>
-          <li data-step="3">
-            <strong>Pit stops</strong>
-            <span>In a dry race every driver has to use two different tyre compounds, so everyone stops at least once. When to stop is the big strategy call.</span>
-          </li>
-          <li data-step="4">
-            <strong>Chequered flag</strong>
-            <span>The top ten score points, from 25 for a win down to 1 for tenth. In these seasons, a top-ten finisher with the fastest lap got one more.</span>
-          </li>
-        </ol>
+        <ul class="race-steps" id="race-steps">
+          <li data-step="0"><b>Qualifying sets the grid.</b> Saturday's one-lap shootout decides the starting order. The fastest driver starts on pole, closest to Turn 1.</li>
+          <li data-step="1"><b>Lights out.</b> Five red lights come on one at a time, then all go out together. That's the start.</li>
+          <li data-step="2"><b>57 laps of 5.4 km.</b> Bahrain's rough surface wears tyres out quickly, so how drivers manage them over a stint matters a lot here.</li>
+          <li data-step="3"><b>Pit stops.</b> In a dry race every driver has to use two different tyre compounds, so everyone stops at least once. When to stop is the big strategy call.</li>
+          <li data-step="4"><b>Chequered flag.</b> The top ten score points, from 25 for a win down to 1 for tenth. In these seasons, a top-ten finisher with the fastest lap got one more.</li>
+        </ul>
       </div>
+      <p class="caption">Bahrain International Circuit, the season opener in all three years I looked at. Drawn from FastF1 position data for the fastest lap of the 2023 race.</p>
     </div>
 
-    <div class="panel-card">
-      <div class="section-head">
-        <span class="section-num">02</span>
-        <h2>Background</h2>
-      </div>
-
+    <div class="block">
       <p>Formula 1 is the top tier of single-seater motorsport: ten teams, twenty drivers, and more than twenty races a season spread across five continents. What makes it different from most sports is that every team, or constructor, designs and builds its own car. A championship is won in the factory and the wind tunnel as much as on track, and the gap between the fastest and slowest cars on the grid can be a second or more per lap. On a race weekend, that car performance gets mixed together with driver skill, the strategy calls made on the pit wall, mechanical reliability, and whatever the weather decides to do. The result is a sport where it's hard to point at one thing and say that's why someone won. F1 has been running since 1950, but the last few years have brought in a huge new audience, much of it in the US, helped along by Netflix's Drive to Survive pulling back the curtain on the teams and their rivalries. It's also a big business. Races bring tourism and money into host cities, sponsorship deals are worth hundreds of millions, and thousands of engineering and manufacturing jobs depend on the teams. Whether you're a fan, a bettor, or someone playing F1 Fantasy, you end up asking the same question: what actually decides where a driver finishes? Teams answer that with enormous amounts of data, and a surprising amount of it is now public, which means anyone can go looking for the answer themselves. The debates online never really end. One weekend it's all about qualifying pace, the next it's tyre management or a botched pit stop. Those arguments rarely get settled, mostly because the factors are tangled together. A fast car qualifies well, pits at the right time, and finishes well, so it's hard to say which part did the work. Pulling those threads apart is the point of this project.</p>
 
       <p>The result of a race matters to a lot more people than the twenty drivers on the grid. Teams feel it first. Prize money is split by finishing position in the constructors' championship, so a slow pit stop or the wrong tyre call can cost a team millions over a season, not just a few points on a Sunday. Drivers feel it through their contracts, since their market value and their next seat depend on turning the car's pace into results. Sponsors and broadcasters want close, unpredictable racing because it keeps people watching, and circuits and host cities notice when a dull season shows up in the next year's ticket sales. Then there are the fans, who put real emotion into title fights that often come down to exactly these details. For most of the sport's history, explaining why a race went the way it did has been left to commentators and journalists, which means expert opinion and good storytelling more than systematic analysis. That's changing as more timing data becomes public. Lap times, pit stop durations, tyre compounds, and track weather are all available now through community-run APIs and open-source tools like FastF1. People have already used this to dig into specific questions, like how much pole position is really worth, when the best window to pit is, or how much of a driver's success is actually the car. Most of that work looks at one factor at a time, though. Grid position gets studied on its own far more often than alongside tyre strategy, pit stop execution, team strength, and weather, even though all of those are happening at once in a real race. This project looks at them together. Using three full seasons of results from 2021 to 2023, I want to build an evidence-based picture of what separates a strong result from a weak one, and how much each factor really contributes once the others are accounted for.</p>
     </div>
 
-    <div class="panel-card">
-      <div class="section-head">
-        <span class="section-num">03</span>
-        <h2>Research questions</h2>
-      </div>
+    <div class="block">
+      <h3>Research questions</h3>
       <ol class="research-questions">
         <li>How strongly does starting grid position predict final race finishing position across different circuits and seasons?</li>
         <li>Do certain constructors consistently convert strong qualifying positions into strong race results more effectively than others?</li>
@@ -128,16 +89,13 @@
       </ol>
     </div>
 
-    <div class="panel-card">
-      <div class="section-head">
-        <span class="section-num">04</span>
-        <h2>The 2026 calendar</h2>
-      </div>
+    <div class="block">
+      <h3>2026 calendar</h3>
       <p>My data stops at 2023, but for context, here's this year's schedule. One oddity: the Bahrain Grand Prix is being held at Sepang in Malaysia this year.</p>
       <div class="table-wrap">
         <table class="calendar-table">
           <thead>
-            <tr><th>Rd</th><th>Grand Prix</th><th>Circuit</th><th>Country</th></tr>
+            <tr><th>#</th><th>Grand Prix</th><th>Circuit</th><th>Country</th></tr>
           </thead>
           <tbody id="calendar-body"></tbody>
         </table>
@@ -145,13 +103,10 @@
     </div>
   </section>
 
-  <!-- DATAPREP / EDA -->
-  <section id="dataprep" class="tab-panel">
-    <div class="panel-card">
-      <div class="section-head">
-        <span class="section-num">01</span>
-        <h2>Where the data came from</h2>
-      </div>
+    <section id="dataprep" class="tab-panel">
+    <div class="block">
+      <h2>Data Prep &amp; EDA</h2>
+      <h3>Where the data came from</h3>
       <p>Everything here covers the 2021, 2022, and 2023 seasons, 66 races in total, and comes from two free sources:</p>
       <ul class="source-list">
         <li><strong>Jolpica-F1 API</strong>, the community-run replacement for the old Ergast API (<a href="https://api.jolpi.ca/ergast/f1/2023/1/results.json" target="_blank" rel="noopener">api.jolpi.ca/ergast/f1</a>). I used it for race results (grid, finishing position, points, status, team), qualifying, and every pit stop's lap and duration. The API returns 100 records at a time, so the scripts page through it to get full seasons.</li>
@@ -168,32 +123,25 @@
       </ul>
     </div>
 
-    <div class="panel-card">
-      <div class="section-head">
-        <span class="section-num">02</span>
-        <h2>Before and after cleaning</h2>
-      </div>
-      <h3>Raw</h3>
+    <div class="block">
+      <h3>Raw data</h3>
       <img class="data-sample-img" src="assets/img/00_raw_data_sample.png" alt="First rows of the raw merged data, before cleaning">
-      <h3>Cleaned</h3>
+      <h3>Cleaned data</h3>
       <img class="data-sample-img" src="assets/img/00_cleaned_data_sample.png" alt="First rows of the cleaned data">
 
-      <h3>What I changed</h3>
+      <h3>Cleaning</h3>
       <p>The biggest catch was that Jolpica gives almost every driver a numeric finishing position, even ones who retired, so I had to work out who actually finished from the status text instead. Pit-lane starts show up as grid position 0, which would look like pole, so I moved those to 21. Where a value can't exist, like the average pit stop time for a driver who never stopped, I left it blank and added a flag column rather than filling in a number. Here's the full log from the cleaning script:</p>
       <div class="cleaning-log" id="cleaning-log-content">Loading cleaning log...</div>
     </div>
 
-    <div class="panel-card">
-      <div class="section-head">
-        <span class="section-num">03</span>
-        <h2>Exploring the data</h2>
-      </div>
+    <div class="block">
+      <h3>Charts</h3>
       <p>Twelve charts built from the cleaned dataset. Hover over any of them for exact values, and use the season filter to look at one year at a time (charts 8, 11, and 12 always show all three seasons).</p>
 
       <div class="filter-bar">
         <label for="season-filter">Season</label>
         <select id="season-filter">
-          <option value="all">2021&ndash;2023</option>
+          <option value="all">All seasons</option>
           <option value="2021">2021</option>
           <option value="2022">2022</option>
           <option value="2023">2023</option>
@@ -265,38 +213,35 @@
     </div>
   </section>
 
-  <!-- LATER MODULES -->
-  <section id="clustering" class="tab-panel">
-    <div class="panel-card empty"><h2>Clustering</h2><p>Coming soon.</p></div>
+    <section id="clustering" class="tab-panel">
+    <div class="block"><h2>Clustering</h2><p class="muted">Not started yet.</p></div>
   </section>
   <section id="pca" class="tab-panel">
-    <div class="panel-card empty"><h2>PCA</h2><p>Coming soon.</p></div>
+    <div class="block"><h2>PCA</h2><p class="muted">Not started yet.</p></div>
   </section>
   <section id="naivebayes" class="tab-panel">
-    <div class="panel-card empty"><h2>Naive Bayes</h2><p>Coming soon.</p></div>
+    <div class="block"><h2>Naive Bayes</h2><p class="muted">Not started yet.</p></div>
   </section>
   <section id="dectrees" class="tab-panel">
-    <div class="panel-card empty"><h2>Decision Trees</h2><p>Coming soon.</p></div>
+    <div class="block"><h2>Decision Trees</h2><p class="muted">Not started yet.</p></div>
   </section>
   <section id="svms" class="tab-panel">
-    <div class="panel-card empty"><h2>SVMs</h2><p>Coming soon.</p></div>
+    <div class="block"><h2>SVMs</h2><p class="muted">Not started yet.</p></div>
   </section>
   <section id="regression" class="tab-panel">
-    <div class="panel-card empty"><h2>Regression</h2><p>Coming soon.</p></div>
+    <div class="block"><h2>Regression</h2><p class="muted">Not started yet.</p></div>
   </section>
   <section id="nn" class="tab-panel">
-    <div class="panel-card empty"><h2>Neural Networks</h2><p>Coming soon.</p></div>
+    <div class="block"><h2>Neural Networks</h2><p class="muted">Not started yet.</p></div>
   </section>
   <section id="conclusions" class="tab-panel">
-    <div class="panel-card empty"><h2>Conclusions</h2><p>Coming soon.</p></div>
+    <div class="block"><h2>Conclusions</h2><p class="muted">Not started yet.</p></div>
   </section>
 
 </main>
 
 <footer>
-  <span>Nivid Pathak &middot; 2026</span>
-  <span>Data from <a href="https://github.com/jolpica/jolpica-f1" target="_blank" rel="noopener">Jolpica-F1</a> and <a href="https://docs.fastf1.dev/" target="_blank" rel="noopener">FastF1</a></span>
-  <a href="https://github.com/NividPathak/f1-performance-lifecycle" target="_blank" rel="noopener">Source on GitHub</a>
+  Nivid Pathak, 2026 &middot; data from <a href="https://github.com/jolpica/jolpica-f1">Jolpica-F1</a> and <a href="https://docs.fastf1.dev/">FastF1</a> &middot; <a href="https://github.com/NividPathak/f1-performance-lifecycle">code</a>
 </footer>
 
 <script src="assets/vendor_anime.min.js"></script>

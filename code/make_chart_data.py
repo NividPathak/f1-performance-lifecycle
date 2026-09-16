@@ -1,7 +1,3 @@
-"""Precompute all aggregates needed for the 12 interactive Chart.js
-visualizations, split by season where useful so the site's season filter can
-re-render client-side without recomputing from the full row-level CSV.
-"""
 import json
 import numpy as np
 import pandas as pd
@@ -16,14 +12,13 @@ out = {"seasons": [2021, 2022, 2023]}
 
 
 def by_season(frame, builder):
-    """Return {'all': builder(frame), '2021': builder(...), ...}"""
     result = {"all": builder(frame)}
     for s in [2021, 2022, 2023]:
         result[str(s)] = builder(frame[frame["season"] == s])
     return result
 
 
-# 1. grid vs final position scatter (finishers only), sampled points
+# grid vs finish
 def scatter_grid_final(frame):
     f = frame[~frame["did_not_finish"]]
     pts = f[["grid", "final_position_num"]].dropna()
@@ -32,7 +27,6 @@ def scatter_grid_final(frame):
 
 out["grid_vs_final"] = by_season(df, scatter_grid_final)
 
-# 2. avg final position by grid zone
 def avg_by_grid_zone(frame):
     f = frame[~frame["did_not_finish"]]
     g = f.groupby("grid_zone", observed=True)["final_position_num"].mean()
@@ -41,7 +35,6 @@ def avg_by_grid_zone(frame):
 
 out["avg_position_by_grid_zone"] = by_season(df, avg_by_grid_zone)
 
-# 3. avg points by constructor
 def avg_points_by_constructor(frame):
     g = frame.groupby("constructor_name")["points"].mean().sort_values(ascending=False, kind="stable")
     return {"labels": list(g.index), "values": [round(float(v), 2) for v in g.values]}
@@ -49,7 +42,6 @@ def avg_points_by_constructor(frame):
 
 out["avg_points_by_constructor"] = by_season(df, avg_points_by_constructor)
 
-# 4. avg final position by number of pitstops (cap at 4)
 def avg_position_by_pitstops(frame):
     f = frame[(~frame["did_not_finish"]) & (frame["num_pitstops"] <= 4)]
     g = f.groupby("num_pitstops")["final_position_num"].mean().sort_index()
@@ -58,7 +50,6 @@ def avg_position_by_pitstops(frame):
 
 out["avg_position_by_pitstops"] = by_season(df, avg_position_by_pitstops)
 
-# 5. pitstop count distribution
 def pitstop_count_dist(frame):
     g = frame["num_pitstops"].value_counts().sort_index()
     g = g[g.index <= 6]
@@ -67,7 +58,7 @@ def pitstop_count_dist(frame):
 
 out["pitstop_count_distribution"] = by_season(df, pitstop_count_dist)
 
-# 6. avg pit stop duration histogram (bins)
+# pit stop time histogram
 def duration_histogram(frame):
     vals = frame["avg_pitstop_duration_s"].dropna()
     counts, edges = np.histogram(vals, bins=16, range=(18, 60))
@@ -77,7 +68,7 @@ def duration_histogram(frame):
 
 out["pitstop_duration_histogram"] = by_season(df, duration_histogram)
 
-# 7. first pit lap vs final position, split by scored points or not
+# first stop lap vs finish
 def first_pit_scatter(frame):
     f = frame[(~frame["did_not_finish"])].dropna(subset=["first_pitstop_lap"])
     scored = f[f["did_finish_points"]]
@@ -90,7 +81,7 @@ def first_pit_scatter(frame):
 
 out["first_pitstop_vs_position"] = by_season(df, first_pit_scatter)
 
-# 8. season points by top 6 constructors, line chart (fixed across all seasons, not filterable)
+# top 6 teams by total points
 top6 = df.groupby("constructor_name")["points"].sum().sort_values(ascending=False).head(6).index.tolist()
 season_points = (
     df[df["constructor_name"].isin(top6)]
@@ -104,7 +95,6 @@ for c in top6:
     datasets.append({"label": c, "data": [round(float(v), 1) for v in sub["points"]]})
 out["season_points_top_constructors"] = {"labels": ["2021", "2022", "2023"], "datasets": datasets}
 
-# 9. DNF rate by constructor
 def dnf_rate_by_constructor(frame):
     g = (frame.groupby("constructor_name")["did_not_finish"].mean() * 100).sort_values(ascending=False, kind="stable")
     return {"labels": list(g.index), "values": [round(float(v), 1) for v in g.values]}
@@ -112,7 +102,6 @@ def dnf_rate_by_constructor(frame):
 
 out["dnf_rate_by_constructor"] = by_season(df, dnf_rate_by_constructor)
 
-# 10. quali vs grid scatter
 def quali_vs_grid_scatter(frame):
     f = frame.dropna(subset=["quali_position"])
     pts = f[["quali_position", "grid"]]
@@ -121,8 +110,7 @@ def quali_vs_grid_scatter(frame):
 
 out["quali_vs_grid"] = by_season(df, quali_vs_grid_scatter)
 
-# 11. DNF rate by air temperature bucket (only rows with weather data, not season-filterable
-#     in a meaningful way given the small weather subset, so computed once on all rows)
+# only 38 races have weather, so no season split
 def temp_label(bucket):
     lo, hi = (float(v) for v in bucket.strip("(]").split(","))
     return f"{lo:.0f}\u2013{hi:.0f} \u00b0C"
@@ -142,7 +130,6 @@ if len(weather_df) > 0:
 else:
     out["dnf_rate_by_temperature"] = {"labels": [], "values": [], "n": 0}
 
-# 12. avg final position by number of distinct tyre compounds used
 tyre_df = df.dropna(subset=["num_compounds_used"])
 if len(tyre_df) > 0:
     f = tyre_df[~tyre_df["did_not_finish"]]

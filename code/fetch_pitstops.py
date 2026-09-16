@@ -1,7 +1,4 @@
-"""Fetch pit stop records (lap number, duration) for every race in the target
-seasons from the Jolpica-F1 API. Pit stops are only available per-race (no
-season-wide endpoint), so this loops over every round.
-"""
+# Pit stops from Jolpica, one request per race.
 import json
 import time
 import urllib.request

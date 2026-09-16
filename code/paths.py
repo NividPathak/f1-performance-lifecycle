@@ -1,6 +1,3 @@
-"""Shared file locations, resolved from the repository root so every script
-works no matter which directory it is run from (e.g. `python code/build_dataset.py`).
-"""
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent

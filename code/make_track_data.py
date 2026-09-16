@@ -1,8 +1,4 @@
-"""Export the Bahrain International Circuit layout for the Introduction tab's
-track map. Uses the position data from the fastest lap of the 2023 Bahrain
-Grand Prix (FastF1), rotated the same way the official track map is, plus the
-official corner numbers. Writes data/track_bahrain.json.
-"""
+# Bahrain layout from the 2023 race's fastest lap, rotated like the official map.
 import json
 
 import fastf1
@@ -29,7 +25,7 @@ angle = info.rotation / 180 * np.pi
 track = rotate(pos[["X", "Y"]].to_numpy(), angle)
 corners = rotate(info.corners[["X", "Y"]].to_numpy(), angle)
 
-# SVG y grows downward, so flip y, then scale everything into a 1000-wide box.
+# flip y for SVG and scale to ~1000 wide
 track[:, 1] *= -1
 corners[:, 1] *= -1
 lo = track.min(axis=0)
@@ -39,7 +35,6 @@ track = (track - lo) * scale + pad
 corners = (corners - lo) * scale + pad
 width, height = track.max(axis=0) + pad
 
-# Thin the points so the SVG path stays small, then close the loop.
 step = max(1, len(track) // 300)
 pts = track[::step]
 path = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts) + " Z"

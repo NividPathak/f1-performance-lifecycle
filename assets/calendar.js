@@ -1,4 +1,4 @@
-// 2026 calendar, from formula1.com/en/racing/2026. The Bahrain GP runs at Sepang this year.
+// from formula1.com/en/racing/2026
 const CALENDAR_2026 = [
   { round: 1, gp: "Australian Grand Prix", circuit: "Albert Park Circuit, Melbourne", country: "Australia" },
   { round: 2, gp: "Chinese Grand Prix", circuit: "Shanghai International Circuit", country: "China" },

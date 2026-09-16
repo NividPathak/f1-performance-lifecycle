@@ -1,7 +1,4 @@
-"""Fetch full-season race results and qualifying data from the Jolpica-F1 API,
-paginating past the API's 100-record-per-request cap. Saves one merged raw JSON
-per season per endpoint under data/raw_pulls/.
-"""
+# Full-season results and qualifying from Jolpica (paged, 100 per request).
 import json
 import time
 import urllib.request

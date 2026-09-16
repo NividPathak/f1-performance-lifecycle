@@ -1,8 +1,3 @@
-/* Bahrain track map on the Introduction tab. The outline comes from
-   data/track_bahrain.json (see code/make_track_data.py). Plays a short
-   three-lap race that walks through the steps listed next to the map:
-   grid, start lights, racing, a pit stop, and the chequered flag. */
-
 (() => {
   const SVG_NS = "http://www.w3.org/2000/svg";
   const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -45,7 +40,7 @@
       return { x: p.x, y: p.y, ang, nx: -Math.sin(ang), ny: Math.cos(ang) };
     };
 
-    // Start/finish line: a chequered strip across the track.
+    // start/finish line
     const s = at(0);
     const line = el("g", { transform: `translate(${s.x},${s.y}) rotate(${(s.ang * 180) / Math.PI})` }, svg);
     for (let i = 0; i < 6; i++) {
@@ -55,7 +50,7 @@
     }
     el("text", { x: s.x, y: s.y + 52, "text-anchor": "middle", class: "track-tag", fill: "#a7a7b0" }, svg).textContent = "START / FINISH";
 
-    // Corner numbers, pushed outward from the middle of the circuit.
+    // push corner numbers away from the middle so they don't sit on the track
     const cx = data.width / 2;
     const cy = data.height / 2;
     for (const c of data.corners) {

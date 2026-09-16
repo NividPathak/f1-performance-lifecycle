@@ -1,9 +1,3 @@
-"""Build a tidy per-driver-per-race dataset from the raw Jolpica-F1 JSON pulls
-(results, qualifying, pit stops) and, when available, the FastF1 tyre/weather
-summaries. Documents every cleaning decision inline via the `cleaning_log`
-list, which is written out alongside the cleaned CSV so the steps are
-traceable.
-"""
 import json
 import numpy as np
 import pandas as pd
@@ -98,8 +92,6 @@ def load_pitstops():
 
 
 def load_fastf1():
-    """Optional: merge tyre-stint and weather summaries if FastF1 fetch has
-    produced files by the time this runs. Returns empty frames if not."""
     stint_rows, weather_rows = [], []
     fdir = FASTF1_RAW
     if not fdir.is_dir():
@@ -115,7 +107,6 @@ def load_fastf1():
             "humidity_mean": d["weather"]["humidity_mean"],
             "rainfall": d["weather"]["rainfall"],
         })
-        # number of distinct tyre compounds used per driver = strategy proxy
         by_driver = {}
         for s in d["stints"]:
             by_driver.setdefault(s["Driver"], set()).add(s["Compound"])
@@ -168,18 +159,8 @@ def main():
         f"{raw_snapshot.shape[1]} cols) to data/combined_raw_snapshot.csv before any cleaning, "
         f"for before/after comparison.")
 
-    # ---------------- CLEANING STEPS ----------------
 
-    # 1. DNF/DNS/DSQ handling: the raw `position` field from Jolpica-F1 is
-    #    actually always populated with a classified running order, even for
-    #    drivers who retired but completed enough of the race distance to be
-    #    scored (their status just says why, e.g. "Retired", "Accident",
-    #    "+1 Lap" for being lapped but still classified as a finisher). So a
-    #    numeric position alone cannot distinguish a true non-finish from a
-    #    normal finish. did_not_finish is instead derived from the `status`
-    #    text. "Finished" and the "+N Lap(s)" lapped-but-classified statuses
-    #    count as finishes. Anything else (mechanical failure, accident,
-    #    disqualification, did-not-start, withdrew) counts as a genuine DNF.
+    # position is filled in even for retirements, so use status to decide DNF
     finished_pattern = r"^(Finished|\+\d+ Laps?)$"
     df["did_not_finish"] = ~df["status"].str.match(finished_pattern)
     n_dnf = df["did_not_finish"].sum()
@@ -190,30 +171,22 @@ def main():
         f"used for this.")
     df["final_position_num"] = pd.to_numeric(df["final_position"], errors="coerce")
 
-    # 2. Duplicate rows
     before = len(df)
     df = df.drop_duplicates(subset=["season", "round", "driver_id"])
     log(f"Dropped {before - len(df)} exact duplicate (season, round, driver_id) rows.")
 
-    # 3. Grid position of 0 in Ergast/Jolpica means the driver started from
-    #    the pit lane (no formal grid slot). Recode to 21 (one worse than the
-    #    typical 20-car grid's last real slot) so it stays numerically
-    #    meaningful for grid-vs-outcome analysis instead of implying P0.
+    # grid 0 = pit lane start
     n_pitlane_start = (df["grid"] == 0).sum()
     df.loc[df["grid"] == 0, "grid"] = 21
     log(f"Recoded {n_pitlane_start} grid=0 values (pit-lane starts, no official grid slot) to 21 "
         f"so they sort as worse than every real grid position instead of implying pole position.")
 
-    # 4. Pit stop fields: a true NaN here means the driver made zero pit
-    #    stops in that race (rare, e.g. red-flagged/shortened races), which
-    #    is a real and valid value of zero, not a missing measurement.
+    # no pit stop record = zero stops
     n_no_stops = df["num_pitstops"].isna().sum()
     df["num_pitstops"] = df["num_pitstops"].fillna(0).astype(int)
     log(f"Filled {n_no_stops} missing num_pitstops values with 0 (no pit-stop record for that "
         f"driver-race means zero stops were made, most often in races ended early by a red flag).")
 
-    # 5. avg_pitstop_duration_s: leave NaN when num_pitstops == 0 (duration is
-    #    undefined, not zero) but flag clearly.
     df["avg_pitstop_duration_s"] = np.where(
         df["num_pitstops"] == 0, np.nan, df["avg_pitstop_duration_s"]
     )
@@ -221,11 +194,7 @@ def main():
         "duration is undefined, not zero, when no stop occurred. This keeps the column honest for "
         "downstream numeric summaries.")
 
-    # 6. Outlier check on pit stop durations: extreme values (>100s) are
-    #    almost always drive-through/stop-go penalties or long unscheduled
-    #    repairs recorded oddly by the timing system, not representative of
-    #    a normal tyre-change strategy call. Cap rather than drop so the row
-    #    (and its grid/finish data) is retained, flagging the capped rows.
+    # stops over 100s are penalties/repairs, cap them
     dur_col = "avg_pitstop_duration_s"
     outlier_mask = df[dur_col] > 100
     n_outliers = outlier_mask.sum()
@@ -236,32 +205,24 @@ def main():
         f"unscheduled repairs, not representative tyre-change times. Dropping the whole row "
         f"would have discarded otherwise-valid grid, finish, and constructor data.")
 
-    # 7. quali_position missing (driver did not set a qualifying time, e.g.
-    #    withdrew before qualifying, or a sprint-weekend edge case). Left as
-    #    NaN with an explicit flag rather than imputed, since there is no
-    #    defensible fill value for "did not qualify."
     n_no_quali = df["quali_position"].isna().sum()
     df["no_qualifying_time"] = df["quali_position"].isna()
     log(f"Flagged {n_no_quali} rows with missing quali_position as no_qualifying_time=True rather "
         f"than imputing a value. There is no valid stand-in for a qualifying position that was "
         f"never set.")
 
-    # 8. points / laps_completed / final_position_num sanity bounds.
     bad_points = df[(df["points"] < 0) | (df["points"] > 26)]
     log(f"Sanity check: {len(bad_points)} rows outside the plausible F1 points range [0, 26] "
         f"(found: none)." if bad_points.empty else
         f"Sanity check found {len(bad_points)} rows with implausible points values. Removed.")
     df = df[(df["points"] >= 0) & (df["points"] <= 26)]
 
-    # 9. Discretize grid position into starting-zone buckets for the EDA
-    #    tab (front row / top 5 / midfield / back), useful for grouped plots.
     bins = [0, 1, 3, 5, 10, 21]
     labels = ["Pole (P1)", "Front row (P2-P3)", "Top 5 (P4-P5)", "Midfield (P6-P10)", "Back (P11+)"]
     df["grid_zone"] = pd.cut(df["grid"], bins=bins, labels=labels, include_lowest=True)
     log("Added a discretized grid_zone column (Pole / Front row / Top 5 / Midfield / Back) "
         "from the numeric grid column, for grouped visualizations.")
 
-    # 10. Standardize dtypes and column order for the final cleaned file.
     df["did_finish_points"] = df["points"] > 0
     final_cols = [
         "season", "round", "race_name", "circuit_id", "circuit_name", "date",
