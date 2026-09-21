@@ -20,6 +20,51 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
   });
 
+  // Blocks fade up the first time they scroll into view.
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add("in");
+      io.unobserve(e.target);
+    });
+  }, { rootMargin: "-8% 0px -4%" });
+
+  const watch = () => document.querySelectorAll(".tab-panel.active .block:not(.in)")
+    .forEach((b) => { b.classList.add("reveal"); io.observe(b); });
+  watch();
+  document.addEventListener("tabchange", watch);
+
+  // Hero counters run once, when the intro is out of the way.
+  const countUp = () => document.querySelectorAll(".hero-stats dd").forEach((el) => {
+    const end = parseFloat(el.dataset.count);
+    const decimals = (el.dataset.count.split(".")[1] || "").length;
+    anime({
+      targets: { v: 0 },
+      v: end,
+      duration: 1600,
+      delay: 260,
+      easing: "easeOutExpo",
+      update(a) {
+        const v = a.animatables[0].target.v;
+        el.textContent = decimals
+          ? v.toFixed(decimals)
+          : Math.round(v).toLocaleString("en-US");
+      },
+    });
+  });
+
+  anime({
+    targets: ".hero-copy > *",
+    opacity: [0, 1],
+    translateY: [28, 0],
+    duration: 900,
+    delay: anime.stagger(110, { start: 120 }),
+    easing: "easeOutExpo",
+  });
+
+  if (document.getElementById("intro")?.hidden !== false) countUp();
+  else document.addEventListener("introdone", countUp, { once: true });
+
   const header = document.querySelector(".site-header");
   const car = document.querySelector(".header-car");
   const drive = () => anime({

@@ -271,3 +271,30 @@ footer a { color: var(--dim); }
 @media (prefers-reduced-motion: reduce) {
   .speed-lines, .header-car { display: none; }
 }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.8rem;
+  align-items: start;
+}
+
+.about-grid img {
+  width: 100%;
+  border: 1px solid var(--line);
+}
+
+.about-grid h3 { margin-top: 0; }
+
+.role {
+  margin-top: -.4rem;
+  color: var(--dim);
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-grid img { max-width: 280px; }
+}

@@ -1,0 +1,339 @@
+/* Premium layer: title sequence, WebGL hero, and the chrome around them.
+   Loads after style.css and overrides it where the two overlap. */
+
+:root {
+  --ink: #05050a;
+  --carbon: #0c0d13;
+  --amber: #ffb020;
+  --ice: #7fd4ff;
+  --hot: #ff3b2f;
+  --edge: rgba(255, 255, 255, .09);
+  --glass: rgba(10, 11, 16, .72);
+  --shell: max(1.25rem, calc(50% - 560px));
+}
+
+body { background: var(--ink); }
+
+/* Speed lines belong to the document, not the hero it sits behind. */
+.speed-lines { opacity: .5; }
+
+/* ---------- title sequence ---------- */
+
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  background: #000;
+  overflow: hidden;
+}
+
+.intro[hidden] { display: none; }
+
+/* Locks the page while the sequence plays. */
+body.intro-playing { overflow: hidden; }
+
+.intro-stage {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: .9rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.intro-mark {
+  width: clamp(72px, 11vw, 116px);
+  height: auto;
+  color: var(--red);
+  opacity: 0;
+  filter: drop-shadow(0 0 18px rgba(225, 6, 0, .55));
+}
+
+.intro-mark path { stroke-linejoin: round; }
+
+.intro-word {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 900;
+  font-size: clamp(2rem, 8.2vw, 5.6rem);
+  line-height: .95;
+  letter-spacing: .04em;
+}
+
+.intro-word .ch {
+  display: inline-block;
+  opacity: 0;
+  color: #fff;
+  text-shadow: 0 0 34px rgba(255, 255, 255, .22);
+  will-change: transform, opacity;
+}
+
+.intro-word .ch.sp { width: .32em; }
+
+.intro-sub {
+  font-weight: 600;
+  font-size: clamp(.8rem, 2.1vw, 1.15rem);
+  letter-spacing: .58em;
+  text-indent: .58em;
+  color: var(--red);
+  opacity: 0;
+}
+
+.intro-sweep {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  margin-top: -1.5px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, var(--hot) 18%, #fff 50%, var(--hot) 82%, transparent);
+  box-shadow: 0 0 26px rgba(255, 59, 47, .9);
+}
+
+.intro-skip {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 1.2rem;
+  padding: .45rem .9rem;
+  border: 1px solid var(--edge);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--dim);
+  font: 600 .78rem "Titillium Web", sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.intro-skip:hover { color: #fff; border-color: rgba(255, 255, 255, .3); }
+
+/* ---------- hero ---------- */
+
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: end;
+  padding: 0 var(--shell) 1.5rem;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 80% at 70% 15%, rgba(40, 52, 96, .5), transparent 60%),
+    radial-gradient(90% 70% at 15% 85%, rgba(225, 6, 0, .16), transparent 65%),
+    var(--ink);
+}
+
+#hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to top, var(--ink) 2%, rgba(5, 5, 10, .55) 26%, transparent 55%),
+    radial-gradient(70% 60% at 50% 45%, transparent 40%, rgba(0, 0, 0, .6));
+}
+
+.hero-copy {
+  position: relative;
+  align-self: end;
+  max-width: 44rem;
+  padding-bottom: 2.2rem;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin: 0 0 1rem;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.hero-eyebrow .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 0 4px rgba(225, 6, 0, .18);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% { box-shadow: 0 0 0 9px rgba(225, 6, 0, 0); }
+}
+
+.hero-title {
+  margin: 0 0 1.1rem;
+  font-size: clamp(2.6rem, 7.4vw, 5.6rem);
+  font-weight: 900;
+  line-height: .96;
+  letter-spacing: -.02em;
+}
+
+.hero-title .line { display: block; }
+
+.hero-title .accent {
+  background: linear-gradient(95deg, var(--red), var(--amber) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-sub {
+  margin: 0 0 1.8rem;
+  max-width: 38rem;
+  font-size: 1.05rem;
+  color: #b9bac4;
+}
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .78rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font: 700 .92rem "Titillium Web", sans-serif;
+  letter-spacing: .04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(100deg, var(--red), #ff5a2b);
+  color: #fff;
+  box-shadow: 0 10px 34px rgba(225, 6, 0, .34);
+}
+
+.btn-ghost {
+  border-color: var(--edge);
+  background: rgba(255, 255, 255, .04);
+  color: var(--text);
+  backdrop-filter: blur(8px);
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn-ghost:hover { background: rgba(255, 255, 255, .1); color: #fff; }
+
+.hero-stats {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  border: 1px solid var(--edge);
+  border-radius: 14px;
+  background: var(--edge);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.hero-stats > div {
+  padding: .9rem 1.1rem;
+  background: var(--glass);
+}
+
+.hero-stats dt {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.hero-stats dd {
+  margin: .15rem 0 0;
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.hero-scroll {
+  position: absolute;
+  right: var(--shell);
+  bottom: 7.5rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--faint);
+  writing-mode: vertical-rl;
+}
+
+.hero-scroll span {
+  width: 1px;
+  height: 56px;
+  background: linear-gradient(to bottom, var(--red), transparent);
+}
+
+/* ---------- chrome ---------- */
+
+.site-header {
+  padding-inline: var(--shell);
+  background: linear-gradient(180deg, #0a0a10, #06060a);
+  border-bottom: 1px solid var(--edge);
+}
+
+.site-header h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+.byline { font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
+
+nav {
+  padding-inline: var(--shell);
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--edge);
+}
+
+nav button { letter-spacing: .04em; transition: color .16s ease; }
+
+nav button.active { border-bottom-width: 3px; }
+
+main { max-width: 1120px; padding-inline: 1.25rem; }
+
+/* Sections fade up as they enter the viewport (JS adds .in). */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .7s cubic-bezier(.22, .61, .36, 1), transform .7s cubic-bezier(.22, .61, .36, 1);
+}
+
+.reveal.in { opacity: 1; transform: none; }
+
+@media (max-width: 860px) {
+  .hero { padding-bottom: 1rem; }
+  .hero-copy { padding-bottom: 1.4rem; }
+  .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-scroll { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow .dot { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .btn:hover { transform: none; }
+}

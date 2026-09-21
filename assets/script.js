@@ -16,6 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Hero buttons open a tab and scroll past the hero to it.
+  document.querySelectorAll("[data-tab-link]").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      activate(link.dataset.tabLink);
+      document.querySelector("nav.tabs").scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
   const initial = window.location.hash.replace("#", "");
   activate(document.getElementById(initial) ? initial : "introduction");
   // hash matches a section id, so undo the jump past the header

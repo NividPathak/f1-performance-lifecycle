@@ -8,10 +8,50 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/premium.css">
 </head>
 <body>
 
 <div class="speed-lines" aria-hidden="true"></div>
+
+<div class="intro" id="intro" hidden>
+  <div class="intro-stage">
+    <svg class="intro-mark" viewBox="0 0 120 120" aria-hidden="true">
+      <path class="im-ring" d="M60 6 A54 54 0 1 1 59.9 6" fill="none" stroke="currentColor" stroke-width="3"/>
+      <path class="im-c1" d="M28 74 L52 38 L64 38 L40 74 Z" fill="currentColor"/>
+      <path class="im-c2" d="M48 74 L72 38 L84 38 L60 74 Z" fill="currentColor"/>
+      <path class="im-apex" d="M30 86 C54 86 78 70 92 44" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <div class="intro-word" id="intro-word" data-text="RACE PERFORMANCE"></div>
+    <div class="intro-sub" id="intro-sub">&amp; STRATEGY</div>
+    <div class="intro-sweep" aria-hidden="true"></div>
+  </div>
+  <button class="intro-skip" type="button" id="intro-skip">Skip intro</button>
+</div>
+
+<section class="hero" id="hero">
+  <canvas id="hero-canvas" aria-label="Animated three-dimensional race cars on a night circuit" role="img"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="hero-copy">
+    <p class="hero-eyebrow"><span class="dot"></span> Data Science Lifecycle &middot; CU Boulder</p>
+    <h1 class="hero-title">
+      <span class="line">Race Performance</span>
+      <span class="line accent">&amp; Strategy</span>
+    </h1>
+    <p class="hero-sub">Three seasons. Sixty-six races. Thirteen hundred driver-races of grid slots, pit calls, tyre compounds and weather, pulled apart to find what actually decides a finishing position.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#introduction" data-tab-link="introduction">Enter the project</a>
+      <a class="btn btn-ghost" href="#dataprep" data-tab-link="dataprep">See the data</a>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Races</dt><dd data-count="66">66</dd></div>
+    <div><dt>Driver-races</dt><dd data-count="1320">1,320</dd></div>
+    <div><dt>Columns</dt><dd data-count="31">31</dd></div>
+    <div><dt>Grid&ndash;finish r</dt><dd data-count="0.73">0.73</dd></div>
+  </dl>
+  <div class="hero-scroll" aria-hidden="true"><span></span>scroll</div>
+</section>
 
 <header class="site-header">
   <h1>F1 Race Performance &amp; Strategy</h1>
@@ -38,6 +78,7 @@
   <button data-tab="regression">Regression</button>
   <button data-tab="nn">Neural Nets</button>
   <button data-tab="conclusions">Conclusions</button>
+  <button data-tab="about">About Me</button>
 </nav>
 
 <main>
@@ -238,14 +279,34 @@
     <div class="block"><h2>Conclusions</h2><p class="muted">Not started yet.</p></div>
   </section>
 
+  <section id="about" class="tab-panel">
+    <div class="block about">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <img src="assets/img/nivid.jpg" alt="Nivid Pathak at Maroon Bells, Colorado">
+        <div>
+          <h3>Nivid Pathak</h3>
+          <p class="role">MS Data Science student, CU Boulder</p>
+          <p>Nivid is a graduate student in the Data Science program at CU Boulder, graduating in May 2027. He completed his undergraduate degree at Nirma University in Ahmedabad before moving to Boulder for his master's. His work covers machine learning, regression modeling, and evaluating AI tools. This fall he is a Course Assistant for three intro data science courses. Outside the classroom, Nivid follows Formula 1 and plays cricket on weekends.</p>
+          <p><a href="https://linkedin.com/in/nivid-pathak">LinkedIn</a> &middot; <a href="https://github.com/NividPathak">GitHub</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
   Nivid Pathak, 2026 &middot; data from <a href="https://github.com/jolpica/jolpica-f1">Jolpica-F1</a> and <a href="https://docs.fastf1.dev/">FastF1</a> &middot; <a href="https://github.com/NividPathak/f1-performance-lifecycle">code</a>
 </footer>
 
+<script type="importmap">
+{ "imports": { "three": "./assets/vendor_three.module.min.js" } }
+</script>
 <script src="assets/vendor_anime.min.js"></script>
 <script src="assets/vendor_chart.min.js"></script>
+<script src="assets/intro.js"></script>
+<script type="module" src="assets/hero3d.js"></script>
 <script src="assets/script.js"></script>
 <script src="assets/motion.js"></script>
 <script src="assets/track.js"></script>
