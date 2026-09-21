@@ -166,9 +166,11 @@
 
     <div class="block">
       <h3>Raw data</h3>
-      <img class="data-sample-img" src="assets/img/00_raw_data_sample.png" alt="First rows of the raw merged data, before cleaning">
+      <p class="muted">First eight rows of the merged results, qualifying and pit stop data, before any cleaning.</p>
+      <div class="table-wrap"><table id="sample-raw" class="sample-table"></table></div>
       <h3>Cleaned data</h3>
-      <img class="data-sample-img" src="assets/img/00_cleaned_data_sample.png" alt="First rows of the cleaned data">
+      <p class="muted">The same rows after cleaning: DNF flag derived, grid 0 recoded, missing pit stop values resolved, grid_zone added.</p>
+      <div class="table-wrap"><table id="sample-cleaned" class="sample-table"></table></div>
 
       <h3>Cleaning</h3>
       <p>The biggest catch was that Jolpica gives almost every driver a numeric finishing position, even ones who retired, so I had to work out who actually finished from the status text instead. Pit-lane starts show up as grid position 0, which would look like pole, so I moved those to 21. Where a value can't exist, like the average pit stop time for a driver who never stopped, I left it blank and added a flag column rather than filling in a number. Here's the full log from the cleaning script:</p>
@@ -312,6 +314,7 @@
 <script src="assets/track.js"></script>
 <script src="assets/charts.js"></script>
 <script src="assets/calendar.js"></script>
+<script src="assets/samples.js"></script>
 
 </body>
 </html>

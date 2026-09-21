@@ -22,13 +22,15 @@ assets/track.js             animated Bahrain track map (anime.js + SVG)
 assets/charts.js            the 12 EDA charts (Chart.js)
 assets/calendar.js          2026 calendar table
 assets/vendor_*.min.js      anime.js 3.2.2 and Chart.js, vendored
-assets/img/                 raw / cleaned data sample tables
+assets/samples.js           raw / cleaned sample tables
+assets/img/                 photo
 data/raw_pulls/             raw API responses
 data/combined_raw_snapshot.csv
 data/f1_driver_race_cleaned.csv
 data/cleaning_log.txt
 data/chart_data.json        aggregates behind the charts
 data/track_bahrain.json     track outline + corner numbers
+data/sample_tables.json     rows shown in the before/after tables
 code/                       fetch, clean, and chart-prep scripts
 ```
 
@@ -42,7 +44,7 @@ python code/fetch_pitstops.py           # pit stops -> data/raw_pulls/ (needs sc
 python code/fetch_fastf1.py             # tyres + weather -> data/raw_pulls/fastf1/ (resumable)
 python code/build_dataset.py            # merge + clean -> data/*.csv, data/cleaning_log.txt
 python code/make_chart_data.py          # data/chart_data.json
-python code/make_data_preview_images.py # assets/img/ sample tables
+python code/make_sample_tables.py       # data/sample_tables.json
 python code/make_track_data.py          # data/track_bahrain.json
 ```
 

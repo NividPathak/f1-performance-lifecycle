@@ -208,7 +208,19 @@ th {
 th, td { padding: .4rem .6rem; white-space: nowrap; }
 td { border-bottom: 1px solid var(--line); }
 
-.data-sample-img { display: block; width: 100%; background: #fff; }
+.sample-table {
+  font-size: .72rem;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+}
+
+.sample-table th, .sample-table td { padding: .35rem .45rem; }
+
+.sample-table th {
+  color: var(--text);
+  border-bottom: 1px solid var(--red);
+}
+
+.sample-table td { color: var(--dim); }
 
 .cleaning-log {
   padding: 1rem;
