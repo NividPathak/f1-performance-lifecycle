@@ -38,18 +38,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const countUp = () => document.querySelectorAll(".hero-stats dd").forEach((el) => {
     const end = parseFloat(el.dataset.count);
     const decimals = (el.dataset.count.split(".")[1] || "").length;
+    const show = (v) => {
+      el.textContent = decimals ? v.toFixed(decimals) : Math.round(v).toLocaleString("en-US");
+    };
     anime({
       targets: { v: 0 },
       v: end,
       duration: 1600,
       delay: 260,
       easing: "easeOutExpo",
-      update(a) {
-        const v = a.animatables[0].target.v;
-        el.textContent = decimals
-          ? v.toFixed(decimals)
-          : Math.round(v).toLocaleString("en-US");
-      },
+      update: (a) => show(a.animatables[0].target.v),
+      complete: () => show(end),
     });
   });
 
