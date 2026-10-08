@@ -17,6 +17,32 @@ GREEN = "#3ddc84"
 VIOLET = "#b58cff"
 PALETTE = [RED, ICE, AMBER, GREEN, VIOLET, "#ff7ab6", "#c9c9cf", "#4f8cff"]
 
+# Team colours from each team's latest livery. Alfa Romeo and AlphaTauri use the
+# colours of the teams they became (Sauber, Racing Bulls). Alpine uses its pink so
+# it doesn't blur with the three blues.
+TEAM_COLORS = {
+    "Red Bull": "#1f3fb0",
+    "Ferrari": "#e8002d",
+    "Mercedes": "#27f4d2",
+    "McLaren": "#ff8000",
+    "Aston Martin": "#229971",
+    "Alpine F1 Team": "#ff87bc",
+    "Williams": "#64c4ff",
+    "AlphaTauri": "#f0f2ff",
+    "Alfa Romeo": "#52e252",
+    "Haas F1 Team": "#9c9fa2",
+}
+TEAM_ORDER = list(TEAM_COLORS)
+TEAM_SHORT = {"Alpine F1 Team": "Alpine", "Haas F1 Team": "Haas"}
+
+
+def team_legend(ax, **kw):
+    """Legend with one dot per team, in a fixed order."""
+    from matplotlib.lines import Line2D
+    handles = [Line2D([], [], marker="o", ls="", markersize=7, markerfacecolor=TEAM_COLORS[t],
+                      markeredgecolor="white", markeredgewidth=0.5, label=TEAM_SHORT.get(t, t)) for t in TEAM_ORDER]
+    return ax.legend(handles=handles, title="team", title_fontsize=9, fontsize=8.5, **kw)
+
 plt.rcParams.update({
     "figure.facecolor": BG,
     "axes.facecolor": PANEL,
@@ -47,27 +73,3 @@ def save(fig, path):
     fig.savefig(path, dpi=160, bbox_inches="tight")
     plt.close(fig)
     print("wrote", path.name)
-
-
-def table_image(df, path, title, col_width=1.15, row_height=0.42, fmt="{:.2f}"):
-    """Render a small DataFrame as a PNG table (for the 'image of the sample' requirement)."""
-    cells = [[fmt.format(v) if isinstance(v, float) else str(v) for v in row] for row in df.itertuples(index=False)]
-    fig_w = max(6, col_width * len(df.columns))
-    fig, ax = plt.subplots(figsize=(fig_w, row_height * (len(df) + 2)))
-    ax.axis("off")
-    labels = [str(c).replace("_", "\n", 1) if len(str(c)) > 11 else str(c) for c in df.columns]
-    tbl = ax.table(cellText=cells, colLabels=labels, loc="center", cellLoc="center")
-    tbl.auto_set_font_size(False)
-    tbl.set_fontsize(8.5)
-    tbl.scale(1, 1.35)
-    for (r, _), cell in tbl.get_celld().items():
-        cell.set_edgecolor(LINE)
-        if r == 0:
-            cell.set_height(cell.get_height() * 1.7)
-            cell.set_facecolor("#1d1d25")
-            cell.set_text_props(color=AMBER, weight="bold")
-        else:
-            cell.set_facecolor(PANEL)
-            cell.set_text_props(color=TEXT)
-    ax.set_title(title, loc="left", pad=8)
-    save(fig, path)

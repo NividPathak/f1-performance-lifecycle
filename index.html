@@ -310,14 +310,12 @@
         <li><strong>Removed every label.</strong> Driver, team, and season were set aside. Eleven numeric columns remain.</li>
         <li><strong>Standardized each column</strong> to mean 0 and standard deviation 1. Without this, average grid (values up to 20) would swamp podium rate (0 to 1) in every distance calculation. After scaling, every variable gets an equal say.</li>
       </ol>
-      <figure class="m2-fig">
-        <img src="assets/img/m2/clu_sample_labeled.png" alt="Table of eight driver-season rows with driver label, team, and raw averages" loading="lazy">
-        <figcaption>Before: driver-season profiles with their labels and raw units (first six of eleven numeric columns shown).</figcaption>
-      </figure>
-      <figure class="m2-fig">
-        <img src="assets/img/m2/clu_sample_scaled.png" alt="Table of eight rows of standardized numbers across eleven columns with no labels" loading="lazy">
-        <figcaption>After: the exact matrix that k-means and hierarchical clustering receive. Only numbers, no labels, every column on the same scale.</figcaption>
-      </figure>
+      <h4>Before: driver-season profiles</h4>
+      <p class="muted">First eight driver-seasons with their labels and raw averages, built from the cleaned dataset.</p>
+      <div class="table-wrap"><table id="sample-clustering-labeled" class="sample-table"></table></div>
+      <h4>After: what the clustering sees</h4>
+      <p class="muted">The same eight rows with the labels removed and every column standardized. This is the exact matrix k-means and hierarchical clustering receive.</p>
+      <div class="table-wrap"><table id="sample-clustering-scaled" class="sample-table"></table></div>
       <p>Data used:</p>
       <ul class="source-list">
         <li><a href="data/milestone2/clustering_input_scaled.csv">clustering_input_scaled.csv</a>: the unlabeled, standardized input (60 rows &times; 11 columns).</li>
@@ -329,18 +327,18 @@
     <div class="block" id="clu-code">
       <h3><span class="section-tag">(c)</span>Code</h3>
       <p>Everything is in Python with scikit-learn and SciPy: <a href="code/clustering.py">code/clustering.py</a> (<a href="https://github.com/NividPathak/f1-performance-lifecycle/blob/master/code/clustering.py" target="_blank" rel="noopener">view on GitHub</a>). The script builds the profiles, runs k-means for every k from 2 to 10 (50 random starts each), scores each k with the silhouette coefficient, runs agglomerative clustering with cosine distance, and draws every figure on this tab. The core of it:</p>
-<pre class="code"><span class="c"># k-means: Euclidean distance, k = 2..10, 50 random starts per k</span>
+<pre class="code">X = StandardScaler().fit_transform(profiles[FEATURES])
+
 for k in range(2, 11):
     km = KMeans(n_clusters=k, n_init=50, random_state=42).fit(X)
-    sil[k] = silhouette_score(X, km.labels_)
+    sil.append(silhouette_score(X, km.labels_))
 
-<span class="c"># hierarchical: cosine distance, average linkage</span>
-D = pdist(X, metric="cosine")          <span class="c"># 1 - cosine similarity, every pair</span>
+<span class="c"># hierarchical clustering with cosine distance</span>
+D = pdist(X, metric="cosine")
 Z = linkage(D, method="average")
 labels = fcluster(Z, k, criterion="maxclust")
 
-<span class="c"># how well do the two methods agree?</span>
-adjusted_rand_score(kmeans_labels, labels)</pre>
+ari = adjusted_rand_score(km_labels[k], hc_labels[k])</pre>
       <p>To rerun it: <code>python code/clustering.py</code> with pandas, NumPy, scikit-learn, SciPy and matplotlib installed.</p>
     </div>
 
@@ -365,10 +363,10 @@ adjusted_rand_score(kmeans_labels, labels)</pre>
       </figure>
 
       <h4>k-means with k = 2, 3 and 4</h4>
-      <p>To see the clusters, I projected the eleven-dimensional profiles onto their first two principal components, which together hold 64% of the variance (PCA itself is covered on the next tab). PC1 is essentially "how strong was this season": strong seasons sit on the left. The white crosses are the cluster centroids.</p>
+      <p>To see the clusters, I projected the eleven-dimensional profiles onto their first two principal components, which together hold 64% of the variance (PCA itself is covered on the next tab). PC1 is essentially "how strong was this season": strong seasons sit on the left. Each dot is coloured by the team the driver raced for, and each cluster is the shaded outline with its number on top.</p>
       <figure class="m2-fig">
         <img src="assets/img/m2/clu_kmeans_pca.png" alt="Three scatter plots of driver-seasons coloured by k-means cluster for k equals 2, 3 and 4, with centroids marked" loading="lazy">
-        <figcaption>k-means clusters drawn on the first two principal components. Clusters are numbered by average points per race, so cluster 1 is always the strongest.</figcaption>
+        <figcaption>k-means clusters drawn on the first two principal components. Dots use team colours (Red Bull dark blue, Ferrari red, Mercedes teal, McLaren papaya, and so on). Clusters are numbered by average points per race, so cluster 1 is always the strongest. Notice how the same team's dots tend to sit inside the same outline.</figcaption>
       </figure>
       <ul>
         <li><strong>k = 2</strong> splits the field into regular points scorers (25 driver-seasons) and everyone else (35).</li>
@@ -406,7 +404,7 @@ adjusted_rand_score(kmeans_labels, labels)</pre>
       <p>The dendrogram shows all 60 driver-seasons merged with cosine distance and average linkage. The highest merge, at a cosine distance of about 1.37, joins two large branches that have little in common, and the next merge down is much lower (about 0.97). The biggest gap between consecutive merge heights is therefore just below the top, so <strong>hclust suggests k = 2</strong>. Its own silhouette, using cosine distance, also peaks at k = 2 (0.50).</p>
       <figure class="m2-fig">
         <a href="assets/img/m2/clu_dendrogram.png" target="_blank" rel="noopener"><img src="assets/img/m2/clu_dendrogram.png" alt="Dendrogram of 60 driver-seasons in two coloured branches, cut at a dashed line into two clusters" loading="lazy"></a>
-        <figcaption>Dendrogram of driver-seasons (cosine distance, average linkage). The dashed line marks the cut into 2 clusters. Leaves are labelled driver and season, for example VER '23. Click to open full size.</figcaption>
+        <figcaption>Dendrogram of driver-seasons (cosine distance, average linkage). The dashed line marks the cut into 2 clusters. Leaves are labelled driver and season, for example VER '23, with a dot in the team's colour under each one. Click to open full size.</figcaption>
       </figure>
 
       <h4>How hclust compares with k-means</h4>
@@ -473,14 +471,12 @@ adjusted_rand_score(kmeans_labels, labels)</pre>
         <li><strong>Removed labels</strong> (race, driver, team, season, DNF flag, rain flag). They come back only to colour the plots afterwards.</li>
         <li><strong>Standardized</strong> all thirteen columns.</li>
       </ol>
-      <figure class="m2-fig">
-        <img src="assets/img/m2/pca_sample_labeled.png" alt="Table of eight driver-race rows from the 2021 Bahrain Grand Prix with race name, driver code, DNF flag and raw values" loading="lazy">
-        <figcaption>Before: driver-race rows with labels and raw units (first seven of thirteen numeric columns shown).</figcaption>
-      </figure>
-      <figure class="m2-fig">
-        <img src="assets/img/m2/pca_sample_scaled.png" alt="Table of eight rows of standardized values across thirteen numeric columns" loading="lazy">
-        <figcaption>After: the thirteen standardized numeric columns PCA runs on.</figcaption>
-      </figure>
+      <h4>Before: driver-race rows</h4>
+      <p class="muted">First eight rows (the 2021 Bahrain Grand Prix, the same drivers as the cleaned table on the Data Prep tab) with their labels and the thirteen measurements in raw units.</p>
+      <div class="table-wrap"><table id="sample-pca-labeled" class="sample-table"></table></div>
+      <h4>After: what PCA sees</h4>
+      <p class="muted">The same rows with labels removed and all thirteen columns standardized to mean 0 and standard deviation 1.</p>
+      <div class="table-wrap"><table id="sample-pca-scaled" class="sample-table"></table></div>
       <p>Data used:</p>
       <ul class="source-list">
         <li><a href="data/milestone2/pca_input_scaled.csv">pca_input_scaled.csv</a>: the unlabeled, standardized input (688 rows &times; 13 columns).</li>
@@ -492,16 +488,17 @@ adjusted_rand_score(kmeans_labels, labels)</pre>
     <div class="block" id="pca-code">
       <h3><span class="section-tag">(c)</span>Code</h3>
       <p>Python with scikit-learn: <a href="code/pca.py">code/pca.py</a> (<a href="https://github.com/NividPathak/f1-performance-lifecycle/blob/master/code/pca.py" target="_blank" rel="noopener">view on GitHub</a>). The script prepares the data, fits PCA with every component so the full set of eigenvalues is available, and draws every figure on this tab. The core of it:</p>
-<pre class="code">X = StandardScaler().fit_transform(data[FEATURES])   <span class="c"># 688 x 13, mean 0, sd 1</span>
+<pre class="code">X = StandardScaler().fit_transform(data[FEATURES])
 
-pca = PCA().fit(X)                       <span class="c"># keep all 13 components</span>
-eigenvalues = pca.explained_variance_    <span class="c"># variance along each eigenvector</span>
-loadings    = pca.components_.T          <span class="c"># eigenvectors: one column per PC</span>
-explained   = pca.explained_variance_ratio_
-n_for_95    = np.searchsorted(np.cumsum(explained), 0.95) + 1
+pca = PCA().fit(X)
+eig = pca.explained_variance_
+var = pca.explained_variance_ratio_
+cum = np.cumsum(var)
+n95 = np.searchsorted(cum, 0.95) + 1
+scores = pca.transform(X)
 
-scores = pca.transform(X)                <span class="c"># every row in the new coordinates</span>
-corr   = loadings * np.sqrt(eigenvalues) <span class="c"># correlation of each variable with each PC</span></pre>
+loadings = pd.DataFrame(pca.components_.T, index=FEATURES, columns=pcs)
+corr = loadings * np.sqrt(eig)</pre>
       <p>To rerun it: <code>python code/pca.py</code>.</p>
     </div>
 
@@ -539,7 +536,7 @@ corr   = loadings * np.sqrt(eigenvalues) <span class="c"># correlation of each v
       <p>A biplot shows the rows and the variables at once. Each dot is one driver-race placed by its PC1 and PC2 scores, and each arrow is one variable's loading. Arrows pointing the same way are positively correlated, opposite arrows are negatively correlated, and arrows at right angles are unrelated. The longer the arrow, the better that variable is represented on these two axes. Here the result variables lie flat along PC1, the weather variables stand straight up along PC2, and the two groups are at right angles.</p>
       <figure class="m2-fig">
         <img src="assets/img/m2/pca_biplot.png" alt="Biplot of 688 driver-races coloured by points, no points, or did not finish, with loading arrows for each variable" loading="lazy">
-        <figcaption>Biplot of PC1 and PC2. Points finishers (red) fill the left half and non-scorers (blue) the right, so PC1 alone nearly separates them. Retirements (grey) sit furthest right. Short, unlabelled arrows near the centre (pit stops, compounds, positions gained) are barely represented by these two components; they show up on PC3 and PC4 instead.</figcaption>
+        <figcaption>Biplot of PC1 and PC2, each dot coloured by team. Red Bull, Mercedes and Ferrari races crowd the left (strong results), while Haas, Williams and Alfa Romeo sit mostly on the right. Weather spreads every team up and down equally. Short, unlabelled arrows near the centre (pit stops, compounds, positions gained) are barely represented by these two components; they show up on PC3 and PC4 instead.</figcaption>
       </figure>
       <p>Correlation circles show the same thing without the points. Each arrow's coordinates are the correlation between a variable and the two components, so an arrow reaching the circle means that variable is almost fully explained by those two PCs. The PC3 and PC4 circle shows the strategy variables that are hidden in the first view.</p>
       <figure class="m2-fig">
@@ -548,7 +545,7 @@ corr   = loadings * np.sqrt(eigenvalues) <span class="c"># correlation of each v
       </figure>
       <figure class="m2-fig">
         <img src="assets/img/m2/pca_3d.png" alt="Three-dimensional scatter of driver-races on PC1, PC2 and PC3, coloured by dry or rain-affected race" loading="lazy">
-        <figcaption>The first three components together (58% of the variance), coloured by whether rain fell during the race. Rain races sit lower on PC2 (cooler and more humid, average score &minus;1.03 against +0.33 for dry races) and lower on PC3 (more stops and more compounds, &minus;0.43 against +0.14).</figcaption>
+        <figcaption>The first three components together (58% of the variance). Colour is the team and triangles are races where rain fell. Rain races sit lower on PC2 (cooler and more humid, average score &minus;1.03 against +0.33 for dry races) and lower on PC3 (more stops and more compounds, &minus;0.43 against +0.14).</figcaption>
       </figure>
     </div>
 

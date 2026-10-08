@@ -1,4 +1,4 @@
-season,driver_code,driver_name,constructor,races,avg_grid,avg_finish,avg_positions_gained,points_per_race,podium_rate,points_finish_rate,dnf_rate,avg_pitstops,avg_first_stop_pct,median_pit_time_s,avg_grid_drop,label
+season,driver_code,driver_name,constructor_name,races,avg_grid,avg_finish,avg_positions_gained,points_per_race,podium_rate,points_finish_rate,dnf_rate,avg_pitstops,avg_first_stop_pct,median_pit_time_s,avg_grid_drop,label
 2021,ALO,Fernando Alonso,Alpine F1 Team,22,10.5,9.9091,1.1,3.6818,0.0455,0.6818,0.0909,1.8636,0.3364,23.803,-0.5,ALO '21
 2021,BOT,Valtteri Bottas,Mercedes,22,5.5909,7.4091,0.7778,9.9545,0.5,0.6818,0.1818,1.7727,0.329,24.0315,1.8182,BOT '21
 2021,GAS,Pierre Gasly,AlphaTauri,22,7.3182,9.3636,-0.5,5.0,0.0455,0.6818,0.1818,1.9091,0.2747,25.1488,0.5,GAS '21

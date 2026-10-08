@@ -1,61 +1,61 @@
-season,driver_code,driver_name,constructor,label,kmeans_cluster,hclust_cluster,kmeans_k2,kmeans_k3,kmeans_k4
-2021,ALO,Fernando Alonso,Alpine F1 Team,ALO '21,3,1,1,2,3
-2021,BOT,Valtteri Bottas,Mercedes,BOT '21,2,1,1,1,2
+season,driver_code,driver_name,constructor_name,label,kmeans_k2,kmeans_k3,kmeans_k4,hclust_k2,hclust_k4
+2021,ALO,Fernando Alonso,Alpine F1 Team,ALO '21,1,2,3,1,1
+2021,BOT,Valtteri Bottas,Mercedes,BOT '21,1,1,2,1,1
 2021,GAS,Pierre Gasly,AlphaTauri,GAS '21,2,2,2,2,2
-2021,GIO,Antonio Giovinazzi,Alfa Romeo,GIO '21,4,2,2,3,4
+2021,GIO,Antonio Giovinazzi,Alfa Romeo,GIO '21,2,3,4,2,4
 2021,HAM,Lewis Hamilton,Mercedes,HAM '21,1,1,1,1,1
-2021,LAT,Nicholas Latifi,Williams,LAT '21,4,2,2,3,4
-2021,LEC,Charles Leclerc,Ferrari,LEC '21,2,1,1,2,2
-2021,MAZ,Nikita Mazepin,Haas F1 Team,MAZ '21,4,2,2,3,4
-2021,MSC,Mick Schumacher,Haas F1 Team,MSC '21,4,2,2,3,4
-2021,NOR,Lando Norris,McLaren,NOR '21,2,1,1,1,2
-2021,OCO,Esteban Ocon,Alpine F1 Team,OCO '21,3,2,2,2,3
-2021,PER,Sergio Pérez,Red Bull,PER '21,2,1,1,1,2
-2021,RAI,Kimi Räikkönen,Alfa Romeo,RAI '21,3,2,2,2,3
-2021,RIC,Daniel Ricciardo,McLaren,RIC '21,3,1,1,2,3
-2021,RUS,George Russell,Williams,RUS '21,4,2,2,3,4
-2021,SAI,Carlos Sainz,Ferrari,SAI '21,2,1,1,2,2
-2021,STR,Lance Stroll,Aston Martin,STR '21,3,2,2,2,3
-2021,TSU,Yuki Tsunoda,AlphaTauri,TSU '21,4,2,2,3,4
+2021,LAT,Nicholas Latifi,Williams,LAT '21,2,3,4,2,4
+2021,LEC,Charles Leclerc,Ferrari,LEC '21,1,2,2,1,1
+2021,MAZ,Nikita Mazepin,Haas F1 Team,MAZ '21,2,3,4,2,4
+2021,MSC,Mick Schumacher,Haas F1 Team,MSC '21,2,3,4,2,4
+2021,NOR,Lando Norris,McLaren,NOR '21,1,1,2,1,1
+2021,OCO,Esteban Ocon,Alpine F1 Team,OCO '21,2,2,3,2,2
+2021,PER,Sergio Pérez,Red Bull,PER '21,1,1,2,1,1
+2021,RAI,Kimi Räikkönen,Alfa Romeo,RAI '21,2,2,3,2,3
+2021,RIC,Daniel Ricciardo,McLaren,RIC '21,1,2,3,1,1
+2021,RUS,George Russell,Williams,RUS '21,2,3,4,2,4
+2021,SAI,Carlos Sainz,Ferrari,SAI '21,1,2,2,1,1
+2021,STR,Lance Stroll,Aston Martin,STR '21,2,2,3,2,3
+2021,TSU,Yuki Tsunoda,AlphaTauri,TSU '21,2,3,4,2,4
 2021,VER,Max Verstappen,Red Bull,VER '21,1,1,1,1,1
-2021,VET,Sebastian Vettel,Aston Martin,VET '21,3,2,2,2,3
-2022,ALB,Alexander Albon,Williams,ALB '22,3,2,2,3,3
-2022,ALO,Fernando Alonso,Alpine F1 Team,ALO '22,3,2,2,2,3
-2022,BOT,Valtteri Bottas,Alfa Romeo,BOT '22,3,2,2,2,3
-2022,GAS,Pierre Gasly,AlphaTauri,GAS '22,4,2,2,3,4
-2022,HAM,Lewis Hamilton,Mercedes,HAM '22,2,1,1,1,2
-2022,LAT,Nicholas Latifi,Williams,LAT '22,4,2,2,3,4
-2022,LEC,Charles Leclerc,Ferrari,LEC '22,2,1,1,1,2
-2022,MAG,Kevin Magnussen,Haas F1 Team,MAG '22,4,2,2,3,4
-2022,MSC,Mick Schumacher,Haas F1 Team,MSC '22,4,2,2,3,4
-2022,NOR,Lando Norris,McLaren,NOR '22,2,1,1,2,2
-2022,OCO,Esteban Ocon,Alpine F1 Team,OCO '22,3,1,1,2,3
-2022,PER,Sergio Pérez,Red Bull,PER '22,2,1,1,1,2
-2022,RIC,Daniel Ricciardo,McLaren,RIC '22,3,2,2,2,3
-2022,RUS,George Russell,Mercedes,RUS '22,2,1,1,1,2
-2022,SAI,Carlos Sainz,Ferrari,SAI '22,2,1,1,1,2
-2022,STR,Lance Stroll,Aston Martin,STR '22,3,2,2,2,3
-2022,TSU,Yuki Tsunoda,AlphaTauri,TSU '22,4,2,2,3,4
+2021,VET,Sebastian Vettel,Aston Martin,VET '21,2,2,3,2,3
+2022,ALB,Alexander Albon,Williams,ALB '22,2,3,3,2,4
+2022,ALO,Fernando Alonso,Alpine F1 Team,ALO '22,2,2,3,2,3
+2022,BOT,Valtteri Bottas,Alfa Romeo,BOT '22,2,2,3,2,3
+2022,GAS,Pierre Gasly,AlphaTauri,GAS '22,2,3,4,2,4
+2022,HAM,Lewis Hamilton,Mercedes,HAM '22,1,1,2,1,1
+2022,LAT,Nicholas Latifi,Williams,LAT '22,2,3,4,2,4
+2022,LEC,Charles Leclerc,Ferrari,LEC '22,1,1,2,1,1
+2022,MAG,Kevin Magnussen,Haas F1 Team,MAG '22,2,3,4,2,4
+2022,MSC,Mick Schumacher,Haas F1 Team,MSC '22,2,3,4,2,4
+2022,NOR,Lando Norris,McLaren,NOR '22,1,2,2,1,1
+2022,OCO,Esteban Ocon,Alpine F1 Team,OCO '22,1,2,3,1,1
+2022,PER,Sergio Pérez,Red Bull,PER '22,1,1,2,1,1
+2022,RIC,Daniel Ricciardo,McLaren,RIC '22,2,2,3,2,4
+2022,RUS,George Russell,Mercedes,RUS '22,1,1,2,1,1
+2022,SAI,Carlos Sainz,Ferrari,SAI '22,1,1,2,1,1
+2022,STR,Lance Stroll,Aston Martin,STR '22,2,2,3,2,3
+2022,TSU,Yuki Tsunoda,AlphaTauri,TSU '22,2,3,4,2,4
 2022,VER,Max Verstappen,Red Bull,VER '22,1,1,1,1,1
-2022,VET,Sebastian Vettel,Aston Martin,VET '22,3,2,2,2,3
-2022,ZHO,Guanyu Zhou,Alfa Romeo,ZHO '22,4,2,2,3,4
-2023,ALB,Alexander Albon,Williams,ALB '23,4,2,2,3,4
-2023,ALO,Fernando Alonso,Aston Martin,ALO '23,2,1,1,1,2
-2023,BOT,Valtteri Bottas,Alfa Romeo,BOT '23,4,2,2,3,4
-2023,DEV,Nyck de Vries,AlphaTauri,DEV '23,4,2,2,3,4
-2023,GAS,Pierre Gasly,Alpine F1 Team,GAS '23,3,2,2,2,3
-2023,HAM,Lewis Hamilton,Mercedes,HAM '23,2,1,1,1,2
-2023,HUL,Nico Hülkenberg,Haas F1 Team,HUL '23,4,2,2,3,4
-2023,LEC,Charles Leclerc,Ferrari,LEC '23,2,1,1,2,2
-2023,MAG,Kevin Magnussen,Haas F1 Team,MAG '23,4,2,2,3,4
-2023,NOR,Lando Norris,McLaren,NOR '23,2,1,1,1,2
-2023,OCO,Esteban Ocon,Alpine F1 Team,OCO '23,3,2,2,2,3
+2022,VET,Sebastian Vettel,Aston Martin,VET '22,2,2,3,2,3
+2022,ZHO,Guanyu Zhou,Alfa Romeo,ZHO '22,2,3,4,2,4
+2023,ALB,Alexander Albon,Williams,ALB '23,2,3,4,2,4
+2023,ALO,Fernando Alonso,Aston Martin,ALO '23,1,1,2,1,1
+2023,BOT,Valtteri Bottas,Alfa Romeo,BOT '23,2,3,4,2,4
+2023,DEV,Nyck de Vries,AlphaTauri,DEV '23,2,3,4,2,4
+2023,GAS,Pierre Gasly,Alpine F1 Team,GAS '23,2,2,3,2,4
+2023,HAM,Lewis Hamilton,Mercedes,HAM '23,1,1,2,1,1
+2023,HUL,Nico Hülkenberg,Haas F1 Team,HUL '23,2,3,4,2,4
+2023,LEC,Charles Leclerc,Ferrari,LEC '23,1,2,2,1,1
+2023,MAG,Kevin Magnussen,Haas F1 Team,MAG '23,2,3,4,2,4
+2023,NOR,Lando Norris,McLaren,NOR '23,1,1,2,1,1
+2023,OCO,Esteban Ocon,Alpine F1 Team,OCO '23,2,2,3,2,3
 2023,PER,Sergio Pérez,Red Bull,PER '23,1,1,1,1,1
-2023,PIA,Oscar Piastri,McLaren,PIA '23,4,2,2,2,4
-2023,RUS,George Russell,Mercedes,RUS '23,2,1,1,1,2
-2023,SAI,Carlos Sainz,Ferrari,SAI '23,2,1,1,1,2
-2023,SAR,Logan Sargeant,Williams,SAR '23,4,2,2,3,4
-2023,STR,Lance Stroll,Aston Martin,STR '23,3,2,2,2,3
-2023,TSU,Yuki Tsunoda,AlphaTauri,TSU '23,4,2,2,3,4
+2023,PIA,Oscar Piastri,McLaren,PIA '23,2,2,4,2,4
+2023,RUS,George Russell,Mercedes,RUS '23,1,1,2,1,1
+2023,SAI,Carlos Sainz,Ferrari,SAI '23,1,1,2,1,1
+2023,SAR,Logan Sargeant,Williams,SAR '23,2,3,4,2,4
+2023,STR,Lance Stroll,Aston Martin,STR '23,2,2,3,2,3
+2023,TSU,Yuki Tsunoda,AlphaTauri,TSU '23,2,3,4,2,4
 2023,VER,Max Verstappen,Red Bull,VER '23,1,1,1,1,1
-2023,ZHO,Guanyu Zhou,Alfa Romeo,ZHO '23,4,2,2,3,4
+2023,ZHO,Guanyu Zhou,Alfa Romeo,ZHO '23,2,3,4,2,4

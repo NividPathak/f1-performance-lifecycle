@@ -4,6 +4,7 @@ import json
 import pandas as pd
 
 from paths import CLEANED_CSV, COMBINED_RAW_CSV, DATA
+from sample_format import table_rows
 
 RAW_COLS = ["season", "round", "driver_code", "constructor_name", "grid",
             "final_position", "status", "points", "num_pitstops", "avg_pitstop_duration_s"]
@@ -14,20 +15,7 @@ ROWS = 8
 
 
 def sample(path, cols):
-    df = pd.read_csv(path)[cols].head(ROWS)
-    rows = []
-    for row in df.itertuples(index=False):
-        out = []
-        for v in row:
-            if pd.isna(v):
-                out.append("NaN")
-            elif isinstance(v, float):
-                out.append(f"{v:.2f}".rstrip("0").rstrip("."))
-            else:
-                out.append(str(v))
-        rows.append(out)
-    return {"columns": cols, "rows": rows}
-
+    return table_rows(pd.read_csv(path)[cols].head(ROWS))
 
 out = {"raw": sample(COMBINED_RAW_CSV, RAW_COLS), "cleaned": sample(CLEANED_CSV, CLEAN_COLS)}
 with open(DATA / "sample_tables.json", "w") as f:
