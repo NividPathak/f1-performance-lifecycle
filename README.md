@@ -4,7 +4,7 @@ Course project for Data Science Lifecycle at CU Boulder. The question: how much 
 
 Live site: https://nividpathak.github.io/f1-performance-lifecycle/
 
-Right now the Introduction and Data Prep & EDA tabs are done. The other tabs get filled in as the course goes on.
+Done so far: Introduction, Data Prep & EDA (Milestone 1), and Clustering and PCA (Milestone 2). The other tabs get filled in as the course goes on.
 
 ## Data
 
@@ -31,12 +31,14 @@ data/cleaning_log.txt
 data/chart_data.json        aggregates behind the charts
 data/track_bahrain.json     track outline + corner numbers
 data/sample_tables.json     rows shown in the before/after tables
-code/                       fetch, clean, and chart-prep scripts
+data/milestone2/            clustering + PCA inputs, assignments, scores, results JSON
+assets/img/m2/              clustering + PCA figures
+code/                       fetch, clean, chart-prep, clustering and PCA scripts
 ```
 
 ## Rebuilding the data
 
-Scripts find their files through `code/paths.py`, so run them from anywhere. You need Python 3 with `pandas`, `numpy`, and `matplotlib`, plus `fastf1` for the FastF1 scripts.
+Scripts find their files through `code/paths.py`, so run them from anywhere. You need Python 3 with `pandas`, `numpy`, and `matplotlib`, plus `fastf1` for the FastF1 scripts and `scikit-learn` and `scipy` for Milestone 2.
 
 ```bash
 python code/fetch_jolpica.py            # results + qualifying -> data/raw_pulls/
@@ -46,14 +48,18 @@ python code/build_dataset.py            # merge + clean -> data/*.csv, data/clea
 python code/make_chart_data.py          # data/chart_data.json
 python code/make_sample_tables.py       # data/sample_tables.json
 python code/make_track_data.py          # data/track_bahrain.json
+python code/clustering.py               # k-means + hierarchical (cosine) on driver-seasons
+python code/pca.py                      # PCA on driver-races with weather data
 ```
 
-The raw pulls are already committed, so you only need the last four to regenerate what the site uses.
+The raw pulls are already committed, so you only need `build_dataset.py` onward to regenerate what the site uses.
 
 ## Hosting
 
 GitHub Pages serves the root of `master`. Pushing to `master` redeploys the site within a minute or two.
 
 ## Credits
+
+Introduction photos from Wikimedia Commons: starting grid at Spa by Mark McArdle (CC BY-SA 2.0), Honda pit stop in Malaysia by Mohd Nor Azmil Abdul Rahman (CC BY 2.0).
 
 Font: Titillium Web (Google Fonts). Animation: [anime.js](https://animejs.com/) (MIT). Charts: [Chart.js](https://www.chartjs.org/) (MIT).

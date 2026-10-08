@@ -25,6 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // In-tab section links scroll without touching the URL hash (the hash picks the tab).
+  document.querySelectorAll("[data-jump]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.getElementById(btn.dataset.jump).scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
   const initial = window.location.hash.replace("#", "");
   activate(document.getElementById(initial) ? initial : "introduction");
   // hash matches a section id, so undo the jump past the header
