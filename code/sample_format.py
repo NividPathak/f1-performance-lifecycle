@@ -1,5 +1,3 @@
-"""One formatter for every sample table on the site, so the same data always looks the same."""
-
 import pandas as pd
 
 

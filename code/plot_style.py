@@ -1,5 +1,3 @@
-"""Shared matplotlib look so the Milestone 2 figures match the site's dark theme."""
-
 import matplotlib
 
 matplotlib.use("Agg")
@@ -17,9 +15,7 @@ GREEN = "#3ddc84"
 VIOLET = "#b58cff"
 PALETTE = [RED, ICE, AMBER, GREEN, VIOLET, "#ff7ab6", "#c9c9cf", "#4f8cff"]
 
-# Team colours from each team's latest livery. Alfa Romeo and AlphaTauri use the
-# colours of the teams they became (Sauber, Racing Bulls). Alpine uses its pink so
-# it doesn't blur with the three blues.
+# latest livery colours. alfa romeo/alphatauri use sauber/racing bulls colours
 TEAM_COLORS = {
     "Red Bull": "#1f3fb0",
     "Ferrari": "#e8002d",
@@ -37,7 +33,6 @@ TEAM_SHORT = {"Alpine F1 Team": "Alpine", "Haas F1 Team": "Haas"}
 
 
 def team_legend(ax, **kw):
-    """Legend with one dot per team, in a fixed order."""
     from matplotlib.lines import Line2D
     handles = [Line2D([], [], marker="o", ls="", markersize=7, markerfacecolor=TEAM_COLORS[t],
                       markeredgecolor="white", markeredgewidth=0.5, label=TEAM_SHORT.get(t, t)) for t in TEAM_ORDER]

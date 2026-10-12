@@ -1,5 +1,4 @@
-# Milestone 2 - clustering
-# k-means and hierarchical clustering (cosine) on driver-season profiles
+# clustering - kmeans + hclust (cosine) on driver season profiles
 
 import json
 
@@ -25,7 +24,7 @@ FEATURES = ["avg_grid", "avg_finish", "avg_positions_gained", "points_per_race",
             "median_pit_time_s", "avg_grid_drop"]
 
 
-# ---------- build one row per driver per season ----------
+# build one row per driver per season
 
 df = pd.read_csv(CLEANED_CSV)
 race_laps = df.groupby(["season", "round"])["laps_completed"].transform("max")
@@ -61,7 +60,6 @@ X = StandardScaler().fit_transform(profiles[FEATURES])
 X_df = pd.DataFrame(X, columns=FEATURES).round(4)
 X_df.to_csv(M2_DATA / "clustering_input_scaled.csv", index=False)
 
-# sample rows for the tables on the site
 tables_file = M2_DATA / "sample_tables.json"
 tables = {}
 if tables_file.exists():
@@ -71,7 +69,7 @@ tables["clustering_scaled"] = table_rows(X_df.head(8))
 tables_file.write_text(json.dumps(tables, indent=1))
 
 
-# ---------- k-means for k = 2 to 10 ----------
+# k-means for k = 2 to 10
 
 ks = list(range(2, 11))
 models = {}
@@ -154,7 +152,7 @@ ps.team_legend(axes[-1], loc="upper left", bbox_to_anchor=(1.02, 1), borderaxesp
 ps.save(fig, M2_IMG / "clu_kmeans_pca.png")
 
 
-# ---------- hierarchical clustering with cosine distance ----------
+# hierarchical clustering with cosine distance
 
 D = pdist(X, metric="cosine")
 Z = linkage(D, method="average")
@@ -196,7 +194,6 @@ ax.legend()
 ps.save(fig, M2_IMG / "clu_hc_vs_km_silhouette.png")
 
 
-# ---------- compare the two methods ----------
 
 hc_labels = {}
 for k in compare:
@@ -219,7 +216,7 @@ for ax, k in zip(axes, [2, 4]):
 ps.save(fig, M2_IMG / "clu_crosstab.png")
 
 
-# ---------- what the k=4 clusters look like ----------
+# what the k=4 clusters look like
 
 # silhouette likes k=2 best but k=4 is easier to explain in racing terms
 for k in compare:
@@ -252,7 +249,7 @@ for c in range(1, 5):
     print(c, list(profiles.loc[profiles["kmeans_k4"] == c, "label"]))
 
 
-# ---------- diagrams for the overview section (made up data) ----------
+# diagrams for the overview section (made up data)
 
 rng = np.random.default_rng(7)
 blobs = np.vstack([rng.normal(c, 0.55, (25, 2)) for c in [(0, 0), (4, 1), (2, 4)]])

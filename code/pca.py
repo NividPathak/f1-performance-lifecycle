@@ -1,5 +1,4 @@
-# Milestone 2 - PCA
-# PCA on driver-race rows from the races that have FastF1 weather + tyre data
+# pca on driver-race rows (only races with fastf1 weather data)
 
 import json
 
@@ -28,7 +27,6 @@ SHORT = {"quali_position": "quali pos", "grid": "grid", "final_position_num": "f
          "air_temp_mean": "air temp", "track_temp_mean": "track temp", "humidity_mean": "humidity"}
 
 
-# ---------- data prep ----------
 
 df = pd.read_csv(CLEANED_CSV)
 df["race_laps"] = df.groupby(["season", "round"])["laps_completed"].transform("max")
@@ -56,7 +54,6 @@ tables["pca_scaled"] = table_rows(X_df.head(8))
 tables_file.write_text(json.dumps(tables, indent=1))
 
 
-# ---------- PCA ----------
 
 pca = PCA().fit(X)
 eig = pca.explained_variance_
@@ -108,7 +105,6 @@ def draw_arrows(ax, xy, color, min_len, scale=1.0):
                 bbox=dict(boxstyle="round,pad=0.2", fc=ps.BG, ec="none", alpha=0.75))
 
 
-# ---------- scree plot ----------
 
 idx = np.arange(1, len(FEATURES) + 1)
 fig, ax = plt.subplots(figsize=(9, 4.4))
@@ -133,7 +129,7 @@ ax.legend(h1 + h2, l1 + l2, loc="center right")
 ps.save(fig, M2_IMG / "pca_scree.png")
 
 
-# ---------- biplot (PC1 vs PC2), dots coloured by team ----------
+# biplot (PC1 vs PC2), dots coloured by team
 
 team_colors = data["constructor_name"].map(ps.TEAM_COLORS).values
 fig, ax = plt.subplots(figsize=(10.5, 7.5))
@@ -146,7 +142,6 @@ ps.team_legend(ax, loc="upper left", bbox_to_anchor=(1.01, 1), borderaxespad=0)
 ps.save(fig, M2_IMG / "pca_biplot.png")
 
 
-# ---------- loadings heatmap ----------
 
 top5 = loadings.iloc[:, :5]
 fig, ax = plt.subplots(figsize=(7.5, 6.5))
@@ -163,7 +158,7 @@ fig.colorbar(im, ax=ax, fraction=0.04, pad=0.02)
 ps.save(fig, M2_IMG / "pca_loadings.png")
 
 
-# ---------- 3d plot, team colours, triangles = rain ----------
+# 3d plot, team colours, triangles = rain
 
 wet = data["rainfall"].astype(bool).values
 fig = plt.figure(figsize=(10.5, 7.5))
@@ -189,7 +184,6 @@ ax.legend(handles=shapes, loc="lower left", bbox_to_anchor=(1.12, 0.1), fontsize
 ps.save(fig, M2_IMG / "pca_3d.png")
 
 
-# ---------- correlation circles ----------
 
 fig, axes = plt.subplots(1, 2, figsize=(15, 6.8))
 for ax, (a, b) in zip(axes, [("PC1", "PC2"), ("PC3", "PC4")]):
@@ -201,7 +195,7 @@ for ax, (a, b) in zip(axes, [("PC1", "PC2"), ("PC3", "PC4")]):
 ps.save(fig, M2_IMG / "pca_corr_circle.png")
 
 
-# ---------- diagrams for the overview section ----------
+# diagrams for the overview section
 
 rng = np.random.default_rng(3)
 toy = rng.multivariate_normal([0, 0], [[3, 2.2], [2.2, 2.2]], 300)

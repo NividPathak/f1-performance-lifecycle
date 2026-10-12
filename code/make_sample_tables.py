@@ -1,4 +1,4 @@
-# Raw vs cleaned sample rows for the Data Prep tab, rendered as real tables on the page.
+# raw vs cleaned sample rows for the data prep tab
 import json
 
 import pandas as pd

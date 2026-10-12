@@ -38,7 +38,7 @@
       <span class="line">Race Performance</span>
       <span class="line accent">&amp; Strategy</span>
     </h1>
-    <p class="hero-sub">Three seasons. Sixty-six races. Thirteen hundred driver-races of grid slots, pit calls, tyre compounds and weather, pulled apart to find what actually decides a finishing position.</p>
+    <p class="hero-sub">2021 to 2023: 66 races and 1,320 driver-races worth of grid slots, pit stops, tyres and weather. I wanted to know what actually decides where a driver finishes, so I went and pulled the data.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#introduction" data-tab-link="introduction">Enter the project</a>
       <a class="btn btn-ghost" href="#dataprep" data-tab-link="dataprep">See the data</a>
@@ -98,31 +98,31 @@
         </div>
 
         <ul class="race-steps" id="race-steps">
-          <li data-step="0"><b>Qualifying sets the grid.</b> Saturday's one-lap shootout decides the starting order. The fastest driver starts on pole, closest to Turn 1.</li>
-          <li data-step="1"><b>Lights out.</b> Five red lights come on one at a time, then all go out together. That's the start.</li>
-          <li data-step="2"><b>57 laps of 5.4 km.</b> Bahrain's rough surface wears tyres out quickly, so how drivers manage them over a stint matters a lot here.</li>
-          <li data-step="3"><b>Pit stops.</b> In a dry race every driver has to use two different tyre compounds, so everyone stops at least once. When to stop is the big strategy call.</li>
-          <li data-step="4"><b>Chequered flag.</b> The top ten score points, from 25 for a win down to 1 for tenth. In these seasons, a top-ten finisher with the fastest lap got one more.</li>
+          <li data-step="0"><b>Qualifying sets the grid.</b> Saturday's one-lap shootout decides the order. Fastest driver gets pole, closest to Turn 1.</li>
+          <li data-step="1"><b>Lights out.</b> Five reds come on one by one, then they all go out. And away we go.</li>
+          <li data-step="2"><b>57 laps of 5.4 km.</b> Bahrain's surface is really abrasive, so tyre management over a stint is a huge deal here.</li>
+          <li data-step="3"><b>Pit stops.</b> In a dry race you have to run two different compounds, so everyone stops at least once. Picking the lap is the big strategy call.</li>
+          <li data-step="4"><b>Chequered flag.</b> Top ten score, 25 for the win down to 1 for P10. In these seasons there was also a bonus point for fastest lap if you finished in the top ten.</li>
         </ul>
       </div>
-      <p class="caption">Bahrain International Circuit, the season opener in all three years I looked at. Drawn from FastF1 position data for the fastest lap of the 2023 race.</p>
+      <p class="caption">Bahrain International Circuit, which opened the season in all three years I looked at. The outline is the fastest lap of the 2023 race, traced from FastF1 position data.</p>
     </div>
 
     <div class="block">
-      <p>Formula 1 is the top tier of single-seater motorsport: ten teams, twenty drivers, and more than twenty races a season spread across five continents. What makes it different from most sports is that every team, or constructor, designs and builds its own car. A championship is won in the factory and the wind tunnel as much as on track, and the gap between the fastest and slowest cars on the grid can be a second or more per lap. On a race weekend, that car performance gets mixed together with driver skill, the strategy calls made on the pit wall, mechanical reliability, and whatever the weather decides to do. The result is a sport where it's hard to point at one thing and say that's why someone won. F1 has been running since 1950, but the last few years have brought in a huge new audience, much of it in the US, helped along by Netflix's Drive to Survive pulling back the curtain on the teams and their rivalries. It's also a big business. Races bring tourism and money into host cities, sponsorship deals are worth hundreds of millions, and thousands of engineering and manufacturing jobs depend on the teams. Whether you're a fan, a bettor, or someone playing F1 Fantasy, you end up asking the same question: what actually decides where a driver finishes? Teams answer that with enormous amounts of data, and a surprising amount of it is now public, which means anyone can go looking for the answer themselves. The debates online never really end. One weekend it's all about qualifying pace, the next it's tyre management or a botched pit stop. Those arguments rarely get settled, mostly because the factors are tangled together. A fast car qualifies well, pits at the right time, and finishes well, so it's hard to say which part did the work. Pulling those threads apart is the point of this project.</p>
+      <p>As an F1 fan, the question I keep coming back to is how much of a result is the driver and how much is the car. Formula 1 is ten teams and twenty drivers racing more than twenty times a year across five continents, but unlike most sports every team (constructor) designs and builds its own car. So the championship gets decided in the wind tunnel and the factory just as much as on track, and the gap from the fastest car to the slowest can easily be a second a lap. On a race weekend all of that gets mixed in with driver skill, whatever the pit wall decides, reliability, and the weather. That's why it's so hard to point at one thing and say "that's why they won." The sport has been around since 1950, but it has blown up in the last few years, especially in the US, and Drive to Survive is a big part of that. It's also serious money: host cities get tourism, sponsorship deals run into the hundreds of millions, and thousands of engineering jobs depend on the teams. Whether you're a fan arguing on Reddit, someone betting, or just trying to win your F1 Fantasy league, you end up asking the same thing: what actually decides where a driver finishes? One week the answer is qualifying, the next week it's tyre deg or a 5 second pit stop. Those arguments never get settled because everything is tangled together. A fast car qualifies well, pits at the right time and finishes well, so which part did the work? That's what I want to untangle here.</p>
 
-      <p>The result of a race matters to a lot more people than the twenty drivers on the grid. Teams feel it first. Prize money is split by finishing position in the constructors' championship, so a slow pit stop or the wrong tyre call can cost a team millions over a season, not just a few points on a Sunday. Drivers feel it through their contracts, since their market value and their next seat depend on turning the car's pace into results. Sponsors and broadcasters want close, unpredictable racing because it keeps people watching, and circuits and host cities notice when a dull season shows up in the next year's ticket sales. Then there are the fans, who put real emotion into title fights that often come down to exactly these details. For most of the sport's history, explaining why a race went the way it did has been left to commentators and journalists, which means expert opinion and good storytelling more than systematic analysis. That's changing as more timing data becomes public. Lap times, pit stop durations, tyre compounds, and track weather are all available now through community-run APIs and open-source tools like FastF1. People have already used this to dig into specific questions, like how much pole position is really worth, when the best window to pit is, or how much of a driver's success is actually the car. Most of that work looks at one factor at a time, though. Grid position gets studied on its own far more often than alongside tyre strategy, pit stop execution, team strength, and weather, even though all of those are happening at once in a real race. This project looks at them together. Using three full seasons of results from 2021 to 2023, I want to build an evidence-based picture of what separates a strong result from a weak one, and how much each factor really contributes once the others are accounted for.</p>
+      <p>A race result matters to way more people than the twenty drivers. Teams care first, because prize money is paid out by where you finish in the constructors' championship, so a slow stop or a bad tyre call can cost millions across a season, not just a couple of points on Sunday. Drivers care because their next contract depends on turning the car's pace into results. Sponsors and broadcasters want close, unpredictable racing (2021 Abu Dhabi is the extreme example), and circuits notice when a boring season like 2023, where Verstappen won 19 of 22, shows up in ticket sales. And fans put a lot of emotion into title fights that come down to exactly these details. For most of F1 history, explaining a race was left to commentators and journalists, so it was mostly expert opinion and good storytelling. That's changed now that a lot of the timing data is public. Lap times, pit stop durations, tyre compounds and track weather are all available through community APIs and open-source tools like FastF1. People have used them to look at things like how much pole is really worth or when the best pit window is, but usually one factor at a time. Grid position gets studied on its own way more than it gets studied alongside tyre strategy, pit stops, team strength and weather, even though all of those are happening in the same race. I want to look at them together, using every race from 2021 to 2023, and see how much each one actually contributes once the others are taken into account.</p>
 
-      <p>The way I'm going about it follows the data science lifecycle, one stage at a time. The first stage was collecting and cleaning the data: 1,320 driver-race rows covering the grid, qualifying, pit stops, tyres, and track weather, which are documented on the Data Prep &amp; EDA tab. Before trying to predict anything, it's worth asking what structure is already sitting in that data without telling a model what to look for. That's what unsupervised methods are for. Clustering groups drivers by how their seasons actually played out, without being told who drove for which team, to see whether natural tiers show up and whether they follow the driver or the car. Principal Component Analysis takes the thirteen numeric measurements behind each race result and finds the handful of underlying directions that explain most of the variation, which shows which factors move together and which ones carry independent information. Those two views of the data shape what comes next. Once I know which variables are redundant and which groups exist naturally, the supervised models in later tabs (Naive Bayes, decision trees, SVMs, regression, and neural networks) can be built on features that actually say something, and their results can be checked against patterns I've already seen. The aim is that every method on this site adds one more piece of evidence towards the same question, instead of being a separate exercise.</p>
+      <p>The site follows the data science lifecycle, one stage per tab. Stage one was collecting and cleaning: 1,320 driver-race rows with grid, qualifying, pit stops, tyres and weather, which is all on the Data Prep &amp; EDA tab. Before I try to predict anything, I want to see what structure is already in the data without telling a model what to look for, and that's what the unsupervised methods are for. Clustering groups drivers by how their seasons went, without telling it who drove for which team, to see if natural tiers show up and whether they follow the driver or the car. PCA takes the thirteen numbers recorded for each race result and finds the few underlying directions that explain most of the variation, which tells me which variables are basically saying the same thing and which ones carry new information. Both of those feed into the supervised tabs later on (Naive Bayes, decision trees, SVMs, regression and neural nets), since I'll know which features are redundant and which groups already exist, and I can check the models against patterns I've already seen. The idea is that every tab adds another piece of evidence to the same question instead of being its own separate exercise.</p>
 
       <div class="intro-photos">
         <figure>
           <img src="assets/img/intro_grid.jpg" alt="Twenty Formula 1 cars lined up on the starting grid at Spa-Francorchamps under an overhead gantry" loading="lazy">
-          <figcaption>The starting grid at Spa-Francorchamps. Each slot back from pole is a few metres further from Turn 1, and the data says those metres matter. <span class="credit">Photo: Mark McArdle, <a href="https://commons.wikimedia.org/wiki/File:Spa_2008_before_start.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY-SA 2.0.</span></figcaption>
+          <figcaption>The grid at Spa. Every slot back from pole is a few more metres to La Source, and the data says those metres add up. <span class="credit">Photo: Mark McArdle, <a href="https://commons.wikimedia.org/wiki/File:Spa_2008_before_start.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY-SA 2.0.</span></figcaption>
         </figure>
         <figure>
           <img src="assets/img/intro_pitstop.jpg" alt="A pit crew of around twenty mechanics changing all four tyres on a Formula 1 car in the pit lane" loading="lazy">
-          <figcaption>A pit stop at the Malaysian Grand Prix. About twenty people change four tyres in a couple of seconds, and the timing of that stop is one of the main strategy calls in a race. <span class="credit">Photo: Mohd Nor Azmil Abdul Rahman, <a href="https://commons.wikimedia.org/wiki/File:Honda_pit_stop_Malaysia_2008.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY 2.0.</span></figcaption>
+          <figcaption>A pit stop at the Malaysian Grand Prix. Around twenty mechanics change four tyres in a couple of seconds, and when you call that stop is one of the biggest strategy decisions of the race. <span class="credit">Photo: Mohd Nor Azmil Abdul Rahman, <a href="https://commons.wikimedia.org/wiki/File:Honda_pit_stop_Malaysia_2008.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY 2.0.</span></figcaption>
         </figure>
       </div>
     </div>
@@ -161,17 +161,17 @@
     <div class="block">
       <h2>Data Prep &amp; EDA</h2>
       <h3>Where the data came from</h3>
-      <p>Everything here covers the 2021, 2022, and 2023 seasons, 66 races in total, and comes from two free sources:</p>
+      <p>Everything covers the 2021, 2022 and 2023 seasons (66 races) and comes from two free sources:</p>
       <ul class="source-list">
-        <li><strong>Jolpica-F1 API</strong>, the community-run replacement for the old Ergast API (<a href="https://api.jolpi.ca/ergast/f1/2023/1/results.json" target="_blank" rel="noopener">api.jolpi.ca/ergast/f1</a>). I used it for race results (grid, finishing position, points, status, team), qualifying, and every pit stop's lap and duration. The API returns 100 records at a time, so the scripts page through it to get full seasons.</li>
-        <li><strong>FastF1</strong>, a Python library that reads F1's official live timing feed. I used it for tyre compounds and race weather (air and track temperature, humidity, rain). I only got 38 of the 66 races before hitting the public feed's hourly rate limit, so the other 28 are left blank instead of guessed.</li>
+        <li><strong>Jolpica-F1 API</strong>, the community-run replacement for the old Ergast API (<a href="https://api.jolpi.ca/ergast/f1/2023/1/results.json" target="_blank" rel="noopener">api.jolpi.ca/ergast/f1</a>). I pulled race results (grid, finish, points, status, team), qualifying, and the lap and duration of every pit stop from it. It only gives 100 records per request, so the scripts page through to get whole seasons.</li>
+        <li><strong>FastF1</strong>, a Python library that reads F1's official live timing feed. I used it for tyre compounds and race weather (air and track temp, humidity, rain). I got through 38 of the 66 races before hitting the hourly rate limit on the public feed, so the other 28 are left blank. I didn't want to guess them.</li>
       </ul>
-      <p>The raw pulls and scripts are all in the repo:</p>
+      <p>Raw pulls and scripts are all in the repo:</p>
       <ul class="source-list">
         <li><a href="data/combined_raw_snapshot.csv">combined_raw_snapshot.csv</a>: results, qualifying, pit stops, and tyre/weather merged together, before any cleaning (1,320 rows).</li>
         <li><a href="https://github.com/NividPathak/f1-performance-lifecycle/tree/master/data/raw_pulls" target="_blank" rel="noopener">data/raw_pulls/</a> (on GitHub): the untouched JSON responses from both sources.</li>
         <li><a href="code/fetch_jolpica.py">fetch_jolpica.py</a>, <a href="code/fetch_pitstops.py">fetch_pitstops.py</a>, <a href="code/fetch_fastf1.py">fetch_fastf1.py</a>: the scripts that pulled the data.</li>
-        <li><a href="code/build_dataset.py">build_dataset.py</a>: merging and cleaning, with comments on each step.</li>
+        <li><a href="code/build_dataset.py">build_dataset.py</a>: merges everything and does the cleaning.</li>
         <li><a href="data/f1_driver_race_cleaned.csv">f1_driver_race_cleaned.csv</a>: the final cleaned dataset (1,320 rows, 31 columns).</li>
         <li><a href="data/cleaning_log.txt">cleaning_log.txt</a>: the log the cleaning script writes as it runs.</li>
       </ul>
@@ -186,13 +186,13 @@
       <div class="table-wrap"><table id="sample-cleaned" class="sample-table"></table></div>
 
       <h3>Cleaning</h3>
-      <p>The biggest catch was that Jolpica gives almost every driver a numeric finishing position, even ones who retired, so I had to work out who actually finished from the status text instead. Pit-lane starts show up as grid position 0, which would look like pole, so I moved those to 21. Where a value can't exist, like the average pit stop time for a driver who never stopped, I left it blank and added a flag column rather than filling in a number. Here's the full log from the cleaning script:</p>
+      <p>The biggest gotcha was that Jolpica gives almost every driver a numeric finishing position, even if they retired, so I had to figure out who actually finished from the status text. Pit lane starts come through as grid 0, which would look like pole, so I recoded those to 21. When a value can't exist (like average pit stop time for someone who never stopped) I left it blank and added a flag column instead of making up a number. Full log from the cleaning script:</p>
       <div class="cleaning-log" id="cleaning-log-content">Loading cleaning log...</div>
     </div>
 
     <div class="block">
       <h3>Charts</h3>
-      <p>Twelve charts built from the cleaned dataset. Hover over any of them for exact values, and use the season filter to look at one year at a time (charts 8, 11, and 12 always show all three seasons).</p>
+      <p>Twelve charts from the cleaned data. Hover for exact values, and use the season filter to look at one year at a time (charts 8, 11 and 12 always show all three seasons).</p>
 
       <div class="filter-bar">
         <label for="season-filter">Season</label>
@@ -208,62 +208,62 @@
         <figure>
           <h4>Grid position vs finishing position</h4>
           <canvas id="chart-01"></canvas>
-          <figcaption>Where you start is a strong guide to where you finish. Among drivers who finished, the correlation is about 0.73.</figcaption>
+          <figcaption>Where you start is a pretty good guide to where you finish. For drivers who finished, r is about 0.73.</figcaption>
         </figure>
         <figure>
           <h4>Average finish by starting zone</h4>
           <canvas id="chart-02"></canvas>
-          <figcaption>Each step back on the grid costs a clear chunk of finishing position, from P2.0 on average for the polesitter to P12.3 from P11 or lower.</figcaption>
+          <figcaption>Every step back on the grid costs you. The polesitter finishes P2.0 on average, while starting P11 or lower gets you P12.3.</figcaption>
         </figure>
         <figure>
           <h4>Average points per race by team</h4>
           <canvas id="chart-03"></canvas>
-          <figcaption>Red Bull averaged almost 16 points a race. Haas averaged under half a point.</figcaption>
+          <figcaption>Red Bull averaged almost 16 points a race. Haas didn't even average half a point.</figcaption>
         </figure>
         <figure>
           <h4>Average finish by number of stops</h4>
           <canvas id="chart-04"></canvas>
-          <figcaption>One, two, and three stops all finish around P8.7 to P9.2 on average. No-stop and four-stop races end further back, so stop count on its own doesn't say much.</figcaption>
+          <figcaption>One, two and three stops all average around P8.7 to P9.2. Zero and four stops end up further back, so stop count alone doesn't tell you much.</figcaption>
         </figure>
         <figure>
           <h4>How many times drivers pitted</h4>
           <canvas id="chart-05"></canvas>
-          <figcaption>Two stops was the most common across all three seasons, just ahead of one. In 2021, one-stop races were slightly more common.</figcaption>
+          <figcaption>Two stops was the most common overall, just ahead of one. 2021 was the exception, with slightly more one-stoppers.</figcaption>
         </figure>
         <figure>
           <h4>Average pit stop time</h4>
           <canvas id="chart-06"></canvas>
-          <figcaption>This is total time in the pit lane, not just time stationary. The median is about 24 s, most stops fall between 22 and 26 s, and there's a long tail of slow ones.</figcaption>
+          <figcaption>This is total pit lane time, not the stationary time you see on TV. Median is about 24 s, most land between 22 and 26 s, and there's a long tail of slow ones.</figcaption>
         </figure>
         <figure>
           <h4>First stop lap vs finishing position</h4>
           <canvas id="chart-07"></canvas>
-          <figcaption>On its own, the lap of a driver's first stop tells you almost nothing about the result (correlation about &minus;0.10).</figcaption>
+          <figcaption>The lap of the first stop on its own says almost nothing about the result (r is about &minus;0.10).</figcaption>
         </figure>
         <figure>
           <h4>Season points, top six teams</h4>
           <canvas id="chart-08"></canvas>
-          <figcaption>Red Bull pulled away every year while Mercedes dropped from 605 points in 2021 to 374 in 2023. Aston Martin jumped from 55 to 266 in 2023.</figcaption>
+          <figcaption>Red Bull pulled away every year while Mercedes fell from 605 points in 2021 to 374 in 2023. Aston Martin went from 55 to 266 in 2023, the year Alonso joined.</figcaption>
         </figure>
         <figure>
           <h4>Did-not-finish rate by team</h4>
           <canvas id="chart-09"></canvas>
-          <figcaption>Williams failed to finish about a quarter of their races and Haas almost a fifth, roughly twice as often as Red Bull, Mercedes, and McLaren.</figcaption>
+          <figcaption>Williams didn't finish about a quarter of their races and Haas almost a fifth, roughly double the rate of Red Bull, Mercedes and McLaren.</figcaption>
         </figure>
         <figure>
           <h4>Qualifying position vs actual grid slot</h4>
           <canvas id="chart-10"></canvas>
-          <figcaption>About two thirds of drivers started exactly where they qualified. Points off the diagonal are mostly grid penalties.</figcaption>
+          <figcaption>About two thirds of drivers started exactly where they qualified. Anything off the diagonal is mostly grid penalties (usually engine parts).</figcaption>
         </figure>
         <figure>
           <h4>DNF rate by air temperature</h4>
           <canvas id="chart-11"></canvas>
-          <figcaption>Only the 38 races with weather data. Retirements peak in the 26 to 31 &deg;C band, but there's no steady pattern from cool to hot races.</figcaption>
+          <figcaption>Only the 38 races with weather data. DNFs peak in the 26 to 31 &deg;C band, but there's no clear trend from cool races to hot ones.</figcaption>
         </figure>
         <figure>
           <h4>Average finish by tyre compounds used</h4>
           <canvas id="chart-12"></canvas>
-          <figcaption>Only the 38 races with tyre data. Two compounds gives the best average finish. Just 13 finishers used four or five, all in rain-affected races, so don't read much into those bars.</figcaption>
+          <figcaption>Only the 38 races with tyre data. Two compounds gives the best average finish. Just 13 finishers used four or five, all in races with rain, so I wouldn't read much into those bars.</figcaption>
         </figure>
       </div>
     </div>
@@ -272,7 +272,7 @@
     <section id="clustering" class="tab-panel">
     <div class="block">
       <h2>Clustering</h2>
-      <p class="muted">Can three seasons of results sort drivers into natural tiers without being told who drove what? And do those tiers follow the driver or the car?</p>
+      <p class="muted">If I hide the team names, do three seasons of results still sort drivers into tiers? And if they do, are those tiers about the driver or the car?</p>
       <nav class="subnav" aria-label="Clustering sections">
         <button type="button" data-jump="clu-overview">(a) Overview</button>
         <button type="button" data-jump="clu-prep">(b) Data Prep</button>
@@ -284,49 +284,49 @@
 
     <div class="block" id="clu-overview">
       <h3><span class="section-tag">(a)</span>Overview</h3>
-      <p>Clustering is an unsupervised learning method. There is no target column and no right answer to check against. The algorithm only sees rows of numbers and tries to put similar rows in the same group and dissimilar rows in different groups. What counts as "similar" is decided by a distance measure, so picking that measure is as important as picking the algorithm. Because nothing is labelled, clustering is a tool for discovery: it shows which groups exist in the data, and it's then up to the analyst to work out what those groups mean.</p>
-      <p>There are two main families. <strong>Partitional clustering</strong>, with k-means as the usual example, splits the data into exactly k non-overlapping groups. You choose k, the algorithm places k centroids, assigns every point to its nearest centroid, moves each centroid to the mean of its points, and repeats until nothing changes. It's fast and simple, but it needs k up front, it depends on where the centroids start (so it's run many times with different starts), and because it minimises squared Euclidean distance it favours compact, roughly round clusters. <strong>Hierarchical clustering</strong> doesn't need k in advance. The agglomerative version starts with every point as its own cluster and keeps merging the two closest clusters until only one is left. The full history of merges is drawn as a tree called a dendrogram, and cutting the tree at any height gives a clustering. How the distance between two clusters is measured is called the linkage: single (closest pair), complete (farthest pair), average (mean of all pairs), or Ward (smallest increase in variance).</p>
-      <p>Two distance measures are used here. <strong>Euclidean distance</strong>, the straight-line distance between two points, is what k-means uses. It cares about magnitude, so two drivers whose numbers are all large end up far from two drivers whose numbers are all small. <strong>Cosine distance</strong>, which is 1 minus the cosine similarity, ignores length and only compares direction: two vectors pointing the same way have a cosine distance near 0 however long they are. On standardized data that means cosine distance compares the <em>shape</em> of a driver's season (which stats are above or below average, relative to each other) rather than how extreme it was. The hierarchical clustering on this page uses cosine distance with average linkage. Ward linkage isn't used because it is only defined for Euclidean distance.</p>
-      <p>For this project, clustering is a way of letting the results speak before any model is told what to predict. Each driver's season becomes one point described by eleven numbers: average grid and finish, points, podium and points-finish rates, retirements, positions gained, pit stops, the timing of the first stop, pit lane time, and grid penalties. If clear tiers appear, I can check whether a driver stays in the same tier when he changes team, which speaks directly to the car-versus-driver question from the Introduction, and whether strategy variables like stop timing separate the groups at all.</p>
+      <p>Clustering is unsupervised learning, so there's no target column and no right answer to check against. The algorithm just sees rows of numbers and tries to put similar rows together and keep different rows apart. What "similar" means comes from the distance measure you pick, which honestly matters as much as the algorithm itself. Since nothing is labelled, clustering is more of a discovery tool. It tells you which groups exist, and then it's on you to figure out what they mean.</p>
+      <p>There are two main families. <strong>Partitional clustering</strong> (k-means is the classic one) splits the data into exactly k groups that don't overlap. You pick k, it drops k centroids, assigns every point to the closest one, moves each centroid to the mean of its points, and repeats until nothing moves. It's fast and simple, but you have to know k up front, the result depends on where the centroids start (so you run it a bunch of times), and since it minimises squared Euclidean distance it likes compact, roundish clusters. <strong>Hierarchical clustering</strong> doesn't need k ahead of time. The agglomerative version starts with every point as its own cluster and keeps merging the two closest ones until there's only one left. That whole merge history gets drawn as a tree called a dendrogram, and you can cut it at any height to get clusters. How you measure the distance between two clusters is the linkage: single (closest pair), complete (farthest pair), average (mean over all pairs) or Ward (smallest increase in variance).</p>
+      <p>I use two distance measures. <strong>Euclidean distance</strong> is the straight-line distance between two points, and it's what k-means uses. It cares about magnitude, so a driver with big numbers everywhere ends up far from one with small numbers everywhere. <strong>Cosine distance</strong> (1 minus cosine similarity) ignores length and only looks at direction, so two vectors pointing the same way are close to 0 apart no matter how long they are. On standardized data, that means cosine compares the <em>shape</em> of a season (which stats are above or below average relative to each other) instead of how extreme it was. My hierarchical clustering uses cosine with average linkage. I couldn't use Ward because it only works with Euclidean distance.</p>
+      <p>For me, clustering is a way to let the results talk before I tell any model what to predict. Each driver's season becomes one point with eleven numbers: average grid and finish, points, podium rate, points-finish rate, retirements, positions gained, pit stops, when the first stop happened, pit lane time, and grid penalties. If tiers show up, I can check whether a driver stays in the same tier after switching teams (which goes straight at the car vs driver question), and whether strategy stuff like stop timing splits the groups at all.</p>
       <div class="fig-pair">
         <figure class="m2-fig">
           <img src="assets/img/m2/clu_concept_partitional_vs_hier.png" alt="Left: three groups of points with k-means centroids marked. Right: a dendrogram merging the same points into a tree" loading="lazy">
-          <figcaption>Partitional versus hierarchical clustering on the same synthetic data. K-means needs k (here 3) and returns centroids. Agglomerative clustering returns a tree that can be cut into any number of clusters.</figcaption>
+          <figcaption>Partitional vs hierarchical on the same made-up data. K-means needs k (3 here) and gives back centroids. Agglomerative gives back a tree you can cut into however many clusters you want.</figcaption>
         </figure>
         <figure class="m2-fig">
           <img src="assets/img/m2/clu_concept_cosine.png" alt="Three arrows from the origin. A and B point the same way but differ in length; C points in a different direction" loading="lazy">
-          <figcaption>A and B are far apart in Euclidean terms but point the same way, so their cosine distance is close to 0. A and C differ in direction, so their cosine distance is large.</figcaption>
+          <figcaption>A and B are far apart in Euclidean terms but point the same way, so cosine says they're almost identical. A and C point different ways, so cosine puts them far apart.</figcaption>
         </figure>
       </div>
     </div>
 
     <div class="block" id="clu-prep">
       <h3><span class="section-tag">(b)</span>Data Prep</h3>
-      <p>Clustering only works on <strong>unlabeled numeric data</strong>. Every method here computes distances between rows, and you can't take the distance between "Red Bull" and "Ferrari" or between a driver's name and a number. Labels also have to come out for a second reason: if team or driver were left in, the algorithm would simply rediscover them, and the point is to see what groups appear <em>without</em> that information. Labels are kept to one side and only brought back afterwards to read the clusters.</p>
-      <p>Starting from the cleaned driver-race table (1,320 rows), I took these steps:</p>
+      <p>Clustering only works on <strong>unlabeled numeric data</strong>. Everything here is based on distances between rows, and there's no distance between "Red Bull" and "Ferrari". There's a second reason to drop labels too. If team or driver stayed in, the algorithm would just find them again, and the whole point is to see what groups show up <em>without</em> that info. So the labels get set aside and only come back at the end to help me read the clusters.</p>
+      <p>Starting from the cleaned driver-race table (1,320 rows):</p>
       <ol>
-        <li><strong>Changed the unit of analysis to a driver-season.</strong> Single races are noisy, since one crash or safety car can flip a result. Averaging over a season gives a steadier picture of how a driver and car actually performed. I derived two extra measures per race first: positions gained (grid minus finish, for finishers) and first-stop timing as a share of race distance, so long and short races can be compared.</li>
-        <li><strong>Dropped stand-ins.</strong> Driver-seasons with fewer than 8 races (for example a one-off substitute) were removed because their averages rest on too few races. That leaves <strong>60 driver-seasons</strong>.</li>
-        <li><strong>Removed every label.</strong> Driver, team, and season were set aside. Eleven numeric columns remain.</li>
-        <li><strong>Standardized each column</strong> to mean 0 and standard deviation 1. Without this, average grid (values up to 20) would swamp podium rate (0 to 1) in every distance calculation. After scaling, every variable gets an equal say.</li>
+        <li><strong>Switched to one row per driver-season.</strong> Single races are noisy. One lap 1 crash or a badly timed safety car can flip a result. Averaging over a season gives a much steadier picture. Before averaging I added two per-race measures: positions gained (grid minus finish, finishers only) and first stop timing as a share of race distance, so Monaco and Spa can be compared fairly.</li>
+        <li><strong>Dropped stand-ins.</strong> Anyone with fewer than 8 races in a season (one-off subs, mostly) got removed since their averages are based on too little. That leaves <strong>60 driver-seasons</strong>.</li>
+        <li><strong>Removed the labels.</strong> Driver, team and season go to one side, leaving eleven numeric columns.</li>
+        <li><strong>Standardized every column</strong> to mean 0 and SD 1. Otherwise average grid (up to 20) would completely drown out podium rate (0 to 1) in every distance. After scaling every variable gets an equal vote.</li>
       </ol>
       <h4>Before: driver-season profiles</h4>
-      <p class="muted">First eight driver-seasons with their labels and raw averages, built from the cleaned dataset.</p>
+      <p class="muted">First eight driver-seasons with labels and raw averages, built from the cleaned data.</p>
       <div class="table-wrap"><table id="sample-clustering-labeled" class="sample-table"></table></div>
       <h4>After: what the clustering sees</h4>
-      <p class="muted">The same eight rows with the labels removed and every column standardized. This is the exact matrix k-means and hierarchical clustering receive.</p>
+      <p class="muted">Same eight rows with labels removed and every column standardized. This is exactly what k-means and hclust get.</p>
       <div class="table-wrap"><table id="sample-clustering-scaled" class="sample-table"></table></div>
       <p>Data used:</p>
       <ul class="source-list">
         <li><a href="data/milestone2/clustering_input_scaled.csv">clustering_input_scaled.csv</a>: the unlabeled, standardized input (60 rows &times; 11 columns).</li>
-        <li><a href="data/milestone2/driver_season_profiles.csv">driver_season_profiles.csv</a>: the same rows with labels and raw values, for reference.</li>
-        <li><a href="data/milestone2/clustering_assignments.csv">clustering_assignments.csv</a>: the cluster each driver-season ended up in.</li>
+        <li><a href="data/milestone2/driver_season_profiles.csv">driver_season_profiles.csv</a>: same rows with labels and raw values.</li>
+        <li><a href="data/milestone2/clustering_assignments.csv">clustering_assignments.csv</a>: which cluster each driver-season ended up in.</li>
       </ul>
     </div>
 
     <div class="block" id="clu-code">
       <h3><span class="section-tag">(c)</span>Code</h3>
-      <p>Everything is in Python with scikit-learn and SciPy: <a href="code/clustering.py">code/clustering.py</a> (<a href="https://github.com/NividPathak/f1-performance-lifecycle/blob/master/code/clustering.py" target="_blank" rel="noopener">view on GitHub</a>). The script builds the profiles, runs k-means for every k from 2 to 10 (50 random starts each), scores each k with the silhouette coefficient, runs agglomerative clustering with cosine distance, and draws every figure on this tab. The core of it:</p>
+      <p>All Python, using scikit-learn and SciPy: <a href="code/clustering.py">code/clustering.py</a> (<a href="https://github.com/NividPathak/f1-performance-lifecycle/blob/master/code/clustering.py" target="_blank" rel="noopener">on GitHub</a>). It builds the profiles, runs k-means for k = 2 to 10 with 50 random starts each, scores every k with silhouette, runs agglomerative clustering with cosine distance, and makes all the figures on this tab. The main part:</p>
 <pre class="code">X = StandardScaler().fit_transform(profiles[FEATURES])
 
 for k in range(2, 11):
@@ -339,7 +339,7 @@ Z = linkage(D, method="average")
 labels = fcluster(Z, k, criterion="maxclust")
 
 ari = adjusted_rand_score(km_labels[k], hc_labels[k])</pre>
-      <p>To rerun it: <code>python code/clustering.py</code> with pandas, NumPy, scikit-learn, SciPy and matplotlib installed.</p>
+      <p>To rerun: <code>python code/clustering.py</code> (needs pandas, NumPy, scikit-learn, SciPy and matplotlib).</p>
     </div>
 
     <div class="block" id="clu-results">
@@ -352,87 +352,87 @@ ari = adjusted_rand_score(km_labels[k], hc_labels[k])</pre>
       </div>
 
       <h4>Choosing k: silhouette and elbow</h4>
-      <p>The silhouette coefficient measures, for each point, how much closer it is to its own cluster than to the nearest other cluster. It runs from &minus;1 to 1, and higher is better. I ran k-means with k from 2 to 10. The silhouette is clearly highest at <strong>k = 2 (0.31)</strong>, then drops to between 0.16 and 0.20 for every k from 3 to 10. The elbow plot tells a similar story: within-cluster error falls fastest going from 1 to 2 clusters and then declines steadily with no sharp bend. So the strongest structure in the data is a single split into two groups. Finer splits exist, but they are softer.</p>
+      <p>Silhouette checks, for each point, how much closer it is to its own cluster than to the next nearest one. It goes from &minus;1 to 1 and higher is better. I ran k-means for k = 2 to 10, and silhouette is clearly highest at <strong>k = 2 (0.31)</strong>. Everything from 3 to 10 sits between 0.16 and 0.20. The elbow plot agrees: the error drops the most going from 1 to 2 clusters and after that it just slides down with no obvious bend. So the strongest structure is one split into two groups. There are finer splits, they're just weaker.</p>
       <figure class="m2-fig">
         <img src="assets/img/m2/clu_silhouette_elbow.png" alt="Line chart of mean silhouette peaking at k equals 2, beside an elbow chart of inertia falling as k grows" loading="lazy">
-        <figcaption>Left: mean silhouette by k, with k = 2 the clear peak. Right: the elbow curve of within-cluster sum of squares.</figcaption>
+        <figcaption>Left: mean silhouette for each k, peaking at k = 2. Right: elbow curve (within-cluster sum of squares).</figcaption>
       </figure>
       <figure class="m2-fig">
         <img src="assets/img/m2/clu_silhouette_profiles.png" alt="Three silhouette plots for k equals 2, 3 and 4, showing per-driver silhouette values grouped by cluster" loading="lazy">
-        <figcaption>Silhouette plots for the three k values compared. Each horizontal sliver is one driver-season. At k = 2 nearly every point is positive. At k = 3 and k = 4 a few points sit near or below 0, meaning they lie on the border between two clusters.</figcaption>
+        <figcaption>Silhouette plots for k = 2, 3 and 4. Each sliver is one driver-season. At k = 2 almost everything is positive. At k = 3 and 4 a few are near or below 0, so they're sitting on the border between two clusters.</figcaption>
       </figure>
 
       <h4>k-means with k = 2, 3 and 4</h4>
-      <p>To see the clusters, I projected the eleven-dimensional profiles onto their first two principal components, which together hold 64% of the variance (PCA itself is covered on the next tab). PC1 is essentially "how strong was this season": strong seasons sit on the left. Each dot is coloured by the team the driver raced for, and each cluster is the shaded outline with its number on top.</p>
+      <p>You can't plot eleven dimensions, so I squashed the profiles down to their first two principal components, which keep 64% of the variance (PCA gets its own tab next). PC1 is basically "how good was this season", with strong seasons on the left. Dots are coloured by team and each cluster is a shaded outline with its number on top.</p>
       <figure class="m2-fig">
         <img src="assets/img/m2/clu_kmeans_pca.png" alt="Three scatter plots of driver-seasons coloured by k-means cluster for k equals 2, 3 and 4, with centroids marked" loading="lazy">
-        <figcaption>k-means clusters drawn on the first two principal components. Dots use team colours (Red Bull dark blue, Ferrari red, Mercedes teal, McLaren papaya, and so on). Clusters are numbered by average points per race, so cluster 1 is always the strongest. Notice how the same team's dots tend to sit inside the same outline.</figcaption>
+        <figcaption>k-means clusters on the first two PCs. Dots are in team colours (Red Bull dark blue, Ferrari red, Mercedes teal, McLaren papaya, etc). Clusters are numbered by average points per race, so cluster 1 is always the strongest. Teammates' dots mostly land in the same outline.</figcaption>
       </figure>
       <ul>
-        <li><strong>k = 2</strong> splits the field into regular points scorers (25 driver-seasons) and everyone else (35).</li>
-        <li><strong>k = 3</strong> breaks this into front-runners (18), a midfield (21), and backmarkers (21).</li>
-        <li><strong>k = 4</strong> pulls a small title-contender group out of the front-runners, and is the easiest to read in racing terms:</li>
+        <li><strong>k = 2</strong> splits the field into regular points scorers (25 driver-seasons) and everybody else (35).</li>
+        <li><strong>k = 3</strong> gives front-runners (18), midfield (21) and backmarkers (21).</li>
+        <li><strong>k = 4</strong> pulls a small title-fight group out of the front-runners, and honestly it's the one that makes the most sense as an F1 fan:</li>
       </ul>
       <div class="cluster-cards">
         <article style="--c:#e10600">
           <h4>1 &middot; Title pace (5)</h4>
-          <p>Average grid P4.4, finish P3.6, 18.2 points a race, a podium 74% of the time, retires only 7% of the time.</p>
+          <p>Average grid P4.4, finish P3.6, 18.2 points a race, on the podium 74% of the time and only 7% retirements.</p>
           <p class="who">VER '21, '22, '23 &middot; HAM '21 &middot; PER '23</p>
         </article>
         <article style="--c:#7fd4ff">
           <h4>2 &middot; Regular podium threats (18)</h4>
-          <p>Grid P6.4, finish P7.2, 8.9 points a race, scores in 81% of races. Mostly Ferrari, Mercedes and McLaren seasons.</p>
+          <p>Grid P6.4, finish P7.2, 8.9 points a race, scores in 81% of races. Mostly Ferrari, Mercedes and McLaren.</p>
           <p class="who">LEC, SAI, NOR, HAM '22-'23, RUS '22-'23, PER '21-'22, ALO '23</p>
         </article>
         <article style="--c:#ffb020">
           <h4>3 &middot; Midfield climbers (16)</h4>
-          <p>Start P12.2 but gain 2.1 places on average, the most of any group, finishing P11.4 and scoring in 47% of races.</p>
+          <p>Start P12.2 but gain 2.1 places on average (the most of any group), finish P11.4 and score in 47% of races.</p>
           <p class="who">STR, OCO, VET, RIC, ALO '21-'22, GAS '23</p>
         </article>
         <article style="--c:#3ddc84">
           <h4>4 &middot; Backmarkers (21)</h4>
-          <p>Start P14.5, finish P14.4, score in only 16% of races. They also pit earliest (25% into the race) and have the slowest pit lane times (24.3 s).</p>
+          <p>Start P14.5, finish P14.4, score in just 16% of races. They also pit earliest (25% into the race) and have the slowest pit lane times (24.3 s).</p>
           <p class="who">TSU, ZHO, MAG, MSC, LAT, ALB, SAR, HUL, DEV</p>
         </article>
       </div>
       <figure class="m2-fig">
         <img src="assets/img/m2/clu_centroids.png" alt="Heatmap of the four k-means centroids across eleven variables" loading="lazy">
-        <figcaption>What defines each k = 4 cluster. The colour is how far the centroid sits from the overall average (in standard deviations), and the number is the raw average. Points, podiums, grid and finish separate the clusters. Number of stops barely changes between them.</figcaption>
+        <figcaption>What each k = 4 cluster looks like. Colour is how far the centroid is from the overall average (in SDs) and the number is the raw average. Points, podiums, grid and finish do the separating. Number of stops barely changes.</figcaption>
       </figure>
 
       <h4>Hierarchical clustering with cosine distance</h4>
-      <p>The dendrogram shows all 60 driver-seasons merged with cosine distance and average linkage. The highest merge, at a cosine distance of about 1.37, joins two large branches that have little in common, and the next merge down is much lower (about 0.97). The biggest gap between consecutive merge heights is therefore just below the top, so <strong>hclust suggests k = 2</strong>. Its own silhouette, using cosine distance, also peaks at k = 2 (0.50).</p>
+      <p>The dendrogram has all 60 driver-seasons merged with cosine distance and average linkage. The top merge is at a cosine distance of about 1.37 and joins two big branches that don't have much in common. The next one down is way lower (about 0.97). The biggest gap between merge heights is right below the top, so <strong>hclust suggests k = 2</strong>. Its own silhouette (with cosine distance) also peaks at k = 2 (0.50).</p>
       <figure class="m2-fig">
         <a href="assets/img/m2/clu_dendrogram.png" target="_blank" rel="noopener"><img src="assets/img/m2/clu_dendrogram.png" alt="Dendrogram of 60 driver-seasons in two coloured branches, cut at a dashed line into two clusters" loading="lazy"></a>
-        <figcaption>Dendrogram of driver-seasons (cosine distance, average linkage). The dashed line marks the cut into 2 clusters. Leaves are labelled driver and season, for example VER '23, with a dot in the team's colour under each one. Click to open full size.</figcaption>
+        <figcaption>Dendrogram of driver-seasons (cosine, average linkage). The dashed line is the cut into 2 clusters. Leaves are driver and season (like VER '23) with a team-colour dot under each one. Click for full size.</figcaption>
       </figure>
 
       <h4>How hclust compares with k-means</h4>
-      <p>At k = 2 the two methods agree <strong>perfectly</strong>: the same 25 driver-seasons land in the upper group under both, an adjusted Rand index (ARI) of 1.00. That matters because they measure similarity differently. K-means uses Euclidean distance and hclust uses cosine, so the top-versus-rest split isn't an artefact of one method.</p>
-      <p>Below k = 2 they diverge in an informative way. At k = 4 (ARI 0.59), k-means splits the strong group by <em>how much</em> stronger it was, pulling out the five title-pace seasons. Hierarchical clustering with cosine distance keeps all 25 strong seasons together, because a dominant season and a merely good one point in the same direction even though one is much longer. Instead, hclust splits the weaker group by <em>shape</em>: a 9-member branch of midfield seasons that scored in 44% of races (Aston Martin's Stroll and Vettel, plus ALO '22, OCO '23, RAI '21 and BOT '22) separates from 24 backmarker seasons that scored in only 18%, and GAS '21 and OCO '21 form a tiny pair of their own.</p>
+      <p>At k = 2 the two methods agree <strong>perfectly</strong>. The same 25 driver-seasons end up in the top group both times, so the adjusted Rand index (ARI) is 1.00. That's a big deal because they measure similarity in different ways (Euclidean for k-means, cosine for hclust), so the top vs rest split isn't just a quirk of one method.</p>
+      <p>Past k = 2 they split up, and the way they disagree is actually interesting. At k = 4 (ARI 0.59), k-means divides the strong group by <em>how much</em> stronger it was and pulls out the five title-pace seasons. Hclust with cosine keeps all 25 strong seasons together, because a dominant season and a decent one point the same direction, one's just longer. Instead hclust splits the weaker group by <em>shape</em>. A 9-season midfield branch that scored in 44% of races (Stroll and Vettel at Aston Martin, plus ALO '22, OCO '23, RAI '21 and BOT '22) breaks away from 24 backmarker seasons that scored in only 18%, and GAS '21 and OCO '21 end up as their own little pair.</p>
       <div class="fig-pair">
         <figure class="m2-fig">
           <img src="assets/img/m2/clu_crosstab.png" alt="Two contingency tables of k-means clusters against hierarchical clusters, for k equals 2 and 4" loading="lazy">
-          <figcaption>Cluster membership compared. At k = 2 every driver-season sits on the diagonal. At k = 4, hclust cluster H1 takes all of k-means cluster 1, 17 of the 18 in cluster 2, and 3 from cluster 3.</figcaption>
+          <figcaption>Cluster membership side by side. At k = 2 everything is on the diagonal. At k = 4, hclust cluster H1 takes all of k-means cluster 1, 17 of the 18 in cluster 2, and 3 from cluster 3.</figcaption>
         </figure>
         <figure class="m2-fig">
           <img src="assets/img/m2/clu_hc_vs_km_silhouette.png" alt="Line chart comparing silhouette by k for hierarchical clustering and k-means; both peak at k equals 2" loading="lazy">
-          <figcaption>Both methods score best at k = 2. The cosine-based hclust scores are higher overall because cosine silhouettes are measured on a different scale, so compare the shape of the curves, not their height.</figcaption>
+          <figcaption>Both methods score best at k = 2. Hclust's numbers are higher overall, but that's because cosine silhouettes are on a different scale, so compare the shape of the curves and not the height.</figcaption>
         </figure>
       </div>
     </div>
 
     <div class="block" id="clu-conclusions">
       <h3><span class="section-tag">(e)</span>Conclusions</h3>
-      <p>Without being told anything about teams, both clustering methods found the same basic divide in Formula 1 between 2021 and 2023: about 25 driver-seasons that regularly scored points and 35 that mostly didn't. That divide is the strongest structure in the data, and two very different ways of measuring similarity agree on it exactly. Inside the top group, k-means picked out a small title-pace tier (Verstappen's three seasons, Hamilton in 2021, and Pérez in 2023) that stands apart even from other front-runners.</p>
-      <p>The clearest finding for the car-versus-driver question is what happens when drivers change cars. Russell was a backmarker at Williams in 2021 and a regular podium threat as soon as he moved to Mercedes in 2022. Alonso sat in the midfield-climber group in both of his Alpine seasons, then jumped into the podium group in his first year at Aston Martin in 2023. Gasly went the other way, from the podium group in 2021 to the backmarkers in 2022 without changing team, because AlphaTauri's car got worse. Teammates share a cluster in 25 of the 30 team-seasons at k = 2, and at k = 4 they are either in the same cluster (19 times) or in neighbouring ones (9 times). The groups follow the car far more than the name, which fits the strong team effect seen on the EDA tab. The driver still shows up at the margins, though: Verstappen was in the title-pace group in 2021 and 2022 while his Red Bull teammate Pérez was a tier below, and Hamilton was a tier above Bottas at Mercedes in 2021.</p>
-      <p>Strategy separates the groups much less than results do. Stop counts are almost identical across clusters (about 1.8 to 2.2 per race). What does differ is that backmarkers pit earliest and have the slowest pit lane times, and that the midfield climbers gain the most places from where they start, more than the regular podium group. That suggests strategy and race craft matter most in the midfield, where cars are evenly matched, and much less at the front, where grid position and car pace already decide most of the result. That's a question the supervised models in later tabs can test directly.</p>
+      <p>Without knowing anything about teams, both methods found the same basic divide in F1 from 2021 to 2023: about 25 driver-seasons that regularly scored and 35 that mostly didn't. That's the strongest structure in the data, and two completely different similarity measures agree on it exactly. Inside the top group, k-means pulled out a small title-pace tier (all three Verstappen seasons, Hamilton in 2021 and Pérez in 2023) that stands apart even from the other front-runners. Anyone who watched 2021 won't be surprised Max and Lewis are in there together.</p>
+      <p>The best evidence on car vs driver is what happens when someone changes cars. Russell was a backmarker at Williams in 2021 and a regular podium threat straight away after moving to Mercedes in 2022. Alonso was a midfield climber in both Alpine seasons, then jumped straight into the podium group in year one at Aston Martin. Gasly went the other way, podium group in 2021 to backmarkers in 2022 without even changing team, because the AlphaTauri just got worse. Teammates share a cluster in 25 of the 30 team-seasons at k = 2, and at k = 4 they're either in the same cluster (19 times) or next door (9 times). So the groups follow the car way more than the name, which lines up with the big team effect on the EDA tab. The driver still shows up at the edges though. Verstappen was title pace in 2021 and 2022 while Pérez in the same Red Bull was a tier below, and Hamilton was a tier above Bottas in 2021.</p>
+      <p>Strategy splits the groups a lot less than results do. Stop counts are almost the same in every cluster (about 1.8 to 2.2 a race). What is different is that backmarkers pit earliest and have the slowest pit lane times, and the midfield climbers gain the most places, more than the podium group does. My read is that strategy and racecraft matter most in the midfield, where the cars are close, and a lot less at the front, where grid and car pace already decide most of it. That's something I can test properly with the supervised models later on.</p>
     </div>
   </section>
   <section id="pca" class="tab-panel">
     <div class="block">
       <h2>PCA</h2>
-      <p class="muted">Thirteen measurements describe every driver's race. How many of them are really telling us something different?</p>
+      <p class="muted">I record thirteen numbers for every driver's race. How many of them are actually telling me something new?</p>
       <nav class="subnav" aria-label="PCA sections">
         <button type="button" data-jump="pca-overview">(a) Overview</button>
         <button type="button" data-jump="pca-prep">(b) Data Prep</button>
@@ -444,50 +444,50 @@ ari = adjusted_rand_score(km_labels[k], hc_labels[k])</pre>
 
     <div class="block" id="pca-overview">
       <h3><span class="section-tag">(a)</span>Overview</h3>
-      <p>Principal Component Analysis (PCA) is a way of describing data with fewer variables while losing as little information as possible. It looks for new axes, called principal components, that are weighted combinations of the original variables. The first principal component (PC1) is the direction along which the data is most spread out. PC2 is the direction of greatest remaining spread that sits at right angles to PC1, PC3 is at right angles to both, and so on. There are as many components as original variables, but they are ordered by how much variance each one captures, so the first few usually hold most of the information. Keeping only those, and dropping the rest, is <strong>dimensionality reduction</strong>.</p>
-      <p>The maths behind this comes from <strong>eigenvectors and eigenvalues</strong>. After the data is standardized, PCA builds the covariance matrix, a square table holding how every pair of variables moves together. An eigenvector of that matrix is a direction that the matrix only stretches, never rotates: multiplying the matrix by the eigenvector gives back the same vector scaled by a number, and that number is the eigenvalue (<em>C</em>v = &lambda;v). Each eigenvector is one principal component and tells you the direction. Its entries, called loadings, say how much each original variable contributes. The matching eigenvalue tells you how much variance lies along that direction. Dividing an eigenvalue by the sum of all eigenvalues gives the share of total variance that component explains. Because the covariance matrix is symmetric, its eigenvectors are all at right angles to each other, which is why the components are uncorrelated. An eigenvalue of exactly zero means a direction with no spread at all, which happens when one variable can be calculated perfectly from the others.</p>
-      <p>Reducing dimensions matters because high-dimensional data causes real problems. It can't be plotted beyond three axes, so patterns stay hidden. Many variables are often redundant (in F1, qualifying position, grid slot, and finishing position mostly say the same thing), and correlated inputs make models like regression unstable. Distances also stop behaving: as the number of dimensions grows, the nearest and farthest neighbours of a point end up almost the same distance away, which hurts any method built on distance, including the clustering on the previous tab. This is the <em>curse of dimensionality</em>. More dimensions also mean more data is needed to cover the space, more risk of overfitting, and more computation. PCA helps by replacing many correlated variables with a few uncorrelated components that keep most of the variance, which makes the data easier to visualise, separates real signal from noise in the smaller components, and gives later models a compact, non-redundant set of inputs.</p>
+      <p>Principal Component Analysis (PCA) describes data with fewer variables while losing as little information as possible. It finds new axes, called principal components, that are weighted combinations of the original variables. PC1 is the direction where the data is most spread out. PC2 is the direction with the most spread left over that's at a right angle to PC1, PC3 is at a right angle to both, and so on. You get as many components as you had variables, but they're sorted by how much variance they capture, so the first few usually hold most of the information. Keeping just those and throwing out the rest is <strong>dimensionality reduction</strong>.</p>
+      <p>Under the hood it's all <strong>eigenvectors and eigenvalues</strong>. Once the data is standardized, PCA builds the covariance matrix, a square table of how every pair of variables moves together. An eigenvector of that matrix is a direction the matrix only stretches and never rotates. Multiply the matrix by it and you get the same vector back, just scaled by a number, and that number is the eigenvalue (<em>C</em>v = &lambda;v). Each eigenvector is one principal component and gives you the direction. Its entries are the loadings, which tell you how much each original variable contributes. The eigenvalue tells you how much variance lies along that direction, and dividing it by the sum of all the eigenvalues gives the share of variance that component explains. The covariance matrix is symmetric, so its eigenvectors are all at right angles, and that's why the components come out uncorrelated. If an eigenvalue is exactly zero, there's no spread in that direction at all, which happens when one variable can be calculated perfectly from the others.</p>
+      <p>Why bother? High-dimensional data causes real problems. You can't plot more than three axes, so patterns stay hidden. A lot of variables end up redundant (in F1, qualifying position, grid slot and finishing position mostly say the same thing), and correlated inputs make models like regression unstable. Distances also start acting weird. As you add dimensions, the nearest and farthest neighbours of a point end up almost the same distance away, which messes with anything distance-based, including the clustering on the last tab. That's the <em>curse of dimensionality</em>. More dimensions also means you need more data to fill the space, you're more likely to overfit, and everything takes longer to compute. PCA swaps lots of correlated variables for a few uncorrelated components that keep most of the variance. That makes the data easier to plot, pushes noise into the small components, and gives later models a compact set of inputs that don't repeat each other.</p>
       <div class="fig-pair">
         <figure class="m2-fig">
           <img src="assets/img/m2/pca_concept_eigen.png" alt="Scatter of correlated two-dimensional points with two arrows: a long one along the main spread labelled PC1 and a short one across it labelled PC2" loading="lazy">
-          <figcaption>On correlated two-dimensional data, the first eigenvector (PC1) points along the main spread and has a large eigenvalue. The second (PC2) is at right angles and has a small eigenvalue. Dropping PC2 here would keep about 94% of the variance with half the dimensions.</figcaption>
+          <figcaption>On correlated 2D data, the first eigenvector (PC1) runs along the main spread and has a big eigenvalue. PC2 is at a right angle with a small one. Dropping PC2 here keeps about 94% of the variance with half the dimensions.</figcaption>
         </figure>
         <figure class="m2-fig">
           <img src="assets/img/m2/pca_concept_curse.png" alt="Log-log line chart showing the gap between farthest and nearest distance shrinking as dimensions increase" loading="lazy">
-          <figcaption>The curse of dimensionality, simulated with random points. In 2 dimensions the farthest point is about 40 times farther than the nearest. In 1,000 dimensions they are within about 12% of each other, so "nearest" means very little.</figcaption>
+          <figcaption>Curse of dimensionality, simulated with random points. In 2D the farthest point is about 40 times farther away than the nearest. In 1,000 dimensions they're within about 12% of each other, so "nearest" barely means anything.</figcaption>
         </figure>
       </div>
-      <p>Here, PCA answers a practical question for the rest of the project: of the thirteen numbers recorded for each driver's race, how many separate kinds of information are there, and which variables belong together?</p>
+      <p>For this project, PCA answers a practical question: out of the thirteen numbers I have for each driver's race, how many different kinds of information are really in there, and which variables go together?</p>
     </div>
 
     <div class="block" id="pca-prep">
       <h3><span class="section-tag">(b)</span>Data Prep</h3>
-      <p>PCA needs <strong>numeric, unlabeled data with no missing values</strong>, and in practice it also needs the data to be <strong>standardized</strong>. It works from variances and covariances, so text labels can't be used, and a missing value has no position in space. Standardizing (mean 0, standard deviation 1 for every column) matters because PCA chases variance: without it, track temperature, measured in tens of degrees, would dominate a share-of-race variable that runs from 0 to 1 just because of its units. After standardizing, PCA is effectively working on the correlation matrix and every variable starts on equal terms.</p>
-      <p>This time the unit of analysis is a single driver in a single race, so there are many more rows than on the clustering tab. Steps:</p>
+      <p>PCA needs <strong>numeric, unlabeled data with no missing values</strong>, and in practice it needs it <strong>standardized</strong> too. It's built on variances and covariances, so text labels are out, and a missing value doesn't have a position in space. Standardizing (mean 0, SD 1 for every column) matters because PCA chases variance. Without it, track temperature (tens of degrees) would dominate a share-of-race variable that goes from 0 to 1, purely because of units. After scaling, PCA is basically working on the correlation matrix and every variable starts even.</p>
+      <p>This time each row is one driver in one race, so there are a lot more rows than on the clustering tab. Steps:</p>
       <ol>
-        <li><strong>Kept the races with weather and tyre data.</strong> FastF1 data exists for 38 of the 66 races (760 driver-races). Those are the only rows where all thirteen measurements can exist.</li>
-        <li><strong>Built two ratio features</strong> so long and short races compare fairly: laps completed as a share of the race distance, and the first pit stop as a share of the race distance. Positions gained is grid minus finish.</li>
-        <li><strong>Dropped rows that can't have every value.</strong> A driver who never pitted has no first-stop lap or pit lane time, and imputing one would invent data. This removed 72 rows, including the whole 2021 Belgian Grand Prix, which was run behind the safety car with no stops. <strong>688 rows from 37 races</strong> remain.</li>
-        <li><strong>Removed labels</strong> (race, driver, team, season, DNF flag, rain flag). They come back only to colour the plots afterwards.</li>
+        <li><strong>Kept races with weather and tyre data.</strong> I have FastF1 data for 38 of the 66 races (760 driver-races), and those are the only rows that can have all thirteen numbers.</li>
+        <li><strong>Made two ratio features</strong> so long and short races compare fairly: laps completed as a share of race distance, and the first stop as a share of race distance. Positions gained is grid minus finish.</li>
+        <li><strong>Dropped rows that can't have every value.</strong> If a driver never pitted there's no first-stop lap or pit lane time, and imputing one would just be making data up. That removed 72 rows, including all of Spa 2021, which was the race that was only ever run behind the safety car, so nobody stopped. <strong>688 rows from 37 races</strong> are left.</li>
+        <li><strong>Removed labels</strong> (race, driver, team, season, DNF flag, rain flag). They only come back afterwards to colour the plots.</li>
         <li><strong>Standardized</strong> all thirteen columns.</li>
       </ol>
       <h4>Before: driver-race rows</h4>
-      <p class="muted">First eight rows (the 2021 Bahrain Grand Prix, the same drivers as the cleaned table on the Data Prep tab) with their labels and the thirteen measurements in raw units.</p>
+      <p class="muted">First eight rows (2021 Bahrain, same drivers as the cleaned table on the Data Prep tab) with labels and the thirteen measurements in raw units.</p>
       <div class="table-wrap"><table id="sample-pca-labeled" class="sample-table"></table></div>
       <h4>After: what PCA sees</h4>
-      <p class="muted">The same rows with labels removed and all thirteen columns standardized to mean 0 and standard deviation 1.</p>
+      <p class="muted">Same rows with labels removed and all thirteen columns standardized to mean 0 and SD 1.</p>
       <div class="table-wrap"><table id="sample-pca-scaled" class="sample-table"></table></div>
       <p>Data used:</p>
       <ul class="source-list">
         <li><a href="data/milestone2/pca_input_scaled.csv">pca_input_scaled.csv</a>: the unlabeled, standardized input (688 rows &times; 13 columns).</li>
-        <li><a href="data/milestone2/pca_input_labeled.csv">pca_input_labeled.csv</a>: the same rows with their labels and raw values.</li>
-        <li><a href="data/milestone2/pca_scores.csv">pca_scores.csv</a>: each row's scores on PC1 to PC3.</li>
+        <li><a href="data/milestone2/pca_input_labeled.csv">pca_input_labeled.csv</a>: same rows with labels and raw values.</li>
+        <li><a href="data/milestone2/pca_scores.csv">pca_scores.csv</a>: each row's PC1 to PC3 scores.</li>
       </ul>
     </div>
 
     <div class="block" id="pca-code">
       <h3><span class="section-tag">(c)</span>Code</h3>
-      <p>Python with scikit-learn: <a href="code/pca.py">code/pca.py</a> (<a href="https://github.com/NividPathak/f1-performance-lifecycle/blob/master/code/pca.py" target="_blank" rel="noopener">view on GitHub</a>). The script prepares the data, fits PCA with every component so the full set of eigenvalues is available, and draws every figure on this tab. The core of it:</p>
+      <p>Python with scikit-learn: <a href="code/pca.py">code/pca.py</a> (<a href="https://github.com/NividPathak/f1-performance-lifecycle/blob/master/code/pca.py" target="_blank" rel="noopener">on GitHub</a>). It preps the data, fits PCA with all the components so I get every eigenvalue, and makes all the figures on this tab. The main part:</p>
 <pre class="code">X = StandardScaler().fit_transform(data[FEATURES])
 
 pca = PCA().fit(X)
@@ -499,7 +499,7 @@ scores = pca.transform(X)
 
 loadings = pd.DataFrame(pca.components_.T, index=FEATURES, columns=pcs)
 corr = loadings * np.sqrt(eig)</pre>
-      <p>To rerun it: <code>python code/pca.py</code>.</p>
+      <p>To rerun: <code>python code/pca.py</code>.</p>
     </div>
 
     <div class="block" id="pca-results">
@@ -512,48 +512,48 @@ corr = loadings * np.sqrt(eig)</pre>
       </div>
 
       <h4>How much variance each component keeps</h4>
-      <p>The eigenvalues come out as 3.30, 2.26, 1.96 and 1.86 for the first four components, then drop to 0.94 and below. Since the data is standardized, each original variable carries a variance of 1, so a component with an eigenvalue above 1 holds more information than any single variable. Four components pass that test (the Kaiser rule), and together they keep 72% of the variance. PC1 alone explains 25%, PC2 17%, PC3 15% and PC4 14%. Reaching 95% takes nine components. The last eigenvalue is exactly 0, which is the redundancy built into the data: positions gained is always grid minus finish, so that direction has no spread at all.</p>
+      <p>The first four eigenvalues are 3.30, 2.26, 1.96 and 1.86, then it drops to 0.94 and below. Since the data is standardized, every original variable has a variance of 1, so a component with an eigenvalue above 1 holds more than any single variable does. Four components pass that (the Kaiser rule) and together they keep 72% of the variance: PC1 25%, PC2 17%, PC3 15%, PC4 14%. Getting to 95% takes nine. The last eigenvalue is exactly 0, and that's on me: positions gained is literally grid minus finish, so that direction has zero spread.</p>
       <figure class="m2-fig">
         <img src="assets/img/m2/pca_scree.png" alt="Bar chart of variance explained by each of 13 principal components with a cumulative line crossing 95 percent at component 9" loading="lazy">
-        <figcaption>Scree plot. Bars show each component's share of the variance. The line is the running total, which passes 95% at nine components.</figcaption>
+        <figcaption>Scree plot. Bars are each component's share of the variance and the line is the running total, which crosses 95% at nine components.</figcaption>
       </figure>
 
       <h4>What each component means</h4>
-      <p>The loadings, the entries of each eigenvector, show which variables build each component. Large values (positive or negative) matter. Values near 0 don't.</p>
+      <p>The loadings (the entries of each eigenvector) show which variables make up each component. Big values, positive or negative, matter. Anything near 0 doesn't.</p>
       <figure class="m2-fig">
         <img src="assets/img/m2/pca_loadings.png" alt="Heatmap of loadings for 13 variables on the first five principal components" loading="lazy">
-        <figcaption>Loadings for the first five components. Each column is an eigenvector.</figcaption>
+        <figcaption>Loadings for the first five components. Each column is one eigenvector.</figcaption>
       </figure>
       <ul>
-        <li><strong>PC1 (25%): the result.</strong> Qualifying position, grid, and finishing position all load at about +0.49, and points at &minus;0.49. A high PC1 score means a weekend near the back. It's essentially one dimension for "where you qualified, started, and finished", which shows how tightly those are tied together.</li>
-        <li><strong>PC2 (17%): the conditions.</strong> Air and track temperature load at +0.56 and +0.58, humidity at &minus;0.50. Hot, dry races sit at the top and cool, humid ones at the bottom. Result variables load at almost exactly 0, so weather varies independently of where drivers finish.</li>
-        <li><strong>PC3 (15%): the strategy.</strong> A late first stop (+0.52) on one side against more stops (&minus;0.50) and more tyre compounds (&minus;0.44) on the other. It separates long one-stop runs from busy multi-stop races.</li>
-        <li><strong>PC4 (14%): the recovery drive.</strong> Positions gained (+0.57) and laps completed (+0.48), with a worse grid slot (+0.26) and better finish (&minus;0.24). It picks out drivers who started further back, ran the full distance, and moved forward.</li>
-        <li>PC5 (7%) is almost entirely pit lane time (+0.94), a variable that moves on its own.</li>
+        <li><strong>PC1 (25%): the result.</strong> Qualifying, grid and finish all load at about +0.49, and points at &minus;0.49. A high PC1 score means a weekend near the back. It's basically one axis for "where you qualified, started and finished", which shows how locked together those are.</li>
+        <li><strong>PC2 (17%): the conditions.</strong> Air and track temp load at +0.56 and +0.58, humidity at &minus;0.50. Hot, dry races at the top, cool humid ones at the bottom. The result variables are almost exactly 0 here, so weather moves independently of where people finish.</li>
+        <li><strong>PC3 (15%): the strategy.</strong> A late first stop (+0.52) on one side, more stops (&minus;0.50) and more compounds (&minus;0.44) on the other. Long one-stop races vs busy multi-stop ones.</li>
+        <li><strong>PC4 (14%): the recovery drive.</strong> Positions gained (+0.57) and laps completed (+0.48), with a worse grid slot (+0.26) and a better finish (&minus;0.24). Think of Max starting down the order and carving through. It picks out drivers who started further back, went the full distance and moved forward.</li>
+        <li>PC5 (7%) is almost all pit lane time (+0.94), which mostly does its own thing.</li>
       </ul>
 
       <h4>Variables and components together</h4>
-      <p>A biplot shows the rows and the variables at once. Each dot is one driver-race placed by its PC1 and PC2 scores, and each arrow is one variable's loading. Arrows pointing the same way are positively correlated, opposite arrows are negatively correlated, and arrows at right angles are unrelated. The longer the arrow, the better that variable is represented on these two axes. Here the result variables lie flat along PC1, the weather variables stand straight up along PC2, and the two groups are at right angles.</p>
+      <p>A biplot shows the rows and the variables together. Each dot is a driver-race placed by its PC1 and PC2 scores, and each arrow is a variable's loading. Arrows pointing the same way are positively correlated, opposite ones are negatively correlated, and arrows at right angles are unrelated. Longer arrow means that variable is better captured by these two axes. Here the result variables lie flat along PC1, the weather ones stand straight up on PC2, and the two groups are at right angles.</p>
       <figure class="m2-fig">
         <img src="assets/img/m2/pca_biplot.png" alt="Biplot of 688 driver-races coloured by points, no points, or did not finish, with loading arrows for each variable" loading="lazy">
-        <figcaption>Biplot of PC1 and PC2, each dot coloured by team. Red Bull, Mercedes and Ferrari races crowd the left (strong results), while Haas, Williams and Alfa Romeo sit mostly on the right. Weather spreads every team up and down equally. Short, unlabelled arrows near the centre (pit stops, compounds, positions gained) are barely represented by these two components; they show up on PC3 and PC4 instead.</figcaption>
+        <figcaption>Biplot of PC1 vs PC2, dots in team colours. Red Bull, Mercedes and Ferrari crowd the left (good results) and Haas, Williams and Alfa Romeo sit mostly on the right. Weather spreads every team up and down about the same. The short unlabelled arrows in the middle (pit stops, compounds, positions gained) barely show up on these two components. They live on PC3 and PC4 instead.</figcaption>
       </figure>
-      <p>Correlation circles show the same thing without the points. Each arrow's coordinates are the correlation between a variable and the two components, so an arrow reaching the circle means that variable is almost fully explained by those two PCs. The PC3 and PC4 circle shows the strategy variables that are hidden in the first view.</p>
+      <p>Correlation circles show the same thing without the dots. Each arrow's coordinates are the correlation between a variable and the two components, so an arrow that reaches the circle is almost fully explained by those two PCs. The PC3/PC4 circle shows the strategy variables that were hiding in the first one.</p>
       <figure class="m2-fig">
         <img src="assets/img/m2/pca_corr_circle.png" alt="Two correlation circles: PC1 against PC2, and PC3 against PC4, with arrows for each variable" loading="lazy">
-        <figcaption>Left: the result variables reach almost to the circle on PC1 (correlation about 0.89), and temperature and humidity on PC2. Right: pit stops and compounds point one way on PC3, first-stop timing the other, and positions gained and laps completed lead PC4.</figcaption>
+        <figcaption>Left: the result variables almost touch the circle on PC1 (correlation about 0.89), and temperature and humidity do the same on PC2. Right: pit stops and compounds point one way on PC3, first stop timing the other way, and positions gained and laps completed lead PC4.</figcaption>
       </figure>
       <figure class="m2-fig">
         <img src="assets/img/m2/pca_3d.png" alt="Three-dimensional scatter of driver-races on PC1, PC2 and PC3, coloured by dry or rain-affected race" loading="lazy">
-        <figcaption>The first three components together (58% of the variance). Colour is the team and triangles are races where rain fell. Rain races sit lower on PC2 (cooler and more humid, average score &minus;1.03 against +0.33 for dry races) and lower on PC3 (more stops and more compounds, &minus;0.43 against +0.14).</figcaption>
+        <figcaption>First three components together (58% of the variance). Colour is team and triangles are races with rain. Wet races sit lower on PC2 (cooler and more humid, average &minus;1.03 vs +0.33 for dry races) and lower on PC3 (more stops and compounds, &minus;0.43 vs +0.14).</figcaption>
       </figure>
     </div>
 
     <div class="block" id="pca-conclusions">
       <h3><span class="section-tag">(e)</span>Conclusions</h3>
-      <p>The biggest single source of variation in a driver's race is simply where they ended up, and it can't be pulled apart from where they qualified and started. Qualifying position, grid slot, finish, and points all collapse onto one component. That backs up the 0.73 grid-to-finish correlation from the EDA tab and the clustering result that the field splits mainly by results: in this period, a race weekend mostly confirmed the order set on Saturday.</p>
-      <p>The other things a race depends on turn out to be separate from that. Weather is its own component, at right angles to the result, so hotter or more humid races didn't systematically favour front or back runners in this data. Pit strategy is a third, independent component, and recovering positions is a fourth. None of the three is redundant with the result or with each other, and that's useful for the models still to come. It means strategy and conditions can't be dropped as "already captured by grid position". They add information, but each one explains far less variance than the result axis, which is consistent with how small the effect of stop count looked on the EDA tab.</p>
-      <p>For the next stages, PCA suggests two practical changes. First, qualifying, grid, and finish shouldn't all go into a model as separate predictors, because they are close to collinear. Second, roughly four components (or one variable picked from each group) capture most of what the thirteen measurements say. Rain also stood out in the third component, linking wet races to more stops and more compounds, which gives the Naive Bayes and decision tree tabs a natural condition to test.</p>
+      <p>The biggest source of variation in a driver's race is just where they ended up, and you can't really separate that from where they qualified and started. Qualifying, grid, finish and points all collapse onto one component. That backs up the 0.73 grid-finish correlation from the EDA tab and the clustering result that the field splits mostly by results. In these three seasons, Sunday mostly confirmed whatever Saturday set up.</p>
+      <p>Everything else a race depends on turns out to be separate from that. Weather is its own component at right angles to the result, so hot or humid races didn't consistently help the front or the back. Pit strategy is a third independent component and recovering places is a fourth. None of them overlap with the result or each other, which is good news for the models coming later, because it means I can't just throw out strategy and conditions as "already covered by grid position". They do add information. Each one just explains a lot less variance than the result axis, which fits with how small the stop count effect looked on the EDA tab.</p>
+      <p>Two practical takeaways for the next milestones. First, qualifying, grid and finish shouldn't all go into a model as separate predictors since they're close to collinear. Second, about four components (or one variable from each group) cover most of what the thirteen measurements say. Rain also stood out on PC3, tying wet races to more stops and more compounds, so that's a natural thing to test on the Naive Bayes and decision tree tabs.</p>
     </div>
   </section>
   <section id="naivebayes" class="tab-panel">
