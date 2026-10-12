@@ -11,3 +11,7 @@ CLEANED_CSV = DATA / "f1_driver_race_cleaned.csv"
 CLEANING_LOG = DATA / "cleaning_log.txt"
 CHART_DATA = DATA / "chart_data.json"
 FASTF1_CACHE = ROOT / "fastf1_cache"
+
+# Milestone 2 (clustering + PCA)
+M2_IMG = IMG / "m2"
+M2_DATA = DATA / "milestone2"

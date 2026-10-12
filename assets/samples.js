@@ -13,4 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
       render(document.getElementById("sample-cleaned"), d.cleaned);
     })
     .catch((err) => console.error("Failed to load sample tables", err));
+
+  fetch("data/milestone2/sample_tables.json")
+    .then((r) => r.json())
+    .then((d) => {
+      for (const key of Object.keys(d)) {
+        const table = document.getElementById("sample-" + key.replace("_", "-"));
+        if (table) render(table, d[key]);
+      }
+    })
+    .catch((err) => console.error("Failed to load milestone 2 sample tables", err));
 });

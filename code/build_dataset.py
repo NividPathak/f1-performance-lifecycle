@@ -160,11 +160,12 @@ def main():
         f"for before/after comparison.")
 
 
-    # position is filled in even for retirements, so use status to decide DNF
-    finished_pattern = r"^(Finished|\+\d+ Laps?)$"
+    # position is filled in even for retirements, so use status to decide DNF.
+    # From 2023 Jolpica reports lapped finishers as "Lapped" instead of "+1 Lap".
+    finished_pattern = r"^(Finished|\+\d+ Laps?|Lapped)$"
     df["did_not_finish"] = ~df["status"].str.match(finished_pattern)
     n_dnf = df["did_not_finish"].sum()
-    log(f"Derived did_not_finish from the status text. Finished and +N Lap(s) count as finished. "
+    log(f"Derived did_not_finish from the status text. Finished, +N Lap(s) and Lapped (2023 wording) count as finished. "
         f"Retired, Accident, Disqualified, Did not start, and similar statuses count as True. "
         f"{n_dnf} of {len(df)} rows flagged as genuine non-finishes. Jolpica-F1 always reports a "
         f"classified numeric position even for most non-finishers, so position alone could not be "

@@ -6,7 +6,7 @@
 6. Merged in FastF1 tyre-compound strategy summaries for 755 driver-race rows (number of distinct compounds used).
 7. Merged in FastF1 weather summaries for 38 races (mean air/track temp, humidity, rainfall flag).
 8. Saved combined-but-uncleaned snapshot (1320 rows x 32 cols) to data/combined_raw_snapshot.csv before any cleaning, for before/after comparison.
-9. Derived did_not_finish from the status text. Finished and +N Lap(s) count as finished. Retired, Accident, Disqualified, Did not start, and similar statuses count as True. 269 of 1320 rows flagged as genuine non-finishes. Jolpica-F1 always reports a classified numeric position even for most non-finishers, so position alone could not be used for this.
+9. Derived did_not_finish from the status text. Finished, +N Lap(s) and Lapped (2023 wording) count as finished. Retired, Accident, Disqualified, Did not start, and similar statuses count as True. 199 of 1320 rows flagged as genuine non-finishes. Jolpica-F1 always reports a classified numeric position even for most non-finishers, so position alone could not be used for this.
 10. Dropped 0 exact duplicate (season, round, driver_id) rows.
 11. Recoded 26 grid=0 values (pit-lane starts, no official grid slot) to 21 so they sort as worse than every real grid position instead of implying pole position.
 12. Filled 96 missing num_pitstops values with 0 (no pit-stop record for that driver-race means zero stops were made, most often in races ended early by a red flag).
