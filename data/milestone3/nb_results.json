@@ -72,5 +72,31 @@
    "f1-score": 0.6848306587019845,
    "support": 440.0
   }
+ },
+ "within_one": {
+  "Multinomial NB": 0.9659,
+  "Bernoulli NB": 0.9682
+ },
+ "errors": {
+  "total": 138,
+  "dnf": 26,
+  "boundary": 45,
+  "other": 67
+ },
+ "two_class": {
+  "Multinomial NB": 0.8,
+  "Bernoulli NB": 0.8045,
+  "Grid-only rule": 0.7364,
+  "Always 'No points'": 0.5,
+  "mnb_cm": [
+   [
+    175,
+    45
+   ],
+   [
+    43,
+    177
+   ]
+  ]
  }
 }

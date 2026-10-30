@@ -1,0 +1,26 @@
+{
+ "tree depth 3, original 5": {
+  "cv": 0.6915,
+  "test": 0.6795
+ },
+ "tree depth 3, original + 6 new": {
+  "cv": 0.6876,
+  "test": 0.6705
+ },
+ "tree depth 5, original 5": {
+  "cv": 0.6629,
+  "test": 0.6682
+ },
+ "tree depth 5, original + 6 new": {
+  "cv": 0.6753,
+  "test": 0.6864
+ },
+ "gaussian NB, original 5": {
+  "cv": 0.6794,
+  "test": 0.6932
+ },
+ "gaussian NB, original + 6 new": {
+  "cv": 0.6814,
+  "test": 0.675
+ }
+}

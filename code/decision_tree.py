@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.model_selection import GroupKFold, cross_val_score
+from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 
 import plot_style as ps
@@ -195,22 +196,77 @@ ax.set_title("What each tree actually splits on", loc="left")
 ps.save(fig, M3_IMG / "dt_importance.png")
 
 
+# ceiling check: much stronger tree models on the same features
+order = {c: i for i, c in enumerate(CLASSES)}
+for name in "ABC":
+    gap = np.abs(y_test.map(order).values - pd.Series(trees[name]["pred"]).map(order).values)
+    results["trees"][name]["within_one"] = round((gap <= 1).mean(), 4)
+results["ceiling"] = {}
+for label, cols in [("pre-race", PRE_RACE), ("all 8", FEATURES)]:
+    rf = RandomForestClassifier(n_estimators=500, min_samples_leaf=10, random_state=0).fit(train[cols], y_train)
+    gb = GradientBoostingClassifier(max_depth=2, n_estimators=150, learning_rate=0.05, random_state=0).fit(train[cols], y_train)
+    results["ceiling"][f"Random forest, {label}"] = round(rf.score(test[cols], y_test), 4)
+    results["ceiling"][f"Gradient boosting, {label}"] = round(gb.score(test[cols], y_test), 4)
+print("ceiling:", results["ceiling"])
+
+# two class tree: top 10 or not
+two = lambda y: np.where(y == "No points", "No points", "Points")
+tree2 = DecisionTreeClassifier(criterion="gini", max_depth=3, random_state=0).fit(train[PRE_RACE], two(y_train))
+pred2 = tree2.predict(test[PRE_RACE])
+results["two_class"] = {"test_acc": round(accuracy_score(two(y_test), pred2), 4),
+                        "train_acc": round(tree2.score(train[PRE_RACE], two(y_train)), 4),
+                        "cm": confusion_matrix(two(y_test), pred2, labels=["Points", "No points"]).tolist()}
+print("two class tree:", results["two_class"])
+(M3_DATA / "dt_results.json").write_text(json.dumps(results, indent=1, default=float))
+
+fig, axes = plt.subplots(1, 2, figsize=(17, 5.5), gridspec_kw={"width_ratios": [2.6, 1]})
+arts = plot_tree(tree2, feature_names=[NICE[c] for c in PRE_RACE], class_names=list(tree2.classes_), impurity=True,
+                 rounded=True, fontsize=9, ax=axes[0], precision=2)
+for a in arts:
+    cls = a.get_text().split("class = ")[-1].strip()
+    if a.get_bbox_patch() is not None:
+        a.get_bbox_patch().set_facecolor(CLASS_COLORS.get(cls, ps.PANEL))
+        a.get_bbox_patch().set_edgecolor(ps.BG)
+        a.set_color("black")
+    if a.arrow_patch is not None:
+        a.arrow_patch.set_color(ps.DIM)
+axes[0].set_title("Tree D: Gini, max depth 3, two classes (Points = top 10)", loc="left")
+ax = axes[1]
+cm = np.array(results["two_class"]["cm"])
+rec = cm / cm.sum(axis=1, keepdims=True)
+ax.imshow(rec, cmap="magma", vmin=0, vmax=1)
+for i in range(2):
+    for j in range(2):
+        ax.text(j, i, f"{cm[i, j]}\n{rec[i, j]:.0%}", ha="center", va="center", fontsize=11,
+                color="black" if rec[i, j] > 0.55 else "white")
+ax.set_xticks([0, 1], ["Points", "No points"])
+ax.set_yticks([0, 1], ["Points", "No points"])
+ax.set_xlabel("predicted")
+ax.set_ylabel("actual")
+ax.set_title(f"Tree D on 2023 ({results['two_class']['test_acc']:.1%})", loc="left", fontsize=12)
+ax.grid(False)
+fig.tight_layout()
+ps.save(fig, M3_IMG / "dt_tree_d_two_class.png")
+
+
 nb = json.loads((M3_DATA / "nb_results.json").read_text())["accuracy"]
 board = {"Always 'No points'": nb["Always 'No points'"], "Grid-only rule": nb["Grid-only rule"],
          "Multinomial NB": nb["Multinomial NB"], "Bernoulli NB": nb["Bernoulli NB"],
          "Fully grown tree": results["full_tree"]["test_acc"]}
 for n in "ABC":
     board[f"Tree {n}"] = results["trees"][n]["test_acc"]
+board.update(results["ceiling"])
 board = dict(sorted(board.items(), key=lambda kv: kv[1]))
-fig, ax = plt.subplots(figsize=(9, 4.4))
-cols = [ps.RED if k.startswith("Tree") else ps.ICE if "NB" in k else "#5a5a64" for k in board]
+fig, ax = plt.subplots(figsize=(9, 5.2))
+cols = [ps.RED if k.startswith("Tree") else ps.ICE if "NB" in k else ps.VIOLET if k in results["ceiling"] else "#5a5a64"
+        for k in board]
 ax.barh(list(board), list(board.values()), color=cols)
 for i, v in enumerate(board.values()):
     ax.text(v + 0.006, i, f"{v:.1%}", va="center", fontsize=10)
 ax.set_xlim(0, 0.85)
 ax.set_xlabel("accuracy on the 2023 test set")
 ax.grid(axis="y", visible=False)
-ax.set_title("Every model so far, same test set", loc="left")
+ax.set_title("Every model so far, same test set (purple = ceiling check)", loc="left")
 ps.save(fig, M3_IMG / "dt_scoreboard.png")
 
 

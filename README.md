@@ -55,6 +55,7 @@ python code/pca.py                      # PCA on driver-races with weather data
 python code/prep_supervised.py          # label + form features + season split
 python code/naive_bayes.py              # multinomial + bernoulli NB
 python code/decision_tree.py            # three trees + pruning + overfitting check
+python code/extra_features.py           # do 6 more pre-race features help?
 ```
 
 The raw pulls are already committed, so you only need `build_dataset.py` onward to regenerate what the site uses.

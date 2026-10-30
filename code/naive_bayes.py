@@ -9,7 +9,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from sklearn.naive_bayes import BernoulliNB, GaussianNB, MultinomialNB
 
 import plot_style as ps
-from paths import M3_DATA, M3_IMG
+from paths import CLEANED_CSV, M3_DATA, M3_IMG
 from prep_supervised import CLASS_COLORS, CLASSES, PRE_RACE
 from sample_format import table_rows
 
@@ -202,3 +202,82 @@ for ax, vals, title, col in zip(axes, [counts, [min(c, 1) for c in counts]],
 fig.suptitle('Team radio: "Box box, box this lap, tyres are gone"', x=0.01, ha="left", fontsize=13, fontweight="bold")
 fig.tight_layout()
 ps.save(fig, M3_IMG / "nb_concept_mn_vs_bern.png")
+
+
+# how far off are the misses
+order = {c: i for i, c in enumerate(CLASSES)}
+gap = np.abs(y_test.map(order).values - pd.Series(preds["Multinomial NB"]).map(order).values)
+results["within_one"] = {"Multinomial NB": round((gap <= 1).mean(), 4),
+                         "Bernoulli NB": round((np.abs(y_test.map(order).values - pd.Series(preds["Bernoulli NB"]).map(order).values) <= 1).mean(), 4)}
+print("within one class:", results["within_one"])
+
+clean = pd.read_csv(CLEANED_CSV)[["season", "round", "driver_code", "did_not_finish", "final_position_num"]]
+info = test.merge(clean, on=["season", "round", "driver_code"], how="left")
+wrong = preds["Multinomial NB"] != y_test.values
+dnf = wrong & info["did_not_finish"].values
+edge = wrong & ~info["did_not_finish"].values & info["final_position_num"].isin([3, 4, 10, 11]).values
+other = wrong & ~dnf & ~edge
+results["errors"] = {"total": int(wrong.sum()), "dnf": int(dnf.sum()), "boundary": int(edge.sum()), "other": int(other.sum())}
+print("errors:", results["errors"])
+
+fig, ax = plt.subplots(figsize=(10, 2.6))
+parts = [("Retired (can't be seen pre-race)", dnf.sum(), "#6b6b75"),
+         ("Finished P3/P4 or P10/P11 (one place off)", edge.sum(), ps.AMBER),
+         ("Everything else", other.sum(), ps.RED)]
+left = 0
+for label, n, col in parts:
+    ax.barh([0], [n], left=left, color=col)
+    ax.text(left + n / 2, 0, str(n), ha="center", va="center", color="black", fontsize=11, fontweight="bold")
+    left += n
+handles = [plt.Rectangle((0, 0), 1, 1, color=c) for _, _, c in parts]
+ax.legend(handles, [p[0] for p in parts], ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.15), frameon=False, fontsize=9)
+ax.set_xlim(0, left)
+ax.set_yticks([])
+ax.set_xticks([])
+ax.grid(False)
+ax.set_title(f"The {wrong.sum()} wrong calls by multinomial NB, broken down", loc="left")
+ps.save(fig, M3_IMG / "nb_error_breakdown.png")
+
+
+# two class version: top 10 or not
+two = lambda y: np.where(y == "No points", "No points", "Points")
+y2_train = two(y_train)
+y2_test = two(y_test)
+mnb2 = MultinomialNB(alpha=1.0).fit(X_train, y2_train)
+bnb2 = BernoulliNB(alpha=1.0).fit(X_train, y2_train)
+grid2 = np.where(test["grid"] <= 10, "Points", "No points")
+results["two_class"] = {"Multinomial NB": round(mnb2.score(X_test, y2_test), 4),
+                        "Bernoulli NB": round(bnb2.score(X_test, y2_test), 4),
+                        "Grid-only rule": round((grid2 == y2_test).mean(), 4),
+                        "Always 'No points'": round((y2_test == "No points").mean(), 4),
+                        "mnb_cm": confusion_matrix(y2_test, mnb2.predict(X_test), labels=["Points", "No points"]).tolist()}
+print("two class:", results["two_class"])
+(M3_DATA / "nb_results.json").write_text(json.dumps(results, indent=1))
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 4), gridspec_kw={"width_ratios": [1.3, 1]})
+ax = axes[0]
+names = ["Always 'No points'", "Grid-only rule", "Bernoulli NB", "Multinomial NB"]
+vals = [results["two_class"][n] for n in names]
+ax.barh(names, vals, color=["#4a4a55", "#6b6b75", ps.ICE, ps.RED])
+for i, v in enumerate(vals):
+    ax.text(v + 0.01, i, f"{v:.1%}", va="center", fontsize=10)
+ax.set_xlim(0, 1)
+ax.set_xlabel("accuracy on 2023")
+ax.grid(axis="y", visible=False)
+ax.set_title("Two classes: will they score points?", loc="left", fontsize=12)
+ax = axes[1]
+cm = np.array(results["two_class"]["mnb_cm"])
+rec = cm / cm.sum(axis=1, keepdims=True)
+ax.imshow(rec, cmap="magma", vmin=0, vmax=1)
+for i in range(2):
+    for j in range(2):
+        ax.text(j, i, f"{cm[i, j]}\n{rec[i, j]:.0%}", ha="center", va="center", fontsize=11,
+                color="black" if rec[i, j] > 0.55 else "white")
+ax.set_xticks([0, 1], ["Points", "No points"])
+ax.set_yticks([0, 1], ["Points", "No points"])
+ax.set_xlabel("predicted")
+ax.set_ylabel("actual")
+ax.set_title("Multinomial NB, 2 classes", loc="left", fontsize=12)
+ax.grid(False)
+fig.tight_layout()
+ps.save(fig, M3_IMG / "nb_two_class.png")
