@@ -14,13 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((err) => console.error("Failed to load sample tables", err));
 
-  fetch("data/milestone2/sample_tables.json")
-    .then((r) => r.json())
-    .then((d) => {
-      for (const key of Object.keys(d)) {
-        const table = document.getElementById("sample-" + key.replace("_", "-"));
-        if (table) render(table, d[key]);
-      }
-    })
-    .catch((err) => console.error("Failed to load milestone 2 sample tables", err));
+  for (const file of ["data/milestone2/sample_tables.json", "data/milestone3/sample_tables.json"]) {
+    fetch(file)
+      .then((r) => r.json())
+      .then((d) => {
+        for (const key of Object.keys(d)) {
+          const table = document.getElementById("sample-" + key.replace("_", "-"));
+          if (table) render(table, d[key]);
+        }
+      })
+      .catch((err) => console.error("Failed to load " + file, err));
+  }
 });

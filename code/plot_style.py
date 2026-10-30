@@ -49,6 +49,7 @@ plt.rcParams.update({
     "axes.titlesize": 13,
     "axes.labelsize": 11,
     "axes.grid": True,
+    "axes.axisbelow": True,
     "grid.color": LINE,
     "grid.linewidth": 0.7,
     "xtick.color": DIM,

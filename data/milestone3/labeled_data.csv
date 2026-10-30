@@ -1,0 +1,1301 @@
+season,round,race_name,driver_code,constructor_name,grid,quali_position,grid_penalty,team_form,driver_form,num_pitstops,first_stop_pct,avg_pit_lane_s,result
+2021,2,Emilia Romagna Grand Prix,VER,Red Bull,3,3.0,0.0,14.0,18.0,2,0.429,29.809,Podium
+2021,2,Emilia Romagna Grand Prix,HAM,Mercedes,1,1.0,0.0,20.5,25.0,4,0.444,35.155,Podium
+2021,2,Emilia Romagna Grand Prix,NOR,McLaren,7,7.0,0.0,9.0,12.0,2,0.444,30.654,Podium
+2021,2,Emilia Romagna Grand Prix,LEC,Ferrari,4,4.0,0.0,6.0,8.0,2,0.444,31.002,Points
+2021,2,Emilia Romagna Grand Prix,SAI,Ferrari,11,11.0,0.0,6.0,4.0,2,0.429,30.856,Points
+2021,2,Emilia Romagna Grand Prix,RIC,McLaren,6,6.0,0.0,9.0,6.0,2,0.429,34.34,Points
+2021,2,Emilia Romagna Grand Prix,GAS,AlphaTauri,5,5.0,0.0,1.0,0.0,4,0.222,39.809,Points
+2021,2,Emilia Romagna Grand Prix,STR,Aston Martin,10,10.0,0.0,0.5,1.0,3,0.429,31.138,Points
+2021,2,Emilia Romagna Grand Prix,OCO,Alpine F1 Team,9,9.0,0.0,0.0,0.0,5,0.016,37.238,Points
+2021,2,Emilia Romagna Grand Prix,ALO,Alpine F1 Team,15,15.0,0.0,0.0,0.0,3,0.444,44.232,Points
+2021,2,Emilia Romagna Grand Prix,PER,Red Bull,2,2.0,0.0,14.0,10.0,2,0.444,44.608,No points
+2021,2,Emilia Romagna Grand Prix,TSU,AlphaTauri,20,20.0,0.0,1.0,2.0,3,0.397,30.696,No points
+2021,2,Emilia Romagna Grand Prix,RAI,Alfa Romeo,16,16.0,0.0,0.0,0.0,3,0.413,30.28,No points
+2021,2,Emilia Romagna Grand Prix,GIO,Alfa Romeo,17,17.0,0.0,0.0,0.0,4,0.429,31.02,No points
+2021,2,Emilia Romagna Grand Prix,VET,Aston Martin,21,13.0,8.0,0.5,0.0,5,0.048,38.688,No points
+2021,2,Emilia Romagna Grand Prix,MSC,Haas F1 Team,18,18.0,0.0,0.0,0.0,4,0.079,44.903,No points
+2021,2,Emilia Romagna Grand Prix,MAZ,Haas F1 Team,19,19.0,0.0,0.0,0.0,4,0.19,37.466,No points
+2021,2,Emilia Romagna Grand Prix,BOT,Mercedes,8,8.0,0.0,20.5,16.0,1,0.444,30.167,No points
+2021,2,Emilia Romagna Grand Prix,RUS,Williams,12,12.0,0.0,0.0,0.0,1,0.413,29.983,No points
+2021,2,Emilia Romagna Grand Prix,LAT,Williams,14,14.0,0.0,0.0,0.0,0,1.0,0.0,No points
+2021,3,Portuguese Grand Prix,HAM,Mercedes,2,2.0,0.0,15.0,22.0,3,0.03,23.832,Podium
+2021,3,Portuguese Grand Prix,VER,Red Bull,3,3.0,0.0,13.25,21.5,4,0.03,24.471,Podium
+2021,3,Portuguese Grand Prix,BOT,Mercedes,1,1.0,0.0,15.0,8.0,4,0.03,24.24,Podium
+2021,3,Portuguese Grand Prix,PER,Red Bull,4,4.0,0.0,13.25,5.0,3,0.03,23.532,Points
+2021,3,Portuguese Grand Prix,NOR,McLaren,7,7.0,0.0,10.25,13.5,3,0.03,23.637,Points
+2021,3,Portuguese Grand Prix,LEC,Ferrari,8,8.0,0.0,8.5,10.0,3,0.03,23.664,Points
+2021,3,Portuguese Grand Prix,OCO,Alpine F1 Team,6,6.0,0.0,0.75,1.0,3,0.03,23.516,Points
+2021,3,Portuguese Grand Prix,ALO,Alpine F1 Team,13,13.0,0.0,0.75,0.5,3,0.03,23.172,Points
+2021,3,Portuguese Grand Prix,RIC,McLaren,16,16.0,0.0,10.25,7.0,3,0.03,24.32,Points
+2021,3,Portuguese Grand Prix,GAS,AlphaTauri,9,9.0,0.0,2.0,3.0,3,0.03,23.281,Points
+2021,3,Portuguese Grand Prix,SAI,Ferrari,5,5.0,0.0,8.5,7.0,3,0.03,23.388,No points
+2021,3,Portuguese Grand Prix,GIO,Alfa Romeo,12,12.0,0.0,0.0,0.0,3,0.03,23.961,No points
+2021,3,Portuguese Grand Prix,VET,Aston Martin,10,10.0,0.0,1.25,0.0,3,0.03,23.256,No points
+2021,3,Portuguese Grand Prix,STR,Aston Martin,17,17.0,0.0,1.25,2.5,3,0.03,23.489,No points
+2021,3,Portuguese Grand Prix,TSU,AlphaTauri,14,14.0,0.0,2.0,1.0,3,0.03,23.67,No points
+2021,3,Portuguese Grand Prix,RUS,Williams,11,11.0,0.0,0.0,0.0,3,0.03,24.377,No points
+2021,3,Portuguese Grand Prix,MSC,Haas F1 Team,19,19.0,0.0,0.0,0.0,3,0.03,23.573,No points
+2021,3,Portuguese Grand Prix,LAT,Williams,18,18.0,0.0,0.0,0.0,3,0.03,23.432,No points
+2021,3,Portuguese Grand Prix,MAZ,Haas F1 Team,20,20.0,0.0,0.0,0.0,4,0.03,24.236,No points
+2021,3,Portuguese Grand Prix,RAI,Alfa Romeo,15,15.0,0.0,0.0,0.0,0,1.0,0.0,No points
+2021,4,Spanish Grand Prix,HAM,Mercedes,1,1.0,0.0,16.833,23.0,2,0.424,22.149,Podium
+2021,4,Spanish Grand Prix,VER,Red Bull,2,2.0,0.0,13.833,20.333,2,0.364,22.578,Podium
+2021,4,Spanish Grand Prix,BOT,Mercedes,3,3.0,0.0,16.833,10.667,2,0.348,21.974,Podium
+2021,4,Spanish Grand Prix,LEC,Ferrari,4,4.0,0.0,7.0,9.333,2,0.424,21.952,Points
+2021,4,Spanish Grand Prix,PER,Red Bull,8,8.0,0.0,13.833,7.333,2,0.409,21.864,Points
+2021,4,Spanish Grand Prix,RIC,McLaren,7,7.0,0.0,8.833,5.333,2,0.379,22.084,Points
+2021,4,Spanish Grand Prix,SAI,Ferrari,6,6.0,0.0,7.0,4.667,2,0.333,21.818,Points
+2021,4,Spanish Grand Prix,NOR,McLaren,9,9.0,0.0,8.833,12.333,2,0.348,22.166,Points
+2021,4,Spanish Grand Prix,OCO,Alpine F1 Team,5,5.0,0.0,2.167,2.667,1,0.348,22.798,Points
+2021,4,Spanish Grand Prix,GAS,AlphaTauri,12,12.0,0.0,1.5,2.333,2,0.273,27.054,Points
+2021,4,Spanish Grand Prix,STR,Aston Martin,11,11.0,0.0,0.833,1.667,2,0.333,21.594,No points
+2021,4,Spanish Grand Prix,RAI,Alfa Romeo,17,17.0,0.0,0.0,0.0,1,0.561,21.572,No points
+2021,4,Spanish Grand Prix,VET,Aston Martin,13,13.0,0.0,0.833,0.0,2,0.318,22.53,No points
+2021,4,Spanish Grand Prix,RUS,Williams,15,15.0,0.0,0.0,0.0,2,0.136,22.866,No points
+2021,4,Spanish Grand Prix,GIO,Alfa Romeo,14,14.0,0.0,0.0,0.0,2,0.121,38.772,No points
+2021,4,Spanish Grand Prix,LAT,Williams,19,19.0,0.0,0.0,0.0,3,0.136,23.5,No points
+2021,4,Spanish Grand Prix,ALO,Alpine F1 Team,10,10.0,0.0,2.167,1.667,2,0.318,22.761,No points
+2021,4,Spanish Grand Prix,MSC,Haas F1 Team,18,18.0,0.0,0.0,0.0,2,0.348,23.158,No points
+2021,4,Spanish Grand Prix,MAZ,Haas F1 Team,20,20.0,0.0,0.0,0.0,2,0.333,22.8,No points
+2021,4,Spanish Grand Prix,TSU,AlphaTauri,16,16.0,0.0,1.5,0.667,0,1.0,0.0,No points
+2021,5,Monaco Grand Prix,VER,Red Bull,2,2.0,0.0,14.0,20.0,1,0.436,23.746,Podium
+2021,5,Monaco Grand Prix,SAI,Ferrari,4,4.0,0.0,7.5,5.0,1,0.41,24.15,Podium
+2021,5,Monaco Grand Prix,NOR,McLaren,5,5.0,0.0,8.125,10.25,1,0.385,23.874,Podium
+2021,5,Monaco Grand Prix,PER,Red Bull,9,9.0,0.0,14.0,8.0,1,0.449,24.548,Points
+2021,5,Monaco Grand Prix,VET,Aston Martin,8,8.0,0.0,0.625,0.0,1,0.397,24.369,Points
+2021,5,Monaco Grand Prix,GAS,AlphaTauri,6,6.0,0.0,1.25,2.0,1,0.385,24.428,Points
+2021,5,Monaco Grand Prix,HAM,Mercedes,7,7.0,0.0,17.625,23.5,2,0.372,24.014,Points
+2021,5,Monaco Grand Prix,STR,Aston Martin,13,13.0,0.0,0.625,1.25,1,0.744,23.474,Points
+2021,5,Monaco Grand Prix,OCO,Alpine F1 Team,11,11.0,0.0,1.875,2.5,1,0.474,23.935,Points
+2021,5,Monaco Grand Prix,GIO,Alfa Romeo,10,10.0,0.0,0.0,0.0,1,0.423,24.521,Points
+2021,5,Monaco Grand Prix,RAI,Alfa Romeo,14,14.0,0.0,0.0,0.0,1,0.551,24.077,No points
+2021,5,Monaco Grand Prix,RIC,McLaren,12,12.0,0.0,8.125,6.0,1,0.462,24.715,No points
+2021,5,Monaco Grand Prix,ALO,Alpine F1 Team,17,17.0,0.0,1.875,1.25,1,0.577,23.803,No points
+2021,5,Monaco Grand Prix,RUS,Williams,15,15.0,0.0,0.0,0.0,1,0.397,23.928,No points
+2021,5,Monaco Grand Prix,LAT,Williams,18,18.0,0.0,0.0,0.0,1,0.551,23.703,No points
+2021,5,Monaco Grand Prix,TSU,AlphaTauri,16,16.0,0.0,1.25,0.5,1,0.821,24.43,No points
+2021,5,Monaco Grand Prix,MAZ,Haas F1 Team,19,19.0,0.0,0.0,0.0,1,0.436,25.202,No points
+2021,5,Monaco Grand Prix,MSC,Haas F1 Team,20,20.0,0.0,0.0,0.0,1,0.474,24.797,No points
+2021,5,Monaco Grand Prix,BOT,Mercedes,3,3.0,0.0,17.625,11.75,0,1.0,0.0,No points
+2021,5,Monaco Grand Prix,LEC,Ferrari,1,1.0,0.0,7.5,10.0,0,1.0,0.0,No points
+2021,6,Azerbaijan Grand Prix,PER,Red Bull,6,7.0,-1.0,14.9,8.8,3,0.255,18.576,Podium
+2021,6,Azerbaijan Grand Prix,VET,Aston Martin,11,11.0,0.0,1.9,2.0,3,0.353,17.393,Podium
+2021,6,Azerbaijan Grand Prix,GAS,AlphaTauri,4,4.0,0.0,1.8,3.2,3,0.216,17.62,Podium
+2021,6,Azerbaijan Grand Prix,LEC,Ferrari,1,1.0,0.0,7.8,8.0,3,0.176,17.464,Points
+2021,6,Azerbaijan Grand Prix,NOR,McLaren,9,6.0,3.0,8.0,11.2,3,0.137,18.2,Points
+2021,6,Azerbaijan Grand Prix,ALO,Alpine F1 Team,8,9.0,-1.0,1.7,1.0,4,0.137,18.528,Points
+2021,6,Azerbaijan Grand Prix,TSU,AlphaTauri,7,8.0,-1.0,1.8,0.4,3,0.176,17.598,Points
+2021,6,Azerbaijan Grand Prix,SAI,Ferrari,5,5.0,0.0,7.8,7.6,3,0.196,17.592,Points
+2021,6,Azerbaijan Grand Prix,RIC,McLaren,13,13.0,0.0,8.0,4.8,3,0.216,17.538,Points
+2021,6,Azerbaijan Grand Prix,RAI,Alfa Romeo,14,14.0,0.0,0.1,0.0,3,0.255,17.556,Points
+2021,6,Azerbaijan Grand Prix,GIO,Alfa Romeo,20,20.0,0.0,0.1,0.2,4,0.039,18.492,No points
+2021,6,Azerbaijan Grand Prix,BOT,Mercedes,10,10.0,0.0,14.8,9.4,3,0.216,20.851,No points
+2021,6,Azerbaijan Grand Prix,MSC,Haas F1 Team,17,17.0,0.0,0.0,0.0,5,0.157,19.695,No points
+2021,6,Azerbaijan Grand Prix,MAZ,Haas F1 Team,18,18.0,0.0,0.0,0.0,6,0.176,20.888,No points
+2021,6,Azerbaijan Grand Prix,HAM,Mercedes,2,2.0,0.0,14.8,20.2,3,0.216,18.951,No points
+2021,6,Azerbaijan Grand Prix,LAT,Williams,16,16.0,0.0,0.0,0.0,2,0.176,22.149,No points
+2021,6,Azerbaijan Grand Prix,RUS,Williams,15,15.0,0.0,0.0,0.0,4,0.02,20.479,No points
+2021,6,Azerbaijan Grand Prix,VER,Red Bull,3,3.0,0.0,14.9,21.0,1,0.235,19.769,No points
+2021,6,Azerbaijan Grand Prix,STR,Aston Martin,19,19.0,0.0,1.9,1.8,0,1.0,0.0,No points
+2021,6,Azerbaijan Grand Prix,OCO,Alpine F1 Team,12,12.0,0.0,1.7,2.4,0,1.0,0.0,No points
+2021,7,French Grand Prix,VER,Red Bull,1,1.0,0.0,14.6,17.4,2,0.34,29.963,Podium
+2021,7,French Grand Prix,HAM,Mercedes,2,2.0,0.0,10.7,15.2,1,0.358,30.263,Podium
+2021,7,French Grand Prix,PER,Red Bull,4,4.0,0.0,14.6,11.8,1,0.453,29.682,Podium
+2021,7,French Grand Prix,BOT,Mercedes,3,3.0,0.0,10.7,6.2,1,0.321,30.572,Points
+2021,7,French Grand Prix,NOR,McLaren,8,8.0,0.0,7.4,10.8,1,0.453,30.531,Points
+2021,7,French Grand Prix,RIC,McLaren,10,10.0,0.0,7.4,4.0,1,0.302,29.951,Points
+2021,7,French Grand Prix,GAS,AlphaTauri,6,6.0,0.0,3.7,6.2,1,0.321,30.781,Points
+2021,7,French Grand Prix,ALO,Alpine F1 Team,9,9.0,0.0,2.5,2.6,1,0.34,31.288,Points
+2021,7,French Grand Prix,VET,Aston Martin,12,12.0,0.0,3.6,5.6,1,0.698,31.069,Points
+2021,7,French Grand Prix,STR,Aston Martin,19,19.0,0.0,3.6,1.6,1,0.642,30.996,Points
+2021,7,French Grand Prix,SAI,Ferrari,5,5.0,0.0,8.2,7.6,1,0.321,30.534,No points
+2021,7,French Grand Prix,RUS,Williams,14,14.0,0.0,0.0,0.0,1,0.321,30.092,No points
+2021,7,French Grand Prix,TSU,AlphaTauri,21,20.0,1.0,3.7,1.2,1,0.283,30.226,No points
+2021,7,French Grand Prix,OCO,Alpine F1 Team,11,11.0,0.0,2.5,2.4,1,0.528,30.207,No points
+2021,7,French Grand Prix,GIO,Alfa Romeo,13,13.0,0.0,0.2,0.2,1,0.528,30.586,No points
+2021,7,French Grand Prix,LEC,Ferrari,7,7.0,0.0,8.2,8.8,2,0.264,31.083,No points
+2021,7,French Grand Prix,RAI,Alfa Romeo,17,17.0,0.0,0.2,0.2,1,0.623,31.327,No points
+2021,7,French Grand Prix,LAT,Williams,16,16.0,0.0,0.0,0.0,1,0.34,29.775,No points
+2021,7,French Grand Prix,MSC,Haas F1 Team,15,15.0,0.0,0.0,0.0,1,0.283,31.457,No points
+2021,7,French Grand Prix,MAZ,Haas F1 Team,18,18.0,0.0,0.0,0.0,1,0.585,30.983,No points
+2021,8,Styrian Grand Prix,VER,Red Bull,1,1.0,0.0,16.2,17.6,1,0.408,20.936,Podium
+2021,8,Styrian Grand Prix,HAM,Mercedes,2,3.0,-1.0,11.8,15.0,2,0.394,21.43,Podium
+2021,8,Styrian Grand Prix,BOT,Mercedes,5,2.0,3.0,11.8,8.6,1,0.38,21.752,Podium
+2021,8,Styrian Grand Prix,PER,Red Bull,4,5.0,-1.0,16.2,14.8,2,0.366,22.219,Points
+2021,8,Styrian Grand Prix,NOR,McLaren,3,4.0,-1.0,6.9,9.8,1,0.437,21.692,Points
+2021,8,Styrian Grand Prix,SAI,Ferrari,12,12.0,0.0,6.0,5.6,1,0.577,21.226,Points
+2021,8,Styrian Grand Prix,LEC,Ferrari,7,7.0,0.0,6.0,6.4,2,0.014,25.155,Points
+2021,8,Styrian Grand Prix,STR,Aston Martin,9,10.0,-1.0,3.5,1.0,1,0.394,20.936,Points
+2021,8,Styrian Grand Prix,ALO,Alpine F1 Team,8,9.0,-1.0,2.6,3.2,1,0.38,21.131,Points
+2021,8,Styrian Grand Prix,TSU,AlphaTauri,11,8.0,3.0,3.7,1.2,1,0.366,21.234,Points
+2021,8,Styrian Grand Prix,RAI,Alfa Romeo,18,18.0,0.0,0.2,0.2,1,0.507,21.227,No points
+2021,8,Styrian Grand Prix,VET,Aston Martin,14,14.0,0.0,3.5,6.0,1,0.38,21.546,No points
+2021,8,Styrian Grand Prix,RIC,McLaren,13,13.0,0.0,6.9,4.0,1,0.577,21.41,No points
+2021,8,Styrian Grand Prix,OCO,Alpine F1 Team,17,17.0,0.0,2.6,2.0,1,0.507,21.238,No points
+2021,8,Styrian Grand Prix,GIO,Alfa Romeo,15,15.0,0.0,0.2,0.2,1,0.324,21.21,No points
+2021,8,Styrian Grand Prix,MSC,Haas F1 Team,19,19.0,0.0,0.0,0.0,1,0.465,22.4,No points
+2021,8,Styrian Grand Prix,LAT,Williams,16,16.0,0.0,0.0,0.0,2,0.014,24.186,No points
+2021,8,Styrian Grand Prix,MAZ,Haas F1 Team,20,20.0,0.0,0.0,0.0,1,0.296,22.759,No points
+2021,8,Styrian Grand Prix,RUS,Williams,10,11.0,-1.0,0.0,0.0,2,0.352,41.812,No points
+2021,8,Styrian Grand Prix,GAS,AlphaTauri,6,6.0,0.0,3.7,6.2,0,1.0,0.0,No points
+2021,9,Austrian Grand Prix,VER,Red Bull,1,1.0,0.0,16.9,19.0,2,0.451,21.163,Podium
+2021,9,Austrian Grand Prix,BOT,Mercedes,5,5.0,0.0,11.1,8.4,1,0.423,21.071,Podium
+2021,9,Austrian Grand Prix,NOR,McLaren,2,2.0,0.0,6.7,9.8,1,0.423,26.474,Podium
+2021,9,Austrian Grand Prix,HAM,Mercedes,4,4.0,0.0,11.1,13.8,2,0.437,21.213,Points
+2021,9,Austrian Grand Prix,SAI,Ferrari,10,11.0,-1.0,6.6,7.2,1,0.676,21.431,Points
+2021,9,Austrian Grand Prix,PER,Red Bull,3,3.0,0.0,16.9,14.8,1,0.451,21.735,Points
+2021,9,Austrian Grand Prix,RIC,McLaren,13,13.0,0.0,6.7,3.6,1,0.408,21.151,Points
+2021,9,Austrian Grand Prix,LEC,Ferrari,12,12.0,0.0,6.6,6.0,1,0.479,21.143,Points
+2021,9,Austrian Grand Prix,GAS,AlphaTauri,6,6.0,0.0,3.7,6.0,2,0.183,21.707,Points
+2021,9,Austrian Grand Prix,ALO,Alpine F1 Team,14,14.0,0.0,1.8,2.8,1,0.451,22.663,Points
+2021,9,Austrian Grand Prix,RUS,Williams,8,9.0,-1.0,0.0,0.0,1,0.423,21.606,No points
+2021,9,Austrian Grand Prix,TSU,AlphaTauri,7,7.0,0.0,3.7,1.4,2,0.169,23.874,No points
+2021,9,Austrian Grand Prix,STR,Aston Martin,9,10.0,-1.0,3.9,1.8,2,0.197,21.432,No points
+2021,9,Austrian Grand Prix,GIO,Alfa Romeo,15,15.0,0.0,0.2,0.2,2,0.014,24.126,No points
+2021,9,Austrian Grand Prix,RAI,Alfa Romeo,16,16.0,0.0,0.2,0.2,1,0.521,21.896,No points
+2021,9,Austrian Grand Prix,LAT,Williams,18,18.0,0.0,0.0,0.0,1,0.465,21.152,No points
+2021,9,Austrian Grand Prix,VET,Aston Martin,11,8.0,3.0,3.9,6.0,2,0.239,20.964,No points
+2021,9,Austrian Grand Prix,MSC,Haas F1 Team,19,19.0,0.0,0.0,0.0,1,0.479,21.798,No points
+2021,9,Austrian Grand Prix,MAZ,Haas F1 Team,20,20.0,0.0,0.0,0.0,2,0.38,23.182,No points
+2021,9,Austrian Grand Prix,OCO,Alpine F1 Team,17,17.0,0.0,1.8,0.8,0,1.0,0.0,No points
+2021,10,British Grand Prix,HAM,Mercedes,2,1.0,1.0,10.1,11.2,2,0.038,40.266,Podium
+2021,10,British Grand Prix,LEC,Ferrari,4,4.0,0.0,6.2,4.4,2,0.038,28.433,Podium
+2021,10,British Grand Prix,BOT,Mercedes,3,3.0,0.0,10.1,9.0,2,0.038,28.209,Podium
+2021,10,British Grand Prix,NOR,McLaren,5,6.0,-1.0,7.6,12.0,2,0.038,31.706,Points
+2021,10,British Grand Prix,RIC,McLaren,6,7.0,-1.0,7.6,3.2,2,0.038,28.817,Points
+2021,10,British Grand Prix,SAI,Ferrari,10,9.0,1.0,6.2,8.0,2,0.038,37.509,Points
+2021,10,British Grand Prix,ALO,Alpine F1 Team,7,11.0,-4.0,1.7,3.0,2,0.038,29.743,Points
+2021,10,British Grand Prix,STR,Aston Martin,14,15.0,-1.0,3.9,1.8,2,0.038,28.213,Points
+2021,10,British Grand Prix,OCO,Alpine F1 Team,9,13.0,-4.0,1.7,0.4,2,0.038,28.772,Points
+2021,10,British Grand Prix,TSU,AlphaTauri,16,16.0,0.0,3.8,1.4,2,0.038,29.134,Points
+2021,10,British Grand Prix,GAS,AlphaTauri,11,12.0,-1.0,3.8,6.2,3,0.038,28.432,No points
+2021,10,British Grand Prix,RUS,Williams,12,8.0,4.0,0.0,0.0,2,0.038,27.812,No points
+2021,10,British Grand Prix,GIO,Alfa Romeo,15,14.0,1.0,0.2,0.2,2,0.038,28.137,No points
+2021,10,British Grand Prix,LAT,Williams,17,18.0,-1.0,0.0,0.0,2,0.038,27.543,No points
+2021,10,British Grand Prix,RAI,Alfa Romeo,13,17.0,-4.0,0.2,0.2,2,0.038,28.11,No points
+2021,10,British Grand Prix,PER,Red Bull,21,5.0,16.0,17.4,14.4,4,0.038,28.274,No points
+2021,10,British Grand Prix,MAZ,Haas F1 Team,19,20.0,-1.0,0.0,0.0,2,0.038,29.253,No points
+2021,10,British Grand Prix,MSC,Haas F1 Team,18,19.0,-1.0,0.0,0.0,2,0.038,29.319,No points
+2021,10,British Grand Prix,VET,Aston Martin,8,10.0,-2.0,3.9,6.0,2,0.038,28.145,No points
+2021,10,British Grand Prix,VER,Red Bull,1,2.0,-1.0,17.4,20.4,0,1.0,0.0,No points
+2021,11,Hungarian Grand Prix,OCO,Alpine F1 Team,8,8.0,0.0,2.3,0.4,3,0.029,30.582,Podium
+2021,11,Hungarian Grand Prix,HAM,Mercedes,1,1.0,0.0,13.4,14.8,4,0.029,21.485,Podium
+2021,11,Hungarian Grand Prix,SAI,Ferrari,15,15.0,0.0,7.0,6.0,3,0.029,32.368,Podium
+2021,11,Hungarian Grand Prix,ALO,Alpine F1 Team,9,9.0,0.0,2.3,4.2,3,0.029,29.322,Points
+2021,11,Hungarian Grand Prix,GAS,AlphaTauri,5,5.0,0.0,3.1,4.6,4,0.029,27.559,Points
+2021,11,Hungarian Grand Prix,TSU,AlphaTauri,16,16.0,0.0,3.1,1.6,3,0.029,31.28,Points
+2021,11,Hungarian Grand Prix,LAT,Williams,18,18.0,0.0,0.0,0.0,3,0.029,30.892,Points
+2021,11,Hungarian Grand Prix,RUS,Williams,17,17.0,0.0,0.0,0.0,3,0.029,25.78,Points
+2021,11,Hungarian Grand Prix,VER,Red Bull,3,3.0,0.0,13.7,15.4,5,0.014,24.927,Points
+2021,11,Hungarian Grand Prix,RAI,Alfa Romeo,13,13.0,0.0,0.1,0.2,4,0.029,31.027,Points
+2021,11,Hungarian Grand Prix,RIC,McLaren,11,11.0,0.0,8.3,5.2,3,0.029,28.057,No points
+2021,11,Hungarian Grand Prix,MSC,Haas F1 Team,20,20.0,0.0,0.0,0.0,3,0.029,29.463,No points
+2021,11,Hungarian Grand Prix,GIO,Alfa Romeo,21,14.0,7.0,0.1,0.0,5,0.014,28.634,No points
+2021,11,Hungarian Grand Prix,MAZ,Haas F1 Team,19,19.0,0.0,0.0,0.0,2,0.014,23.715,No points
+2021,11,Hungarian Grand Prix,NOR,McLaren,6,6.0,0.0,8.3,11.4,1,0.014,38.267,No points
+2021,11,Hungarian Grand Prix,BOT,Mercedes,2,2.0,0.0,13.4,12.0,0,1.0,0.0,No points
+2021,11,Hungarian Grand Prix,PER,Red Bull,4,4.0,0.0,13.7,12.0,0,1.0,0.0,No points
+2021,11,Hungarian Grand Prix,LEC,Ferrari,7,7.0,0.0,7.0,8.0,0,1.0,0.0,No points
+2021,11,Hungarian Grand Prix,STR,Aston Martin,12,12.0,0.0,2.9,1.8,0,1.0,0.0,No points
+2021,11,Hungarian Grand Prix,VET,Aston Martin,10,10.0,0.0,2.9,4.0,3,0.029,31.792,No points
+2021,12,Belgian Grand Prix,VER,Red Bull,1,1.0,0.0,11.4,15.8,0,1.0,0.0,Podium
+2021,12,Belgian Grand Prix,RUS,Williams,2,2.0,0.0,1.0,0.8,0,1.0,0.0,Podium
+2021,12,Belgian Grand Prix,HAM,Mercedes,3,3.0,0.0,15.2,18.4,0,1.0,0.0,Podium
+2021,12,Belgian Grand Prix,RIC,McLaren,4,4.0,0.0,7.1,4.8,0,1.0,0.0,Points
+2021,12,Belgian Grand Prix,VET,Aston Martin,5,5.0,0.0,1.1,0.4,0,1.0,0.0,Points
+2021,12,Belgian Grand Prix,GAS,AlphaTauri,6,6.0,0.0,2.9,3.8,0,1.0,0.0,Points
+2021,12,Belgian Grand Prix,OCO,Alpine F1 Team,8,9.0,-1.0,5.2,5.4,0,1.0,0.0,Points
+2021,12,Belgian Grand Prix,LEC,Ferrari,9,11.0,-2.0,6.9,5.6,0,1.0,0.0,Points
+2021,12,Belgian Grand Prix,LAT,Williams,10,12.0,-2.0,1.0,1.2,0,1.0,0.0,Points
+2021,12,Belgian Grand Prix,SAI,Ferrari,11,13.0,-2.0,6.9,8.2,0,1.0,0.0,Points
+2021,12,Belgian Grand Prix,ALO,Alpine F1 Team,12,14.0,-2.0,5.2,5.0,0,1.0,0.0,No points
+2021,12,Belgian Grand Prix,BOT,Mercedes,13,8.0,5.0,15.2,12.0,0,1.0,0.0,No points
+2021,12,Belgian Grand Prix,GIO,Alfa Romeo,14,16.0,-2.0,0.1,0.0,0,1.0,0.0,No points
+2021,12,Belgian Grand Prix,NOR,McLaren,15,10.0,5.0,7.1,9.4,0,1.0,0.0,No points
+2021,12,Belgian Grand Prix,TSU,AlphaTauri,16,17.0,-1.0,2.9,2.0,0,1.0,0.0,No points
+2021,12,Belgian Grand Prix,MSC,Haas F1 Team,17,18.0,-1.0,0.0,0.0,0,1.0,0.0,No points
+2021,12,Belgian Grand Prix,MAZ,Haas F1 Team,18,20.0,-2.0,0.0,0.0,0,1.0,0.0,No points
+2021,12,Belgian Grand Prix,RAI,Alfa Romeo,21,19.0,2.0,0.1,0.2,0,1.0,0.0,No points
+2021,12,Belgian Grand Prix,PER,Red Bull,21,7.0,14.0,11.4,7.0,0,1.0,0.0,No points
+2021,12,Belgian Grand Prix,STR,Aston Martin,19,15.0,4.0,1.1,1.8,0,1.0,0.0,No points
+2021,13,Dutch Grand Prix,VER,Red Bull,1,1.0,0.0,8.55,13.1,2,0.292,18.86,Podium
+2021,13,Dutch Grand Prix,HAM,Mercedes,2,2.0,0.0,12.95,16.3,3,0.278,19.28,Podium
+2021,13,Dutch Grand Prix,BOT,Mercedes,3,3.0,0.0,12.95,9.6,2,0.431,20.302,Podium
+2021,13,Dutch Grand Prix,GAS,AlphaTauri,4,4.0,0.0,2.7,3.4,1,0.333,19.163,Points
+2021,13,Dutch Grand Prix,LEC,Ferrari,5,5.0,0.0,7.15,6.0,1,0.472,19.49,Points
+2021,13,Dutch Grand Prix,ALO,Alpine F1 Team,9,9.0,0.0,5.1,4.2,1,0.458,19.018,Points
+2021,13,Dutch Grand Prix,SAI,Ferrari,6,6.0,0.0,7.15,8.3,1,0.431,20.327,Points
+2021,13,Dutch Grand Prix,PER,Red Bull,21,16.0,5.0,8.55,4.0,2,0.111,18.921,Points
+2021,13,Dutch Grand Prix,OCO,Alpine F1 Team,8,8.0,0.0,5.1,6.0,1,0.431,19.24,Points
+2021,13,Dutch Grand Prix,NOR,McLaren,13,13.0,0.0,5.9,7.4,1,0.583,20.443,Points
+2021,13,Dutch Grand Prix,RIC,McLaren,10,10.0,0.0,5.9,4.4,1,0.417,19.449,No points
+2021,13,Dutch Grand Prix,STR,Aston Martin,12,12.0,0.0,1.3,1.6,1,0.375,19.389,No points
+2021,13,Dutch Grand Prix,VET,Aston Martin,15,17.0,-2.0,1.3,1.0,2,0.139,18.672,No points
+2021,13,Dutch Grand Prix,GIO,Alfa Romeo,7,7.0,0.0,0.1,0.0,2,0.375,19.546,No points
+2021,13,Dutch Grand Prix,KUB,Alfa Romeo,16,18.0,-2.0,0.1,0.1,1,0.556,19.708,No points
+2021,13,Dutch Grand Prix,LAT,Williams,21,14.0,7.0,2.0,1.4,1,0.319,20.646,No points
+2021,13,Dutch Grand Prix,RUS,Williams,11,11.0,0.0,2.0,2.6,2,0.375,22.084,No points
+2021,13,Dutch Grand Prix,MSC,Haas F1 Team,17,19.0,-2.0,0.0,0.0,2,0.056,30.076,No points
+2021,13,Dutch Grand Prix,TSU,AlphaTauri,14,15.0,-1.0,2.7,2.0,1,0.431,19.85,No points
+2021,13,Dutch Grand Prix,MAZ,Haas F1 Team,18,20.0,-2.0,0.0,0.0,1,0.458,19.999,No points
+2021,14,Italian Grand Prix,RIC,McLaren,2,5.0,-3.0,5.0,4.4,1,0.415,23.812,Podium
+2021,14,Italian Grand Prix,NOR,McLaren,3,4.0,-1.0,5.0,5.6,1,0.453,24.168,Podium
+2021,14,Italian Grand Prix,BOT,Mercedes,19,1.0,18.0,12.95,9.6,1,0.491,24.308,Podium
+2021,14,Italian Grand Prix,LEC,Ferrari,5,8.0,-3.0,7.35,6.8,1,0.491,24.557,Points
+2021,14,Italian Grand Prix,PER,Red Bull,8,9.0,-1.0,7.75,2.4,1,0.491,23.906,Points
+2021,14,Italian Grand Prix,SAI,Ferrari,6,7.0,-1.0,7.35,7.9,1,0.491,24.283,Points
+2021,14,Italian Grand Prix,STR,Aston Martin,9,12.0,-3.0,0.9,0.8,1,0.472,24.846,Points
+2021,14,Italian Grand Prix,ALO,Alpine F1 Team,10,13.0,-3.0,5.9,5.4,1,0.472,24.797,Points
+2021,14,Italian Grand Prix,RUS,Williams,14,15.0,-1.0,2.0,2.6,1,0.491,24.156,Points
+2021,14,Italian Grand Prix,OCO,Alpine F1 Team,12,14.0,-2.0,5.9,6.4,1,0.491,30.333,Points
+2021,14,Italian Grand Prix,LAT,Williams,13,16.0,-3.0,2.0,1.4,1,0.434,24.168,No points
+2021,14,Italian Grand Prix,VET,Aston Martin,11,11.0,0.0,0.9,1.0,2,0.415,25.542,No points
+2021,14,Italian Grand Prix,GIO,Alfa Romeo,7,10.0,-3.0,0.1,0.0,2,0.019,33.87,No points
+2021,14,Italian Grand Prix,KUB,Alfa Romeo,17,19.0,-2.0,0.1,0.0,1,0.491,24.501,No points
+2021,14,Italian Grand Prix,MSC,Haas F1 Team,18,18.0,0.0,0.0,0.0,1,0.434,24.714,No points
+2021,14,Italian Grand Prix,MAZ,Haas F1 Team,16,20.0,-4.0,0.0,0.0,3,0.453,26.884,No points
+2021,14,Italian Grand Prix,HAM,Mercedes,4,2.0,2.0,12.95,16.3,1,0.472,25.619,No points
+2021,14,Italian Grand Prix,VER,Red Bull,1,3.0,-2.0,7.75,13.1,1,0.434,32.456,No points
+2021,14,Italian Grand Prix,GAS,AlphaTauri,21,6.0,15.0,3.8,5.8,0,1.0,0.0,No points
+2021,14,Italian Grand Prix,TSU,AlphaTauri,21,17.0,4.0,3.8,1.8,0,1.0,0.0,No points
+2021,15,Russian Grand Prix,HAM,Mercedes,4,4.0,0.0,11.45,13.9,2,0.491,29.962,Podium
+2021,15,Russian Grand Prix,VER,Red Bull,20,20.0,0.0,5.35,7.9,2,0.491,30.298,Podium
+2021,15,Russian Grand Prix,SAI,Ferrari,2,2.0,0.0,7.95,7.5,2,0.264,30.696,Podium
+2021,15,Russian Grand Prix,RIC,McLaren,5,5.0,0.0,7.3,8.4,2,0.415,32.316,Points
+2021,15,Russian Grand Prix,BOT,Mercedes,16,7.0,9.0,11.45,9.0,2,0.528,29.752,Points
+2021,15,Russian Grand Prix,ALO,Alpine F1 Team,6,6.0,0.0,6.3,6.0,2,0.679,30.43,Points
+2021,15,Russian Grand Prix,NOR,McLaren,1,1.0,0.0,7.3,6.2,2,0.528,31.247,Points
+2021,15,Russian Grand Prix,RAI,Alfa Romeo,13,16.0,-3.0,0.1,0.2,2,0.283,30.116,Points
+2021,15,Russian Grand Prix,PER,Red Bull,8,9.0,-1.0,5.35,2.8,2,0.679,34.17,Points
+2021,15,Russian Grand Prix,RUS,Williams,3,3.0,0.0,2.2,3.0,2,0.245,31.373,Points
+2021,15,Russian Grand Prix,STR,Aston Martin,7,8.0,-1.0,1.5,2.0,2,0.226,36.683,No points
+2021,15,Russian Grand Prix,VET,Aston Martin,10,11.0,-1.0,1.5,1.0,2,0.491,30.685,No points
+2021,15,Russian Grand Prix,GAS,AlphaTauri,11,12.0,-1.0,3.6,5.4,2,0.623,30.634,No points
+2021,15,Russian Grand Prix,OCO,Alpine F1 Team,9,10.0,-1.0,6.3,6.6,2,0.283,31.583,No points
+2021,15,Russian Grand Prix,LEC,Ferrari,19,15.0,4.0,7.95,8.4,2,0.66,32.248,No points
+2021,15,Russian Grand Prix,GIO,Alfa Romeo,17,18.0,-1.0,0.1,0.0,2,0.679,32.021,No points
+2021,15,Russian Grand Prix,TSU,AlphaTauri,12,13.0,-1.0,3.6,1.8,3,0.245,30.688,No points
+2021,15,Russian Grand Prix,MAZ,Haas F1 Team,15,19.0,-4.0,0.0,0.0,2,0.264,32.029,No points
+2021,15,Russian Grand Prix,LAT,Williams,18,14.0,4.0,2.2,1.4,1,0.245,30.056,No points
+2021,15,Russian Grand Prix,MSC,Haas F1 Team,14,17.0,-3.0,0.0,0.0,1,0.377,29.996,No points
+2021,16,Turkish Grand Prix,BOT,Mercedes,1,2.0,-1.0,10.95,8.0,1,0.638,22.962,Podium
+2021,16,Turkish Grand Prix,VER,Red Bull,2,3.0,-1.0,7.35,11.5,1,0.621,22.442,Podium
+2021,16,Turkish Grand Prix,PER,Red Bull,6,7.0,-1.0,7.35,3.2,1,0.638,22.463,Podium
+2021,16,Turkish Grand Prix,LEC,Ferrari,3,4.0,-1.0,6.85,4.8,1,0.81,23.646,Points
+2021,16,Turkish Grand Prix,HAM,Mercedes,11,1.0,10.0,10.95,13.9,1,0.862,22.684,Points
+2021,16,Turkish Grand Prix,GAS,AlphaTauri,4,5.0,-1.0,3.5,5.4,1,0.672,29.31,Points
+2021,16,Turkish Grand Prix,NOR,McLaren,7,8.0,-1.0,7.0,5.2,1,0.586,23.239,Points
+2021,16,Turkish Grand Prix,SAI,Ferrari,19,15.0,4.0,6.85,8.9,1,0.621,28.353,Points
+2021,16,Turkish Grand Prix,STR,Aston Martin,8,9.0,-1.0,1.1,1.2,1,0.672,35.509,Points
+2021,16,Turkish Grand Prix,OCO,Alpine F1 Team,12,12.0,0.0,6.3,6.2,0,1.0,0.0,Points
+2021,16,Turkish Grand Prix,GIO,Alfa Romeo,16,18.0,-2.0,0.5,0.0,1,0.69,23.15,No points
+2021,16,Turkish Grand Prix,RAI,Alfa Romeo,17,19.0,-2.0,0.5,1.0,1,0.638,23.164,No points
+2021,16,Turkish Grand Prix,RIC,McLaren,20,16.0,4.0,7.0,8.8,1,0.362,23.028,No points
+2021,16,Turkish Grand Prix,TSU,AlphaTauri,9,10.0,-1.0,3.5,1.6,1,0.603,23.329,No points
+2021,16,Turkish Grand Prix,RUS,Williams,13,13.0,0.0,2.3,3.2,1,0.603,23.551,No points
+2021,16,Turkish Grand Prix,ALO,Alpine F1 Team,5,6.0,-1.0,6.3,6.4,1,0.517,29.116,No points
+2021,16,Turkish Grand Prix,LAT,Williams,15,17.0,-2.0,2.3,1.4,1,0.586,24.104,No points
+2021,16,Turkish Grand Prix,VET,Aston Martin,10,11.0,-1.0,1.1,1.0,2,0.621,23.507,No points
+2021,16,Turkish Grand Prix,MSC,Haas F1 Team,14,14.0,0.0,0.0,0.0,1,0.672,23.892,No points
+2021,16,Turkish Grand Prix,MAZ,Haas F1 Team,18,20.0,-2.0,0.0,0.0,1,0.603,23.829,No points
+2021,17,United States Grand Prix,VER,Red Bull,1,1.0,0.0,10.45,14.7,2,0.179,23.89,Podium
+2021,17,United States Grand Prix,HAM,Mercedes,2,2.0,0.0,12.75,12.3,2,0.232,24.078,Podium
+2021,17,United States Grand Prix,PER,Red Bull,3,3.0,0.0,10.45,6.2,2,0.214,24.311,Podium
+2021,17,United States Grand Prix,LEC,Ferrari,4,5.0,-1.0,6.95,7.2,2,0.214,23.908,Points
+2021,17,United States Grand Prix,RIC,McLaren,6,7.0,-1.0,7.6,8.8,2,0.196,24.106,Points
+2021,17,United States Grand Prix,BOT,Mercedes,9,4.0,5.0,12.75,13.2,2,0.268,24.032,Points
+2021,17,United States Grand Prix,SAI,Ferrari,5,6.0,-1.0,6.95,6.7,2,0.196,25.14,Points
+2021,17,United States Grand Prix,NOR,McLaren,7,8.0,-1.0,7.6,6.4,2,0.179,24.966,Points
+2021,17,United States Grand Prix,TSU,AlphaTauri,10,10.0,0.0,2.4,0.0,2,0.161,23.666,Points
+2021,17,United States Grand Prix,VET,Aston Martin,18,12.0,6.0,1.3,1.0,2,0.304,24.413,Points
+2021,17,United States Grand Prix,GIO,Alfa Romeo,12,13.0,-1.0,0.4,0.0,2,0.143,23.748,No points
+2021,17,United States Grand Prix,STR,Aston Martin,13,16.0,-3.0,1.3,1.6,2,0.321,23.641,No points
+2021,17,United States Grand Prix,RAI,Alfa Romeo,15,18.0,-3.0,0.4,1.0,2,0.214,24.14,No points
+2021,17,United States Grand Prix,RUS,Williams,20,15.0,5.0,1.3,2.4,2,0.161,24.276,No points
+2021,17,United States Grand Prix,LAT,Williams,14,17.0,-3.0,1.3,0.2,2,0.089,28.132,No points
+2021,17,United States Grand Prix,MSC,Haas F1 Team,16,19.0,-3.0,0.0,0.0,2,0.196,24.27,No points
+2021,17,United States Grand Prix,MAZ,Haas F1 Team,17,20.0,-3.0,0.0,0.0,3,0.018,26.484,No points
+2021,17,United States Grand Prix,ALO,Alpine F1 Team,19,14.0,5.0,2.7,4.0,3,0.125,23.578,No points
+2021,17,United States Grand Prix,OCO,Alpine F1 Team,11,11.0,0.0,2.7,1.4,2,0.054,32.359,No points
+2021,17,United States Grand Prix,GAS,AlphaTauri,8,9.0,-1.0,2.4,4.8,1,0.179,23.745,No points
+2021,18,Mexico City Grand Prix,VER,Red Bull,3,3.0,0.0,13.2,17.2,1,0.465,21.908,Podium
+2021,18,Mexico City Grand Prix,HAM,Mercedes,2,2.0,0.0,14.7,14.6,1,0.408,22.373,Podium
+2021,18,Mexico City Grand Prix,PER,Red Bull,4,4.0,0.0,13.2,9.2,1,0.563,22.114,Podium
+2021,18,Mexico City Grand Prix,GAS,AlphaTauri,5,5.0,0.0,2.2,4.0,1,0.437,22.549,Points
+2021,18,Mexico City Grand Prix,LEC,Ferrari,8,8.0,0.0,8.5,9.2,1,0.423,22.085,Points
+2021,18,Mexico City Grand Prix,SAI,Ferrari,6,6.0,0.0,8.5,7.8,1,0.592,22.031,Points
+2021,18,Mexico City Grand Prix,VET,Aston Martin,9,11.0,-2.0,0.9,0.2,1,0.465,22.277,Points
+2021,18,Mexico City Grand Prix,RAI,Alfa Romeo,10,12.0,-2.0,0.4,1.0,1,0.451,22.424,Points
+2021,18,Mexico City Grand Prix,ALO,Alpine F1 Team,12,16.0,-4.0,2.4,4.0,1,0.549,23.985,Points
+2021,18,Mexico City Grand Prix,NOR,McLaren,18,10.0,8.0,8.4,7.2,1,0.62,22.534,Points
+2021,18,Mexico City Grand Prix,GIO,Alfa Romeo,11,14.0,-3.0,0.4,0.0,1,0.225,22.205,No points
+2021,18,Mexico City Grand Prix,RIC,McLaren,7,7.0,0.0,8.4,9.6,2,0.014,30.47,No points
+2021,18,Mexico City Grand Prix,OCO,Alpine F1 Team,19,15.0,4.0,2.4,0.8,1,0.197,23.1,No points
+2021,18,Mexico City Grand Prix,STR,Aston Martin,20,20.0,0.0,0.9,1.6,2,0.169,24.821,No points
+2021,18,Mexico City Grand Prix,BOT,Mercedes,1,1.0,0.0,14.7,14.8,4,0.014,25.812,No points
+2021,18,Mexico City Grand Prix,RUS,Williams,16,13.0,3.0,0.3,0.6,1,0.211,21.984,No points
+2021,18,Mexico City Grand Prix,LAT,Williams,13,17.0,-4.0,0.3,0.0,2,0.155,23.21,No points
+2021,18,Mexico City Grand Prix,MAZ,Haas F1 Team,15,19.0,-4.0,0.0,0.0,2,0.183,24.366,No points
+2021,18,Mexico City Grand Prix,MSC,Haas F1 Team,14,18.0,-4.0,0.0,0.0,0,1.0,0.0,No points
+2021,18,Mexico City Grand Prix,TSU,AlphaTauri,17,9.0,8.0,2.2,0.4,0,1.0,0.0,No points
+2021,19,São Paulo Grand Prix,HAM,Mercedes,10,1.0,9.0,13.1,14.4,4,0.099,20.481,Podium
+2021,19,São Paulo Grand Prix,VER,Red Bull,2,2.0,0.0,14.3,17.2,4,0.099,20.303,Podium
+2021,19,São Paulo Grand Prix,BOT,Mercedes,1,3.0,-2.0,13.1,11.8,4,0.099,20.464,Podium
+2021,19,São Paulo Grand Prix,PER,Red Bull,4,4.0,0.0,14.3,11.4,5,0.099,21.036,Points
+2021,19,São Paulo Grand Prix,LEC,Ferrari,6,7.0,-1.0,8.7,9.2,4,0.099,20.361,Points
+2021,19,São Paulo Grand Prix,SAI,Ferrari,3,6.0,-3.0,8.7,8.2,4,0.099,20.725,Points
+2021,19,São Paulo Grand Prix,GAS,AlphaTauri,7,5.0,2.0,2.2,4.0,4,0.099,21.05,Points
+2021,19,São Paulo Grand Prix,OCO,Alpine F1 Team,8,11.0,-3.0,1.6,0.4,3,0.099,20.202,Points
+2021,19,São Paulo Grand Prix,ALO,Alpine F1 Team,12,10.0,2.0,1.6,2.8,3,0.099,19.944,Points
+2021,19,São Paulo Grand Prix,NOR,McLaren,5,8.0,-3.0,8.4,7.2,5,0.014,21.218,Points
+2021,19,São Paulo Grand Prix,VET,Aston Martin,9,12.0,-3.0,1.5,1.4,4,0.099,20.861,No points
+2021,19,São Paulo Grand Prix,RAI,Alfa Romeo,21,14.0,7.0,0.8,1.6,4,0.099,20.824,No points
+2021,19,São Paulo Grand Prix,RUS,Williams,17,18.0,-1.0,0.3,0.6,4,0.085,21.283,No points
+2021,19,São Paulo Grand Prix,GIO,Alfa Romeo,13,15.0,-2.0,0.8,0.0,4,0.099,20.522,No points
+2021,19,São Paulo Grand Prix,TSU,AlphaTauri,15,13.0,2.0,2.2,0.4,5,0.056,24.265,No points
+2021,19,São Paulo Grand Prix,LAT,Williams,16,17.0,-1.0,0.3,0.0,4,0.099,20.708,No points
+2021,19,São Paulo Grand Prix,MAZ,Haas F1 Team,19,20.0,-1.0,0.0,0.0,3,0.099,20.003,No points
+2021,19,São Paulo Grand Prix,MSC,Haas F1 Team,18,19.0,-1.0,0.0,0.0,5,0.099,25.569,No points
+2021,19,São Paulo Grand Prix,RIC,McLaren,11,9.0,2.0,8.4,9.6,3,0.099,20.306,No points
+2021,19,São Paulo Grand Prix,STR,Aston Martin,14,16.0,-2.0,1.5,1.6,3,0.099,20.293,No points
+2021,20,Qatar Grand Prix,HAM,Mercedes,1,1.0,0.0,15.6,19.4,2,0.316,25.308,Podium
+2021,20,Qatar Grand Prix,VER,Red Bull,7,2.0,5.0,16.4,20.8,3,0.298,25.313,Podium
+2021,20,Qatar Grand Prix,ALO,Alpine F1 Team,3,5.0,-2.0,1.7,2.4,1,0.404,25.991,Podium
+2021,20,Qatar Grand Prix,PER,Red Bull,11,11.0,0.0,16.4,12.0,2,0.333,25.42,Points
+2021,20,Qatar Grand Prix,OCO,Alpine F1 Team,9,9.0,0.0,1.7,1.0,1,0.421,25.517,Points
+2021,20,Qatar Grand Prix,STR,Aston Martin,12,12.0,0.0,0.9,0.4,1,0.404,26.157,Points
+2021,20,Qatar Grand Prix,SAI,Ferrari,5,7.0,-2.0,8.5,8.2,1,0.474,25.639,Points
+2021,20,Qatar Grand Prix,LEC,Ferrari,13,13.0,0.0,8.5,8.8,1,0.474,25.799,Points
+2021,20,Qatar Grand Prix,NOR,McLaren,4,6.0,-2.0,4.1,3.8,2,0.439,25.936,Points
+2021,20,Qatar Grand Prix,VET,Aston Martin,10,10.0,0.0,0.9,1.4,1,0.456,25.726,Points
+2021,20,Qatar Grand Prix,GAS,AlphaTauri,2,4.0,-2.0,2.8,5.2,2,0.228,25.87,No points
+2021,20,Qatar Grand Prix,RIC,McLaren,14,14.0,0.0,4.1,4.4,1,0.456,25.562,No points
+2021,20,Qatar Grand Prix,TSU,AlphaTauri,8,8.0,0.0,2.8,0.4,2,0.158,26.166,No points
+2021,20,Qatar Grand Prix,RAI,Alfa Romeo,16,16.0,0.0,0.8,1.6,2,0.175,25.904,No points
+2021,20,Qatar Grand Prix,GIO,Alfa Romeo,18,18.0,0.0,0.8,0.0,2,0.263,25.667,No points
+2021,20,Qatar Grand Prix,MSC,Haas F1 Team,19,19.0,0.0,0.0,0.0,1,0.386,25.881,No points
+2021,20,Qatar Grand Prix,RUS,Williams,15,15.0,0.0,0.1,0.2,2,0.298,30.564,No points
+2021,20,Qatar Grand Prix,MAZ,Haas F1 Team,20,20.0,0.0,0.0,0.0,1,0.544,26.515,No points
+2021,20,Qatar Grand Prix,LAT,Williams,17,17.0,0.0,0.1,0.0,1,0.316,25.811,No points
+2021,20,Qatar Grand Prix,BOT,Mercedes,6,3.0,3.0,15.6,11.8,1,0.579,36.341,No points
+2021,21,Saudi Arabian Grand Prix,HAM,Mercedes,1,1.0,0.0,14.6,19.4,3,0.2,20.58,Podium
+2021,21,Saudi Arabian Grand Prix,VER,Red Bull,3,3.0,0.0,17.5,21.0,2,0.26,0.0,Podium
+2021,21,Saudi Arabian Grand Prix,BOT,Mercedes,2,2.0,0.0,14.6,9.8,3,0.2,21.668,Podium
+2021,21,Saudi Arabian Grand Prix,OCO,Alpine F1 Team,9,9.0,0.0,3.4,3.0,2,0.26,0.0,Points
+2021,21,Saudi Arabian Grand Prix,RIC,McLaren,11,11.0,0.0,2.4,2.0,2,0.26,0.0,Points
+2021,21,Saudi Arabian Grand Prix,GAS,AlphaTauri,6,6.0,0.0,2.8,5.2,2,0.26,0.0,Points
+2021,21,Saudi Arabian Grand Prix,LEC,Ferrari,4,4.0,0.0,8.0,9.6,3,0.2,20.531,Points
+2021,21,Saudi Arabian Grand Prix,SAI,Ferrari,15,15.0,0.0,8.0,6.4,2,0.26,0.0,Points
+2021,21,Saudi Arabian Grand Prix,GIO,Alfa Romeo,10,10.0,0.0,0.4,0.0,2,0.26,0.0,Points
+2021,21,Saudi Arabian Grand Prix,NOR,McLaren,7,7.0,0.0,2.4,2.8,3,0.2,20.973,Points
+2021,21,Saudi Arabian Grand Prix,STR,Aston Martin,18,18.0,0.0,1.8,2.0,3,0.18,27.165,No points
+2021,21,Saudi Arabian Grand Prix,LAT,Williams,16,16.0,0.0,0.0,0.0,3,0.2,24.22,No points
+2021,21,Saudi Arabian Grand Prix,ALO,Alpine F1 Team,13,13.0,0.0,3.4,3.8,4,0.2,20.751,No points
+2021,21,Saudi Arabian Grand Prix,TSU,AlphaTauri,8,8.0,0.0,2.8,0.4,3,0.26,27.874,No points
+2021,21,Saudi Arabian Grand Prix,RAI,Alfa Romeo,12,12.0,0.0,0.4,0.8,3,0.26,34.489,No points
+2021,21,Saudi Arabian Grand Prix,VET,Aston Martin,17,17.0,0.0,1.8,1.6,2,0.26,0.0,No points
+2021,21,Saudi Arabian Grand Prix,PER,Red Bull,5,5.0,0.0,17.5,14.0,2,0.2,20.71,No points
+2021,21,Saudi Arabian Grand Prix,MAZ,Haas F1 Team,20,20.0,0.0,0.0,0.0,1,0.26,0.0,No points
+2021,21,Saudi Arabian Grand Prix,RUS,Williams,14,14.0,0.0,0.0,0.0,2,0.18,20.519,No points
+2021,21,Saudi Arabian Grand Prix,MSC,Haas F1 Team,19,19.0,0.0,0.0,0.0,0,1.0,0.0,No points
+2021,22,Abu Dhabi Grand Prix,VER,Red Bull,1,1.0,0.0,16.0,21.0,3,0.224,21.492,Podium
+2021,22,Abu Dhabi Grand Prix,HAM,Mercedes,2,2.0,0.0,15.1,22.6,1,0.241,21.595,Podium
+2021,22,Abu Dhabi Grand Prix,SAI,Ferrari,5,5.0,0.0,7.4,6.4,1,0.328,22.213,Podium
+2021,22,Abu Dhabi Grand Prix,TSU,AlphaTauri,8,8.0,0.0,2.8,0.4,2,0.397,22.182,Points
+2021,22,Abu Dhabi Grand Prix,GAS,AlphaTauri,12,12.0,0.0,2.8,5.2,2,0.621,22.026,Points
+2021,22,Abu Dhabi Grand Prix,BOT,Mercedes,6,6.0,0.0,15.1,7.6,1,0.517,21.669,Points
+2021,22,Abu Dhabi Grand Prix,NOR,McLaren,3,3.0,0.0,2.9,1.8,2,0.293,21.776,Points
+2021,22,Abu Dhabi Grand Prix,ALO,Alpine F1 Team,11,11.0,0.0,4.5,3.8,1,0.621,21.304,Points
+2021,22,Abu Dhabi Grand Prix,OCO,Alpine F1 Team,9,9.0,0.0,4.5,5.2,1,0.259,21.677,Points
+2021,22,Abu Dhabi Grand Prix,LEC,Ferrari,7,7.0,0.0,7.4,8.4,2,0.259,21.817,Points
+2021,22,Abu Dhabi Grand Prix,VET,Aston Martin,15,15.0,0.0,1.6,1.6,1,0.397,21.221,No points
+2021,22,Abu Dhabi Grand Prix,RIC,McLaren,10,10.0,0.0,2.9,4.0,2,0.31,21.752,No points
+2021,22,Abu Dhabi Grand Prix,STR,Aston Martin,13,13.0,0.0,1.6,1.6,2,0.362,22.474,No points
+2021,22,Abu Dhabi Grand Prix,MSC,Haas F1 Team,19,19.0,0.0,0.0,0.0,2,0.172,22.097,No points
+2021,22,Abu Dhabi Grand Prix,PER,Red Bull,4,4.0,0.0,16.0,11.0,3,0.362,21.423,No points
+2021,22,Abu Dhabi Grand Prix,LAT,Williams,16,16.0,0.0,0.0,0.0,1,0.483,21.241,No points
+2021,22,Abu Dhabi Grand Prix,GIO,Alfa Romeo,14,14.0,0.0,0.6,0.4,1,0.293,22.283,No points
+2021,22,Abu Dhabi Grand Prix,RUS,Williams,17,17.0,0.0,0.0,0.0,0,1.0,0.0,No points
+2021,22,Abu Dhabi Grand Prix,RAI,Alfa Romeo,18,18.0,0.0,0.6,0.8,1,0.362,22.338,No points
+2021,22,Abu Dhabi Grand Prix,MAZ,Haas F1 Team,20,20.0,0.0,0.0,0.0,0,1.0,0.0,No points
+2022,1,Bahrain Grand Prix,LEC,Ferrari,1,1.0,0.0,7.2,6.2,3,0.263,24.717,Podium
+2022,1,Bahrain Grand Prix,SAI,Ferrari,3,3.0,0.0,7.2,8.2,3,0.246,24.464,Podium
+2022,1,Bahrain Grand Prix,HAM,Mercedes,5,5.0,0.0,15.0,22.4,3,0.193,25.525,Podium
+2022,1,Bahrain Grand Prix,RUS,Mercedes,9,9.0,0.0,15.0,0.0,3,0.263,25.599,Points
+2022,1,Bahrain Grand Prix,MAG,Haas F1 Team,7,7.0,0.0,0.0,0.0,3,0.246,25.802,Points
+2022,1,Bahrain Grand Prix,BOT,Alfa Romeo,6,6.0,0.0,0.6,7.6,3,0.246,25.412,Points
+2022,1,Bahrain Grand Prix,OCO,Alpine F1 Team,11,11.0,0.0,5.1,5.6,3,0.246,26.703,Points
+2022,1,Bahrain Grand Prix,TSU,AlphaTauri,16,16.0,0.0,4.8,2.4,3,0.263,24.878,Points
+2022,1,Bahrain Grand Prix,ALO,Alpine F1 Team,8,8.0,0.0,5.1,4.6,3,0.193,24.927,Points
+2022,1,Bahrain Grand Prix,ZHO,Alfa Romeo,15,15.0,0.0,0.6,0.6,3,0.263,26.455,Points
+2022,1,Bahrain Grand Prix,MSC,Haas F1 Team,12,12.0,0.0,0.0,0.0,2,0.211,25.4,No points
+2022,1,Bahrain Grand Prix,STR,Aston Martin,19,19.0,0.0,1.5,1.6,3,0.316,25.912,No points
+2022,1,Bahrain Grand Prix,ALB,Williams,14,14.0,0.0,0.0,0.0,3,0.228,25.166,No points
+2022,1,Bahrain Grand Prix,RIC,McLaren,18,18.0,0.0,2.1,2.0,3,0.298,24.98,No points
+2022,1,Bahrain Grand Prix,NOR,McLaren,13,13.0,0.0,2.1,2.2,3,0.421,25.637,No points
+2022,1,Bahrain Grand Prix,LAT,Williams,20,20.0,0.0,0.0,0.0,3,0.246,24.631,No points
+2022,1,Bahrain Grand Prix,HUL,Aston Martin,17,17.0,0.0,1.5,1.5,3,0.333,26.608,No points
+2022,1,Bahrain Grand Prix,PER,Red Bull,4,4.0,0.0,14.6,8.0,3,0.263,24.722,No points
+2022,1,Bahrain Grand Prix,VER,Red Bull,2,2.0,0.0,14.6,21.2,3,0.246,24.745,No points
+2022,1,Bahrain Grand Prix,GAS,AlphaTauri,10,10.0,0.0,4.8,7.2,2,0.246,25.225,No points
+2022,2,Saudi Arabian Grand Prix,VER,Red Bull,4,4.0,0.0,10.6,16.2,1,0.32,20.731,Podium
+2022,2,Saudi Arabian Grand Prix,LEC,Ferrari,2,2.0,0.0,9.8,9.4,1,0.32,21.038,Podium
+2022,2,Saudi Arabian Grand Prix,SAI,Ferrari,3,3.0,0.0,9.8,10.2,1,0.32,21.521,Podium
+2022,2,Saudi Arabian Grand Prix,PER,Red Bull,1,1.0,0.0,10.6,5.0,1,0.3,20.481,Points
+2022,2,Saudi Arabian Grand Prix,RUS,Mercedes,6,6.0,0.0,15.9,2.4,1,0.32,21.415,Points
+2022,2,Saudi Arabian Grand Prix,OCO,Alpine F1 Team,5,5.0,0.0,5.7,6.8,1,0.32,21.141,Points
+2022,2,Saudi Arabian Grand Prix,NOR,McLaren,11,11.0,0.0,2.0,2.0,1,0.32,20.383,Points
+2022,2,Saudi Arabian Grand Prix,GAS,AlphaTauri,9,9.0,0.0,4.0,4.8,1,0.3,22.82,Points
+2022,2,Saudi Arabian Grand Prix,MAG,Haas F1 Team,10,10.0,0.0,1.0,10.0,1,0.74,22.374,Points
+2022,2,Saudi Arabian Grand Prix,HAM,Mercedes,15,16.0,-1.0,15.9,21.8,1,0.8,21.788,Points
+2022,2,Saudi Arabian Grand Prix,ZHO,Alfa Romeo,12,13.0,-1.0,1.1,1.0,2,0.32,24.418,No points
+2022,2,Saudi Arabian Grand Prix,HUL,Aston Martin,17,18.0,-1.0,0.9,0.0,1,0.74,21.425,No points
+2022,2,Saudi Arabian Grand Prix,STR,Aston Martin,13,15.0,-2.0,0.9,1.6,1,0.26,22.339,No points
+2022,2,Saudi Arabian Grand Prix,ALB,Williams,16,17.0,-1.0,0.0,0.0,1,0.26,20.683,No points
+2022,2,Saudi Arabian Grand Prix,BOT,Alfa Romeo,8,8.0,0.0,1.1,9.2,2,0.32,22.636,No points
+2022,2,Saudi Arabian Grand Prix,ALO,Alpine F1 Team,7,7.0,0.0,5.7,4.6,1,0.32,21.543,No points
+2022,2,Saudi Arabian Grand Prix,RIC,McLaren,14,12.0,2.0,2.0,2.0,1,0.16,20.65,No points
+2022,2,Saudi Arabian Grand Prix,LAT,Williams,18,19.0,-1.0,0.0,0.0,0,1.0,0.0,No points
+2022,2,Saudi Arabian Grand Prix,TSU,AlphaTauri,19,20.0,-1.0,4.0,3.2,0,1.0,0.0,No points
+2022,2,Saudi Arabian Grand Prix,MSC,Haas F1 Team,21,14.0,7.0,1.0,0.0,0,1.0,0.0,No points
+2022,3,Australian Grand Prix,LEC,Ferrari,1,1.0,0.0,11.4,11.2,1,0.379,17.973,Podium
+2022,3,Australian Grand Prix,PER,Red Bull,3,3.0,0.0,11.2,4.8,1,0.345,17.434,Podium
+2022,3,Australian Grand Prix,RUS,Mercedes,6,6.0,0.0,13.0,4.4,1,0.397,18.479,Podium
+2022,3,Australian Grand Prix,HAM,Mercedes,5,5.0,0.0,13.0,17.0,1,0.379,17.877,Points
+2022,3,Australian Grand Prix,NOR,McLaren,4,4.0,0.0,2.5,3.0,1,0.345,17.556,Points
+2022,3,Australian Grand Prix,RIC,McLaren,7,7.0,0.0,2.5,2.0,1,0.362,18.15,Points
+2022,3,Australian Grand Prix,OCO,Alpine F1 Team,8,8.0,0.0,5.9,7.6,1,0.293,19.128,Points
+2022,3,Australian Grand Prix,BOT,Alfa Romeo,12,12.0,0.0,1.1,6.2,1,0.379,18.413,Points
+2022,3,Australian Grand Prix,GAS,AlphaTauri,11,11.0,0.0,3.8,4.4,1,0.362,18.926,Points
+2022,3,Australian Grand Prix,ALB,Williams,20,16.0,4.0,0.0,0.0,1,0.983,19.845,Points
+2022,3,Australian Grand Prix,ZHO,Alfa Romeo,14,14.0,0.0,1.1,0.5,1,0.362,18.38,No points
+2022,3,Australian Grand Prix,STR,Aston Martin,19,20.0,-1.0,0.9,1.6,3,0.052,19.068,No points
+2022,3,Australian Grand Prix,MSC,Haas F1 Team,15,15.0,0.0,1.2,0.0,1,0.241,19.039,No points
+2022,3,Australian Grand Prix,MAG,Haas F1 Team,16,17.0,-1.0,1.2,6.0,1,0.672,19.111,No points
+2022,3,Australian Grand Prix,TSU,AlphaTauri,13,13.0,0.0,3.8,3.2,1,0.31,18.443,No points
+2022,3,Australian Grand Prix,LAT,Williams,18,19.0,-1.0,0.0,0.0,2,0.224,18.244,No points
+2022,3,Australian Grand Prix,ALO,Alpine F1 Team,10,10.0,0.0,5.9,4.2,2,0.672,18.595,No points
+2022,3,Australian Grand Prix,VER,Red Bull,2,2.0,0.0,11.2,17.6,1,0.31,18.281,No points
+2022,3,Australian Grand Prix,VET,Aston Martin,17,18.0,-1.0,0.9,1.4,0,1.0,0.0,No points
+2022,3,Australian Grand Prix,SAI,Ferrari,9,9.0,0.0,11.4,11.6,0,1.0,0.0,No points
+2022,4,Emilia Romagna Grand Prix,VER,Red Bull,1,1.0,0.0,9.9,13.8,2,0.302,29.972,Podium
+2022,4,Emilia Romagna Grand Prix,PER,Red Bull,3,7.0,-4.0,9.9,6.0,2,0.286,29.996,Podium
+2022,4,Emilia Romagna Grand Prix,NOR,McLaren,5,3.0,2.0,4.1,4.6,1,0.302,30.07,Podium
+2022,4,Emilia Romagna Grand Prix,RUS,Mercedes,11,11.0,0.0,13.2,7.4,1,0.286,31.079,Points
+2022,4,Emilia Romagna Grand Prix,BOT,Alfa Romeo,7,8.0,-1.0,1.5,7.0,1,0.286,40.957,Points
+2022,4,Emilia Romagna Grand Prix,LEC,Ferrari,2,2.0,0.0,13.0,15.6,3,0.302,32.799,Points
+2022,4,Emilia Romagna Grand Prix,TSU,AlphaTauri,12,16.0,-4.0,4.0,3.2,1,0.286,30.372,Points
+2022,4,Emilia Romagna Grand Prix,VET,Aston Martin,13,9.0,4.0,0.0,0.2,1,0.27,30.484,Points
+2022,4,Emilia Romagna Grand Prix,MAG,Haas F1 Team,8,4.0,4.0,1.2,4.0,1,0.286,33.765,Points
+2022,4,Emilia Romagna Grand Prix,STR,Aston Martin,15,15.0,0.0,0.0,0.0,1,0.286,32.667,Points
+2022,4,Emilia Romagna Grand Prix,ALB,Williams,18,20.0,-2.0,0.1,0.333,1,0.27,30.793,No points
+2022,4,Emilia Romagna Grand Prix,GAS,AlphaTauri,17,17.0,0.0,4.0,4.8,1,0.27,30.405,No points
+2022,4,Emilia Romagna Grand Prix,HAM,Mercedes,14,13.0,1.0,13.2,14.4,1,0.286,32.74,No points
+2022,4,Emilia Romagna Grand Prix,OCO,Alpine F1 Team,16,19.0,-3.0,4.0,6.8,1,0.286,31.409,No points
+2022,4,Emilia Romagna Grand Prix,ZHO,Alfa Romeo,21,14.0,7.0,1.5,0.333,1,0.286,32.203,No points
+2022,4,Emilia Romagna Grand Prix,LAT,Williams,19,18.0,1.0,0.1,0.0,1,0.286,31.125,No points
+2022,4,Emilia Romagna Grand Prix,MSC,Haas F1 Team,10,12.0,-2.0,1.2,0.0,2,0.286,31.152,No points
+2022,4,Emilia Romagna Grand Prix,RIC,McLaren,6,6.0,0.0,4.1,3.6,3,0.032,30.98,No points
+2022,4,Emilia Romagna Grand Prix,ALO,Alpine F1 Team,9,5.0,4.0,4.0,1.2,0,1.0,0.0,No points
+2022,4,Emilia Romagna Grand Prix,SAI,Ferrari,4,10.0,-6.0,13.0,10.4,0,1.0,0.0,No points
+2022,5,Miami Grand Prix,VER,Red Bull,3,3.0,0.0,12.5,15.4,1,0.456,18.798,Podium
+2022,5,Miami Grand Prix,LEC,Ferrari,1,1.0,0.0,12.8,16.0,1,0.421,19.697,Podium
+2022,5,Miami Grand Prix,SAI,Ferrari,2,2.0,0.0,12.8,9.6,1,0.474,22.063,Podium
+2022,5,Miami Grand Prix,PER,Red Bull,4,4.0,0.0,12.5,9.6,2,0.474,18.476,Points
+2022,5,Miami Grand Prix,RUS,Mercedes,12,12.0,0.0,10.3,9.8,1,0.702,19.035,Points
+2022,5,Miami Grand Prix,HAM,Mercedes,6,6.0,0.0,10.3,9.2,1,0.386,18.82,Points
+2022,5,Miami Grand Prix,BOT,Alfa Romeo,5,5.0,0.0,2.3,6.0,1,0.456,19.614,Points
+2022,5,Miami Grand Prix,OCO,Alpine F1 Team,20,20.0,0.0,2.8,4.4,1,0.719,19.019,Points
+2022,5,Miami Grand Prix,ALB,Williams,18,18.0,0.0,0.1,0.25,1,0.281,20.059,Points
+2022,5,Miami Grand Prix,STR,Aston Martin,21,10.0,11.0,0.5,0.2,1,0.702,19.074,Points
+2022,5,Miami Grand Prix,ALO,Alpine F1 Team,11,11.0,0.0,2.8,1.2,1,0.263,21.638,No points
+2022,5,Miami Grand Prix,TSU,AlphaTauri,9,9.0,0.0,3.8,4.4,2,0.193,19.244,No points
+2022,5,Miami Grand Prix,RIC,McLaren,14,14.0,0.0,4.5,1.6,2,0.526,19.382,No points
+2022,5,Miami Grand Prix,LAT,Williams,19,19.0,0.0,0.1,0.0,1,0.596,19.185,No points
+2022,5,Miami Grand Prix,MSC,Haas F1 Team,15,15.0,0.0,1.4,0.0,2,0.246,26.397,No points
+2022,5,Miami Grand Prix,MAG,Haas F1 Team,16,16.0,0.0,1.4,3.5,2,0.211,20.216,No points
+2022,5,Miami Grand Prix,VET,Aston Martin,21,13.0,8.0,0.5,1.0,1,0.719,19.861,No points
+2022,5,Miami Grand Prix,GAS,AlphaTauri,7,7.0,0.0,3.8,3.2,2,0.281,19.275,No points
+2022,5,Miami Grand Prix,NOR,McLaren,8,8.0,0.0,4.5,7.4,1,0.316,19.986,No points
+2022,5,Miami Grand Prix,ZHO,Alfa Romeo,17,17.0,0.0,2.3,0.25,0,1.0,0.0,No points
+2022,6,Spanish Grand Prix,VER,Red Bull,2,2.0,0.0,13.7,15.4,3,0.197,22.027,Podium
+2022,6,Spanish Grand Prix,PER,Red Bull,5,5.0,0.0,13.7,12.0,3,0.258,21.782,Podium
+2022,6,Spanish Grand Prix,RUS,Mercedes,4,4.0,0.0,9.5,11.8,3,0.197,22.336,Podium
+2022,6,Spanish Grand Prix,SAI,Ferrari,3,3.0,0.0,14.5,9.6,3,0.152,22.17,Points
+2022,6,Spanish Grand Prix,HAM,Mercedes,6,6.0,0.0,9.5,7.2,3,0.015,25.133,Points
+2022,6,Spanish Grand Prix,BOT,Alfa Romeo,7,7.0,0.0,2.9,5.6,2,0.212,22.764,Points
+2022,6,Spanish Grand Prix,OCO,Alpine F1 Team,12,12.0,0.0,2.6,4.8,3,0.197,22.374,Points
+2022,6,Spanish Grand Prix,NOR,McLaren,11,11.0,0.0,3.9,6.2,3,0.182,22.474,Points
+2022,6,Spanish Grand Prix,ALO,Alpine F1 Team,20,17.0,3.0,2.6,0.4,3,0.152,23.232,Points
+2022,6,Spanish Grand Prix,TSU,AlphaTauri,13,13.0,0.0,1.6,2.0,3,0.167,22.734,Points
+2022,6,Spanish Grand Prix,VET,Aston Martin,16,16.0,0.0,0.6,0.8,2,0.318,22.496,No points
+2022,6,Spanish Grand Prix,RIC,McLaren,9,9.0,0.0,3.9,1.6,3,0.167,22.226,No points
+2022,6,Spanish Grand Prix,GAS,AlphaTauri,14,14.0,0.0,1.6,1.2,3,0.152,23.931,No points
+2022,6,Spanish Grand Prix,MSC,Haas F1 Team,10,10.0,0.0,1.4,0.0,2,0.182,23.354,No points
+2022,6,Spanish Grand Prix,STR,Aston Martin,17,18.0,-1.0,0.6,0.4,3,0.212,23.346,No points
+2022,6,Spanish Grand Prix,LAT,Williams,19,20.0,-1.0,0.3,0.0,3,0.182,22.754,No points
+2022,6,Spanish Grand Prix,MAG,Haas F1 Team,8,8.0,0.0,1.4,2.8,2,0.015,26.755,No points
+2022,6,Spanish Grand Prix,ALB,Williams,18,19.0,-1.0,0.3,0.6,4,0.167,23.202,No points
+2022,6,Spanish Grand Prix,ZHO,Alfa Romeo,15,15.0,0.0,2.9,0.2,1,0.152,23.109,No points
+2022,6,Spanish Grand Prix,LEC,Ferrari,1,1.0,0.0,14.5,19.4,1,0.318,21.794,No points
+2022,7,Monaco Grand Prix,PER,Red Bull,3,3.0,0.0,18.1,15.8,3,0.25,24.472,Podium
+2022,7,Monaco Grand Prix,SAI,Ferrari,2,2.0,0.0,11.3,8.4,2,0.328,24.666,Podium
+2022,7,Monaco Grand Prix,VER,Red Bull,4,4.0,0.0,18.1,20.4,3,0.281,26.97,Podium
+2022,7,Monaco Grand Prix,LEC,Ferrari,1,1.0,0.0,11.3,14.2,3,0.281,26.872,Points
+2022,7,Monaco Grand Prix,RUS,Mercedes,6,6.0,0.0,9.3,12.4,2,0.328,25.352,Points
+2022,7,Monaco Grand Prix,NOR,McLaren,5,5.0,0.0,4.3,7.0,4,0.266,24.746,Points
+2022,7,Monaco Grand Prix,ALO,Alpine F1 Team,7,7.0,0.0,2.6,0.4,2,0.328,24.526,Points
+2022,7,Monaco Grand Prix,HAM,Mercedes,8,8.0,0.0,9.3,6.2,3,0.234,24.652,Points
+2022,7,Monaco Grand Prix,BOT,Alfa Romeo,12,12.0,0.0,2.8,5.6,2,0.312,25.865,Points
+2022,7,Monaco Grand Prix,VET,Aston Martin,9,9.0,0.0,0.6,0.8,3,0.094,25.049,Points
+2022,7,Monaco Grand Prix,GAS,AlphaTauri,17,17.0,0.0,1.3,1.2,3,0.031,32.128,No points
+2022,7,Monaco Grand Prix,OCO,Alpine F1 Team,10,10.0,0.0,2.6,4.8,2,0.328,24.875,No points
+2022,7,Monaco Grand Prix,RIC,McLaren,14,14.0,0.0,4.3,1.6,2,0.297,26.056,No points
+2022,7,Monaco Grand Prix,STR,Aston Martin,18,18.0,0.0,0.6,0.4,4,0.016,28.377,No points
+2022,7,Monaco Grand Prix,LAT,Williams,19,19.0,0.0,0.3,0.0,4,0.016,33.345,No points
+2022,7,Monaco Grand Prix,ZHO,Alfa Romeo,20,20.0,0.0,2.8,0.0,2,0.297,25.594,No points
+2022,7,Monaco Grand Prix,TSU,AlphaTauri,11,11.0,0.0,1.3,1.4,4,0.094,25.452,No points
+2022,7,Monaco Grand Prix,ALB,Williams,16,16.0,0.0,0.3,0.6,3,0.281,29.374,No points
+2022,7,Monaco Grand Prix,MSC,Haas F1 Team,15,15.0,0.0,0.4,0.0,2,0.062,32.246,No points
+2022,7,Monaco Grand Prix,MAG,Haas F1 Team,13,13.0,0.0,0.4,0.8,0,1.0,0.0,No points
+2022,8,Azerbaijan Grand Prix,VER,Red Bull,3,3.0,0.0,18.4,18.4,2,0.353,21.095,Podium
+2022,8,Azerbaijan Grand Prix,PER,Red Bull,2,2.0,0.0,18.4,18.4,2,0.314,22.864,Podium
+2022,8,Azerbaijan Grand Prix,RUS,Mercedes,5,5.0,0.0,9.6,12.4,2,0.176,20.532,Podium
+2022,8,Azerbaijan Grand Prix,HAM,Mercedes,7,7.0,0.0,9.6,6.8,2,0.176,21.15,Points
+2022,8,Azerbaijan Grand Prix,GAS,AlphaTauri,6,6.0,0.0,0.9,0.4,1,0.176,22.698,Points
+2022,8,Azerbaijan Grand Prix,VET,Aston Martin,9,9.0,0.0,0.7,1.0,1,0.176,20.249,Points
+2022,8,Azerbaijan Grand Prix,ALO,Alpine F1 Team,10,10.0,0.0,2.4,1.6,1,0.353,20.571,Points
+2022,8,Azerbaijan Grand Prix,RIC,McLaren,12,12.0,0.0,4.6,1.6,1,0.647,21.794,Points
+2022,8,Azerbaijan Grand Prix,NOR,McLaren,11,11.0,0.0,4.6,7.6,1,0.392,21.443,Points
+2022,8,Azerbaijan Grand Prix,OCO,Alpine F1 Team,13,13.0,0.0,2.4,3.2,1,0.647,22.638,Points
+2022,8,Azerbaijan Grand Prix,BOT,Alfa Romeo,15,15.0,0.0,3.0,6.0,1,0.647,20.979,No points
+2022,8,Azerbaijan Grand Prix,ALB,Williams,17,17.0,0.0,0.3,0.6,2,0.176,23.558,No points
+2022,8,Azerbaijan Grand Prix,TSU,AlphaTauri,8,8.0,0.0,0.9,1.4,2,0.176,32.292,No points
+2022,8,Azerbaijan Grand Prix,MSC,Haas F1 Team,20,20.0,0.0,0.2,0.0,2,0.176,24.602,No points
+2022,8,Azerbaijan Grand Prix,LAT,Williams,18,18.0,0.0,0.3,0.0,2,0.059,25.732,No points
+2022,8,Azerbaijan Grand Prix,STR,Aston Martin,19,19.0,0.0,0.7,0.4,1,0.588,22.059,No points
+2022,8,Azerbaijan Grand Prix,MAG,Haas F1 Team,16,16.0,0.0,0.2,0.4,1,0.176,21.555,No points
+2022,8,Azerbaijan Grand Prix,ZHO,Alfa Romeo,14,14.0,0.0,3.0,0.0,1,0.176,23.001,No points
+2022,8,Azerbaijan Grand Prix,LEC,Ferrari,1,1.0,0.0,10.9,12.8,1,0.176,23.212,No points
+2022,8,Azerbaijan Grand Prix,SAI,Ferrari,4,4.0,0.0,10.9,9.0,0,1.0,0.0,No points
+2022,9,Canadian Grand Prix,VER,Red Bull,1,1.0,0.0,21.0,23.4,2,0.129,23.96,Podium
+2022,9,Canadian Grand Prix,SAI,Ferrari,3,3.0,0.0,8.3,9.0,2,0.286,24.548,Podium
+2022,9,Canadian Grand Prix,HAM,Mercedes,4,4.0,0.0,9.6,6.8,2,0.129,23.843,Podium
+2022,9,Canadian Grand Prix,RUS,Mercedes,8,8.0,0.0,9.6,12.4,2,0.271,24.01,Points
+2022,9,Canadian Grand Prix,LEC,Ferrari,19,15.0,4.0,8.3,7.6,1,0.586,26.199,Points
+2022,9,Canadian Grand Prix,OCO,Alpine F1 Team,7,7.0,0.0,2.5,2.2,2,0.271,24.814,Points
+2022,9,Canadian Grand Prix,BOT,Alfa Romeo,11,11.0,0.0,2.6,5.2,1,0.7,26.089,Points
+2022,9,Canadian Grand Prix,ZHO,Alfa Romeo,10,10.0,0.0,2.6,0.0,2,0.271,24.13,Points
+2022,9,Canadian Grand Prix,ALO,Alpine F1 Team,2,2.0,0.0,2.5,2.8,2,0.4,24.459,Points
+2022,9,Canadian Grand Prix,STR,Aston Martin,17,18.0,-1.0,1.5,0.4,1,0.671,25.252,Points
+2022,9,Canadian Grand Prix,RIC,McLaren,9,9.0,0.0,3.4,0.8,2,0.271,26.385,No points
+2022,9,Canadian Grand Prix,VET,Aston Martin,16,17.0,-1.0,1.5,2.6,2,0.071,23.544,No points
+2022,9,Canadian Grand Prix,ALB,Williams,12,12.0,0.0,0.2,0.4,2,0.257,23.667,No points
+2022,9,Canadian Grand Prix,GAS,AlphaTauri,15,16.0,-1.0,1.7,2.0,2,0.071,23.585,No points
+2022,9,Canadian Grand Prix,NOR,McLaren,14,14.0,0.0,3.4,6.0,2,0.271,33.583,No points
+2022,9,Canadian Grand Prix,LAT,Williams,18,19.0,-1.0,0.2,0.0,2,0.129,27.027,No points
+2022,9,Canadian Grand Prix,MAG,Haas F1 Team,5,5.0,0.0,0.2,0.4,1,0.1,38.262,No points
+2022,9,Canadian Grand Prix,TSU,AlphaTauri,20,20.0,0.0,1.7,1.4,2,0.129,23.349,No points
+2022,9,Canadian Grand Prix,MSC,Haas F1 Team,6,6.0,0.0,0.2,0.0,0,1.0,0.0,No points
+2022,9,Canadian Grand Prix,PER,Red Bull,13,13.0,0.0,21.0,18.6,0,1.0,0.0,No points
+2022,10,British Grand Prix,SAI,Ferrari,1,1.0,0.0,10.4,12.8,3,0.019,28.504,Podium
+2022,10,British Grand Prix,PER,Red Bull,4,4.0,0.0,19.1,15.0,3,0.019,32.728,Podium
+2022,10,British Grand Prix,HAM,Mercedes,5,5.0,0.0,11.1,9.8,3,0.019,29.416,Podium
+2022,10,British Grand Prix,LEC,Ferrari,3,3.0,0.0,10.4,8.0,2,0.019,28.805,Points
+2022,10,British Grand Prix,ALO,Alpine F1 Team,7,7.0,0.0,3.5,3.2,3,0.019,28.787,Points
+2022,10,British Grand Prix,NOR,McLaren,6,6.0,0.0,1.9,3.0,3,0.019,28.803,Points
+2022,10,British Grand Prix,VER,Red Bull,2,2.0,0.0,19.1,23.2,4,0.019,29.133,Points
+2022,10,British Grand Prix,MSC,Haas F1 Team,19,19.0,0.0,0.0,0.0,3,0.019,29.99,Points
+2022,10,British Grand Prix,VET,Aston Martin,18,18.0,0.0,1.1,1.8,3,0.019,29.193,Points
+2022,10,British Grand Prix,MAG,Haas F1 Team,17,17.0,0.0,0.0,0.0,2,0.019,29.473,Points
+2022,10,British Grand Prix,STR,Aston Martin,20,20.0,0.0,1.1,0.4,3,0.019,29.206,No points
+2022,10,British Grand Prix,LAT,Williams,10,10.0,0.0,0.2,0.0,3,0.019,28.634,No points
+2022,10,British Grand Prix,RIC,McLaren,14,14.0,0.0,1.9,0.8,4,0.019,30.069,No points
+2022,10,British Grand Prix,TSU,AlphaTauri,13,13.0,0.0,1.1,0.2,3,0.019,32.103,No points
+2022,10,British Grand Prix,OCO,Alpine F1 Team,15,15.0,0.0,3.5,3.8,2,0.019,30.342,No points
+2022,10,British Grand Prix,GAS,AlphaTauri,11,11.0,0.0,1.1,2.0,2,0.019,29.632,No points
+2022,10,British Grand Prix,BOT,Alfa Romeo,12,12.0,0.0,2.6,4.4,1,0.019,0.0,No points
+2022,10,British Grand Prix,RUS,Mercedes,8,8.0,0.0,11.1,12.4,0,1.0,0.0,No points
+2022,10,British Grand Prix,ZHO,Alfa Romeo,9,9.0,0.0,2.6,0.8,0,1.0,0.0,No points
+2022,10,British Grand Prix,ALB,Williams,16,16.0,0.0,0.2,0.4,0,1.0,0.0,No points
+2022,11,Austrian Grand Prix,LEC,Ferrari,2,2.0,0.0,10.8,6.8,3,0.366,21.5,Podium
+2022,11,Austrian Grand Prix,VER,Red Bull,1,1.0,0.0,17.7,19.2,3,0.183,21.595,Podium
+2022,11,Austrian Grand Prix,HAM,Mercedes,8,9.0,-1.0,10.9,11.4,2,0.394,22.862,Podium
+2022,11,Austrian Grand Prix,RUS,Mercedes,4,4.0,0.0,10.9,10.4,2,0.155,29.966,Points
+2022,11,Austrian Grand Prix,OCO,Alpine F1 Team,6,5.0,1.0,4.1,3.0,2,0.225,21.932,Points
+2022,11,Austrian Grand Prix,MSC,Haas F1 Team,9,7.0,2.0,0.5,0.8,2,0.225,22.5,Points
+2022,11,Austrian Grand Prix,NOR,McLaren,10,15.0,-5.0,2.7,4.6,2,0.197,25.004,Points
+2022,11,Austrian Grand Prix,MAG,Haas F1 Team,7,6.0,1.0,0.5,0.2,2,0.211,22.146,Points
+2022,11,Austrian Grand Prix,RIC,McLaren,11,16.0,-5.0,2.7,0.8,2,0.169,21.622,Points
+2022,11,Austrian Grand Prix,ALO,Alpine F1 Team,19,8.0,11.0,4.1,5.2,3,0.38,22.544,Points
+2022,11,Austrian Grand Prix,BOT,Alfa Romeo,21,12.0,9.0,2.0,3.2,2,0.085,23.478,No points
+2022,11,Austrian Grand Prix,ALB,Williams,15,11.0,4.0,0.0,0.0,2,0.155,22.212,No points
+2022,11,Austrian Grand Prix,STR,Aston Martin,12,17.0,-5.0,1.2,0.2,2,0.408,21.692,No points
+2022,11,Austrian Grand Prix,ZHO,Alfa Romeo,13,18.0,-5.0,2.0,0.8,2,0.338,25.782,No points
+2022,11,Austrian Grand Prix,GAS,AlphaTauri,14,10.0,4.0,1.1,2.0,2,0.169,25.167,No points
+2022,11,Austrian Grand Prix,TSU,AlphaTauri,16,14.0,2.0,1.1,0.2,2,0.366,21.634,No points
+2022,11,Austrian Grand Prix,VET,Aston Martin,18,20.0,-2.0,1.2,2.2,2,0.282,21.847,No points
+2022,11,Austrian Grand Prix,SAI,Ferrari,3,3.0,0.0,10.8,14.8,2,0.38,21.352,No points
+2022,11,Austrian Grand Prix,LAT,Williams,17,19.0,-2.0,0.0,0.0,2,0.169,21.464,No points
+2022,11,Austrian Grand Prix,PER,Red Bull,5,13.0,-8.0,17.7,16.2,1,0.014,23.681,No points
+2022,12,French Grand Prix,VER,Red Bull,2,2.0,0.0,15.2,18.0,1,0.302,35.266,Podium
+2022,12,French Grand Prix,HAM,Mercedes,4,4.0,0.0,11.1,12.4,1,0.34,37.189,Podium
+2022,12,French Grand Prix,RUS,Mercedes,6,6.0,0.0,11.1,9.8,1,0.34,38.277,Podium
+2022,12,French Grand Prix,PER,Red Bull,3,3.0,0.0,15.2,12.4,1,0.34,38.061,Points
+2022,12,French Grand Prix,SAI,Ferrari,19,9.0,10.0,12.1,12.4,2,0.34,41.875,Points
+2022,12,French Grand Prix,ALO,Alpine F1 Team,7,7.0,0.0,4.4,5.0,1,0.34,36.524,Points
+2022,12,French Grand Prix,NOR,McLaren,5,5.0,0.0,3.1,5.0,1,0.34,37.539,Points
+2022,12,French Grand Prix,OCO,Alpine F1 Team,10,12.0,-2.0,4.4,3.8,1,0.34,44.747,Points
+2022,12,French Grand Prix,RIC,McLaren,9,11.0,-2.0,3.1,1.2,1,0.34,36.264,Points
+2022,12,French Grand Prix,STR,Aston Martin,15,17.0,-2.0,1.2,0.2,1,0.34,39.844,Points
+2022,12,French Grand Prix,VET,Aston Martin,12,14.0,-2.0,1.2,2.2,1,0.358,36.671,No points
+2022,12,French Grand Prix,GAS,AlphaTauri,14,16.0,-2.0,1.0,2.0,1,0.34,35.969,No points
+2022,12,French Grand Prix,ALB,Williams,13,15.0,-2.0,0.0,0.0,1,0.34,37.38,No points
+2022,12,French Grand Prix,BOT,Alfa Romeo,11,13.0,-2.0,1.2,1.6,2,0.34,37.188,No points
+2022,12,French Grand Prix,MSC,Haas F1 Team,17,19.0,-2.0,1.7,2.4,2,0.17,36.854,No points
+2022,12,French Grand Prix,ZHO,Alfa Romeo,16,18.0,-2.0,1.2,0.8,2,0.17,43.617,No points
+2022,12,French Grand Prix,LAT,Williams,18,20.0,-2.0,0.0,0.0,2,0.358,37.22,No points
+2022,12,French Grand Prix,MAG,Haas F1 Team,20,10.0,10.0,1.7,1.0,2,0.151,36.591,No points
+2022,12,French Grand Prix,LEC,Ferrari,1,1.0,0.0,12.1,11.8,0,1.0,0.0,No points
+2022,12,French Grand Prix,TSU,AlphaTauri,8,8.0,0.0,1.0,0.0,1,0.208,37.648,No points
+2022,13,Hungarian Grand Prix,VER,Red Bull,10,10.0,0.0,14.9,20.0,2,0.229,21.29,Podium
+2022,13,Hungarian Grand Prix,HAM,Mercedes,7,7.0,0.0,13.0,15.2,2,0.271,21.897,Podium
+2022,13,Hungarian Grand Prix,RUS,Mercedes,1,1.0,0.0,13.0,10.8,2,0.229,22.253,Podium
+2022,13,Hungarian Grand Prix,SAI,Ferrari,2,2.0,0.0,10.2,11.0,2,0.243,23.138,Points
+2022,13,Hungarian Grand Prix,PER,Red Bull,11,11.0,0.0,14.9,9.8,2,0.257,21.142,Points
+2022,13,Hungarian Grand Prix,LEC,Ferrari,3,3.0,0.0,10.2,9.4,3,0.3,21.764,Points
+2022,13,Hungarian Grand Prix,NOR,McLaren,4,4.0,0.0,3.0,4.4,2,0.2,22.711,Points
+2022,13,Hungarian Grand Prix,ALO,Alpine F1 Team,6,6.0,0.0,5.0,5.4,1,0.3,22.083,Points
+2022,13,Hungarian Grand Prix,OCO,Alpine F1 Team,5,5.0,0.0,5.0,4.6,1,0.329,23.581,Points
+2022,13,Hungarian Grand Prix,VET,Aston Martin,18,18.0,0.0,1.2,2.0,2,0.214,23.216,Points
+2022,13,Hungarian Grand Prix,STR,Aston Martin,14,14.0,0.0,1.2,0.4,2,0.2,21.697,No points
+2022,13,Hungarian Grand Prix,GAS,AlphaTauri,21,19.0,2.0,1.0,2.0,2,0.229,21.582,No points
+2022,13,Hungarian Grand Prix,ZHO,Alfa Romeo,12,12.0,0.0,1.0,0.8,2,0.386,25.27,No points
+2022,13,Hungarian Grand Prix,MSC,Haas F1 Team,15,15.0,0.0,1.7,2.4,2,0.3,22.76,No points
+2022,13,Hungarian Grand Prix,RIC,McLaren,9,9.0,0.0,3.0,1.6,2,0.214,21.54,No points
+2022,13,Hungarian Grand Prix,MAG,Haas F1 Team,13,13.0,0.0,1.7,1.0,3,0.086,25.333,No points
+2022,13,Hungarian Grand Prix,ALB,Williams,17,17.0,0.0,0.0,0.0,3,0.029,25.779,No points
+2022,13,Hungarian Grand Prix,LAT,Williams,19,20.0,-1.0,0.0,0.0,3,0.257,24.365,No points
+2022,13,Hungarian Grand Prix,TSU,AlphaTauri,16,16.0,0.0,1.0,0.0,3,0.186,21.907,No points
+2022,13,Hungarian Grand Prix,BOT,Alfa Romeo,8,8.0,0.0,1.0,1.2,1,0.371,22.272,No points
+2022,14,Belgian Grand Prix,VER,Red Bull,14,1.0,13.0,14.0,20.0,2,0.341,22.602,Podium
+2022,14,Belgian Grand Prix,PER,Red Bull,2,3.0,-1.0,14.0,8.0,2,0.318,22.5,Podium
+2022,14,Belgian Grand Prix,SAI,Ferrari,1,2.0,-1.0,12.2,13.4,2,0.25,22.646,Podium
+2022,14,Belgian Grand Prix,RUS,Mercedes,5,8.0,-3.0,13.7,10.8,2,0.295,22.901,Points
+2022,14,Belgian Grand Prix,ALO,Alpine F1 Team,3,6.0,-3.0,4.9,5.0,2,0.25,23.298,Points
+2022,14,Belgian Grand Prix,LEC,Ferrari,15,4.0,11.0,12.2,11.0,3,0.068,23.574,Points
+2022,14,Belgian Grand Prix,OCO,Alpine F1 Team,16,5.0,11.0,4.9,4.8,2,0.273,23.501,Points
+2022,14,Belgian Grand Prix,VET,Aston Martin,10,16.0,-6.0,0.5,0.6,2,0.318,23.028,Points
+2022,14,Belgian Grand Prix,GAS,AlphaTauri,21,12.0,9.0,0.0,0.0,2,0.227,22.7,Points
+2022,14,Belgian Grand Prix,ALB,Williams,6,9.0,-3.0,0.0,0.0,2,0.227,23.874,Points
+2022,14,Belgian Grand Prix,STR,Aston Martin,9,14.0,-5.0,0.5,0.4,2,0.341,23.452,No points
+2022,14,Belgian Grand Prix,NOR,McLaren,17,10.0,7.0,3.0,5.2,2,0.295,23.298,No points
+2022,14,Belgian Grand Prix,TSU,AlphaTauri,21,19.0,2.0,0.0,0.0,2,0.409,27.154,No points
+2022,14,Belgian Grand Prix,ZHO,Alfa Romeo,18,13.0,5.0,1.0,0.8,2,0.318,23.554,No points
+2022,14,Belgian Grand Prix,RIC,McLaren,7,11.0,-4.0,3.0,0.8,2,0.273,23.116,No points
+2022,14,Belgian Grand Prix,MAG,Haas F1 Team,12,18.0,-6.0,1.7,1.0,2,0.25,25.106,No points
+2022,14,Belgian Grand Prix,MSC,Haas F1 Team,19,15.0,4.0,1.7,2.4,2,0.318,24.57,No points
+2022,14,Belgian Grand Prix,LAT,Williams,11,17.0,-6.0,0.0,0.0,3,0.068,27.802,No points
+2022,14,Belgian Grand Prix,BOT,Alfa Romeo,13,20.0,-7.0,1.0,1.2,0,1.0,0.0,No points
+2022,14,Belgian Grand Prix,HAM,Mercedes,4,7.0,-3.0,13.7,16.6,0,1.0,0.0,No points
+2022,15,Dutch Grand Prix,VER,Red Bull,1,1.0,0.0,15.9,20.2,4,0.25,18.253,Podium
+2022,15,Dutch Grand Prix,RUS,Mercedes,6,6.0,0.0,12.2,10.8,3,0.431,20.488,Podium
+2022,15,Dutch Grand Prix,LEC,Ferrari,2,2.0,0.0,11.6,10.6,4,0.236,17.937,Podium
+2022,15,Dutch Grand Prix,HAM,Mercedes,4,4.0,0.0,12.2,13.6,3,0.403,17.455,Points
+2022,15,Dutch Grand Prix,PER,Red Bull,5,5.0,0.0,15.9,11.6,4,0.194,17.734,Points
+2022,15,Dutch Grand Prix,ALO,Alpine F1 Team,13,13.0,0.0,5.5,6.6,3,0.167,18.947,Points
+2022,15,Dutch Grand Prix,NOR,McLaren,7,7.0,0.0,3.0,5.2,3,0.236,20.561,Points
+2022,15,Dutch Grand Prix,SAI,Ferrari,3,3.0,0.0,11.6,12.6,3,0.194,23.454,Points
+2022,15,Dutch Grand Prix,OCO,Alpine F1 Team,12,12.0,0.0,5.5,4.4,3,0.25,18.366,Points
+2022,15,Dutch Grand Prix,STR,Aston Martin,10,10.0,0.0,0.8,0.2,4,0.222,18.42,Points
+2022,15,Dutch Grand Prix,GAS,AlphaTauri,11,11.0,0.0,0.2,0.4,4,0.153,17.508,No points
+2022,15,Dutch Grand Prix,ALB,Williams,15,15.0,0.0,0.1,0.2,4,0.292,18.464,No points
+2022,15,Dutch Grand Prix,MSC,Haas F1 Team,8,8.0,0.0,1.7,2.4,4,0.181,20.764,No points
+2022,15,Dutch Grand Prix,VET,Aston Martin,19,19.0,0.0,0.8,1.4,4,0.125,18.651,No points
+2022,15,Dutch Grand Prix,MAG,Haas F1 Team,18,18.0,0.0,1.7,1.0,4,0.194,20.583,No points
+2022,15,Dutch Grand Prix,ZHO,Alfa Romeo,14,14.0,0.0,0.0,0.0,4,0.167,19.824,No points
+2022,15,Dutch Grand Prix,RIC,McLaren,17,17.0,0.0,3.0,0.8,5,0.153,18.724,No points
+2022,15,Dutch Grand Prix,LAT,Williams,20,20.0,0.0,0.1,0.0,4,0.181,18.882,No points
+2022,15,Dutch Grand Prix,BOT,Alfa Romeo,16,16.0,0.0,0.0,0.0,2,0.222,20.395,No points
+2022,15,Dutch Grand Prix,TSU,AlphaTauri,9,9.0,0.0,0.2,0.0,3,0.181,30.25,No points
+2022,16,Italian Grand Prix,VER,Red Bull,7,2.0,5.0,17.1,24.2,2,0.472,23.941,Podium
+2022,16,Italian Grand Prix,LEC,Ferrari,1,1.0,0.0,9.8,11.2,3,0.226,23.718,Podium
+2022,16,Italian Grand Prix,RUS,Mercedes,2,6.0,-4.0,13.6,14.4,2,0.434,24.594,Podium
+2022,16,Italian Grand Prix,SAI,Ferrari,18,3.0,15.0,9.8,8.4,2,0.566,24.126,Points
+2022,16,Italian Grand Prix,HAM,Mercedes,19,5.0,14.0,13.6,12.8,1,0.623,24.282,Points
+2022,16,Italian Grand Prix,PER,Red Bull,13,4.0,9.0,17.1,10.0,2,0.132,23.498,Points
+2022,16,Italian Grand Prix,NOR,McLaren,3,7.0,-4.0,2.8,4.8,2,0.66,25.749,Points
+2022,16,Italian Grand Prix,GAS,AlphaTauri,5,9.0,-4.0,0.2,0.4,1,0.34,25.376,Points
+2022,16,Italian Grand Prix,DEV,Williams,8,13.0,-5.0,0.1,0.1,1,0.358,24.628,Points
+2022,16,Italian Grand Prix,ZHO,Alfa Romeo,9,14.0,-5.0,0.0,0.0,1,0.34,25.366,Points
+2022,16,Italian Grand Prix,OCO,Alpine F1 Team,14,11.0,3.0,5.5,4.8,1,0.358,24.336,No points
+2022,16,Italian Grand Prix,MSC,Haas F1 Team,17,20.0,-3.0,1.2,1.6,1,0.623,24.817,No points
+2022,16,Italian Grand Prix,BOT,Alfa Romeo,15,12.0,3.0,0.0,0.0,1,0.66,24.758,No points
+2022,16,Italian Grand Prix,TSU,AlphaTauri,20,15.0,5.0,0.2,0.0,2,0.358,23.956,No points
+2022,16,Italian Grand Prix,LAT,Williams,10,16.0,-6.0,0.1,0.0,2,0.283,25.522,No points
+2022,16,Italian Grand Prix,MAG,Haas F1 Team,16,19.0,-3.0,1.2,0.8,2,0.453,27.505,No points
+2022,16,Italian Grand Prix,RIC,McLaren,4,8.0,-4.0,2.8,0.8,1,0.358,25.164,No points
+2022,16,Italian Grand Prix,STR,Aston Martin,12,18.0,-6.0,0.7,0.4,1,0.34,24.254,No points
+2022,16,Italian Grand Prix,ALO,Alpine F1 Team,6,10.0,-4.0,5.5,6.2,0,1.0,0.0,No points
+2022,16,Italian Grand Prix,VET,Aston Martin,11,17.0,-6.0,0.7,1.0,0,1.0,0.0,No points
+2022,17,Singapore Grand Prix,PER,Red Bull,2,2.0,0.0,18.6,11.8,1,0.593,29.55,Podium
+2022,17,Singapore Grand Prix,LEC,Ferrari,1,1.0,0.0,10.3,9.8,1,0.576,32.058,Podium
+2022,17,Singapore Grand Prix,SAI,Ferrari,4,4.0,0.0,10.3,10.8,1,0.593,30.603,Podium
+2022,17,Singapore Grand Prix,NOR,McLaren,6,6.0,0.0,2.6,4.8,1,0.61,30.528,Points
+2022,17,Singapore Grand Prix,RIC,McLaren,16,17.0,-1.0,2.6,0.4,1,0.61,30.946,Points
+2022,17,Singapore Grand Prix,STR,Aston Martin,11,12.0,-1.0,0.7,0.4,1,0.593,29.863,Points
+2022,17,Singapore Grand Prix,VER,Red Bull,8,8.0,0.0,18.6,25.4,2,0.593,29.591,Points
+2022,17,Singapore Grand Prix,VET,Aston Martin,13,14.0,-1.0,0.7,1.0,1,0.576,29.704,Points
+2022,17,Singapore Grand Prix,HAM,Mercedes,3,3.0,0.0,13.4,11.8,1,0.576,41.019,Points
+2022,17,Singapore Grand Prix,GAS,AlphaTauri,7,7.0,0.0,0.6,1.2,1,0.559,29.867,Points
+2022,17,Singapore Grand Prix,BOT,Alfa Romeo,15,16.0,-1.0,0.1,0.0,1,0.559,32.167,No points
+2022,17,Singapore Grand Prix,MAG,Haas F1 Team,9,9.0,0.0,0.0,0.0,2,0.119,35.925,No points
+2022,17,Singapore Grand Prix,MSC,Haas F1 Team,12,13.0,-1.0,0.0,0.0,2,0.576,32.962,No points
+2022,17,Singapore Grand Prix,RUS,Mercedes,21,11.0,10.0,13.4,15.0,4,0.356,30.799,No points
+2022,17,Singapore Grand Prix,TSU,AlphaTauri,10,10.0,0.0,0.6,0.0,1,0.559,31.293,No points
+2022,17,Singapore Grand Prix,OCO,Alpine F1 Team,17,18.0,-1.0,4.4,2.8,0,1.0,0.0,No points
+2022,17,Singapore Grand Prix,ALB,Williams,18,19.0,-1.0,0.3,0.2,0,1.0,0.0,No points
+2022,17,Singapore Grand Prix,ALO,Alpine F1 Team,5,5.0,0.0,4.4,6.0,0,1.0,0.0,No points
+2022,17,Singapore Grand Prix,LAT,Williams,19,20.0,-1.0,0.3,0.0,0,1.0,0.0,No points
+2022,17,Singapore Grand Prix,ZHO,Alfa Romeo,14,15.0,-1.0,0.1,0.2,0,1.0,0.0,No points
+2022,18,Japanese Grand Prix,VER,Red Bull,1,1.0,0.0,18.0,21.6,2,0.071,24.308,Podium
+2022,18,Japanese Grand Prix,PER,Red Bull,4,4.0,0.0,18.0,14.4,2,0.071,25.322,Podium
+2022,18,Japanese Grand Prix,LEC,Ferrari,2,2.0,0.0,12.5,13.4,2,0.071,25.899,Podium
+2022,18,Japanese Grand Prix,OCO,Alpine F1 Team,5,5.0,0.0,3.2,2.0,2,0.071,25.172,Points
+2022,18,Japanese Grand Prix,HAM,Mercedes,6,6.0,0.0,10.3,8.6,2,0.071,25.059,Points
+2022,18,Japanese Grand Prix,VET,Aston Martin,9,9.0,0.0,1.8,1.8,2,0.071,24.218,Points
+2022,18,Japanese Grand Prix,ALO,Alpine F1 Team,7,7.0,0.0,3.2,4.4,3,0.071,24.114,Points
+2022,18,Japanese Grand Prix,RUS,Mercedes,8,8.0,0.0,10.3,12.0,2,0.071,28.728,Points
+2022,18,Japanese Grand Prix,LAT,Williams,20,20.0,0.0,0.3,0.0,2,0.071,24.785,Points
+2022,18,Japanese Grand Prix,NOR,McLaren,10,10.0,0.0,4.0,6.0,2,0.071,24.595,Points
+2022,18,Japanese Grand Prix,RIC,McLaren,11,11.0,0.0,4.0,2.0,2,0.071,25.377,No points
+2022,18,Japanese Grand Prix,STR,Aston Martin,19,19.0,0.0,1.8,1.8,3,0.071,23.938,No points
+2022,18,Japanese Grand Prix,TSU,AlphaTauri,13,13.0,0.0,0.7,0.0,3,0.071,24.098,No points
+2022,18,Japanese Grand Prix,MAG,Haas F1 Team,18,18.0,0.0,0.0,0.0,2,0.071,25.594,No points
+2022,18,Japanese Grand Prix,BOT,Alfa Romeo,12,12.0,0.0,0.1,0.0,2,0.071,24.869,No points
+2022,18,Japanese Grand Prix,ZHO,Alfa Romeo,14,14.0,0.0,0.1,0.2,3,0.071,24.414,No points
+2022,18,Japanese Grand Prix,MSC,Haas F1 Team,15,15.0,0.0,0.0,0.0,2,0.071,24.608,No points
+2022,18,Japanese Grand Prix,GAS,AlphaTauri,17,17.0,0.0,0.7,1.4,4,0.036,30.084,No points
+2022,18,Japanese Grand Prix,SAI,Ferrari,3,3.0,0.0,12.5,11.6,0,1.0,0.0,No points
+2022,18,Japanese Grand Prix,ALB,Williams,16,16.0,0.0,0.3,0.2,0,1.0,0.0,No points
+2022,19,United States Grand Prix,VER,Red Bull,2,3.0,-1.0,18.8,21.6,2,0.232,28.06,Podium
+2022,19,United States Grand Prix,HAM,Mercedes,3,5.0,-2.0,8.3,6.8,2,0.214,24.248,Podium
+2022,19,United States Grand Prix,LEC,Ferrari,12,2.0,10.0,12.0,14.8,2,0.321,24.034,Podium
+2022,19,United States Grand Prix,PER,Red Bull,9,4.0,5.0,18.8,16.0,2,0.25,24.102,Points
+2022,19,United States Grand Prix,RUS,Mercedes,4,6.0,-2.0,8.3,9.8,3,0.232,26.165,Points
+2022,19,United States Grand Prix,NOR,McLaren,6,8.0,-2.0,3.5,5.0,2,0.25,23.864,Points
+2022,19,United States Grand Prix,ALO,Alpine F1 Team,14,9.0,5.0,4.4,4.8,2,0.321,31.788,Points
+2022,19,United States Grand Prix,VET,Aston Martin,10,12.0,-2.0,2.5,3.2,2,0.321,31.232,Points
+2022,19,United States Grand Prix,MAG,Haas F1 Team,13,16.0,-3.0,0.0,0.0,1,0.321,29.039,Points
+2022,19,United States Grand Prix,TSU,AlphaTauri,19,15.0,4.0,0.7,0.0,2,0.179,23.464,Points
+2022,19,United States Grand Prix,OCO,Alpine F1 Team,21,18.0,3.0,4.4,4.0,2,0.321,24.764,No points
+2022,19,United States Grand Prix,ZHO,Alfa Romeo,18,14.0,4.0,0.1,0.2,2,0.161,26.17,No points
+2022,19,United States Grand Prix,ALB,Williams,8,11.0,-3.0,0.5,0.2,2,0.161,24.468,No points
+2022,19,United States Grand Prix,GAS,AlphaTauri,11,13.0,-2.0,0.7,1.4,2,0.196,26.294,No points
+2022,19,United States Grand Prix,MSC,Haas F1 Team,16,19.0,-3.0,0.0,0.0,2,0.321,24.93,No points
+2022,19,United States Grand Prix,RIC,McLaren,15,17.0,-2.0,3.5,2.0,2,0.179,25.321,No points
+2022,19,United States Grand Prix,LAT,Williams,17,20.0,-3.0,0.5,0.4,2,0.089,24.758,No points
+2022,19,United States Grand Prix,STR,Aston Martin,5,7.0,-2.0,2.5,1.8,1,0.268,25.417,No points
+2022,19,United States Grand Prix,BOT,Alfa Romeo,7,10.0,-3.0,0.1,0.0,1,0.179,25.013,No points
+2022,19,United States Grand Prix,SAI,Ferrari,1,1.0,0.0,12.0,9.2,0,1.0,0.0,No points
+2022,20,Mexico City Grand Prix,VER,Red Bull,1,1.0,0.0,18.1,21.4,1,0.352,22.487,Podium
+2022,20,Mexico City Grand Prix,HAM,Mercedes,3,3.0,0.0,10.0,10.4,1,0.408,23.194,Podium
+2022,20,Mexico City Grand Prix,PER,Red Bull,4,4.0,0.0,18.1,14.8,1,0.324,24.892,Podium
+2022,20,Mexico City Grand Prix,RUS,Mercedes,2,2.0,0.0,10.0,9.6,2,0.479,22.956,Points
+2022,20,Mexico City Grand Prix,SAI,Ferrari,5,5.0,0.0,11.2,6.2,1,0.408,23.469,Points
+2022,20,Mexico City Grand Prix,LEC,Ferrari,7,7.0,0.0,11.2,16.2,1,0.394,22.193,Points
+2022,20,Mexico City Grand Prix,RIC,McLaren,11,11.0,0.0,4.3,2.0,1,0.62,22.28,Points
+2022,20,Mexico City Grand Prix,OCO,Alpine F1 Team,10,10.0,0.0,3.4,2.8,1,0.465,22.343,Points
+2022,20,Mexico City Grand Prix,NOR,McLaren,8,8.0,0.0,4.3,6.6,1,0.437,22.585,Points
+2022,20,Mexico City Grand Prix,BOT,Alfa Romeo,6,6.0,0.0,0.1,0.0,1,0.549,23.863,Points
+2022,20,Mexico City Grand Prix,GAS,AlphaTauri,14,14.0,0.0,0.6,1.0,1,0.563,29.168,No points
+2022,20,Mexico City Grand Prix,ALB,Williams,17,19.0,-2.0,0.4,0.2,1,0.535,23.182,No points
+2022,20,Mexico City Grand Prix,ZHO,Alfa Romeo,12,12.0,0.0,0.1,0.2,1,0.634,24.218,No points
+2022,20,Mexico City Grand Prix,VET,Aston Martin,16,17.0,-1.0,2.5,3.2,1,0.535,22.534,No points
+2022,20,Mexico City Grand Prix,STR,Aston Martin,20,18.0,2.0,2.5,1.8,2,0.239,23.314,No points
+2022,20,Mexico City Grand Prix,MSC,Haas F1 Team,15,16.0,-1.0,0.2,0.0,1,0.338,23.679,No points
+2022,20,Mexico City Grand Prix,MAG,Haas F1 Team,19,15.0,4.0,0.2,0.4,1,0.535,23.722,No points
+2022,20,Mexico City Grand Prix,LAT,Williams,18,20.0,-2.0,0.4,0.4,2,0.324,23.932,No points
+2022,20,Mexico City Grand Prix,ALO,Alpine F1 Team,9,9.0,0.0,3.4,4.0,1,0.563,23.159,No points
+2022,20,Mexico City Grand Prix,TSU,AlphaTauri,13,13.0,0.0,0.6,0.2,1,0.408,22.468,No points
+2022,21,São Paulo Grand Prix,RUS,Mercedes,1,3.0,-2.0,10.1,8.6,2,0.338,23.5,Podium
+2022,21,São Paulo Grand Prix,HAM,Mercedes,2,8.0,-6.0,10.1,11.6,2,0.408,23.748,Podium
+2022,21,São Paulo Grand Prix,SAI,Ferrari,7,5.0,2.0,11.1,7.4,3,0.239,24.168,Podium
+2022,21,São Paulo Grand Prix,LEC,Ferrari,5,10.0,-5.0,11.1,14.8,3,0.099,25.459,Points
+2022,21,São Paulo Grand Prix,ALO,Alpine F1 Team,17,7.0,10.0,2.8,2.4,3,0.197,25.374,Points
+2022,21,São Paulo Grand Prix,VER,Red Bull,3,2.0,1.0,18.5,21.2,3,0.099,28.909,Points
+2022,21,São Paulo Grand Prix,PER,Red Bull,4,9.0,-5.0,18.5,15.8,2,0.324,23.01,Points
+2022,21,São Paulo Grand Prix,OCO,Alpine F1 Team,16,6.0,10.0,2.8,3.2,2,0.338,24.156,Points
+2022,21,São Paulo Grand Prix,BOT,Alfa Romeo,14,18.0,-4.0,0.2,0.2,2,0.338,24.262,Points
+2022,21,São Paulo Grand Prix,STR,Aston Martin,15,15.0,0.0,2.4,1.6,2,0.408,23.616,Points
+2022,21,São Paulo Grand Prix,VET,Aston Martin,9,13.0,-4.0,2.4,3.2,2,0.366,24.138,No points
+2022,21,São Paulo Grand Prix,ZHO,Alfa Romeo,13,17.0,-4.0,0.2,0.2,2,0.225,24.722,No points
+2022,21,São Paulo Grand Prix,MSC,Haas F1 Team,12,20.0,-8.0,0.2,0.0,2,0.338,24.822,No points
+2022,21,São Paulo Grand Prix,GAS,AlphaTauri,10,12.0,-2.0,0.6,1.0,3,0.268,23.266,No points
+2022,21,São Paulo Grand Prix,ALB,Williams,19,11.0,8.0,0.4,0.0,3,0.056,23.678,No points
+2022,21,São Paulo Grand Prix,LAT,Williams,18,16.0,2.0,0.4,0.4,3,0.282,25.58,No points
+2022,21,São Paulo Grand Prix,TSU,AlphaTauri,21,19.0,2.0,0.6,0.2,3,0.282,23.522,No points
+2022,21,São Paulo Grand Prix,NOR,McLaren,6,4.0,2.0,4.5,5.8,2,0.338,27.004,No points
+2022,21,São Paulo Grand Prix,MAG,Haas F1 Team,8,1.0,7.0,0.2,0.4,0,1.0,0.0,No points
+2022,21,São Paulo Grand Prix,RIC,McLaren,11,14.0,-3.0,4.5,3.2,0,1.0,0.0,No points
+2022,22,Abu Dhabi Grand Prix,VER,Red Bull,1,1.0,0.0,16.5,17.8,1,0.345,22.735,Podium
+2022,22,Abu Dhabi Grand Prix,LEC,Ferrari,3,3.0,0.0,10.8,13.6,1,0.362,22.21,Podium
+2022,22,Abu Dhabi Grand Prix,PER,Red Bull,2,2.0,0.0,16.5,15.2,2,0.259,21.364,Podium
+2022,22,Abu Dhabi Grand Prix,SAI,Ferrari,4,4.0,0.0,10.8,8.0,2,0.293,21.752,Points
+2022,22,Abu Dhabi Grand Prix,RUS,Mercedes,6,6.0,0.0,12.0,10.8,2,0.259,26.087,Points
+2022,22,Abu Dhabi Grand Prix,NOR,McLaren,7,7.0,0.0,3.9,4.6,2,0.259,21.897,Points
+2022,22,Abu Dhabi Grand Prix,OCO,Alpine F1 Team,8,8.0,0.0,4.2,4.0,2,0.241,21.814,Points
+2022,22,Abu Dhabi Grand Prix,STR,Aston Martin,14,14.0,0.0,2.5,1.8,2,0.224,21.808,Points
+2022,22,Abu Dhabi Grand Prix,RIC,McLaren,13,10.0,3.0,3.9,3.2,1,0.328,21.893,Points
+2022,22,Abu Dhabi Grand Prix,VET,Aston Martin,9,9.0,0.0,2.5,3.2,1,0.431,23.186,Points
+2022,22,Abu Dhabi Grand Prix,TSU,AlphaTauri,11,12.0,-1.0,0.2,0.2,2,0.241,21.926,No points
+2022,22,Abu Dhabi Grand Prix,ZHO,Alfa Romeo,15,15.0,0.0,0.3,0.0,2,0.259,22.797,No points
+2022,22,Abu Dhabi Grand Prix,ALB,Williams,19,19.0,0.0,0.2,0.0,2,0.207,21.795,No points
+2022,22,Abu Dhabi Grand Prix,GAS,AlphaTauri,17,17.0,0.0,0.2,0.2,1,0.241,21.855,No points
+2022,22,Abu Dhabi Grand Prix,BOT,Alfa Romeo,18,18.0,0.0,0.3,0.6,1,0.517,22.573,No points
+2022,22,Abu Dhabi Grand Prix,MSC,Haas F1 Team,12,13.0,-1.0,0.2,0.0,2,0.241,22.903,No points
+2022,22,Abu Dhabi Grand Prix,MAG,Haas F1 Team,16,16.0,0.0,0.2,0.4,1,0.483,22.387,No points
+2022,22,Abu Dhabi Grand Prix,HAM,Mercedes,5,5.0,0.0,12.0,13.2,1,0.31,21.27,No points
+2022,22,Abu Dhabi Grand Prix,LAT,Williams,20,20.0,0.0,0.2,0.4,2,0.259,23.798,No points
+2022,22,Abu Dhabi Grand Prix,ALO,Alpine F1 Team,10,11.0,-1.0,4.2,4.4,1,0.328,21.74,No points
+2023,1,Bahrain Grand Prix,VER,Red Bull,1,1.0,0.0,17.4,21.6,2,0.246,24.6,Podium
+2023,1,Bahrain Grand Prix,PER,Red Bull,2,2.0,0.0,17.4,13.2,2,0.298,24.678,Podium
+2023,1,Bahrain Grand Prix,ALO,Aston Martin,5,5.0,0.0,1.8,4.4,2,0.246,25.334,Podium
+2023,1,Bahrain Grand Prix,SAI,Ferrari,4,4.0,0.0,10.5,7.4,2,0.228,24.364,Points
+2023,1,Bahrain Grand Prix,HAM,Mercedes,7,7.0,0.0,12.8,12.8,2,0.211,24.686,Points
+2023,1,Bahrain Grand Prix,STR,Aston Martin,8,8.0,0.0,1.8,1.0,2,0.263,25.044,Points
+2023,1,Bahrain Grand Prix,RUS,Mercedes,6,6.0,0.0,12.8,12.8,2,0.228,25.734,Points
+2023,1,Bahrain Grand Prix,BOT,Alfa Romeo,12,12.0,0.0,0.3,0.6,2,0.193,25.521,Points
+2023,1,Bahrain Grand Prix,GAS,Alpine F1 Team,20,20.0,0.0,4.8,0.0,3,0.158,25.167,Points
+2023,1,Bahrain Grand Prix,ALB,Williams,15,15.0,0.0,0.2,0.0,3,0.193,24.811,Points
+2023,1,Bahrain Grand Prix,TSU,AlphaTauri,14,14.0,0.0,0.1,0.2,3,0.175,25.152,No points
+2023,1,Bahrain Grand Prix,SAR,Williams,16,16.0,0.0,0.2,0.2,3,0.211,25.439,No points
+2023,1,Bahrain Grand Prix,MAG,Haas F1 Team,17,17.0,0.0,0.2,0.4,3,0.263,25.303,No points
+2023,1,Bahrain Grand Prix,DEV,AlphaTauri,19,19.0,0.0,0.1,2.0,2,0.193,25.126,No points
+2023,1,Bahrain Grand Prix,HUL,Haas F1 Team,10,10.0,0.0,0.2,0.0,3,0.193,30.308,No points
+2023,1,Bahrain Grand Prix,ZHO,Alfa Romeo,13,13.0,0.0,0.3,0.0,3,0.211,27.079,No points
+2023,1,Bahrain Grand Prix,NOR,McLaren,11,11.0,0.0,2.8,4.0,6,0.175,32.556,No points
+2023,1,Bahrain Grand Prix,OCO,Alpine F1 Team,9,9.0,0.0,4.8,5.2,3,0.211,36.982,No points
+2023,1,Bahrain Grand Prix,LEC,Ferrari,3,3.0,0.0,10.5,13.6,2,0.228,24.494,No points
+2023,1,Bahrain Grand Prix,PIA,McLaren,18,18.0,0.0,2.8,2.8,0,1.0,0.0,No points
+2023,2,Saudi Arabian Grand Prix,PER,Red Bull,1,1.0,0.0,17.4,13.2,1,0.36,20.715,Podium
+2023,2,Saudi Arabian Grand Prix,VER,Red Bull,15,15.0,0.0,17.4,21.6,1,0.36,20.824,Podium
+2023,2,Saudi Arabian Grand Prix,ALO,Aston Martin,2,3.0,-1.0,3.3,6.2,1,0.36,26.879,Podium
+2023,2,Saudi Arabian Grand Prix,RUS,Mercedes,3,4.0,-1.0,13.0,13.2,1,0.36,20.828,Points
+2023,2,Saudi Arabian Grand Prix,HAM,Mercedes,7,8.0,-1.0,13.0,12.8,1,0.36,21.102,Points
+2023,2,Saudi Arabian Grand Prix,SAI,Ferrari,4,5.0,-1.0,10.2,9.8,1,0.3,20.76,Points
+2023,2,Saudi Arabian Grand Prix,LEC,Ferrari,12,2.0,10.0,10.2,10.6,1,0.32,20.026,Points
+2023,2,Saudi Arabian Grand Prix,OCO,Alpine F1 Team,6,7.0,-1.0,3.2,2.8,1,0.32,20.762,Points
+2023,2,Saudi Arabian Grand Prix,GAS,Alpine F1 Team,9,10.0,-1.0,3.2,0.4,1,0.28,20.719,Points
+2023,2,Saudi Arabian Grand Prix,MAG,Haas F1 Team,13,13.0,0.0,0.2,0.4,1,0.16,20.87,Points
+2023,2,Saudi Arabian Grand Prix,TSU,AlphaTauri,16,16.0,0.0,0.1,0.2,1,0.34,21.414,No points
+2023,2,Saudi Arabian Grand Prix,HUL,Haas F1 Team,10,11.0,-1.0,0.2,0.0,1,0.22,21.567,No points
+2023,2,Saudi Arabian Grand Prix,ZHO,Alfa Romeo,11,12.0,-1.0,0.7,0.0,2,0.22,21.492,No points
+2023,2,Saudi Arabian Grand Prix,DEV,AlphaTauri,18,18.0,0.0,0.1,1.0,1,0.34,21.116,No points
+2023,2,Saudi Arabian Grand Prix,PIA,McLaren,8,9.0,-1.0,2.7,0.0,1,0.02,31.534,No points
+2023,2,Saudi Arabian Grand Prix,SAR,Williams,20,20.0,0.0,0.1,0.0,1,0.36,21.064,No points
+2023,2,Saudi Arabian Grand Prix,NOR,McLaren,19,19.0,0.0,2.7,3.8,2,0.04,25.398,No points
+2023,2,Saudi Arabian Grand Prix,BOT,Alfa Romeo,14,14.0,0.0,0.7,1.4,3,0.18,21.835,No points
+2023,2,Saudi Arabian Grand Prix,ALB,Williams,17,17.0,0.0,0.1,0.2,1,0.34,21.397,No points
+2023,2,Saudi Arabian Grand Prix,STR,Aston Martin,5,6.0,-1.0,3.3,2.6,1,0.26,21.15,No points
+2023,3,Australian Grand Prix,VER,Red Bull,1,1.0,0.0,18.1,20.4,3,0.138,0.0,Podium
+2023,3,Australian Grand Prix,HAM,Mercedes,3,3.0,0.0,12.3,11.2,3,0.138,0.0,Podium
+2023,3,Australian Grand Prix,ALO,Aston Martin,4,4.0,0.0,4.4,8.0,3,0.138,0.0,Podium
+2023,3,Australian Grand Prix,STR,Aston Martin,6,6.0,0.0,4.4,2.6,3,0.138,0.0,Points
+2023,3,Australian Grand Prix,PER,Red Bull,20,20.0,0.0,18.1,15.8,5,0.017,17.736,Points
+2023,3,Australian Grand Prix,NOR,McLaren,13,13.0,0.0,1.9,2.2,3,0.138,0.0,Points
+2023,3,Australian Grand Prix,HUL,Haas F1 Team,10,10.0,0.0,0.1,0.0,3,0.138,0.0,Points
+2023,3,Australian Grand Prix,PIA,McLaren,16,16.0,0.0,1.9,0.0,4,0.138,19.442,Points
+2023,3,Australian Grand Prix,ZHO,Alfa Romeo,17,17.0,0.0,0.7,0.0,5,0.017,20.416,Points
+2023,3,Australian Grand Prix,TSU,AlphaTauri,12,12.0,0.0,0.0,0.0,4,0.138,18.258,Points
+2023,3,Australian Grand Prix,BOT,Alfa Romeo,19,19.0,0.0,0.7,1.4,6,0.017,20.742,No points
+2023,3,Australian Grand Prix,SAI,Ferrari,5,5.0,0.0,10.1,11.4,4,0.121,18.319,No points
+2023,3,Australian Grand Prix,GAS,Alpine F1 Team,9,9.0,0.0,3.2,0.8,2,0.138,0.0,No points
+2023,3,Australian Grand Prix,OCO,Alpine F1 Team,11,11.0,0.0,3.2,3.6,3,0.017,18.056,No points
+2023,3,Australian Grand Prix,DEV,AlphaTauri,15,15.0,0.0,0.0,0.667,4,0.138,18.08,No points
+2023,3,Australian Grand Prix,SAR,Williams,18,18.0,0.0,0.1,0.0,6,0.017,18.853,No points
+2023,3,Australian Grand Prix,MAG,Haas F1 Team,14,14.0,0.0,0.1,0.2,2,0.121,20.789,No points
+2023,3,Australian Grand Prix,RUS,Mercedes,2,2.0,0.0,12.3,13.4,2,0.121,19.146,No points
+2023,3,Australian Grand Prix,ALB,Williams,8,8.0,0.0,0.1,0.2,0,1.0,0.0,No points
+2023,3,Australian Grand Prix,LEC,Ferrari,7,7.0,0.0,10.1,8.8,0,1.0,0.0,No points
+2023,4,Azerbaijan Grand Prix,PER,Red Bull,3,3.0,0.0,17.7,15.0,1,0.216,20.389,Podium
+2023,4,Azerbaijan Grand Prix,VER,Red Bull,2,2.0,0.0,17.7,20.4,1,0.196,20.707,Podium
+2023,4,Azerbaijan Grand Prix,LEC,Ferrari,1,1.0,0.0,8.3,7.2,1,0.216,21.126,Podium
+2023,4,Azerbaijan Grand Prix,ALO,Aston Martin,6,6.0,0.0,7.1,11.0,1,0.216,23.148,Points
+2023,4,Azerbaijan Grand Prix,SAI,Ferrari,4,4.0,0.0,8.3,9.4,1,0.216,21.97,Points
+2023,4,Azerbaijan Grand Prix,HAM,Mercedes,5,5.0,0.0,11.0,11.2,1,0.176,20.324,Points
+2023,4,Azerbaijan Grand Prix,STR,Aston Martin,9,9.0,0.0,7.1,5.0,1,0.216,23.161,Points
+2023,4,Azerbaijan Grand Prix,RUS,Mercedes,11,11.0,0.0,11.0,10.8,2,0.216,20.924,Points
+2023,4,Azerbaijan Grand Prix,NOR,McLaren,7,7.0,0.0,2.3,3.4,1,0.176,20.346,Points
+2023,4,Azerbaijan Grand Prix,TSU,AlphaTauri,8,8.0,0.0,0.1,0.2,1,0.157,20.497,Points
+2023,4,Azerbaijan Grand Prix,PIA,McLaren,10,10.0,0.0,2.3,1.333,1,0.157,20.902,No points
+2023,4,Azerbaijan Grand Prix,ALB,Williams,12,13.0,-1.0,0.1,0.2,1,0.137,21.103,No points
+2023,4,Azerbaijan Grand Prix,MAG,Haas F1 Team,16,18.0,-2.0,0.7,0.2,1,0.196,30.951,No points
+2023,4,Azerbaijan Grand Prix,GAS,Alpine F1 Team,17,19.0,-2.0,2.8,0.8,2,0.098,20.702,No points
+2023,4,Azerbaijan Grand Prix,OCO,Alpine F1 Team,19,12.0,7.0,2.8,2.8,1,0.98,20.367,No points
+2023,4,Azerbaijan Grand Prix,SAR,Williams,14,15.0,-1.0,0.1,0.0,1,0.157,21.015,No points
+2023,4,Azerbaijan Grand Prix,HUL,Haas F1 Team,20,17.0,3.0,0.7,1.2,1,0.961,24.748,No points
+2023,4,Azerbaijan Grand Prix,BOT,Alfa Romeo,13,14.0,-1.0,0.8,1.2,3,0.118,21.444,No points
+2023,4,Azerbaijan Grand Prix,ZHO,Alfa Romeo,15,16.0,-1.0,0.8,0.4,1,0.216,22.247,No points
+2023,4,Azerbaijan Grand Prix,DEV,AlphaTauri,18,20.0,-2.0,0.1,0.5,0,1.0,0.0,No points
+2023,5,Miami Grand Prix,VER,Red Bull,9,9.0,0.0,20.6,22.4,1,0.789,22.688,Podium
+2023,5,Miami Grand Prix,PER,Red Bull,1,1.0,0.0,20.6,18.8,1,0.351,21.884,Podium
+2023,5,Miami Grand Prix,ALO,Aston Martin,2,2.0,0.0,8.8,11.4,1,0.421,22.631,Podium
+2023,5,Miami Grand Prix,RUS,Mercedes,6,6.0,0.0,7.9,6.6,1,0.298,22.335,Points
+2023,5,Miami Grand Prix,SAI,Ferrari,3,3.0,0.0,8.1,8.4,1,0.316,22.278,Points
+2023,5,Miami Grand Prix,HAM,Mercedes,13,13.0,0.0,7.9,9.2,1,0.649,22.15,Points
+2023,5,Miami Grand Prix,LEC,Ferrari,7,7.0,0.0,8.1,7.8,1,0.298,22.068,Points
+2023,5,Miami Grand Prix,GAS,Alpine F1 Team,5,5.0,0.0,1.4,0.8,1,0.263,22.417,Points
+2023,5,Miami Grand Prix,OCO,Alpine F1 Team,8,8.0,0.0,1.4,2.0,1,0.684,21.942,Points
+2023,5,Miami Grand Prix,MAG,Haas F1 Team,4,4.0,0.0,0.7,0.2,1,0.246,22.616,Points
+2023,5,Miami Grand Prix,TSU,AlphaTauri,17,17.0,0.0,0.2,0.4,1,0.632,22.39,No points
+2023,5,Miami Grand Prix,STR,Aston Martin,18,18.0,0.0,8.8,6.0,1,0.737,22.651,No points
+2023,5,Miami Grand Prix,BOT,Alfa Romeo,10,10.0,0.0,0.6,0.8,1,0.263,23.158,No points
+2023,5,Miami Grand Prix,ALB,Williams,11,11.0,0.0,0.1,0.2,1,0.386,22.482,No points
+2023,5,Miami Grand Prix,HUL,Haas F1 Team,12,12.0,0.0,0.7,1.2,1,0.579,23.12,No points
+2023,5,Miami Grand Prix,ZHO,Alfa Romeo,14,14.0,0.0,0.6,0.4,1,0.544,22.796,No points
+2023,5,Miami Grand Prix,NOR,McLaren,16,16.0,0.0,2.5,3.8,1,0.07,24.09,No points
+2023,5,Miami Grand Prix,DEV,AlphaTauri,15,15.0,0.0,0.2,0.4,1,0.263,23.487,No points
+2023,5,Miami Grand Prix,PIA,McLaren,19,19.0,0.0,2.5,1.0,1,0.088,22.205,No points
+2023,5,Miami Grand Prix,SAR,Williams,20,20.0,0.0,0.1,0.0,1,0.035,48.938,No points
+2023,6,Monaco Grand Prix,VER,Red Bull,1,1.0,0.0,21.0,22.6,1,0.705,24.798,Podium
+2023,6,Monaco Grand Prix,ALO,Aston Martin,2,2.0,0.0,9.8,14.4,2,0.692,25.165,Podium
+2023,6,Monaco Grand Prix,OCO,Alpine F1 Team,3,4.0,-1.0,1.4,1.2,2,0.41,25.27,Podium
+2023,6,Monaco Grand Prix,HAM,Mercedes,5,6.0,-1.0,8.9,10.8,2,0.397,25.64,Points
+2023,6,Monaco Grand Prix,RUS,Mercedes,8,8.0,0.0,8.9,7.0,1,0.692,30.98,Points
+2023,6,Monaco Grand Prix,LEC,Ferrari,6,3.0,3.0,6.7,5.4,2,0.564,24.952,Points
+2023,6,Monaco Grand Prix,GAS,Alpine F1 Team,7,7.0,0.0,1.4,1.6,2,0.603,26.926,Points
+2023,6,Monaco Grand Prix,SAI,Ferrari,4,5.0,-1.0,6.7,8.0,2,0.423,26.776,Points
+2023,6,Monaco Grand Prix,NOR,McLaren,10,10.0,0.0,1.4,2.0,2,0.641,29.045,Points
+2023,6,Monaco Grand Prix,PIA,McLaren,11,11.0,0.0,1.4,0.8,1,0.692,25.851,Points
+2023,6,Monaco Grand Prix,BOT,Alfa Romeo,15,15.0,0.0,0.6,0.8,1,0.654,30.395,No points
+2023,6,Monaco Grand Prix,DEV,AlphaTauri,12,12.0,0.0,0.2,0.0,1,0.679,24.539,No points
+2023,6,Monaco Grand Prix,ZHO,Alfa Romeo,19,19.0,0.0,0.6,0.4,2,0.013,25.7,No points
+2023,6,Monaco Grand Prix,ALB,Williams,13,13.0,0.0,0.1,0.2,2,0.231,25.64,No points
+2023,6,Monaco Grand Prix,TSU,AlphaTauri,9,9.0,0.0,0.2,0.4,1,0.679,33.706,No points
+2023,6,Monaco Grand Prix,PER,Red Bull,20,20.0,0.0,21.0,19.4,5,0.013,27.331,No points
+2023,6,Monaco Grand Prix,HUL,Haas F1 Team,18,18.0,0.0,0.8,1.2,3,0.013,30.964,No points
+2023,6,Monaco Grand Prix,SAR,Williams,16,16.0,0.0,0.1,0.0,3,0.256,26.032,No points
+2023,6,Monaco Grand Prix,MAG,Haas F1 Team,17,17.0,0.0,0.8,0.4,1,0.718,51.052,No points
+2023,6,Monaco Grand Prix,STR,Aston Martin,14,14.0,0.0,9.8,5.2,1,0.654,24.656,No points
+2023,7,Spanish Grand Prix,VER,Red Bull,1,1.0,0.0,19.2,22.6,2,0.394,22.299,Podium
+2023,7,Spanish Grand Prix,HAM,Mercedes,4,5.0,-1.0,9.6,11.4,2,0.364,22.653,Podium
+2023,7,Spanish Grand Prix,RUS,Mercedes,12,12.0,0.0,9.6,7.8,2,0.379,22.164,Podium
+2023,7,Spanish Grand Prix,PER,Red Bull,11,11.0,0.0,19.2,15.8,2,0.409,21.656,Points
+2023,7,Spanish Grand Prix,SAI,Ferrari,2,2.0,0.0,6.7,6.4,2,0.227,22.348,Points
+2023,7,Spanish Grand Prix,STR,Aston Martin,5,6.0,-1.0,9.3,3.6,2,0.212,22.863,Points
+2023,7,Spanish Grand Prix,ALO,Aston Martin,8,9.0,-1.0,9.3,15.0,2,0.288,22.727,Points
+2023,7,Spanish Grand Prix,OCO,Alpine F1 Team,6,7.0,-1.0,3.3,4.2,2,0.197,23.111,Points
+2023,7,Spanish Grand Prix,ZHO,Alfa Romeo,13,13.0,0.0,0.2,0.4,2,0.136,23.16,Points
+2023,7,Spanish Grand Prix,GAS,Alpine F1 Team,10,4.0,6.0,3.3,2.4,2,0.288,23.499,Points
+2023,7,Spanish Grand Prix,LEC,Ferrari,19,19.0,0.0,6.7,7.0,2,0.242,22.39,No points
+2023,7,Spanish Grand Prix,TSU,AlphaTauri,15,15.0,0.0,0.2,0.4,2,0.152,22.092,No points
+2023,7,Spanish Grand Prix,PIA,McLaren,9,10.0,-1.0,1.7,1.0,2,0.258,22.616,No points
+2023,7,Spanish Grand Prix,DEV,AlphaTauri,14,14.0,0.0,0.2,0.0,2,0.136,22.249,No points
+2023,7,Spanish Grand Prix,HUL,Haas F1 Team,7,8.0,-1.0,0.8,1.2,3,0.121,23.346,No points
+2023,7,Spanish Grand Prix,ALB,Williams,18,18.0,0.0,0.0,0.0,2,0.242,23.384,No points
+2023,7,Spanish Grand Prix,NOR,McLaren,3,3.0,0.0,1.7,2.4,3,0.015,27.549,No points
+2023,7,Spanish Grand Prix,MAG,Haas F1 Team,17,17.0,0.0,0.8,0.4,3,0.152,23.072,No points
+2023,7,Spanish Grand Prix,BOT,Alfa Romeo,16,16.0,0.0,0.2,0.0,2,0.076,23.894,No points
+2023,7,Spanish Grand Prix,SAR,Williams,20,20.0,0.0,0.0,0.0,2,0.258,23.205,No points
+2023,8,Canadian Grand Prix,VER,Red Bull,1,1.0,0.0,18.6,24.0,2,0.171,23.777,Podium
+2023,8,Canadian Grand Prix,ALO,Aston Martin,2,3.0,-1.0,9.2,13.2,2,0.171,23.98,Podium
+2023,8,Canadian Grand Prix,HAM,Mercedes,3,4.0,-1.0,10.7,13.0,2,0.171,24.044,Podium
+2023,8,Canadian Grand Prix,LEC,Ferrari,10,11.0,-1.0,6.3,5.8,1,0.557,24.343,Points
+2023,8,Canadian Grand Prix,SAI,Ferrari,11,8.0,3.0,6.3,6.8,1,0.543,24.133,Points
+2023,8,Canadian Grand Prix,PER,Red Bull,12,12.0,0.0,18.6,13.2,2,0.529,23.25,Points
+2023,8,Canadian Grand Prix,ALB,Williams,9,10.0,-1.0,0.0,0.0,1,0.171,25.064,Points
+2023,8,Canadian Grand Prix,OCO,Alpine F1 Team,6,6.0,0.0,3.2,4.2,2,0.171,24.05,Points
+2023,8,Canadian Grand Prix,STR,Aston Martin,16,13.0,3.0,9.2,5.2,2,0.157,23.775,Points
+2023,8,Canadian Grand Prix,BOT,Alfa Romeo,14,15.0,-1.0,0.4,0.0,1,0.514,24.038,Points
+2023,8,Canadian Grand Prix,PIA,McLaren,8,9.0,-1.0,1.7,1.0,2,0.171,24.132,No points
+2023,8,Canadian Grand Prix,GAS,Alpine F1 Team,15,17.0,-2.0,3.2,2.2,2,0.143,25.816,No points
+2023,8,Canadian Grand Prix,NOR,McLaren,7,7.0,0.0,1.7,2.4,2,0.171,24.716,No points
+2023,8,Canadian Grand Prix,TSU,AlphaTauri,19,16.0,3.0,0.2,0.4,2,0.014,25.584,No points
+2023,8,Canadian Grand Prix,HUL,Haas F1 Team,5,2.0,3.0,0.7,1.2,2,0.157,24.54,No points
+2023,8,Canadian Grand Prix,ZHO,Alfa Romeo,20,20.0,0.0,0.4,0.8,2,0.171,25.835,No points
+2023,8,Canadian Grand Prix,MAG,Haas F1 Team,13,14.0,-1.0,0.7,0.2,2,0.5,24.712,No points
+2023,8,Canadian Grand Prix,DEV,AlphaTauri,17,18.0,-1.0,0.2,0.0,2,0.157,24.373,No points
+2023,8,Canadian Grand Prix,RUS,Mercedes,4,5.0,-1.0,10.7,8.4,1,0.171,0.0,No points
+2023,8,Canadian Grand Prix,SAR,Williams,18,19.0,-1.0,0.0,0.0,0,1.0,0.0,No points
+2023,9,Austrian Grand Prix,VER,Red Bull,1,1.0,0.0,18.4,24.0,4,0.028,20.176,Podium
+2023,9,Austrian Grand Prix,LEC,Ferrari,2,2.0,0.0,8.5,8.2,3,0.028,20.429,Podium
+2023,9,Austrian Grand Prix,PER,Red Bull,15,15.0,0.0,18.4,12.8,3,0.028,20.117,Podium
+2023,9,Austrian Grand Prix,NOR,McLaren,4,4.0,0.0,0.5,0.8,3,0.028,20.485,Points
+2023,9,Austrian Grand Prix,ALO,Aston Martin,7,7.0,0.0,8.5,13.8,3,0.028,20.321,Points
+2023,9,Austrian Grand Prix,SAI,Ferrari,3,3.0,0.0,8.5,8.8,3,0.028,23.749,Points
+2023,9,Austrian Grand Prix,RUS,Mercedes,11,11.0,0.0,10.4,8.4,3,0.028,20.637,Points
+2023,9,Austrian Grand Prix,HAM,Mercedes,5,5.0,0.0,10.4,12.4,3,0.028,22.044,Points
+2023,9,Austrian Grand Prix,STR,Aston Martin,6,6.0,0.0,8.5,3.2,4,0.028,21.216,Points
+2023,9,Austrian Grand Prix,GAS,Alpine F1 Team,9,9.0,0.0,3.6,2.2,3,0.028,21.999,Points
+2023,9,Austrian Grand Prix,ALB,Williams,10,10.0,0.0,0.6,1.2,3,0.028,21.994,No points
+2023,9,Austrian Grand Prix,ZHO,Alfa Romeo,17,17.0,0.0,0.3,0.4,3,0.028,21.25,No points
+2023,9,Austrian Grand Prix,SAR,Williams,18,18.0,0.0,0.6,0.0,3,0.028,20.691,No points
+2023,9,Austrian Grand Prix,OCO,Alpine F1 Team,12,12.0,0.0,3.6,5.0,3,0.028,23.533,No points
+2023,9,Austrian Grand Prix,BOT,Alfa Romeo,14,14.0,0.0,0.3,0.2,3,0.028,23.63,No points
+2023,9,Austrian Grand Prix,PIA,McLaren,13,13.0,0.0,0.5,0.2,4,0.028,23.004,No points
+2023,9,Austrian Grand Prix,DEV,AlphaTauri,20,20.0,0.0,0.1,0.0,3,0.028,19.813,No points
+2023,9,Austrian Grand Prix,MAG,Haas F1 Team,19,19.0,0.0,0.1,0.2,3,0.014,24.83,No points
+2023,9,Austrian Grand Prix,TSU,AlphaTauri,16,16.0,0.0,0.1,0.2,4,0.014,23.654,No points
+2023,9,Austrian Grand Prix,HUL,Haas F1 Team,8,8.0,0.0,0.1,0.0,2,0.028,19.334,No points
+2023,10,British Grand Prix,VER,Red Bull,1,1.0,0.0,18.2,25.6,1,0.635,29.056,Podium
+2023,10,British Grand Prix,NOR,McLaren,2,2.0,0.0,1.5,2.8,1,0.635,28.438,Podium
+2023,10,British Grand Prix,HAM,Mercedes,7,7.0,0.0,10.1,11.6,1,0.635,29.169,Podium
+2023,10,British Grand Prix,PIA,McLaren,3,3.0,0.0,1.5,0.2,1,0.558,28.655,Points
+2023,10,British Grand Prix,RUS,Mercedes,6,6.0,0.0,10.1,8.6,1,0.538,29.455,Points
+2023,10,British Grand Prix,PER,Red Bull,15,15.0,0.0,18.2,10.8,1,0.538,28.06,Points
+2023,10,British Grand Prix,ALO,Aston Martin,9,9.0,0.0,7.9,13.4,1,0.635,28.679,Points
+2023,10,British Grand Prix,ALB,Williams,8,8.0,0.0,0.6,1.2,1,0.615,29.634,Points
+2023,10,British Grand Prix,LEC,Ferrari,4,4.0,0.0,8.6,8.8,2,0.346,28.524,Points
+2023,10,British Grand Prix,SAI,Ferrari,5,5.0,0.0,8.6,8.4,1,0.5,28.869,Points
+2023,10,British Grand Prix,SAR,Williams,14,14.0,0.0,0.6,0.0,1,0.558,28.847,No points
+2023,10,British Grand Prix,BOT,Alfa Romeo,20,15.0,5.0,0.3,0.2,1,0.615,29.662,No points
+2023,10,British Grand Prix,HUL,Haas F1 Team,11,11.0,0.0,0.1,0.0,2,0.135,35.988,No points
+2023,10,British Grand Prix,STR,Aston Martin,12,12.0,0.0,7.9,2.4,1,0.596,28.561,No points
+2023,10,British Grand Prix,ZHO,Alfa Romeo,17,17.0,0.0,0.3,0.4,3,0.462,30.753,No points
+2023,10,British Grand Prix,TSU,AlphaTauri,16,16.0,0.0,0.0,0.0,2,0.269,28.478,No points
+2023,10,British Grand Prix,DEV,AlphaTauri,18,18.0,0.0,0.0,0.0,2,0.519,28.328,No points
+2023,10,British Grand Prix,GAS,Alpine F1 Team,10,10.0,0.0,3.7,2.4,1,0.596,28.458,No points
+2023,10,British Grand Prix,MAG,Haas F1 Team,19,19.0,0.0,0.1,0.2,0,1.0,0.0,No points
+2023,10,British Grand Prix,OCO,Alpine F1 Team,13,13.0,0.0,3.7,5.0,0,1.0,0.0,No points
+2023,11,Hungarian Grand Prix,VER,Red Bull,2,2.0,0.0,17.2,25.6,2,0.329,21.544,Podium
+2023,11,Hungarian Grand Prix,NOR,McLaren,3,3.0,0.0,4.5,6.4,2,0.243,21.486,Podium
+2023,11,Hungarian Grand Prix,PER,Red Bull,9,9.0,0.0,17.2,8.8,2,0.343,21.371,Podium
+2023,11,Hungarian Grand Prix,HAM,Mercedes,1,1.0,0.0,10.6,13.0,2,0.229,21.851,Points
+2023,11,Hungarian Grand Prix,PIA,McLaren,4,4.0,0.0,4.5,2.6,2,0.257,21.6,Points
+2023,11,Hungarian Grand Prix,RUS,Mercedes,18,18.0,0.0,10.6,8.2,2,0.4,21.78,Points
+2023,11,Hungarian Grand Prix,LEC,Ferrari,6,6.0,0.0,7.3,8.0,2,0.243,24.928,Points
+2023,11,Hungarian Grand Prix,SAI,Ferrari,11,11.0,0.0,7.3,6.6,2,0.214,21.726,Points
+2023,11,Hungarian Grand Prix,ALO,Aston Martin,8,8.0,0.0,7.0,11.6,2,0.286,23.534,Points
+2023,11,Hungarian Grand Prix,STR,Aston Martin,14,14.0,0.0,7.0,2.4,2,0.129,22.156,Points
+2023,11,Hungarian Grand Prix,ALB,Williams,16,16.0,0.0,1.0,2.0,2,0.114,21.919,No points
+2023,11,Hungarian Grand Prix,BOT,Alfa Romeo,7,7.0,0.0,0.3,0.2,2,0.129,22.678,No points
+2023,11,Hungarian Grand Prix,RIC,AlphaTauri,13,13.0,0.0,0.0,1.6,2,0.257,22.08,No points
+2023,11,Hungarian Grand Prix,HUL,Haas F1 Team,10,10.0,0.0,0.0,0.0,2,0.229,22.438,No points
+2023,11,Hungarian Grand Prix,TSU,AlphaTauri,17,17.0,0.0,0.0,0.0,2,0.129,23.676,No points
+2023,11,Hungarian Grand Prix,ZHO,Alfa Romeo,5,5.0,0.0,0.3,0.4,2,0.143,26.032,No points
+2023,11,Hungarian Grand Prix,MAG,Haas F1 Team,19,19.0,0.0,0.0,0.0,2,0.2,22.452,No points
+2023,11,Hungarian Grand Prix,SAR,Williams,20,20.0,0.0,1.0,0.0,2,0.186,23.099,No points
+2023,11,Hungarian Grand Prix,OCO,Alpine F1 Team,12,12.0,0.0,3.1,4.6,0,1.0,0.0,No points
+2023,11,Hungarian Grand Prix,GAS,Alpine F1 Team,15,15.0,0.0,3.1,1.6,0,1.0,0.0,No points
+2023,12,Belgian Grand Prix,VER,Red Bull,6,1.0,5.0,18.8,25.8,2,0.318,22.95,Podium
+2023,12,Belgian Grand Prix,PER,Red Bull,2,3.0,-1.0,18.8,11.8,2,0.295,23.197,Podium
+2023,12,Belgian Grand Prix,LEC,Ferrari,1,2.0,-1.0,7.1,7.6,2,0.295,23.186,Podium
+2023,12,Belgian Grand Prix,HAM,Mercedes,3,4.0,-1.0,10.3,12.8,3,0.273,23.09,Points
+2023,12,Belgian Grand Prix,ALO,Aston Martin,9,9.0,0.0,5.5,8.4,2,0.227,23.442,Points
+2023,12,Belgian Grand Prix,RUS,Mercedes,8,8.0,0.0,10.3,7.8,1,0.5,23.837,Points
+2023,12,Belgian Grand Prix,NOR,McLaren,7,7.0,0.0,7.0,9.6,2,0.114,24.378,Points
+2023,12,Belgian Grand Prix,OCO,Alpine F1 Team,14,15.0,-1.0,1.0,1.6,2,0.136,23.212,Points
+2023,12,Belgian Grand Prix,STR,Aston Martin,10,10.0,0.0,5.5,2.6,1,0.455,25.397,Points
+2023,12,Belgian Grand Prix,TSU,AlphaTauri,11,11.0,0.0,0.0,0.0,2,0.205,22.673,Points
+2023,12,Belgian Grand Prix,GAS,Alpine F1 Team,12,12.0,0.0,1.0,0.4,1,0.523,25.664,No points
+2023,12,Belgian Grand Prix,BOT,Alfa Romeo,13,14.0,-1.0,0.3,0.2,2,0.136,23.574,No points
+2023,12,Belgian Grand Prix,ZHO,Alfa Romeo,17,17.0,0.0,0.3,0.4,2,0.159,24.247,No points
+2023,12,Belgian Grand Prix,ALB,Williams,15,16.0,-1.0,1.0,2.0,3,0.159,24.047,No points
+2023,12,Belgian Grand Prix,MAG,Haas F1 Team,16,13.0,3.0,0.0,0.0,2,0.114,23.605,No points
+2023,12,Belgian Grand Prix,RIC,AlphaTauri,19,19.0,0.0,0.0,1.6,2,0.114,23.066,No points
+2023,12,Belgian Grand Prix,SAR,Williams,18,18.0,0.0,1.0,0.0,3,0.182,23.539,No points
+2023,12,Belgian Grand Prix,HUL,Haas F1 Team,20,20.0,0.0,0.0,0.0,2,0.273,24.904,No points
+2023,12,Belgian Grand Prix,SAI,Ferrari,4,5.0,-1.0,7.1,6.6,1,0.159,23.303,No points
+2023,12,Belgian Grand Prix,PIA,McLaren,5,6.0,-1.0,7.0,4.4,0,1.0,0.0,No points
+2023,13,Dutch Grand Prix,VER,Red Bull,1,1.0,0.0,19.3,25.6,6,0.028,19.641,Podium
+2023,13,Dutch Grand Prix,ALO,Aston Martin,5,5.0,0.0,5.3,9.2,5,0.028,21.64,Podium
+2023,13,Dutch Grand Prix,GAS,Alpine F1 Team,12,12.0,0.0,0.9,0.2,5,0.014,23.452,Podium
+2023,13,Dutch Grand Prix,PER,Red Bull,7,7.0,0.0,19.3,13.0,6,0.014,24.821,Points
+2023,13,Dutch Grand Prix,SAI,Ferrari,6,6.0,0.0,7.6,4.6,5,0.028,19.93,Points
+2023,13,Dutch Grand Prix,HAM,Mercedes,13,13.0,0.0,9.1,11.8,5,0.042,20.086,Points
+2023,13,Dutch Grand Prix,NOR,McLaren,2,2.0,0.0,7.6,10.8,6,0.042,24.717,Points
+2023,13,Dutch Grand Prix,ALB,Williams,4,4.0,0.0,1.0,2.0,4,0.611,26.734,Points
+2023,13,Dutch Grand Prix,PIA,McLaren,8,8.0,0.0,7.6,4.4,5,0.208,24.732,Points
+2023,13,Dutch Grand Prix,OCO,Alpine F1 Team,16,17.0,-1.0,0.9,1.6,6,0.028,24.097,Points
+2023,13,Dutch Grand Prix,STR,Aston Martin,11,11.0,0.0,5.3,1.4,7,0.056,22.484,No points
+2023,13,Dutch Grand Prix,HUL,Haas F1 Team,14,15.0,-1.0,0.0,0.0,5,0.222,24.154,No points
+2023,13,Dutch Grand Prix,LAW,AlphaTauri,19,20.0,-1.0,0.1,0.1,7,0.014,27.147,No points
+2023,13,Dutch Grand Prix,BOT,Alfa Romeo,18,19.0,-1.0,0.1,0.2,5,0.222,23.163,No points
+2023,13,Dutch Grand Prix,TSU,AlphaTauri,17,14.0,3.0,0.1,0.2,5,0.014,26.682,No points
+2023,13,Dutch Grand Prix,MAG,Haas F1 Team,21,18.0,3.0,0.0,0.0,6,0.014,25.24,No points
+2023,13,Dutch Grand Prix,RUS,Mercedes,3,3.0,0.0,9.1,6.4,7,0.056,24.533,No points
+2023,13,Dutch Grand Prix,ZHO,Alfa Romeo,15,16.0,-1.0,0.1,0.0,4,0.014,21.307,No points
+2023,13,Dutch Grand Prix,LEC,Ferrari,9,9.0,0.0,7.6,10.6,2,0.014,29.944,No points
+2023,13,Dutch Grand Prix,SAR,Williams,10,10.0,0.0,1.0,0.0,0,1.0,0.0,No points
+2023,14,Italian Grand Prix,VER,Red Bull,2,2.0,0.0,19.6,25.6,1,0.392,24.228,Podium
+2023,14,Italian Grand Prix,PER,Red Bull,5,5.0,0.0,19.6,13.6,1,0.412,23.819,Podium
+2023,14,Italian Grand Prix,SAI,Ferrari,1,1.0,0.0,6.4,4.6,1,0.373,25.183,Podium
+2023,14,Italian Grand Prix,LEC,Ferrari,3,3.0,0.0,6.4,8.2,1,0.392,23.931,Points
+2023,14,Italian Grand Prix,RUS,Mercedes,4,4.0,0.0,8.4,6.4,1,0.373,24.215,Points
+2023,14,Italian Grand Prix,HAM,Mercedes,8,8.0,0.0,8.4,10.4,1,0.529,24.255,Points
+2023,14,Italian Grand Prix,ALB,Williams,6,6.0,0.0,0.8,1.6,1,0.294,24.538,Points
+2023,14,Italian Grand Prix,NOR,McLaren,9,9.0,0.0,8.4,12.0,1,0.431,23.727,Points
+2023,14,Italian Grand Prix,ALO,Aston Martin,10,10.0,0.0,5.2,9.4,1,0.412,24.798,Points
+2023,14,Italian Grand Prix,BOT,Alfa Romeo,14,14.0,0.0,0.0,0.0,1,0.49,24.658,Points
+2023,14,Italian Grand Prix,LAW,AlphaTauri,12,12.0,0.0,0.1,0.0,2,0.255,24.246,No points
+2023,14,Italian Grand Prix,PIA,McLaren,7,7.0,0.0,8.4,4.8,2,0.451,27.966,No points
+2023,14,Italian Grand Prix,SAR,Williams,15,15.0,0.0,0.8,0.0,1,0.275,24.779,No points
+2023,14,Italian Grand Prix,ZHO,Alfa Romeo,16,16.0,0.0,0.0,0.0,2,0.216,25.178,No points
+2023,14,Italian Grand Prix,GAS,Alpine F1 Team,17,17.0,0.0,2.1,3.2,2,0.196,26.031,No points
+2023,14,Italian Grand Prix,STR,Aston Martin,20,20.0,0.0,5.2,1.0,1,0.392,25.667,No points
+2023,14,Italian Grand Prix,HUL,Haas F1 Team,13,13.0,0.0,0.0,0.0,2,0.275,25.212,No points
+2023,14,Italian Grand Prix,MAG,Haas F1 Team,19,19.0,0.0,0.0,0.0,2,0.235,24.712,No points
+2023,14,Italian Grand Prix,OCO,Alpine F1 Team,18,18.0,0.0,2.1,1.0,1,0.471,24.249,No points
+2023,14,Italian Grand Prix,TSU,AlphaTauri,11,11.0,0.0,0.1,0.2,0,1.0,0.0,No points
+2023,15,Singapore Grand Prix,SAI,Ferrari,1,1.0,0.0,6.5,6.0,1,0.323,29.499,Podium
+2023,15,Singapore Grand Prix,NOR,McLaren,4,4.0,0.0,7.6,10.4,1,0.323,29.485,Podium
+2023,15,Singapore Grand Prix,HAM,Mercedes,5,5.0,0.0,9.2,11.2,2,0.323,33.106,Podium
+2023,15,Singapore Grand Prix,LEC,Ferrari,3,3.0,0.0,6.5,7.0,1,0.323,32.888,Points
+2023,15,Singapore Grand Prix,VER,Red Bull,11,11.0,0.0,19.8,25.4,1,0.645,29.698,Points
+2023,15,Singapore Grand Prix,GAS,Alpine F1 Team,12,12.0,0.0,2.0,3.0,1,0.323,31.802,Points
+2023,15,Singapore Grand Prix,PIA,McLaren,17,17.0,0.0,7.6,4.8,1,0.323,29.369,Points
+2023,15,Singapore Grand Prix,PER,Red Bull,13,13.0,0.0,19.8,14.2,1,0.629,28.977,Points
+2023,15,Singapore Grand Prix,LAW,AlphaTauri,10,10.0,0.0,0.1,0.0,1,0.323,32.348,Points
+2023,15,Singapore Grand Prix,MAG,Haas F1 Team,6,6.0,0.0,0.0,0.0,2,0.323,32.276,Points
+2023,15,Singapore Grand Prix,ALB,Williams,14,14.0,0.0,1.4,2.8,2,0.323,29.962,No points
+2023,15,Singapore Grand Prix,ZHO,Alfa Romeo,19,19.0,0.0,0.1,0.0,2,0.032,30.334,No points
+2023,15,Singapore Grand Prix,HUL,Haas F1 Team,9,9.0,0.0,0.0,0.0,1,0.323,35.497,No points
+2023,15,Singapore Grand Prix,SAR,Williams,18,18.0,0.0,1.4,0.0,2,0.306,31.018,No points
+2023,15,Singapore Grand Prix,ALO,Aston Martin,7,7.0,0.0,4.2,7.8,2,0.323,41.689,No points
+2023,15,Singapore Grand Prix,RUS,Mercedes,2,2.0,0.0,9.2,7.2,2,0.323,30.008,No points
+2023,15,Singapore Grand Prix,BOT,Alfa Romeo,16,16.0,0.0,0.1,0.2,1,0.645,30.487,No points
+2023,15,Singapore Grand Prix,OCO,Alpine F1 Team,8,8.0,0.0,2.0,1.0,1,0.323,29.755,No points
+2023,15,Singapore Grand Prix,TSU,AlphaTauri,15,15.0,0.0,0.1,0.2,0,1.0,0.0,No points
+2023,15,Singapore Grand Prix,STR,Aston Martin,21,20.0,1.0,4.2,0.6,0,1.0,0.0,No points
+2023,16,Japanese Grand Prix,VER,Red Bull,1,1.0,0.0,17.8,22.2,2,0.302,24.039,Podium
+2023,16,Japanese Grand Prix,NOR,McLaren,3,3.0,0.0,7.0,10.4,2,0.321,23.352,Podium
+2023,16,Japanese Grand Prix,PIA,McLaren,2,2.0,0.0,7.0,3.6,2,0.245,23.826,Podium
+2023,16,Japanese Grand Prix,LEC,Ferrari,4,4.0,0.0,9.9,9.0,2,0.321,23.062,Points
+2023,16,Japanese Grand Prix,HAM,Mercedes,7,7.0,0.0,8.3,11.4,2,0.302,24.236,Points
+2023,16,Japanese Grand Prix,SAI,Ferrari,6,6.0,0.0,9.9,10.8,2,0.34,23.224,Points
+2023,16,Japanese Grand Prix,RUS,Mercedes,8,8.0,0.0,8.3,5.2,1,0.453,24.034,Points
+2023,16,Japanese Grand Prix,ALO,Aston Martin,10,10.0,0.0,3.6,6.6,2,0.208,24.19,Points
+2023,16,Japanese Grand Prix,OCO,Alpine F1 Team,14,14.0,0.0,2.8,1.0,2,0.019,25.422,Points
+2023,16,Japanese Grand Prix,GAS,Alpine F1 Team,12,12.0,0.0,2.8,4.6,2,0.34,24.57,Points
+2023,16,Japanese Grand Prix,LAW,AlphaTauri,11,11.0,0.0,0.3,0.667,2,0.189,23.404,No points
+2023,16,Japanese Grand Prix,TSU,AlphaTauri,9,9.0,0.0,0.3,0.2,2,0.17,23.136,No points
+2023,16,Japanese Grand Prix,ZHO,Alfa Romeo,19,19.0,0.0,0.1,0.0,3,0.019,29.749,No points
+2023,16,Japanese Grand Prix,HUL,Haas F1 Team,18,18.0,0.0,0.1,0.0,3,0.151,23.506,No points
+2023,16,Japanese Grand Prix,MAG,Haas F1 Team,15,15.0,0.0,0.1,0.2,2,0.226,23.837,No points
+2023,16,Japanese Grand Prix,ALB,Williams,13,13.0,0.0,1.0,2.0,2,0.019,51.154,No points
+2023,16,Japanese Grand Prix,SAR,Williams,20,20.0,0.0,1.0,0.0,3,0.038,37.255,No points
+2023,16,Japanese Grand Prix,STR,Aston Martin,17,17.0,0.0,3.6,0.6,1,0.264,23.441,No points
+2023,16,Japanese Grand Prix,PER,Red Bull,5,5.0,0.0,17.8,13.4,4,0.038,34.867,No points
+2023,16,Japanese Grand Prix,BOT,Alfa Romeo,16,16.0,0.0,0.1,0.2,2,0.019,54.657,No points
+2023,17,Qatar Grand Prix,VER,Red Bull,1,1.0,0.0,16.3,22.2,3,0.298,28.687,Podium
+2023,17,Qatar Grand Prix,PIA,McLaren,6,6.0,0.0,7.5,4.6,3,0.211,28.077,Podium
+2023,17,Qatar Grand Prix,NOR,McLaren,10,10.0,0.0,7.5,10.4,3,0.228,27.807,Podium
+2023,17,Qatar Grand Prix,RUS,Mercedes,2,2.0,0.0,7.9,4.8,4,0.018,31.183,Points
+2023,17,Qatar Grand Prix,LEC,Ferrari,5,5.0,0.0,10.9,10.2,3,0.211,27.871,Points
+2023,17,Qatar Grand Prix,ALO,Aston Martin,4,4.0,0.0,3.7,7.0,3,0.193,28.399,Points
+2023,17,Qatar Grand Prix,OCO,Alpine F1 Team,8,8.0,0.0,3.1,1.4,3,0.175,29.033,Points
+2023,17,Qatar Grand Prix,BOT,Alfa Romeo,9,9.0,0.0,0.1,0.2,3,0.053,29.437,Points
+2023,17,Qatar Grand Prix,ZHO,Alfa Romeo,19,20.0,-1.0,0.1,0.0,3,0.316,28.884,Points
+2023,17,Qatar Grand Prix,PER,Red Bull,20,13.0,7.0,16.3,10.4,3,0.298,31.406,Points
+2023,17,Qatar Grand Prix,STR,Aston Martin,16,17.0,-1.0,3.7,0.4,3,0.053,28.814,No points
+2023,17,Qatar Grand Prix,GAS,Alpine F1 Team,7,7.0,0.0,3.1,4.8,3,0.193,31.159,No points
+2023,17,Qatar Grand Prix,ALB,Williams,13,14.0,-1.0,1.0,2.0,3,0.316,28.994,No points
+2023,17,Qatar Grand Prix,MAG,Haas F1 Team,18,19.0,-1.0,0.1,0.2,3,0.053,29.341,No points
+2023,17,Qatar Grand Prix,TSU,AlphaTauri,11,11.0,0.0,0.3,0.2,3,0.158,27.729,No points
+2023,17,Qatar Grand Prix,HUL,Haas F1 Team,14,15.0,-1.0,0.1,0.0,3,0.228,32.248,No points
+2023,17,Qatar Grand Prix,LAW,AlphaTauri,17,18.0,-1.0,0.3,0.5,3,0.053,28.722,No points
+2023,17,Qatar Grand Prix,SAR,Williams,15,16.0,-1.0,1.0,0.0,2,0.228,29.404,No points
+2023,17,Qatar Grand Prix,HAM,Mercedes,3,3.0,0.0,7.9,11.0,0,1.0,0.0,No points
+2023,17,Qatar Grand Prix,SAI,Ferrari,12,12.0,0.0,10.9,11.6,0,1.0,0.0,No points
+2023,18,United States Grand Prix,VER,Red Bull,6,6.0,0.0,14.7,22.4,2,0.286,24.365,Podium
+2023,18,United States Grand Prix,NOR,McLaren,2,2.0,0.0,10.2,12.2,2,0.304,23.758,Podium
+2023,18,United States Grand Prix,SAI,Ferrari,4,4.0,0.0,10.4,11.6,2,0.304,23.67,Podium
+2023,18,United States Grand Prix,PER,Red Bull,9,9.0,0.0,14.7,7.0,2,0.304,23.996,Points
+2023,18,United States Grand Prix,RUS,Mercedes,5,5.0,0.0,7.0,5.6,2,0.375,24.163,Points
+2023,18,United States Grand Prix,GAS,Alpine F1 Team,7,7.0,0.0,3.3,4.8,2,0.321,24.39,Points
+2023,18,United States Grand Prix,STR,Aston Martin,20,19.0,1.0,3.3,0.0,2,0.357,24.206,Points
+2023,18,United States Grand Prix,TSU,AlphaTauri,11,11.0,0.0,0.2,0.0,3,0.304,23.984,Points
+2023,18,United States Grand Prix,ALB,Williams,15,18.0,-3.0,1.0,2.0,2,0.179,24.458,Points
+2023,18,United States Grand Prix,SAR,Williams,16,20.0,-4.0,1.0,0.0,2,0.196,25.268,Points
+2023,18,United States Grand Prix,HUL,Haas F1 Team,18,16.0,2.0,0.1,0.0,2,0.339,25.44,No points
+2023,18,United States Grand Prix,BOT,Alfa Romeo,13,13.0,0.0,0.7,1.0,2,0.179,24.902,No points
+2023,18,United States Grand Prix,ZHO,Alfa Romeo,12,12.0,0.0,0.7,0.4,2,0.161,25.176,No points
+2023,18,United States Grand Prix,MAG,Haas F1 Team,17,14.0,3.0,0.1,0.2,2,0.179,24.906,No points
+2023,18,United States Grand Prix,RIC,AlphaTauri,14,15.0,-1.0,0.2,1.6,2,0.393,25.438,No points
+2023,18,United States Grand Prix,ALO,Aston Martin,19,17.0,2.0,3.3,6.6,2,0.339,24.939,No points
+2023,18,United States Grand Prix,PIA,McLaren,10,10.0,0.0,10.2,8.2,0,1.0,0.0,No points
+2023,18,United States Grand Prix,OCO,Alpine F1 Team,8,8.0,0.0,3.3,1.8,0,1.0,0.0,No points
+2023,18,United States Grand Prix,HAM,Mercedes,3,3.0,0.0,7.0,8.4,2,0.357,24.782,No points
+2023,18,United States Grand Prix,LEC,Ferrari,1,1.0,0.0,10.4,9.2,1,0.411,23.963,No points
+2023,19,Mexico City Grand Prix,VER,Red Bull,3,3.0,0.0,14.7,22.4,3,0.268,22.4,Podium
+2023,19,Mexico City Grand Prix,HAM,Mercedes,6,6.0,0.0,7.2,6.8,2,0.338,22.21,Podium
+2023,19,Mexico City Grand Prix,LEC,Ferrari,1,1.0,0.0,10.9,9.2,2,0.437,22.248,Podium
+2023,19,Mexico City Grand Prix,SAI,Ferrari,2,2.0,0.0,10.9,12.6,2,0.423,22.067,Points
+2023,19,Mexico City Grand Prix,NOR,McLaren,17,19.0,-2.0,11.2,14.6,3,0.155,22.986,Points
+2023,19,Mexico City Grand Prix,RUS,Mercedes,8,8.0,0.0,7.2,7.6,2,0.366,22.311,Points
+2023,19,Mexico City Grand Prix,RIC,AlphaTauri,4,4.0,0.0,0.7,0.4,2,0.38,22.406,Points
+2023,19,Mexico City Grand Prix,PIA,McLaren,7,7.0,0.0,11.2,7.8,2,0.352,23.734,Points
+2023,19,Mexico City Grand Prix,ALB,Williams,14,14.0,0.0,0.9,1.6,2,0.465,23.68,Points
+2023,19,Mexico City Grand Prix,OCO,Alpine F1 Team,15,16.0,-1.0,2.5,1.6,1,0.479,0.0,Points
+2023,19,Mexico City Grand Prix,GAS,Alpine F1 Team,11,11.0,0.0,2.5,3.4,2,0.394,22.627,No points
+2023,19,Mexico City Grand Prix,TSU,AlphaTauri,18,15.0,3.0,0.7,1.0,2,0.127,30.121,No points
+2023,19,Mexico City Grand Prix,HUL,Haas F1 Team,12,12.0,0.0,0.1,0.0,2,0.324,23.144,No points
+2023,19,Mexico City Grand Prix,ZHO,Alfa Romeo,10,10.0,0.0,0.7,0.4,2,0.296,22.817,No points
+2023,19,Mexico City Grand Prix,BOT,Alfa Romeo,9,9.0,0.0,0.7,1.0,2,0.437,23.638,No points
+2023,19,Mexico City Grand Prix,SAR,Williams,19,20.0,-1.0,0.9,0.2,2,0.31,23.945,No points
+2023,19,Mexico City Grand Prix,STR,Aston Martin,21,18.0,3.0,2.0,1.2,2,0.423,22.582,No points
+2023,19,Mexico City Grand Prix,ALO,Aston Martin,13,13.0,0.0,2.0,2.8,2,0.408,22.844,No points
+2023,19,Mexico City Grand Prix,MAG,Haas F1 Team,16,17.0,-1.0,0.1,0.2,1,0.324,23.642,No points
+2023,19,Mexico City Grand Prix,PER,Red Bull,5,5.0,0.0,14.7,7.0,0,1.0,0.0,No points
+2023,20,São Paulo Grand Prix,VER,Red Bull,1,1.0,0.0,12.9,22.4,4,0.014,21.642,Podium
+2023,20,São Paulo Grand Prix,NOR,McLaren,6,7.0,-1.0,12.2,15.8,4,0.014,22.285,Podium
+2023,20,São Paulo Grand Prix,ALO,Aston Martin,4,4.0,0.0,1.8,2.4,4,0.014,22.174,Podium
+2023,20,São Paulo Grand Prix,PER,Red Bull,9,9.0,0.0,12.9,3.4,4,0.014,22.499,Points
+2023,20,São Paulo Grand Prix,STR,Aston Martin,3,3.0,0.0,1.8,1.2,4,0.014,22.452,Points
+2023,20,São Paulo Grand Prix,SAI,Ferrari,7,8.0,-1.0,10.9,12.0,4,0.014,23.43,Points
+2023,20,São Paulo Grand Prix,GAS,Alpine F1 Team,15,13.0,2.0,2.6,3.4,4,0.014,23.134,Points
+2023,20,São Paulo Grand Prix,HAM,Mercedes,5,5.0,0.0,8.1,9.0,4,0.014,22.055,Points
+2023,20,São Paulo Grand Prix,TSU,AlphaTauri,16,16.0,0.0,1.3,1.0,4,0.014,23.845,Points
+2023,20,São Paulo Grand Prix,OCO,Alpine F1 Team,14,12.0,2.0,2.6,1.8,5,0.014,23.563,Points
+2023,20,São Paulo Grand Prix,SAR,Williams,19,19.0,0.0,0.5,0.2,4,0.014,25.325,No points
+2023,20,São Paulo Grand Prix,HUL,Haas F1 Team,11,11.0,0.0,0.1,0.0,4,0.014,27.501,No points
+2023,20,São Paulo Grand Prix,RIC,AlphaTauri,17,17.0,0.0,1.3,1.6,4,0.014,26.744,No points
+2023,20,São Paulo Grand Prix,PIA,McLaren,10,10.0,0.0,12.2,8.6,4,0.014,28.454,No points
+2023,20,São Paulo Grand Prix,RUS,Mercedes,8,6.0,2.0,8.1,7.2,4,0.014,22.714,No points
+2023,20,São Paulo Grand Prix,BOT,Alfa Romeo,18,18.0,0.0,0.6,0.8,3,0.014,22.404,No points
+2023,20,São Paulo Grand Prix,ZHO,Alfa Romeo,20,20.0,0.0,0.6,0.4,3,0.014,22.604,No points
+2023,20,São Paulo Grand Prix,MAG,Haas F1 Team,12,14.0,-2.0,0.1,0.2,0,1.0,0.0,No points
+2023,20,São Paulo Grand Prix,ALB,Williams,13,15.0,-2.0,0.5,0.8,0,1.0,0.0,No points
+2023,20,São Paulo Grand Prix,LEC,Ferrari,2,2.0,0.0,10.9,9.8,0,1.0,0.0,No points
+2023,21,Las Vegas Grand Prix,VER,Red Bull,2,3.0,-1.0,15.2,25.4,2,0.32,24.004,Podium
+2023,21,Las Vegas Grand Prix,LEC,Ferrari,1,1.0,0.0,8.0,7.4,1,0.42,22.559,Podium
+2023,21,Las Vegas Grand Prix,PER,Red Bull,11,12.0,-1.0,15.2,5.0,2,0.02,27.584,Podium
+2023,21,Las Vegas Grand Prix,OCO,Alpine F1 Team,16,17.0,-1.0,2.5,2.0,1,0.4,21.763,Points
+2023,21,Las Vegas Grand Prix,STR,Aston Martin,19,14.0,5.0,4.3,3.2,2,0.06,22.396,Points
+2023,21,Las Vegas Grand Prix,SAI,Ferrari,12,2.0,10.0,8.0,8.6,2,0.06,21.946,Points
+2023,21,Las Vegas Grand Prix,HAM,Mercedes,10,11.0,-1.0,6.9,6.6,2,0.34,23.778,Points
+2023,21,Las Vegas Grand Prix,RUS,Mercedes,3,4.0,-1.0,6.9,7.2,2,0.3,21.604,Points
+2023,21,Las Vegas Grand Prix,ALO,Aston Martin,9,10.0,-1.0,4.3,5.4,2,0.02,26.259,Points
+2023,21,Las Vegas Grand Prix,PIA,McLaren,18,19.0,-1.0,11.7,7.4,2,0.32,21.902,Points
+2023,21,Las Vegas Grand Prix,GAS,Alpine F1 Team,4,5.0,-1.0,2.5,3.0,1,0.34,22.262,No points
+2023,21,Las Vegas Grand Prix,ALB,Williams,5,6.0,-1.0,0.5,0.8,1,0.32,21.242,No points
+2023,21,Las Vegas Grand Prix,MAG,Haas F1 Team,8,9.0,-1.0,0.0,0.0,2,0.28,21.74,No points
+2023,21,Las Vegas Grand Prix,RIC,AlphaTauri,14,15.0,-1.0,1.3,1.2,1,0.34,22.242,No points
+2023,21,Las Vegas Grand Prix,ZHO,Alfa Romeo,17,18.0,-1.0,0.6,0.4,1,0.52,22.155,No points
+2023,21,Las Vegas Grand Prix,SAR,Williams,6,7.0,-1.0,0.5,0.2,1,0.3,21.367,No points
+2023,21,Las Vegas Grand Prix,BOT,Alfa Romeo,7,8.0,-1.0,0.6,0.8,2,0.02,32.745,No points
+2023,21,Las Vegas Grand Prix,TSU,AlphaTauri,20,20.0,0.0,1.3,1.4,2,0.2,20.756,No points
+2023,21,Las Vegas Grand Prix,HUL,Haas F1 Team,13,13.0,0.0,0.0,0.0,2,0.24,23.804,No points
+2023,21,Las Vegas Grand Prix,NOR,McLaren,15,16.0,-1.0,11.7,16.0,0,1.0,0.0,No points
+2023,22,Abu Dhabi Grand Prix,VER,Red Bull,1,1.0,0.0,16.6,25.2,2,0.276,21.468,Podium
+2023,22,Abu Dhabi Grand Prix,LEC,Ferrari,2,2.0,0.0,8.6,8.6,2,0.293,21.582,Podium
+2023,22,Abu Dhabi Grand Prix,RUS,Mercedes,4,4.0,0.0,6.3,6.8,2,0.241,21.867,Podium
+2023,22,Abu Dhabi Grand Prix,PER,Red Bull,9,9.0,0.0,16.6,8.0,2,0.293,21.36,Points
+2023,22,Abu Dhabi Grand Prix,NOR,McLaren,5,5.0,0.0,8.6,12.4,2,0.241,22.746,Points
+2023,22,Abu Dhabi Grand Prix,PIA,McLaren,3,3.0,0.0,8.6,4.8,2,0.224,21.426,Points
+2023,22,Abu Dhabi Grand Prix,ALO,Aston Martin,7,7.0,0.0,5.1,5.0,2,0.207,22.152,Points
+2023,22,Abu Dhabi Grand Prix,TSU,AlphaTauri,6,6.0,0.0,1.3,1.4,1,0.379,21.486,Points
+2023,22,Abu Dhabi Grand Prix,HAM,Mercedes,11,11.0,0.0,6.3,5.8,2,0.259,22.12,Points
+2023,22,Abu Dhabi Grand Prix,STR,Aston Martin,13,13.0,0.0,5.1,5.2,2,0.379,21.766,Points
+2023,22,Abu Dhabi Grand Prix,RIC,AlphaTauri,15,15.0,0.0,1.3,1.2,2,0.121,21.716,No points
+2023,22,Abu Dhabi Grand Prix,OCO,Alpine F1 Team,12,12.0,0.0,3.4,4.0,1,0.259,22.16,No points
+2023,22,Abu Dhabi Grand Prix,GAS,Alpine F1 Team,10,10.0,0.0,3.4,2.8,2,0.293,23.284,No points
+2023,22,Abu Dhabi Grand Prix,ALB,Williams,14,14.0,0.0,0.5,0.8,2,0.276,22.044,No points
+2023,22,Abu Dhabi Grand Prix,HUL,Haas F1 Team,8,8.0,0.0,0.0,0.0,2,0.224,21.971,No points
+2023,22,Abu Dhabi Grand Prix,SAR,Williams,20,20.0,0.0,0.5,0.2,2,0.259,22.002,No points
+2023,22,Abu Dhabi Grand Prix,ZHO,Alfa Romeo,19,19.0,0.0,0.6,0.4,2,0.224,22.606,No points
+2023,22,Abu Dhabi Grand Prix,SAI,Ferrari,16,16.0,0.0,8.6,8.6,2,0.397,21.396,No points
+2023,22,Abu Dhabi Grand Prix,BOT,Alfa Romeo,18,18.0,0.0,0.6,0.8,1,0.5,22.665,No points
+2023,22,Abu Dhabi Grand Prix,MAG,Haas F1 Team,17,17.0,0.0,0.0,0.0,2,0.086,22.464,No points

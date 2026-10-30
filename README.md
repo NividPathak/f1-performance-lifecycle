@@ -4,7 +4,7 @@ Course project for Data Science Lifecycle at CU Boulder. The question: how much 
 
 Live site: https://nividpathak.github.io/f1-performance-lifecycle/
 
-Done so far: Introduction, Data Prep & EDA (Milestone 1), and Clustering and PCA (Milestone 2). The other tabs get filled in as the course goes on.
+Done so far: Introduction, Data Prep & EDA (Milestone 1), Clustering and PCA (Milestone 2), and Naive Bayes and Decision Trees (Milestone 3). The other tabs get filled in as the course goes on.
 
 ## Data
 
@@ -33,12 +33,14 @@ data/track_bahrain.json     track outline + corner numbers
 data/sample_tables.json     rows shown in the before/after tables
 data/milestone2/            clustering + PCA inputs, assignments, scores, results JSON
 assets/img/m2/              clustering + PCA figures
-code/                       fetch, clean, chart-prep, clustering and PCA scripts
+data/milestone3/            labeled data, 2021-22 train / 2023 test split, NB + tree results
+assets/img/m3/              naive bayes + decision tree figures
+code/                       fetch, clean, chart-prep, clustering, PCA, NB and tree scripts
 ```
 
 ## Rebuilding the data
 
-Scripts find their files through `code/paths.py`, so run them from anywhere. You need Python 3 with `pandas`, `numpy`, and `matplotlib`, plus `fastf1` for the FastF1 scripts and `scikit-learn` and `scipy` for Milestone 2.
+Scripts find their files through `code/paths.py`, so run them from anywhere. You need Python 3 with `pandas`, `numpy`, and `matplotlib`, plus `fastf1` for the FastF1 scripts and `scikit-learn` and `scipy` for Milestones 2 and 3.
 
 ```bash
 python code/fetch_jolpica.py            # results + qualifying -> data/raw_pulls/
@@ -50,6 +52,9 @@ python code/make_sample_tables.py       # data/sample_tables.json
 python code/make_track_data.py          # data/track_bahrain.json
 python code/clustering.py               # k-means + hierarchical (cosine) on driver-seasons
 python code/pca.py                      # PCA on driver-races with weather data
+python code/prep_supervised.py          # label + form features + season split
+python code/naive_bayes.py              # multinomial + bernoulli NB
+python code/decision_tree.py            # three trees + pruning + overfitting check
 ```
 
 The raw pulls are already committed, so you only need `build_dataset.py` onward to regenerate what the site uses.

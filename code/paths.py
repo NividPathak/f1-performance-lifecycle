@@ -15,3 +15,7 @@ FASTF1_CACHE = ROOT / "fastf1_cache"
 # Milestone 2 (clustering + PCA)
 M2_IMG = IMG / "m2"
 M2_DATA = DATA / "milestone2"
+
+# Milestone 3 (naive bayes + decision trees)
+M3_IMG = IMG / "m3"
+M3_DATA = DATA / "milestone3"

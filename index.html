@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=m2">
+<link rel="stylesheet" href="assets/style.css?v=m3">
 <link rel="stylesheet" href="assets/premium.css">
 </head>
 <body>
@@ -114,6 +114,8 @@
       <p>A race result matters to way more people than the twenty drivers. Teams care first, because prize money is paid out by where you finish in the constructors' championship, so a slow stop or a bad tyre call can cost millions across a season, not just a couple of points on Sunday. Drivers care because their next contract depends on turning the car's pace into results. Sponsors and broadcasters want close, unpredictable racing (2021 Abu Dhabi is the extreme example), and circuits notice when a boring season like 2023, where Verstappen won 19 of 22, shows up in ticket sales. And fans put a lot of emotion into title fights that come down to exactly these details. For most of F1 history, explaining a race was left to commentators and journalists, so it was mostly expert opinion and good storytelling. That's changed now that a lot of the timing data is public. Lap times, pit stop durations, tyre compounds and track weather are all available through community APIs and open-source tools like FastF1. People have used them to look at things like how much pole is really worth or when the best pit window is, but usually one factor at a time. Grid position gets studied on its own way more than it gets studied alongside tyre strategy, pit stops, team strength and weather, even though all of those are happening in the same race. I want to look at them together, using every race from 2021 to 2023, and see how much each one actually contributes once the others are taken into account.</p>
 
       <p>The site follows the data science lifecycle, one stage per tab. Stage one was collecting and cleaning: 1,320 driver-race rows with grid, qualifying, pit stops, tyres and weather, which is all on the Data Prep &amp; EDA tab. Before I try to predict anything, I want to see what structure is already in the data without telling a model what to look for, and that's what the unsupervised methods are for. Clustering groups drivers by how their seasons went, without telling it who drove for which team, to see if natural tiers show up and whether they follow the driver or the car. PCA takes the thirteen numbers recorded for each race result and finds the few underlying directions that explain most of the variation, which tells me which variables are basically saying the same thing and which ones carry new information. Both of those feed into the supervised tabs later on (Naive Bayes, decision trees, SVMs, regression and neural nets), since I'll know which features are redundant and which groups already exist, and I can check the models against patterns I've already seen. The idea is that every tab adds another piece of evidence to the same question instead of being its own separate exercise.</p>
+
+      <p>There's also a bigger question sitting under all of this: how predictable is an F1 race before it even starts? If you only knew where everyone qualified and how their car had been going lately, how often could you call the result? Fans do this every weekend without thinking about it. You see a Red Bull on pole and assume the win's gone, or you see a Haas in Q3 and wonder if it can hang on to points. Betting odds and F1 Fantasy prices are basically a more formal version of the same guess. But F1 has plenty of days where that guess falls apart. Singapore 2023 is my favourite example: both Red Bulls got knocked out in Q2, Sainz won from pole, and Russell crashed out of a podium spot on the very last lap. Safety cars, rain, a slow stop or a reliability failure can flip a result that looked decided on Saturday. So part of this project is measuring how much of a race is locked in before the lights go out and how much is still up for grabs on Sunday. The Naive Bayes and Decision Trees tabs are my first real attempt at that, and honestly the gap between what the models predicted and what actually happened is just as interesting to me as the accuracy number.</p>
 
       <div class="intro-photos">
         <figure>
@@ -557,10 +559,299 @@ corr = loadings * np.sqrt(eig)</pre>
     </div>
   </section>
   <section id="naivebayes" class="tab-panel">
-    <div class="block"><h2>Naive Bayes</h2><p class="muted">Not started yet.</p></div>
+    <div class="block">
+      <h2>Naive Bayes</h2>
+      <p class="muted">Knowing only the grid, the penalties and how the team and driver have been going lately, can a model call each driver's race before lights out: podium, points, or nothing?</p>
+      <nav class="subnav" aria-label="Naive Bayes sections">
+        <button type="button" data-jump="nb-overview">(a) Overview</button>
+        <button type="button" data-jump="nb-prep">(b) Data Prep</button>
+        <button type="button" data-jump="nb-code">(c) Code</button>
+        <button type="button" data-jump="nb-results">(d) Results</button>
+        <button type="button" data-jump="nb-conclusions">(e) Conclusions</button>
+      </nav>
+    </div>
+
+    <div class="block" id="nb-overview">
+      <h3><span class="section-tag">(a)</span>Overview</h3>
+      <p>Naive Bayes (NB) is a supervised classifier built on Bayes' theorem. Given a row of features, it works out the probability of each class and picks the most likely one: P(class | features) &prop; P(class) &times; P(features | class). P(class) is the <strong>prior</strong>, how common the class is overall. P(features | class) is the <strong>likelihood</strong>, how typical those features are for that class. Multiply them and normalise and you get the <strong>posterior</strong>. The "naive" part is a big simplifying assumption: NB treats every feature as independent of the others once you know the class, so the likelihood is just the product of one probability per feature. That's almost never literally true, but it makes NB really fast, it needs very little training data, it can't really overfit the way a deep tree can, and it gives you actual probabilities instead of just a label. That's why it's used for spam filters, sorting news articles or support tickets by topic, sentiment analysis, quick medical screening and pretty much anywhere you want a strong, cheap baseline.</p>
+      <p>Here's the idea with my actual training data. Half of all driver-races end with no points, so the prior says "No points" before you know anything. But only 2% of no-points finishes started P2 or P3, compared to 42% of podiums. Multiply prior by likelihood and a front-row start flips the prediction to Podium, with a posterior of 0.63.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/nb_concept_bayes.png" alt="Three bar charts: the prior favours No points, the likelihood of starting P2-3 strongly favours Podium, and the posterior favours Podium at 0.63" loading="lazy">
+        <figcaption>Bayes' theorem on the 2021-22 training data with one feature. Prior &times; likelihood, then rescaled so it adds to 1, gives the posterior.</figcaption>
+      </figure>
+      <p>There are a few flavours of NB, and the difference is how they model P(feature | class). <strong>Multinomial NB</strong> is the standard one we covered in class. It treats each row like a document and each feature as a word count, so it learns how often each "word" shows up in each class relative to all the other words. It was made for text, where the counts matter: a radio message that says "box" three times is more urgent than one that says it once. It uses <strong>Laplace smoothing</strong> (adding &alpha; = 1 to every count) so a feature that never appeared with a class in training doesn't get a probability of exactly 0, which would wipe out the whole product. <strong>Bernoulli NB</strong> only cares whether each feature is there or not (1 or 0). The key difference is that Bernoulli also uses the <em>absence</em> of a feature as evidence: if a word that usually shows up in spam is missing, that pushes the prediction away from spam, while multinomial just ignores missing words. Bernoulli tends to do well on short texts or yes/no data. (There's also Gaussian NB, which fits a bell curve to each numeric feature per class. I ran it as a bonus at the end.)</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/nb_concept_mn_vs_bern.png" alt="Bar charts of a team radio message as word counts for multinomial NB and as 0 or 1 for Bernoulli NB" loading="lazy">
+        <figcaption>The same radio message as each model sees it. Multinomial keeps the count (box = 3). Bernoulli keeps only present or absent, and counts "rain = 0" and "push = 0" as evidence too.</figcaption>
+      </figure>
+    </div>
+
+    <div class="block" id="nb-prep">
+      <h3><span class="section-tag">(b)</span>Data Prep</h3>
+      <p>Supervised learning needs <strong>labeled data</strong>: every row has to come with the right answer so the model can learn what features go with what outcome. Clustering and PCA didn't need that, but NB can't learn P(features | class) without knowing the class. So the first step was making a label. I gave every driver-race one of three classes based on how it ended: <strong>Podium</strong> (finished P1 to P3), <strong>Points</strong> (finished P4 to P10) or <strong>No points</strong> (P11 or lower, or didn't finish). Every race has exactly 3 podium spots and 7 more points places out of 20 cars, so the mix is always about 15% / 35% / 50%.</p>
+      <p>For features I wanted things you'd actually know <em>before</em> the race, because predicting a result from data collected during the race is kind of cheating:</p>
+      <ul>
+        <li><strong>grid</strong>: starting position.</li>
+        <li><strong>grid_penalty</strong>: grid minus qualifying position, so positive means the driver got moved back (usually engine penalties).</li>
+        <li><strong>team_form</strong>: the average points per car the team scored in its previous 5 races.</li>
+        <li><strong>driver_form</strong>: the driver's own average points over their previous 5 races.</li>
+      </ul>
+      <p>The two form features only look backwards (the race being predicted is never included), so no future info leaks in. 2021 Round 1 got dropped because there's no history before it, leaving <strong>1,300 labeled rows</strong>. For a driver's first race I used the team's form as their form.</p>
+      <h4>Labeled data</h4>
+      <p class="muted">First eight drivers from the 2022 Bahrain GP with their pre-race features and the label.</p>
+      <div class="table-wrap"><table id="sample-nb-labeled" class="sample-table"></table></div>
+      <p><strong>Getting it into multinomial NB shape.</strong> Scikit-learn's MultinomialNB only takes numbers, and they have to be non-negative counts, so raw values like a team form of 14.6 don't really make sense to it. I binned each feature and one-hot encoded the bins. Grid became P1, P2-3, P4-6, P7-10, P11-15 or P16+. Both form features became 0-1, 1-4, 4-8, 8-12 or 12+ points a race. The penalty became dropped, none or gained. That gives 19 columns where every row has exactly four 1s, one per feature. In NB terms, every driver-race is a tiny "document" with four "words", like <em>grid_P2-3, team_form_12+, driver_form_8-12, penalty_none</em>. Bernoulli NB uses exactly the same 0/1 matrix.</p>
+      <h4>Training and testing sets</h4>
+      <p>A model has to be tested on data it has never seen. If you test on the same rows it trained on, you're just checking how well it memorised them, which tells you nothing about how it'll do on the next race. So the training set and testing set have to be <strong>disjoint</strong>, with no row in both. Instead of a random 70/30 shuffle, I split by season: the model trains on <strong>2021 and 2022 (860 rows, 43 races)</strong> and gets tested on <strong>all of 2023 (440 rows, 22 races)</strong>. I like this better for two reasons. First, it's what you'd actually do in real life: learn from the past, then predict next season. Second, a random split would put some drivers from a race in training and their rivals from the same race in testing, and those rows aren't really independent. Splitting by season means every race is fully on one side. The script checks it, and zero rows show up in both sets.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/split_overview.png" alt="Timeline of 65 races, 2021 and 2022 in blue as training and 2023 in amber as testing, with the class mix in each set at 15, 35 and 50 percent" loading="lazy">
+        <figcaption>Every bar is a race. Blue races train the model, amber races test it. The class mix is the same in both sets because every race hands out the same number of podiums and points places.</figcaption>
+      </figure>
+      <h4>Training set (what NB learns from)</h4>
+      <p class="muted">Six random rows from the training set after binning, 19 count columns plus the label.</p>
+      <div class="table-wrap"><table id="sample-nb-train" class="sample-table"></table></div>
+      <h4>Testing set (what NB gets graded on)</h4>
+      <p class="muted">Six random rows from the 2023 testing set, same format. The label is hidden from the model and only used to score it.</p>
+      <div class="table-wrap"><table id="sample-nb-test" class="sample-table"></table></div>
+      <p>Data used:</p>
+      <ul class="source-list">
+        <li><a href="data/milestone3/labeled_data.csv">labeled_data.csv</a>: all 1,300 labeled driver-races with IDs, raw features and the label.</li>
+        <li><a href="data/milestone3/nb_train.csv">nb_train.csv</a> and <a href="data/milestone3/nb_test.csv">nb_test.csv</a>: the binned count versions NB actually uses.</li>
+        <li><a href="data/milestone3/train.csv">train.csv</a> and <a href="data/milestone3/test.csv">test.csv</a>: the same split with raw numbers (used on the Decision Trees tab too).</li>
+      </ul>
+    </div>
+
+    <div class="block" id="nb-code">
+      <h3><span class="section-tag">(c)</span>Code</h3>
+      <p>Python with scikit-learn. <a href="code/prep_supervised.py">code/prep_supervised.py</a> builds the label, the form features and the split (<a href="https://github.com/NividPathak/f1-performance-lifecycle/blob/master/code/prep_supervised.py" target="_blank" rel="noopener">on GitHub</a>). <a href="code/naive_bayes.py">code/naive_bayes.py</a> bins the features, trains both NB models, scores them against two baselines and makes all the figures on this tab (<a href="https://github.com/NividPathak/f1-performance-lifecycle/blob/master/code/naive_bayes.py" target="_blank" rel="noopener">on GitHub</a>). The main part:</p>
+<pre class="code">X_train = to_counts(train)
+X_test = to_counts(test)
+
+mnb = MultinomialNB(alpha=1.0).fit(X_train, y_train)
+bnb = BernoulliNB(alpha=1.0).fit(X_train, y_train)
+
+pred = mnb.predict(X_test)
+print(accuracy_score(y_test, pred))
+print(confusion_matrix(y_test, pred, labels=CLASSES))
+
+probs = mnb.predict_proba(race_X)</pre>
+      <p>To rerun: <code>python code/prep_supervised.py</code> then <code>python code/naive_bayes.py</code>.</p>
+    </div>
+
+    <div class="block" id="nb-results">
+      <h3><span class="section-tag">(d)</span>Results</h3>
+      <div class="stat-row">
+        <div><b>68.6%</b><span>multinomial NB accuracy on 2023</span></div>
+        <div><b>68.6%</b><span>Bernoulli NB accuracy</span></div>
+        <div><b>65.9%</b><span>"just use the grid" rule</span></div>
+        <div><b>50.0%</b><span>always guessing No points</span></div>
+      </div>
+
+      <h4>Accuracy</h4>
+      <p>A number like 68.6% means nothing on its own, so I compared it against two baselines. The dumbest one always guesses "No points" and gets 50%, since half the field doesn't score. The smarter one is what most fans would do: predict a podium from P1 to P3, points from P4 to P10, and nothing from further back. That gets 65.9%, which shows how much the grid already tells you. Both NB models beat it with <strong>68.6%</strong>, so team and driver form do add something on top of the grid, just not a massive amount. Training accuracy was 69.5%, basically the same as test, so NB isn't overfitting. That makes sense for such a simple model.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/nb_accuracy.png" alt="Horizontal bar chart of test accuracy: always No points 50 percent, grid rule 65.9, Gaussian NB 69.3, Bernoulli NB 68.6, multinomial NB 68.6" loading="lazy">
+        <figcaption>Accuracy on the 440 driver-races of 2023. Gaussian NB, run on the raw numbers instead of bins, does slightly better at 69.3%.</figcaption>
+      </figure>
+
+      <h4>Confusion matrices</h4>
+      <p>The confusion matrix shows <em>where</em> the mistakes are. Rows are what actually happened and columns are what the model predicted, so the diagonal is the correct calls. Multinomial NB caught <strong>47 of the 66 podiums (71%)</strong> and 177 of 220 no-points races (80%). Points was the hardest class: only 78 of 154 (51%), because P4 to P10 is the messy middle where a driver could easily land a place either side. Almost all the mistakes are "one class off": only 1 actual podium was predicted as No points. When it predicted a podium it was right about half the time (precision 50.5%), which sounds bad until you remember it's guessing before the race even starts.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/nb_confusion.png" alt="Two 3 by 3 confusion matrices for multinomial and Bernoulli Naive Bayes with counts and row percentages" loading="lazy">
+        <figcaption>Confusion matrices on the 2023 test set. Each cell shows the count and the share of that row. Bernoulli disagrees with multinomial on just five of the 440 drivers.</figcaption>
+      </figure>
+      <p>Why are multinomial and Bernoulli almost identical? Because of how I built the features. Every row has exactly one bin turned on per feature, so if a driver <em>isn't</em> in grid P1, they must be in one of the other grid bins. The "absent" information Bernoulli uses is already implied by what's present, so the two end up making nearly the same calls. On real text, where most words are missing from most documents, they'd separate a lot more.</p>
+
+      <h4>What the model learned</h4>
+      <p>NB's whole model is a table of likelihoods, so you can read exactly what it learned. Podiums came from P2-3 (41%) or P1 (24%) and from teams scoring 12+ points a race (51%). No-points finishes mostly came from P16+ (43%) and teams scoring under a point a race (51%). Grid penalties barely matter, since the "none" bin dominates every class.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/nb_likelihoods.png" alt="Heatmaps of the probability of each feature bin given each class for grid, team form, driver form and penalty" loading="lazy">
+        <figcaption>P(bin | class) for each feature, learned from 2021-22. Read across a row: for example, 51% of podiums came from teams averaging 12+ points a race.</figcaption>
+      </figure>
+
+      <h4>A race preview: Singapore 2023</h4>
+      <p>Since NB gives probabilities, I ran it as a "pre-race preview" for the one race Red Bull didn't win in 2023. It liked the right group of cars. It picked Sainz from pole (61% podium), and Hamilton (68%) and Norris (30% podium, 98% top ten) both ended up on the podium. Russell was its top podium pick at 75% and was on course for it until crashing on the last lap, which no model is going to see coming. The big miss shows the naive assumption breaking. Verstappen and Pérez started P11 and P13 but still got a 56% podium chance, because NB multiplies team form and driver form as if they were separate evidence. They aren't, since both basically say "this is a Red Bull". It double-counted the car and overrated them. Verstappen finished P5.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/nb_race_preview.png" alt="Bar chart of predicted podium and points probabilities for every driver at the 2023 Singapore Grand Prix in team colours, with actual podium and points finishers marked" loading="lazy">
+        <figcaption>Multinomial NB's predictions for Singapore 2023, drivers in grid order. Solid bar = P(podium), faded bar = P(podium or points). "P" marks an actual podium and "pts" an actual points finish.</figcaption>
+      </figure>
+    </div>
+
+    <div class="block" id="nb-conclusions">
+      <h3><span class="section-tag">(e)</span>Conclusions</h3>
+      <p>Using only things you'd know before the race (grid slot, penalties and recent form), NB called the outcome for 2023 drivers correctly about 69% of the time, compared to 66% for just going by the grid and 50% for always guessing no points. It's best at the two ends of the field. It caught 71% of podiums and 80% of no-score races, and when it was wrong it was nearly always off by one class. The middle of the points places is where it struggles, which makes sense: that's where the cars are closest and a pit stop, a safety car or a first-lap move decides who gets P8 and who gets P11.</p>
+      <p>For my car vs driver question, the likelihood tables say the same thing clustering did. Team form is about as strong a signal as grid position, and driver form mostly repeats it. That's also NB's biggest weakness on F1 data. The features aren't independent, because a fast car means good qualifying, a good grid and good recent form all at once, and NB counts that same evidence several times. That's exactly how it ended up giving Red Bulls starting outside the top ten a better-than-even podium chance in Singapore.</p>
+      <p>So roughly two thirds of a race result is already decided by Saturday night, and the last third is what makes Sundays worth watching. Next I want a model that can handle features that depend on each other, which is what the decision trees on the next tab do.</p>
+    </div>
   </section>
   <section id="dectrees" class="tab-panel">
-    <div class="block"><h2>Decision Trees</h2><p class="muted">Not started yet.</p></div>
+    <div class="block">
+      <h2>Decision Trees</h2>
+      <p class="muted">Same question as Naive Bayes (podium, points, or nothing) but now as a flowchart of yes/no questions. Which questions does the data ask first, and does knowing about pit strategy help?</p>
+      <nav class="subnav" aria-label="Decision Trees sections">
+        <button type="button" data-jump="dt-overview">(a) Overview</button>
+        <button type="button" data-jump="dt-prep">(b) Data Prep</button>
+        <button type="button" data-jump="dt-code">(c) Code</button>
+        <button type="button" data-jump="dt-results">(d) Results</button>
+        <button type="button" data-jump="dt-conclusions">(e) Conclusions</button>
+      </nav>
+    </div>
+
+    <div class="block" id="dt-overview">
+      <h3><span class="section-tag">(a)</span>Overview</h3>
+      <p>A decision tree is a supervised model that predicts by asking a series of yes/no questions, like "did they qualify in the top 10?" then "is the team scoring more than 2 points a race?". The top question is the <strong>root</strong>, every question after it is an <strong>internal node</strong>, and where you end up is a <strong>leaf</strong>, which gives the prediction (the majority class of the training rows that landed there). Trees are built top-down. At each node the algorithm tries every feature and every possible cut point, keeps the one that separates the classes best, then repeats the whole thing on each side until it hits a stopping rule. They work for classification and for regression. People like them because you can read them: a bank can explain why a loan was denied, a doctor can follow a triage tree, and a race engineer could follow one for a pit call. They also don't care about scaling, can handle mixed types of features and pick up interactions on their own, like grid mattering differently for fast and slow teams. The downside is they overfit really easily if you let them grow.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/dt_concept_partition.png" alt="Left: scatter of training driver-races by grid position and team form, shaded into three rectangular regions. Right: the depth-2 decision tree that makes those regions" loading="lazy">
+        <figcaption>A depth-2 tree on two features, grid and team form, trained on 2021-22. Every split is a straight cut on one feature, so the tree chops the space into boxes, and each box predicts its majority class.</figcaption>
+      </figure>
+
+      <h4>Gini, entropy and information gain</h4>
+      <p>To pick the "best" split, the tree needs a way to measure how mixed up a node is, called <strong>impurity</strong>. A node with only podiums is pure (impurity 0). A node with an even mix of all three classes is as impure as it gets. The two usual measures are:</p>
+      <ul>
+        <li><strong>Gini</strong> = 1 &minus; &Sigma; p<sub>k</sub>&sup2;, where p<sub>k</sub> is the share of class k in the node. It's the chance you'd mislabel a random row if you labelled it randomly using the node's class mix.</li>
+        <li><strong>Entropy</strong> = &minus;&Sigma; p<sub>k</sub> log<sub>2</sub> p<sub>k</sub>, from information theory. It's how many bits of "surprise" are left in the node.</li>
+      </ul>
+      <p><strong>Information gain</strong> is how much a split reduces impurity: the parent's impurity minus the weighted average impurity of the children, weighted by how many rows go to each side. The tree tries every possible split and picks the one with the biggest gain. Gini and entropy behave really similarly (see the curves). Gini is a little faster since there's no log, and entropy punishes mixed nodes a bit more.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/dt_concept_impurity.png" alt="Line chart of entropy, Gini and misclassification impurity against the share of class 1, all peaking at 0.5" loading="lazy">
+        <figcaption>For two classes, all three impurity measures are 0 when a node is pure and max out at a 50/50 mix. Entropy peaks at 1 bit, Gini at 0.5.</figcaption>
+      </figure>
+
+      <h4>A worked example: 2022 Bahrain GP</h4>
+      <p>The 20 drivers at the 2022 season opener (in my training set) finished as 3 podiums, 7 points and 10 no points. Say the tree tries the split <strong>"grid &le; 10"</strong>:</p>
+      <div class="table-wrap">
+        <table class="sample-table">
+          <thead><tr><th>node</th><th>drivers</th><th>podium / points / none</th><th>entropy</th><th>Gini</th></tr></thead>
+          <tbody>
+            <tr><td>parent (everyone)</td><td>20</td><td>3 / 7 / 10</td><td>1.441</td><td>0.605</td></tr>
+            <tr><td>grid &le; 10</td><td>10</td><td>3 / 4 / 3</td><td>1.571</td><td>0.660</td></tr>
+            <tr><td>grid &gt; 10</td><td>10</td><td>0 / 3 / 7</td><td>0.881</td><td>0.420</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Parent entropy = &minus;(0.15 log<sub>2</sub> 0.15 + 0.35 log<sub>2</sub> 0.35 + 0.5 log<sub>2</sub> 0.5) = 1.441. The left child is actually <em>more</em> mixed than the parent (1.571), but the right child is much cleaner (0.881), so the weighted average is (10/20)(1.571) + (10/20)(0.881) = 1.226. The <strong>information gain is 1.441 &minus; 1.226 = 0.215 bits</strong>. With Gini it's the same idea: 0.605 &minus; (0.5 &times; 0.660 + 0.5 &times; 0.420) = 0.605 &minus; 0.540 = <strong>0.065</strong>. Now try <strong>"grid &le; 3"</strong> instead. The top 3 split 2 podiums and 1 no points (Verstappen retired from P2), and the other 17 drivers split 1 / 7 / 9. That gives a gain of <strong>0.238 bits</strong>, which beats 0.215, so the tree would rather cut at P3 than P10 for this race. That's all a tree is doing, just over hundreds of rows and every possible cut on every feature.</p>
+
+      <h4>Why there are basically infinite trees</h4>
+      <p>For any dataset you can build a huge number of different trees, and in principle infinitely many. Numeric features can be cut anywhere: "grid &le; 10.5", "&le; 10.4" and "&le; 10.4999" are all different trees even if they split the training data the same way. On top of that you can choose which feature goes at the root and in what order the rest come, how deep to go, how many rows a leaf needs, Gini or entropy, and whether to prune. Every combination gives a different tree. If you never stop, you can keep splitting until every leaf is pure, and there are lots of ways to get there. Even a small change in the training data, like one extra race, can change the root split, and then everything below it changes too. That's why you don't just grow "the" tree. You pick settings, compare a few, and check them on data the tree has never seen, which is exactly what the results below do.</p>
+    </div>
+
+    <div class="block" id="dt-prep">
+      <h3><span class="section-tag">(b)</span>Data Prep</h3>
+      <p>Just like NB, a decision tree is supervised, so it can only learn from <strong>labeled data</strong>. Every row needs the right answer (Podium, Points or No points) so the tree can measure how pure each split makes the nodes. I used the same 1,300 labeled driver-races and the same label as the Naive Bayes tab, so the two models can be compared fairly.</p>
+      <p>The big difference is that trees don't need bins or counts. A split is just "is this number above or below a cut point", so raw numbers work fine and there's no need for scaling either. Scikit-learn does need everything numeric, though, so there are no team or driver name columns, and team strength comes in through the team_form number instead. I gave the trees eight features in two groups:</p>
+      <ul>
+        <li><strong>Pre-race (5):</strong> grid, quali_position, grid_penalty, team_form and driver_form (same definitions as on the NB tab).</li>
+        <li><strong>Strategy (3):</strong> num_pitstops, first_stop_pct (lap of the first stop divided by race distance) and avg_pit_lane_s (average time in the pit lane). These happen <em>during</em> the race, so a tree using them isn't a pure pre-race prediction. I include them to see if strategy explains results beyond the grid. For a driver who never stopped I set first_stop_pct to 1.0 (didn't stop before the end) and pit lane time to 0.</li>
+      </ul>
+      <h4>Labeled data</h4>
+      <p class="muted">First eight drivers from the 2022 Bahrain GP with all eight raw features and the label.</p>
+      <div class="table-wrap"><table id="sample-dt-labeled" class="sample-table"></table></div>
+      <h4>Training and testing sets</h4>
+      <p>Same split as NB: train on <strong>2021-22 (860 rows, 43 races)</strong> and test on <strong>2023 (440 rows, 22 races)</strong>. The sets have to be <strong>disjoint</strong> because the only honest way to measure a model is on rows it never saw. A tree is the worst offender here, since a fully grown tree can memorise the training set perfectly (I show that below: 100% on training, 62% on 2023). If test rows leaked into training, that memorising would look like skill. Splitting by season also keeps every race entirely on one side, so a tree can't learn "how 2023 Monaco went" from some drivers and get tested on the others. The script confirms zero overlap. For tuning I only used cross-validation <em>inside</em> the training set, also split by race, so 2023 was only touched once, for the final score.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/split_overview.png" alt="Timeline of races split into 2021-22 training and 2023 testing, with matching class mixes" loading="lazy">
+        <figcaption>Same split as Naive Bayes. Blue races train the trees and amber races test them.</figcaption>
+      </figure>
+      <h4>Training set</h4>
+      <p class="muted">Six random rows from the training set: eight numeric features plus the label.</p>
+      <div class="table-wrap"><table id="sample-dt-train" class="sample-table"></table></div>
+      <h4>Testing set</h4>
+      <p class="muted">Six random rows from the 2023 testing set. The tree only sees the features, and the label is used to score it.</p>
+      <div class="table-wrap"><table id="sample-dt-test" class="sample-table"></table></div>
+      <p>Data used:</p>
+      <ul class="source-list">
+        <li><a href="data/milestone3/labeled_data.csv">labeled_data.csv</a>: all 1,300 labeled rows with IDs.</li>
+        <li><a href="data/milestone3/train.csv">train.csv</a> (860 rows) and <a href="data/milestone3/test.csv">test.csv</a> (440 rows): the exact sets the trees used.</li>
+      </ul>
+    </div>
+
+    <div class="block" id="dt-code">
+      <h3><span class="section-tag">(c)</span>Code</h3>
+      <p>Python with scikit-learn: <a href="code/decision_tree.py">code/decision_tree.py</a> (<a href="https://github.com/NividPathak/f1-performance-lifecycle/blob/master/code/decision_tree.py" target="_blank" rel="noopener">on GitHub</a>). It reads the split made by <a href="code/prep_supervised.py">prep_supervised.py</a>, works out the Bahrain example, trains the three trees plus an unlimited one, tunes the pruning with grouped cross-validation, and makes every figure on this tab. The main part:</p>
+<pre class="code">tree_a = DecisionTreeClassifier(criterion="gini", max_depth=3)
+tree_b = DecisionTreeClassifier(criterion="entropy", max_depth=3)
+
+<span class="c"># tree c: pick the pruning strength with 5-fold CV, folds split by race</span>
+path = DecisionTreeClassifier().cost_complexity_pruning_path(X_train, y_train)
+for a in path.ccp_alphas:
+    m = DecisionTreeClassifier(criterion=crit, ccp_alpha=a)
+    s = cross_val_score(m, X_train, y_train, groups=races, cv=GroupKFold(5)).mean()
+
+m.fit(train[cols], y_train)
+pred = m.predict(test[cols])
+confusion_matrix(y_test, pred, labels=CLASSES)</pre>
+      <p>To rerun: <code>python code/prep_supervised.py</code> then <code>python code/decision_tree.py</code>.</p>
+    </div>
+
+    <div class="block" id="dt-results">
+      <h3><span class="section-tag">(d)</span>Results</h3>
+      <div class="stat-row">
+        <div><b>71.4%</b><span>best tree (B) on 2023</span></div>
+        <div><b>quali</b><span>root split in all three trees</span></div>
+        <div><b>213</b><span>leaves if you never stop splitting</span></div>
+        <div><b>61.8%</b><span>what that giant tree scores on 2023</span></div>
+      </div>
+      <p>I built three different trees, changing the splitting criterion, the features and how the size is controlled, so the differences between them actually mean something. Box colour shows each node's majority class. The value list in each box is the count of [No points, Podium, Points] in that node (scikit-learn sorts the classes alphabetically).</p>
+
+      <h4>Tree A: Gini, max depth 3, pre-race features only</h4>
+      <p>The cleanest "before lights out" tree. The root asks <strong>quali &le; 9.5</strong>, basically "did they make Q3?". Then on the left it asks if they were top 3, and on the right it asks if the team is scoring more than 2.35 points a race. It ignores grid penalties completely. Accuracy on 2023 is <strong>68.0%</strong> (71.2% on training). A few of the bottom splits predict the same class on both sides. That still happens because the split makes the nodes purer even if it doesn't change the vote.</p>
+      <figure class="m2-fig">
+        <a href="assets/img/m3/dt_tree_a.png" target="_blank" rel="noopener"><img src="assets/img/m3/dt_tree_a.png" alt="Decision tree A with Gini impurity and depth 3, splitting on qualifying position, team form, driver form and grid" loading="lazy"></a>
+        <figcaption>Tree A. 8 leaves. Click for full size.</figcaption>
+      </figure>
+
+      <h4>Tree B: entropy, max depth 3, pre-race + strategy</h4>
+      <p>Same depth, but with entropy and the three strategy features added. The root becomes <strong>quali &le; 7.5</strong>, and then <strong>first stop % &le; 0.93</strong> shows up twice on the left side. This is the best tree at <strong>71.4%</strong> (72.7% training), but I don't think it's because strategy wins races. A first stop after 93% of the race distance, or no stop at all, basically means the driver retired before they could pit. All 25 drivers in 2023 with a value that high finished with no points. So most of what Tree B gains is spotting DNFs, and you can't know that before the race. It's a good reminder to check <em>why</em> a model got better before getting excited.</p>
+      <figure class="m2-fig">
+        <a href="assets/img/m3/dt_tree_b.png" target="_blank" rel="noopener"><img src="assets/img/m3/dt_tree_b.png" alt="Decision tree B with entropy and depth 3, splitting on qualifying position, first stop percentage, grid, driver form and team form" loading="lazy"></a>
+        <figcaption>Tree B. 8 leaves. Click for full size.</figcaption>
+      </figure>
+
+      <h4>Tree C: pruned, size picked by cross-validation</h4>
+      <p>Instead of picking a depth myself, I grew a full tree on all eight features and used <strong>cost-complexity pruning</strong>. Every branch has to "pay" a penalty &alpha; per leaf, and bigger &alpha; means a smaller tree. I tried every &alpha; on the pruning path with both Gini and entropy, scored each one with 5-fold cross-validation on 2021-22 (folds split by race), and kept the best: <strong>Gini with &alpha; = 0.026</strong>, CV accuracy 67.7%. Cross-validation basically chose the simplest tree that still works. It has just <strong>4 leaves</strong> and only uses qualifying and team form. It scored <strong>66.8%</strong> on 2023 (69.4% training). That's a little below A and B but still above the grid-only rule, from a tree you could write on a sticky note.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/dt_tree_c.png" alt="Pruned decision tree C with four leaves splitting on qualifying position and team form" loading="lazy">
+        <figcaption>Tree C: qualified top 3 &rarr; Podium, P4 to P9 &rarr; Points, otherwise &rarr; No points. The team form split on the right makes the nodes purer but both sides still vote No points.</figcaption>
+      </figure>
+
+      <h4>Confusion matrices and accuracy</h4>
+      <p>All three trees caught the same <strong>41 of 66 podiums (62%)</strong>. That's lower than NB's 47, because a top-3 qualifying cut can't see a Red Bull recovering from P6. Where they differ is the other two classes. Tree B gets 183 of 220 no-points right (83%, up from 161 for A), mostly thanks to the retirement split. Tree A is best at Points (97 of 154, 63%). Tree C pushes more Points finishes into No points (61 of them), which is the price of having only 4 leaves.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/dt_confusion.png" alt="Three confusion matrices for trees A, B and C with counts and row percentages" loading="lazy">
+        <figcaption>Confusion matrices on the 2023 test set. Rows are actual results and columns are predictions.</figcaption>
+      </figure>
+
+      <h4>What happens if you don't stop</h4>
+      <p>To show why the depth limits and pruning matter, I also grew a tree with <strong>no limits</strong>. It kept splitting until every leaf was pure: <strong>213 leaves, 16 levels deep, 100% accuracy on 2021-22</strong>. On 2023 it drops to <strong>61.8%</strong>, worse than just using the grid. It memorised individual races (one chaotic restart, one badly timed safety car) and none of that carries over to a new season. The depth curve shows the same thing step by step. Training accuracy keeps climbing toward 100%, but cross-validation peaks at depth 3 and then slides down. Test accuracy happens to peak at depth 6 (70.0%), but I couldn't have known that without peeking at 2023, which is exactly what you're not supposed to do.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/dt_tree_full.png" alt="An enormous fully grown decision tree with hundreds of tiny nodes" loading="lazy">
+        <figcaption>The unlimited tree. It's too big to label, which is kind of the point.</figcaption>
+      </figure>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/dt_depth_curve.png" alt="Line chart of training, cross-validation and test accuracy against tree depth from 1 to 15; training rises to 1.0 while CV and test peak around depth 3 to 6 and then fall" loading="lazy">
+        <figcaption>Training accuracy vs cross-validation and test accuracy as the tree gets deeper. The gap between the grey line and the other two is overfitting.</figcaption>
+      </figure>
+
+      <h4>What the trees split on</h4>
+      <p>Feature importance adds up how much impurity each feature removed across the whole tree. <strong>Qualifying position</strong> does most of the work in every tree (75% in A, 68% in B, 86% in C), even though grid was available too. That surprised me at first, but it makes sense: quali is grid without the penalties mixed in, so it's a cleaner measure of pure pace. Team form comes second. Driver form, grid penalty, number of stops and pit lane time contribute almost nothing.</p>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/dt_importance.png" alt="Grouped bar chart of feature importance for trees A, B and C, dominated by qualifying position" loading="lazy">
+        <figcaption>Feature importance for each tree. Features a tree didn't use show as 0.</figcaption>
+      </figure>
+
+      <h4>Every model so far</h4>
+      <figure class="m2-fig">
+        <img src="assets/img/m3/dt_scoreboard.png" alt="Bar chart of 2023 test accuracy for every model: Tree B 71.4, Bernoulli and multinomial NB 68.6, Tree A 68.0, Tree C 66.8, grid rule 65.9, fully grown tree 61.8, always No points 50" loading="lazy">
+        <figcaption>All the models on the same 440 driver-races from 2023. Red = trees, blue = Naive Bayes, grey = baselines.</figcaption>
+      </figure>
+    </div>
+
+    <div class="block" id="dt-conclusions">
+      <h3><span class="section-tag">(e)</span>Conclusions</h3>
+      <p>The trees basically wrote down the rules a fan already uses, just with actual cut points. Qualified top 3? Probably a podium. Made Q3? Probably points. Outside Q3 in a team scoring less than about 2 points a race? Probably nothing. Every tree put qualifying at the root, and the smallest tree (just qualifying and team form, 4 leaves) still beat the grid-only rule. That backs up what clustering and PCA showed: Saturday's order and the car's recent pace explain most of a result, and the driver's own form doesn't add much once you know the car.</p>
+      <p>The strategy features were the interesting part. Adding them gave the best accuracy (71.4%), but when I looked at why, the useful split was "never got to pit", which is really just a sign of retirement and not clever strategy. Number of stops and pit lane time were basically ignored. That fits what the EDA and clustering showed earlier. Strategy doesn't change <em>which class</em> a driver ends up in very often. It's more about moving a couple of places within the midfield, which a three-class label is too rough to pick up.</p>
+      <p>The biggest lesson was overfitting. A tree with no limits got 100% on 2021-22 and then did worse than the grid rule on 2023, because every season has its own random stuff. The simpler trees held up much better. For this kind of data, a small, readable tree is both easier to trust and actually more accurate. Going forward I want to predict finishing position itself with regression (so a P8 vs P11 difference counts), and to add features that could help explain the middle of the field, like circuit type and weather.</p>
+    </div>
   </section>
   <section id="svms" class="tab-panel">
     <div class="block"><h2>SVMs</h2><p class="muted">Not started yet.</p></div>
@@ -603,12 +894,12 @@ corr = loadings * np.sqrt(eig)</pre>
 <script src="assets/vendor_chart.min.js"></script>
 <script src="assets/intro.js"></script>
 <script type="module" src="assets/hero3d.js"></script>
-<script src="assets/script.js?v=m2"></script>
+<script src="assets/script.js?v=m3"></script>
 <script src="assets/motion.js"></script>
 <script src="assets/track.js"></script>
 <script src="assets/charts.js"></script>
 <script src="assets/calendar.js"></script>
-<script src="assets/samples.js?v=m2"></script>
+<script src="assets/samples.js?v=m3"></script>
 
 </body>
 </html>
