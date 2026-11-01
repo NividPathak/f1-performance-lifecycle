@@ -1,0 +1,102 @@
+{
+ "accuracy": {
+  "Always 'No points'": 0.5,
+  "Grid-only rule": 0.6591,
+  "Gaussian NB (raw numbers)": 0.6932,
+  "Bernoulli NB": 0.6864,
+  "Multinomial NB": 0.6864
+ },
+ "mnb_cm": [
+  [
+   47,
+   18,
+   1
+  ],
+  [
+   32,
+   78,
+   44
+  ],
+  [
+   14,
+   29,
+   177
+  ]
+ ],
+ "bnb_cm": [
+  [
+   46,
+   19,
+   1
+  ],
+  [
+   31,
+   79,
+   44
+  ],
+  [
+   13,
+   30,
+   177
+  ]
+ ],
+ "mnb_report": {
+  "Podium": {
+   "precision": 0.5053763440860215,
+   "recall": 0.7121212121212122,
+   "f1-score": 0.5911949685534591,
+   "support": 66.0
+  },
+  "Points": {
+   "precision": 0.624,
+   "recall": 0.5064935064935064,
+   "f1-score": 0.5591397849462365,
+   "support": 154.0
+  },
+  "No points": {
+   "precision": 0.7972972972972973,
+   "recall": 0.8045454545454546,
+   "f1-score": 0.8009049773755657,
+   "support": 220.0
+  },
+  "accuracy": 0.6863636363636364,
+  "macro avg": {
+   "precision": 0.642224547127773,
+   "recall": 0.6743867243867244,
+   "f1-score": 0.650413243625087,
+   "support": 440.0
+  },
+  "weighted avg": {
+   "precision": 0.6928551002615518,
+   "recall": 0.6863636363636364,
+   "f1-score": 0.6848306587019845,
+   "support": 440.0
+  }
+ },
+ "within_one": {
+  "Multinomial NB": 0.9659,
+  "Bernoulli NB": 0.9682
+ },
+ "errors": {
+  "total": 138,
+  "dnf": 26,
+  "boundary": 45,
+  "other": 67
+ },
+ "two_class": {
+  "Multinomial NB": 0.8,
+  "Bernoulli NB": 0.8045,
+  "Grid-only rule": 0.7364,
+  "Always 'No points'": 0.5,
+  "mnb_cm": [
+   [
+    175,
+    45
+   ],
+   [
+    43,
+    177
+   ]
+  ]
+ }
+}

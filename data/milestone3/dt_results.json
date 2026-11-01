@@ -1,0 +1,211 @@
+{
+ "example": {
+  "parent": [
+   3,
+   7,
+   10
+  ],
+  "left": [
+   3,
+   4,
+   3
+  ],
+  "right": [
+   0,
+   3,
+   7
+  ],
+  "entropy": {
+   "parent": 1.4406,
+   "left": 1.571,
+   "right": 0.8813,
+   "weighted": 1.2261,
+   "gain": 0.2145
+  },
+  "gini": {
+   "parent": 0.605,
+   "left": 0.66,
+   "right": 0.42,
+   "weighted": 0.54,
+   "gain": 0.065
+  },
+  "alt_grid3": {
+   "left": [
+    2,
+    0,
+    1
+   ],
+   "right": [
+    1,
+    7,
+    9
+   ],
+   "gain": 0.2376
+  }
+ },
+ "trees": {
+  "A": {
+   "criterion": "gini",
+   "depth": 3,
+   "leaves": 8,
+   "ccp_alpha": 0.0,
+   "features": [
+    "grid",
+    "quali_position",
+    "grid_penalty",
+    "team_form",
+    "driver_form"
+   ],
+   "train_acc": 0.7116,
+   "test_acc": 0.6795,
+   "cm": [
+    [
+     41,
+     22,
+     3
+    ],
+    [
+     15,
+     97,
+     42
+    ],
+    [
+     10,
+     49,
+     161
+    ]
+   ],
+   "importance": {
+    "grid": 0.0688,
+    "quali_position": 0.7512,
+    "grid_penalty": 0.0,
+    "team_form": 0.1672,
+    "driver_form": 0.0129
+   },
+   "within_one": 0.9705
+  },
+  "B": {
+   "criterion": "entropy",
+   "depth": 3,
+   "leaves": 8,
+   "ccp_alpha": 0.0,
+   "features": [
+    "grid",
+    "quali_position",
+    "grid_penalty",
+    "team_form",
+    "driver_form",
+    "num_pitstops",
+    "first_stop_pct",
+    "avg_pit_lane_s"
+   ],
+   "train_acc": 0.7267,
+   "test_acc": 0.7136,
+   "cm": [
+    [
+     41,
+     22,
+     3
+    ],
+    [
+     15,
+     90,
+     49
+    ],
+    [
+     8,
+     29,
+     183
+    ]
+   ],
+   "importance": {
+    "grid": 0.1414,
+    "quali_position": 0.6835,
+    "grid_penalty": 0.0,
+    "team_form": 0.0498,
+    "driver_form": 0.0445,
+    "num_pitstops": 0.0,
+    "first_stop_pct": 0.0808,
+    "avg_pit_lane_s": 0.0
+   },
+   "within_one": 0.975
+  },
+  "C": {
+   "criterion": "gini",
+   "depth": 2,
+   "leaves": 4,
+   "ccp_alpha": 0.02619,
+   "features": [
+    "grid",
+    "quali_position",
+    "grid_penalty",
+    "team_form",
+    "driver_form",
+    "num_pitstops",
+    "first_stop_pct",
+    "avg_pit_lane_s"
+   ],
+   "train_acc": 0.6942,
+   "test_acc": 0.6682,
+   "cm": [
+    [
+     41,
+     19,
+     6
+    ],
+    [
+     15,
+     78,
+     61
+    ],
+    [
+     10,
+     35,
+     175
+    ]
+   ],
+   "importance": {
+    "grid": 0.0,
+    "quali_position": 0.8555,
+    "grid_penalty": 0.0,
+    "team_form": 0.1445,
+    "driver_form": 0.0,
+    "num_pitstops": 0.0,
+    "first_stop_pct": 0.0,
+    "avg_pit_lane_s": 0.0
+   },
+   "within_one": 0.9636
+  }
+ },
+ "cv_best": {
+  "score": 0.6768,
+  "criterion": "gini",
+  "alpha": 0.02619
+ },
+ "full_tree": {
+  "leaves": 213,
+  "depth": 16,
+  "train_acc": 1.0,
+  "test_acc": 0.6182
+ },
+ "ceiling": {
+  "Random forest, pre-race": 0.6955,
+  "Gradient boosting, pre-race": 0.6977,
+  "Random forest, all 8": 0.7341,
+  "Gradient boosting, all 8": 0.7318
+ },
+ "two_class": {
+  "test_acc": 0.7909,
+  "train_acc": 0.7942,
+  "cm": [
+   [
+    182,
+    38
+   ],
+   [
+    54,
+    166
+   ]
+  ]
+ }
+}
